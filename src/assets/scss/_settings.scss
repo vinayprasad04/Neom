@@ -1,0 +1,100 @@
+@use './_variables' as *;
+
+.settings{
+    padding: 130px 200px;
+
+    @media screen and (max-width: $xl){
+        padding: 130px 0;
+    }
+    @media screen and (max-width: $md){
+        padding: 80px 0;
+    }
+
+    &__title{
+        font-size: 2.25rem;
+        font-weight: 200;
+        color: $secondary;
+        margin-bottom: 10px;
+    }
+
+    &__subtitle{
+        font-size: 1.5rem;
+        font-weight: 200;
+        line-height: 1.4;
+        color: $secondary;
+        margin-bottom: 35px;
+
+        @media screen and (max-width: $md){
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list{
+        &--item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 0;
+            border-bottom: 1px solid $border;
+
+            &-column{
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                
+                .settings__flex--row{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &--title{
+            font-size: 1.125rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            color: $secondary;
+        }
+
+        &--details{
+            font-size: 0.875rem;
+            font-weight: 300;
+            margin-bottom: 0;
+            color: $secondary;
+            line-height: 1.2;
+        }
+    }
+
+    &__flex{
+        &--row{
+            flex: 0 0 80%;
+        }
+    }
+
+    &__toggle{
+        &--list{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            .form__group--toggle{
+                display: flex;
+                align-items: center;
+                margin-right: 50px;
+
+                @media screen and (max-width: $md){
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                }
+
+                span{
+                    font-size: 1rem;
+                    font-weight: 300;
+                    color: $secondary;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

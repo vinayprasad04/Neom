@@ -1,0 +1,9 @@
+@use './_variables' as *;
+
+.favorites{
+    .recommendations{
+        @media screen and (max-width: $md){
+            padding-top: 80px;
+        }
+    }
+}
