@@ -38,8 +38,8 @@ const Feedback = () =>{
         localStorage.setItem('User',JSON.stringify(Profile[0]));
     },[])
 
-const customerName = localStorage.getItem('User');
-const Name = JSON.parse(customerName);
+/*const customerName = localStorage.getItem('User');
+const Name = JSON.parse(customerName);*/
 
     return(
             <div>
@@ -76,7 +76,7 @@ const Name = JSON.parse(customerName);
 
                     <div className="feedback__cards">
                         <div className="container">
-                            <div className="feedback__title">Hi {Name.Customer_Name},<br/>here are the glimpse of your feedback shared
+                            <div className="feedback__title">Hi {Profile[0].Customer_Name},<br/>here are the glimpse of your feedback shared
                                 with us.
                             </div>
                             <ul className="feedback__list">
