@@ -40,6 +40,7 @@ const Profile = [
         "Password":"$abc@",
         "Master_Journey":"Guests",
         "Age":48,
+        "dop":'08/01/1979',
         "Gender":"female",
         "Arrival_Date":"11/25/2022",
         "Arrival_Time":"12:06 PM",
@@ -91,6 +92,25 @@ const Profile = [
         "Likes":"Cooking",
         "Dislikes":"Chinese food",
         "Other/Preferences":"NA",
+    },
+    {
+        "Booking_ID":10001,
+        "Customer_ID":'004',
+        "Customer_Name":"Raj Kumar",
+        "Customer_Image":"filepath",
+        "Contact_Number":6698432271,
+        "Contact_Email":"c.sureshkumar@techmahindra.com",
+        "Password":"$abc@",
+        "Master_Journey":"Guests",
+        "Age":13,
+        "Gender":"Male",
+        "Arrival_Date":"11/19/2022",
+        "Arrival_Time":"11:41  PM",
+        "Departure_Date":"11/23/2022",
+        "Departure_Time":"8:21 AM",
+        "Likes":"Comedy Show,Cooking",
+        "Dislikes":"Screaming Children",
+        "Other/Preferences":"Football",
     }
 
 ]

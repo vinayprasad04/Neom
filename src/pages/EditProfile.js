@@ -34,7 +34,7 @@ const activitylist = [
 
 const EditProfile = () =>{
     const {id} = useParams();
-    const profile = Profile.find((profile) => profile.Customer_ID === id);
+    const profile = Profile.find((profile) => profile.Customer_ID === '001');
     const [activityList, setActivityList] = useState(activitylist);
     const {Customer_Name,Contact_Email,Contact_Number, Customer_Image, Gender, Age, Likes} = profile;
 
@@ -69,7 +69,7 @@ const EditProfile = () =>{
                 <div className="profile">
                     <div className="container">
                         <div className="profile__page userPreferences">
-                            <div className="profile__title">Edit Jane's profile</div>
+                            <div className="profile__title">Edit {Customer_Name}'s profile</div>
                             <div className="profile__edit">
                                 <div className="profile__list">
                                     <div className="profile__list--item active">
@@ -99,7 +99,7 @@ const EditProfile = () =>{
                                     <div className="form__group">
                                         <label className="form__label">What is your gender?</label>
                                         <ul className="gender__list">
-                                            <li title={"Male"} className={`gender__list--item ${Gender == "male" && 'active'}`}>
+                                            <li title={"Male"} className={`gender__list--item ${Gender.toUpperCase() == "MALE" && 'active'}`}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="51.964" height="60"
                                                      viewBox="0 0 51.964 60">
                                                     <path id="Union_3" data-name="Union 3"
@@ -107,7 +107,7 @@ const EditProfile = () =>{
                                                           transform="translate(0 0)" opacity="0.5"/>
                                                 </svg>
                                             </li>
-                                            <li title={"Female"} className={`gender__list--item ${Gender == "female" && 'active'}`}>
+                                            <li title={"Female"} className={`gender__list--item ${Gender.toUpperCase() == "FEMALE" && 'active'}`}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="60"
                                                      viewBox="0 0 48 60">
                                                     <g id="avatar-woman-girl-person-user" opacity="0.5">
@@ -126,7 +126,7 @@ const EditProfile = () =>{
                                                     </g>
                                                 </svg>
                                             </li>
-                                            <li title={"Other"} className={`gender__list--item ${Gender == "other" && 'active'}`}>
+                                            <li title={"Other"} className={`gender__list--item ${Gender.toUpperCase() == "OTHER" && 'active'}`}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="57.498" height="60.3"
                                                      viewBox="0 0 57.498 60.3">
                                                     <g id="bigender" transform="translate(0.15 0.15)" opacity="0.5">

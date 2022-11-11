@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Profile} from './../MockData';
 import Footer from "../component/Footer";
 import Header from "../component/Header";
@@ -7,9 +7,15 @@ import {Link} from 'react-router-dom';
 
 const Profiles = () =>{
         const [selectUser, setUserSelect] = useState({});
-        const onHandleProfileClick = (e, item)=>{
-            setUserSelect({[item]: item});
+        const onHandleProfileClick = (e, id, item)=>{
+            setUserSelect({[id]: id});
+            localStorage.setItem('User',JSON.stringify(item));
         }
+        useEffect(()=>{
+            let user = Profile[0].Customer_ID;
+            setUserSelect({[user]: true});
+            localStorage.setItem('User',JSON.stringify(Profile[0]));
+        },[])
     return(
         <>
         <Header/>
@@ -17,7 +23,7 @@ const Profiles = () =>{
         <div className="profile">
             <div className="container">
                 <div className="profile__page">
-                    <div className="profile__skip">Skip</div>
+                    {/*<div className="profile__skip">Skip</div>*/}
                     <div className="profile__title">Profiles</div>
                     <div className="profile__subtitle">We are committed to provide you the best and your favorable
                         experience to you and your family.
@@ -32,7 +38,7 @@ const Profiles = () =>{
                                                         className={`profile__list--item ${selectUser[item.Customer_ID] == item.Customer_ID && 'active'}`}>
                                                             <div className="profile__info">
                                                                     <div className="profile__image"
-                                                                         onClick={(e)=>onHandleProfileClick(e, item.Customer_ID)}>
+                                                                         onClick={(e)=>onHandleProfileClick(e, item.Customer_ID, item)}>
                                                                             <div className="profile__image--abstract"></div>
                                                                             <div className="profile__image--overlay"></div>
                                                                             <img src={process.env.PUBLIC_URL + "./img/user.svg"} alt="Profile"/>
