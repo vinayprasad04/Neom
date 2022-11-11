@@ -6,15 +6,16 @@ import {
 } from "react-router-dom";
 
 import './assets/scss/index.css';
-
-import Home from "./pages/home/Home";
+import { HomePage, Dashboard } from './pages/index';
 
 function App() {
   return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/home" element={<Home/>} />
+          <Route path="/" element={<HomePage/>} />
+          <Route path="/home" element={<HomePage/>} />
+          <Route path="/dashboard" element={<Dashboard/>} />
+
         </Routes>
       </BrowserRouter>
   );
