@@ -5,6 +5,7 @@ import {
 } from "../component/index.js";
 import {FeedData} from './../utils/FeedbackData';
 import {Profile} from "../MockData";
+import ChartSmile from "../component/Chart";
 
 const EmotionList = ({rating}) =>{
 
@@ -65,6 +66,7 @@ const Name = JSON.parse(customerName);*/
                                     </div>
                                     <div className="col_sm_12 col_md_12 col_lg_6">
                                         <div className="feedback__banner--graphic">
+                                            {/*<ChartSmile/>*/}
                                             <img src={process.env.PUBLIC_URL + "./img/vibe-o-meter.svg"} alt=""/>
                                         </div>
                                     </div>

@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import './assets/scss/index.css';
-import { HomePage, Dashboard, Profiles, EditProfile, Feedback } from './pages/index';
+import { HomePage, Dashboard, EditProfile, Feedback, Settings, Notifications } from './pages/index';
 
 function App() {
   return (
@@ -18,6 +18,8 @@ function App() {
           <Route path="/edit-profile" element={<EditProfile/>} />
             {/*<Route path="/profiles/:id" element={<EditProfile/>} />*/}
           <Route path="/feedback" element={<Feedback/>} />
+          <Route path="/settings" element={<Settings/>} />
+          <Route path="/notifications" element={<Notifications/>} />
         </Routes>
       </BrowserRouter>
   );
