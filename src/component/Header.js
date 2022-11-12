@@ -16,7 +16,7 @@ const HeaderAlert = () =>{
             <p className="popup__content">Please visit the home page to check the new events and activities!
             </p>
             <div className="popup__actions">
-                <Link to={'/notifications'} className={"popup__btn"}>
+                <Link to={'/recommendation'} className={"popup__btn"}>
                     I want to see
                 </Link>
                 <Link className={"popup__link"}>

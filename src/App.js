@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import './assets/scss/index.css';
-import { HomePage, Dashboard, EditProfile, Feedback, Settings, Notifications } from './pages/index';
+import { HomePage, Dashboard, EditProfile, Feedback, Settings, Notifications, Recommendation } from './pages/index';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           <Route path="/feedback" element={<Feedback/>} />
           <Route path="/settings" element={<Settings/>} />
           <Route path="/notifications" element={<Notifications/>} />
+          <Route path="/recommendation" element={<Recommendation/>} />
         </Routes>
       </BrowserRouter>
   );
