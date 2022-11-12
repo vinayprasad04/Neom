@@ -11,7 +11,7 @@ const Settings = () =>{
             <main className="content">
                 <div className="settings">
                     <div className="container">
-                        <div className="settings__title">Good morning {Profile[0].Customer_Name}!</div>
+                        <h2 className="settings__title">Good morning {Profile[0].Customer_Name}!</h2>
                         <div className="settings__subtitle">You can change the settings for your personal data and other
                             information.
                         </div>
@@ -69,17 +69,17 @@ const Settings = () =>{
                                 </div>
                                 <div className="settings__toggle--list">
                                     <div className="form__group--toggle">
-                                        <input type="checkbox" id="switch5" className="checkbox"/>
+                                        <input type="checkbox" id="switch5" className="checkbox" checked={true}/>
                                         <label htmlFor="switch5" className="toggle"></label>
                                         <span>Emails</span>
                                     </div>
                                     <div className="form__group--toggle">
-                                        <input type="checkbox" id="switch6" className="checkbox"/>
+                                        <input type="checkbox" id="switch6" className="checkbox" checked={true}/>
                                         <label htmlFor="switch6" className="toggle"></label>
                                         <span>Newsletters</span>
                                     </div>
                                     <div className="form__group--toggle">
-                                        <input type="checkbox" id="switch7" className="checkbox"/>
+                                        <input type="checkbox" id="switch7" className="checkbox" checked={true}/>
                                         <label htmlFor="switch7" className="toggle"></label>
                                         <span>Personalized notifiations</span>
                                     </div>

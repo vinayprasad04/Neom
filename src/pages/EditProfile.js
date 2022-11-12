@@ -8,7 +8,7 @@ import golf from './../assets/img/golf.png';
 import music from './../assets/img/music.png';
 import exploring from './../assets/img/exploring.png';
 import cookingdinner from './../assets/img/cooking&dinner.png';
-import standupcomedy from './../assets/img/standup-comedy.png';
+import rooms from './../assets/img/Product1.png';
 import socializing from './../assets/img/socializing.png';
 import plays from './../assets/img/plays.png';
 import chinesefood from './../assets/img/chinese-food.png';
@@ -19,12 +19,12 @@ import watersports from './../assets/img/water-sports.png';
 import {Profile} from './../MockData';
 
 const activitylist = [
-    {name:"Golf", img:golf, select:false,},
+    {name:"Golf", img:golf, select:true,},
     {name:"Music", img:music, select:false,},
+    {name:"Rooms", img:rooms, select:true,},
     {name:"Exploring", img:exploring, select:false,},
-    {name:"Cooking & dining", img:cookingdinner,  select:false,},
-    {name:"Stand up comedy", img:standupcomedy,  select:false,},
     {name:"Socializing", img:socializing,  select:false,},
+    {name:"Cooking & dining", img:cookingdinner,  select:false,},
     {name:"Plays", img:plays,  select:false,},
     {name:"Chinese Food", img:chinesefood,  select:false,},
     {name:"Screaming Child", img:screamingchild,  select:false,},
@@ -69,15 +69,34 @@ const EditProfile = () =>{
                 <div className="profile">
                     <div className="container">
                         <div className="profile__page userPreferences">
-                            <div className="profile__title">Edit {Customer_Name}'s profile</div>
+                            <h2 className="profile__title">Edit {Customer_Name}'s profile</h2>
                             <div className="profile__edit">
                                 <div className="profile__list">
                                     <div className="profile__list--item active">
                                         <div className="profile__info">
                                             <div className="profile__image">
                                                 <div className="profile__image--abstract"></div>
+                                                <div className="profile__main--image">
+                                                    <img src={music} alt="profile"/>
+                                                </div>
                                                 <div className="profile__image--overlay"></div>
-                                                <img src={user} alt="Profile"/>
+                                                <div className="profile__icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="27.232" height="26"
+                                                         viewBox="0 0 27.232 26">
+                                                        <g id="Icon_feather-edit-3" data-name="Icon feather-edit-3"
+                                                           transform="translate(-3.5 -3.318)">
+                                                            <path id="Path_25" data-name="Path 25" d="M18,30H31.5"
+                                                                  transform="translate(-1.768 -1.682)" fill="none"
+                                                                  stroke="#fff" stroke-linecap="round"
+                                                                  stroke-linejoin="round" stroke-width="2"></path>
+                                                            <path id="Path_26" data-name="Path 26"
+                                                                  d="M23.356,5.189a2.968,2.968,0,0,1,4.19,4.205L10.087,26.916,4.5,28.318l1.4-5.607Z"
+                                                                  transform="translate(0 0)" fill="none" stroke="#fff"
+                                                                  stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"></path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -96,7 +115,7 @@ const EditProfile = () =>{
                                         <label className="form__label">On which number can we contact you?</label>
                                         <input type="tel" className="form__input" value={Contact_Number} placeholder=""/>
                                     </div>
-                                    <div className="form__group">
+                                   {/* <div className="form__group">
                                         <label className="form__label">What is your gender?</label>
                                         <ul className="gender__list">
                                             <li title={"Male"} className={`gender__list--item ${Gender.toUpperCase() == "MALE" && 'active'}`}>
@@ -158,7 +177,7 @@ const EditProfile = () =>{
                                                 </svg>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div>*/}
                                     <div className="form__group">
                                         <label className="form__label">When can we wish a happy birthday?</label>
                                         <input type="text" className="form__input" value={Age} placeholder=""/>

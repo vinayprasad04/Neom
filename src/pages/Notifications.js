@@ -9,7 +9,7 @@ const Notifications = () =>{
             <main className="content">
                 <div className="notification">
                     <div className="container">
-                        <div className="notification__title">Good morning {Profile[0].Customer_Name}!</div>
+                        <h2 className="notification__title">Good morning {Profile[0].Customer_Name}!</h2>
                         <div className="notification__subtitle">Here are the notifications that you have received so
                             far.
                         </div>

@@ -55,10 +55,10 @@ const Name = JSON.parse(customerName);*/
                                             <div className="feedback__banner--icon">
                                                 <img src={process.env.PUBLIC_URL + "./img/overwhelmed.svg"} alt="Overwhelmed"/>
                                             </div>
-                                            <div className="feedback__banner--title">Overwhelmed experience</div>
-                                            <div className="feedback__banner--subtitle">Your Vibe-O-Meter reading exits
+                                            <h2 className="feedback__banner--title">Overwhelmed experience</h2>
+                                            <h3 className="feedback__banner--subtitle">Your Vibe-O-Meter reading exits
                                                 us too
-                                            </div>
+                                            </h3>
                                             <div className="feedback__banner--description">We are happy too because we
                                                 successfully keep you happy during this visit to Sindalah City.
                                             </div>
@@ -78,9 +78,9 @@ const Name = JSON.parse(customerName);*/
 
                     <div className="feedback__cards">
                         <div className="container">
-                            <div className="feedback__title">Hi {Profile[0].Customer_Name},<br/>here are the glimpse of your feedback shared
+                            <h2 className="feedback__title">Hi {Profile[0].Customer_Name},<br/>here are the glimpse of your feedback shared
                                 with us.
-                            </div>
+                            </h2>
                             <ul className="feedback__list">
                                 {
                                     FeedData.map((item)=>{
@@ -101,13 +101,13 @@ const Name = JSON.parse(customerName);*/
                                                 </div>
                                                 <div className="feedback__list--content">
                                                     <div className="card--date">Nov 17, 2022</div>
-                                                    <div className="card--title">{item.Feedback}</div>
-                                                    <div className="card--description">{/*Lorem ipsum dolor sit amet, consetetur
+                                                    <h3 className="card--title">{item.Feedback}</h3>
+                                                    <div className="card--description">Lorem ipsum dolor sit amet, consetetur
                                                         sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
                                                         magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
                                                         dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
                                                         Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                                                        sadipscing elit.*/}
+                                                        sadipscing elit.
                                                     </div>
                                                     <EmotionList rating ={item.Overall_Rating}/>
                                                 </div>

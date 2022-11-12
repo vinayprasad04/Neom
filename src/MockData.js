@@ -46,7 +46,7 @@ const Profile = [
         "Arrival_Time":"12:06 PM",
         "Departure_Date":"11/28/2022",
         "Departure_Time":"1:06 PM",
-        "Likes":"Rock Music, Adventure Sport",
+        "Likes":"Golf, Rooms",
         "Dislikes":"Walking for Long",
         "Other/Preferences":"NA",
 
