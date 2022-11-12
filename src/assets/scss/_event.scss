@@ -6,7 +6,7 @@
         margin-bottom: 80px;
 
         @media screen and (max-width: $md){
-            padding-top: 80px;
+            padding-top: 100px;
         }
     }
     .recommendations__title{
@@ -20,17 +20,17 @@
 }
 
 .eventAddReview{
-    padding-top: 110px;
+    padding-top: 130px;
     margin-bottom: 40px;
 
-    @media screen and (max-width: $sm){
-        padding-top: 80px;
+    @media screen and (max-width: $md){
+        padding-top: 100px;
     }
 
     &__card{
-        background: $white;
-        box-shadow: 0px 3px 16px #00000024;
-        border: 1px solid $border;
+        background: transparent;
+        // box-shadow: 0px 3px 16px #00000024;
+        border: 1px solid $secondary;
         border-radius: 12px;
         padding: 30px;
         display: flex;
@@ -50,34 +50,33 @@
 
         &--title{
             font-size: 2.25rem;
-            font-weight: 200;
+            font-weight: 400;
             color: $secondary;
-            margin-bottom: 10px;
+            margin-bottom: 1rem;
         }
         &--subtitle{
-            font-size: 1.25rem;
-            font-weight: 200;
+            font-size: 1.125rem;
+            font-weight: 400;
             line-height: 1.5;
             color: $secondary;
             margin-bottom: 0;
         }
 
         .btn__black{
+            @include font('BrownMedium', 1.125rem, 400, 1);
             padding: 18px 35px;
             width: fit-content;
             border-radius: 6px;
             background-color: $secondary;
             border: 1px solid $secondary;
             color: $white;
-            font-size: 1.125rem;
-            font-weight: 400;
             text-align: center;
             cursor: pointer;
             transition: all $easeTime ease;
             white-space: nowrap;
 
             &:hover{
-                background-color: $white;
+                background-color: transparent;
                 color: $secondary;
                 transition: all $easeTime ease;
             }
@@ -104,7 +103,7 @@
 
     &__title{
         font-size: 1.25rem;
-        font-weight: 200;
+        font-weight: 400;
         color: $secondary;
         margin-bottom: 1.25rem;
     }
@@ -119,7 +118,8 @@
         }
 
         &--fields{
-            border: 1px solid $border;
+            // border: 1px solid $border;
+            border: 1px solid $secondary;
             border-radius: 24px;
             padding: 0.8rem;
             display: flex;
@@ -136,6 +136,8 @@
                 font-size: 0.875rem;
                 font-weight: 300;
                 color: $secondary;
+                background-color: transparent;
+
                 &:focus{
                     outline: 0;
                 }
@@ -170,7 +172,7 @@
         &__list{
             display: flex;
             align-items: center;
-            border: 1px solid $border;
+            border: 1px solid $secondary;
             border-radius: 24px;
             width: fit-content;
             height: 48px;
@@ -187,14 +189,13 @@
 
             &--item{
                 padding: 0 1rem;
-                font-size: 0.875rem;
-                font-weight: 300;
+                @include font('Poppins', 0.8rem, 300, 1);
                 color: $secondary;
                 height: 100%;
                 border-right: 1px;
                 border-left: 1px;
                 border-style: solid;
-                border-color: $border;
+                border-color: $secondary;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -226,7 +227,7 @@
 
                 @media screen and (max-width: $xxl){
                     padding: 0 0.8rem;
-                    font-size: 0.8rem;
+                    font-size: 0.7rem;
                 }
 
                 @media screen and (max-width: $lg){
@@ -236,12 +237,69 @@
                 }
 
                 @media screen and (max-width: $sm){
-                    font-size: 0.875rem;
+                    padding: 0;
+                    font-size: 0.7rem;
                 }
             }
         }
     }
 }
+
+.recommendation--page{
+    padding-top: 130px;
+
+    @media screen and (max-width: $sm){
+        padding-top: 110px;
+    }
+
+    .recommendations{
+        padding-top: 0;
+    
+        .recommendations__title{
+            margin-bottom: 0;
+        }
+        .recommendations__subtitle{
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 40px;
+        }
+    
+        .schedule{
+            display: flex;
+            gap: unset;
+            margin: 20px 0 0 0;
+    
+            .time{
+                width: 100%;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                .time__list{
+                    margin-right: 20px;
+                    .time__list--item{
+                        height: 48px;
+                    }
+                }
+            }
+        }
+        .card__grid{
+            margin-top: 50px;
+            .card__item{
+                .card__title{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .banner{
+        padding-top: 0;
+        margin-top: 0;
+        margin-bottom: 80px;
+    }
+}
+
+
 
 .category{
     margin-bottom: 50px;
@@ -259,32 +317,54 @@
         justify-content: flex-start;
         flex-wrap: wrap;
 
+        @media screen and (max-width: $sm){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
         &--item{
             padding: 0.875rem 1.25rem;
-            font-size: 0.875rem;
-            font-weight: 300;
+            @include font('Poppins', 0.8rem, 300, 1);
             color: $secondary;
             border-radius: 24px;
-            background-color: $bgLight;
+            background-color: transparent;
+            border: 1px solid $secondary;
             cursor: pointer;
             margin: 0 10px 10px 0;
             transition: all $easeTime ease;
+            text-align: center;
+
+            @media screen and (max-width: $sm){
+                margin: 0;
+            }
 
             &:hover, &.active{
                 background-color: $secondary;
                 color: $white;
                 transition: all $easeTime ease;
             }
+
+            @media screen and (max-width: $xxl){
+                font-size: 0.7rem;
+            }
+            @media screen and (max-width: $lg){
+                font-size: 1rem;
+            }
+
+            @media screen and (max-width: $sm){
+                font-size: 0.7rem;
+            }
         }
     }
 }
 
 .eventDetails{
-    padding-top: 110px;
+    padding-top: 130px;
 
-    @media screen and (max-width: $md){
-        padding-top: 80px;
-    }
+    // @media screen and (max-width: $md){
+    //     padding-top: 80px;
+    // }
 
     &__title{
         font-size: 1.875rem;
@@ -300,26 +380,53 @@
         margin-bottom: 35px;
 
         .review{
-            font-size: 0.75rem;
-            font-weight: 500;
+            @include font('BrownMedium', 0.875rem, 400, 1);
             margin: 0 20px 0 10px;
+
             span{
-                font-weight: 300;
+                @include font('Brown', 0.875rem, 400, 1);
                 color: $secondary;
                 text-decoration: underline;
+                text-underline-offset: 2px;
                 cursor: pointer;
                 margin-left: 10px;
                 transition: all 0.3s ease;
+                position: relative;
 
                 &:hover{
                     color: $primary;
                     transition: all 0.3s ease;
                 }
+
+                &::before{
+                    content: '';
+                    width: 2px;
+                    height: 2px;
+                    border-radius: 50%;
+                    background-color: $secondary;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: -6px;
+                    transform: translateY(-50%);
+                }
+
+                &::after{
+                    content: '';
+                    width: 2px;
+                    height: 2px;
+                    border-radius: 50%;
+                    background-color: $secondary;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    right: -6px;
+                    transform: translateY(-50%);
+                }
             }
         }
         .location{
-            font-size: 0.875rem;
-            font-weight: 300;
+            @include font('Brown', 0.875rem, 400, 1);
             color: $secondary;
         }
     }
@@ -364,6 +471,7 @@
             position: absolute;
             right: 24px;
             bottom: 24px;
+            @include font('BrownMedium', 1.125rem, 400, 1);
 
             @media screen and (max-width: $sm){
                 width: fit-content;
@@ -417,7 +525,7 @@
 
     .event__reserve--title{
         font-size: 1.875rem;
-        font-weight: 200;
+        font-weight: 400;
         color: $secondary;
         margin-bottom: 20px;
     }
@@ -466,16 +574,17 @@
                     align-items: flex-start;
                     justify-content: flex-start;
                     h5{
-                        font-size: 1rem;
-                        font-weight: 500;
+                        font-family: 'BrownMedium' !important;
+                        font-size: 1.125rem;
+                        font-weight: 400;
                         color: $secondary;
                         margin-bottom: 4px;
                     }
                     p{
-                        font-size: 0.875rem;
-                        font-weight: 300;
+                        font-size: 1rem;
+                        font-weight: 400;
                         color: $secondary;
-                        line-height: 32px;
+                        line-height: 1.2;
                         margin: 0;
                     }
                 }
@@ -487,8 +596,8 @@
         padding: 30px 0;
         border-bottom: 1px solid $border;
         p{
-            font-size: 0.875rem;
-            font-weight: 300;
+            font-size: 1rem;
+            font-weight: 400;
             line-height: 28px;
             color: $secondary;
             margin-bottom: 30px;
@@ -654,6 +763,7 @@
     }
     .recommendations__title{
         margin-bottom: 40px;
+        font-weight: 400;
     }
 }
 
@@ -772,9 +882,7 @@
     
 
     &--title{
-        font-size: 1.5rem;
-        font-weight: 600;
-        line-height: 16px;
+        @include font('BrownMedium', 1.5rem, 400, 1);
         color: $secondary;
         display: flex;
         align-items: flex-end;
@@ -784,7 +892,7 @@
         span{
             margin-left: 10px;
             font-size: 1rem;
-            font-weight: 300;
+            font-weight: 400;
             color: $secondary;
             line-height: 16px;
         }
@@ -792,13 +900,14 @@
 
     &--seats{
         margin-top: 10px;
-        font-size: 1rem;
+        font-size: 1.125rem;
         font-weight: 300;
         line-height: 20px;
         color: $secondary;
     }
 
-    .btn__red{
+    .btn__black{
+        @include font('BrownMedium', 1.125rem, 400, 1);
         margin-top: 30px;
         width: 100%;
     }
@@ -832,7 +941,8 @@
         justify-content: space-between;
 
         &__title, &__price{
-            font-size: 1.125rem;
+            font-family: 'BrownMedium';
+            font-size: 1.5rem;
             font-weight: 600;
             color: $secondary;
         }
