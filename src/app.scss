@@ -1,0 +1,38 @@
+.alert{
+  background: #ddffdd;
+  color: #000;
+  position: fixed;
+  width: 0;
+  top: 100px;
+  height: 88px;
+  right: -50px;
+  transition: width .401s;
+  z-index: 1;
+  border-radius: 3px;
+  padding: 20px 10px;
+  border: 1px solid #ccc!important;
+  h2{
+    font-size: 22px;
+  }
+  p{
+    color: black;
+    margin: 10px 0;
+  }
+  &.open{
+    width: 600px;
+    transition: width 1s;
+    right: 0;
+  }
+  .left{
+    float: left;
+  }
+  svg{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 16px;
+    width: 26px;
+    height: 26px;
+    float: right;
+  }
+}

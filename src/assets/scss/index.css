@@ -1214,11 +1214,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-input[type=date]::-webkit-inner-spin-button,
+/*input[type=date]::-webkit-inner-spin-button,
 input[type=date]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
-}
+}*/
 
 .star-rating {
   width: 0;

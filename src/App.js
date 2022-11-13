@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
+import './app.scss';
 import './assets/scss/index.css';
 import { HomePage, Dashboard, CompleteEventDetail, EditProfile, EventDetail, Feedback, Settings, Notifications, Recommendation } from './pages/index';
 
