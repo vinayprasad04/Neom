@@ -11,11 +11,15 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0, 0, 0);
+    // background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 
     @media screen and (max-width: $sm){
         padding-bottom: 50px;
+        padding-top: 80px;
+        background-color: transparent;
+        z-index: 100;
+        overflow: hidden;
     }
 }
 
@@ -42,7 +46,11 @@
     }
 
     @media screen and (max-width: $sm){
-        width: 95%;
+        width: 100%;    
+        box-shadow: none;
+        border-radius: 0;
+        height: calc(100vh - 80px);
+        overflow-y: auto;
     }
 }
 
@@ -86,10 +94,18 @@
         top: -8px;
     }
 
+    svg{
+        width: 28px;
+        height: 28px;
+        path{
+            fill: $border;
+            transition: all $easeTime ease;
+        }
+    }
+
     img{
         width: 28px;
         height: 28px;
-        padding: 4px;
         border-radius: 50%;
         border: 1px solid $border;
         transition: all $easeTime ease;
@@ -100,23 +116,30 @@
             border-color: $primary;
             transition: all $easeTime ease;
         }
+        svg{
+            path{
+                fill: $primary;
+                transition: all $easeTime ease;
+            }
+        }
     }
 }
 
 .modal-header {
     position: relative;
+
     h2{
         font-size: 1.5rem;
         font-weight: 400;
         color: $secondary;
-        margin-bottom: 14px;
+        margin-bottom: 1rem;
     }
 }
 
 .modal-body {
     p{
         font-size: 1rem;
-        font-weight: 300;
+        font-weight: 400;
         line-height: 24px;
         color: $secondary;
         margin-bottom: 20px;
@@ -174,17 +197,17 @@
             }
 
             &--details{
-                h4{
+                h4{ 
+                    font-family: 'Brown' !important;
                     font-size: 1rem;
                     font-weight: 400;
                     color: $secondary;
                     line-height: 20px;
                 }
                 p{
-                    font-size: 0.75rem;
+                    font-size: 0.875rem;
                     font-weight: 400;
                     color: $secondary;
-                    opacity: 0.7;
                     margin: 0;
                 }
 
@@ -204,14 +227,15 @@
             }
 
             .review{
+                font-family: 'Brown';
+                font-size: 0.875rem;
+                font-weight: 400;
                 margin-left: 10px;
-                font-size: 0.75rem;
-                font-weight: 300;
                 color: $secondary;
                 padding-top: 2px;
 
                 span{
-                    font-weight: 500;
+                    font-family: 'BrownMedium';
                     margin-right: 10px;
                 }
             }
@@ -223,7 +247,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
 
             &--item{
                 display: flex;
@@ -235,8 +259,7 @@
         }
 
         &--title{
-            font-size: 1rem;
-            font-weight: 400;
+            @include font('Brown', 1rem, 400, 1);
             color: $secondary;
             margin-bottom: 10px;
         }
@@ -254,6 +277,7 @@
 .modal-footer {
     .form__group{
         textarea{
+            font-size: 1rem;
             resize: none;
             background: $white;
             border: 1px solid $border;
@@ -271,7 +295,9 @@
         }
     }
     .btn{
+        font-size: 1rem;
         padding: 12px 45px;
+        font-family: 'Poppins';
         @media screen and (max-width: $sm){
             width: 100%;
         }

@@ -8,6 +8,7 @@ import {
   EventSlider,
   useOpenWeather,
   Map,
+  YourChoice,
   // SimpleMap
 } from "../component/index.js";
 
@@ -41,8 +42,9 @@ const Dashboard = (props) => {
       showForecast
     />
         <SliderCard {...dashboardPage.SliderCardData}/>
-        <EventSlider {...dashboardPage.CartInfoSlider}/>
-        <Trending />
+        <YourChoice {...dashboardPage.YourChoice}/>
+        <Trending {...dashboardPage.RecommendationsCard} />
+        <EventSlider {...dashboardPage.AttendEventCard}/>
         <Map />
       </main>
       <Footer />

@@ -1,15 +1,15 @@
 import React from 'react';
 import EventCart from "./EventCart";
-import {RecommendationData} from './../MockData';
 
-const Recommendations = () =>{
+const Recommendations = (props) =>{
+    const {Recommendation} = props;
     return(
         <div className="recommendations">
             <div className="container">
                 <div className="recommendations__title">Some more recommendations for you, Shane!</div>
                 <div className="card__grid">
                     {
-                        RecommendationData.map((item, index)=>{
+                        Recommendation.map((item, index)=>{
                             return(
                                 <EventCart key={index} item={item}/>
                             )

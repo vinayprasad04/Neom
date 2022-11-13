@@ -1,8 +1,9 @@
+@use './_variables' as *;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
-//   font-family: 'Poppins', sans-serif;
+  //   font-family: 'Poppins', sans-serif;
   font-family: 'brownlight', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   box-sizing: border-box;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -115,6 +116,7 @@ section {
 
 body {
   line-height: 1;
+  background-color: $bgDefault;
 }
 
 ol,
@@ -141,4 +143,8 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Ivy Mode', sans-serif !important;
 }

@@ -31,11 +31,14 @@ const SliderCard = (props) => {
             {SliderCard.map((item, index) => {
               return (
                 <SwiperSlide>
-                  <a href="#" class="recSlider__link">                    
-                    <img
+                  <a href="#" class="recSlider__link">   
+                  <div class="slider__image--wrapper">
+                              <img
                       src={process.env.PUBLIC_URL + "./img/" + item.img}
                       alt="event title"
                     />
+                            </div>                 
+                    
                     <div class="recSlider__info" key={index}>
                       <div class="recSlider__info__title">{item.title}</div>
                       <div class="recSlider__info__rating">

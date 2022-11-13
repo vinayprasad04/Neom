@@ -12,6 +12,9 @@ export { default as EventSlider } from './Sliders/EventSlider.js';
 export { default as SectionHeader } from './SectionHeader.js';
 export { default as useOpenWeather } from './Weather/Weather.js';
 export { default as SimpleMap } from './Map/Map.js';
+export {default as YourChoice } from './Sliders/YourChoice.js'
+export {default as GallaryItems } from './GallaryItems.js'
+export {default as RatingSlider } from './Sliders/RatingSlider.js'
 
 
 

@@ -7,19 +7,22 @@ import {
   SliderCard,
   EventSlider,
   useOpenWeather,
-  Map,
+  RatingSlider,
+  GallaryItems,
   // SimpleMap
 } from "../component/index.js";
+import Recommendations from "../component/Recommendations";
+
 import "photoswipe/dist/photoswipe.css";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import { eventDetailImage } from "../MockData.js";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import getJson from "../utils/dashboardData";
-const dashboardPage = getJson();
+import getJson from "../utils/eventDetailData";
+const eventDetailPage = getJson();
 
-const Dashboard = (props) => {
+const EventDetail = (props) => {
   const { data, isLoading, errorMessage } = useOpenWeather({
     key: "edb174adcaf962338a5b74bbb3498eb1",
     lat: "48.137154",
@@ -27,12 +30,28 @@ const Dashboard = (props) => {
     lang: "en",
     unit: "metric",
   });
-  console.log(data, "data is callllled");
+const Sucmsg = () =>{
+  let el = document.getElementById('sucmsg')
+  el.style= 'display:block'
+}
   return (
     <div>
       <Header />
-      <main className="content home">
-        <div class="eventDetails">
+      <main className="content event">
+        <div class="eventAddReview">
+          <div class="container" id="sucmsg" style={{display:'none'}}>
+            <div class="eventAddReview__card">
+              <div>
+                <h2 class="eventAddReview__card--title">Congratulations</h2>
+                <p class="eventAddReview__card--subtitle">
+                  Message goes her We are sure that you have enjoyed this event
+                  a lot. Would you like to share your feedback with us.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="eventDetails p-0">
           <div class="container">
             <div class="eventDetails__title">Men's Golf League</div>
 
@@ -43,31 +62,7 @@ const Dashboard = (props) => {
               </div>
               <div class="location">Sindalah City, Dubai</div>
             </div>
-
-            <div class="eventDetails__grid">
-              <div class="eventDetails__grid--col grid__box">
-                {eventDetailImage.map((item, index) => {
-                  return (
-                    <div class="grid__box--sm" key={index}>
-                      <img
-                        src={process.env.PUBLIC_URL + "./img/" + item.img}
-                        alt=""
-                        class="grid__image border__rounded--topLeft"
-                      />
-                    </div>
-                  );
-                })}
-              </div>
-              <div class="eventDetails__grid--col">
-                <img
-                  src={process.env.PUBLIC_URL + "./img/Image119.jpg"}
-                  alt=""
-                  class="grid__image border__rounded--topRight border__rounded--bottomRight"
-                />
-              </div>
-              <div class="status scheduled">Scheduled</div>
-              <button class="btn__white">Show all</button>
-            </div>
+            <GallaryItems {...eventDetailPage.PhotoGallaryData} />
           </div>
         </div>
 
@@ -161,7 +156,10 @@ const Dashboard = (props) => {
                     </li>
                     <li class="event__description--list-item">
                       <div class="icon">
-                        <img src="./assets/img/overwhelmed.svg" alt="" />
+                        <img
+                          src={process.env.PUBLIC_URL + "./img/overwhelmed.svg"}
+                          alt=""
+                        />
                       </div>
                       <div class="description-details">
                         <h5>Overwhelmed experience</h5>
@@ -214,7 +212,7 @@ const Dashboard = (props) => {
               </div>
               <div class="eventReserve__grid--col flex__order--1">
                 <div class="eventReserve__form">
-                  <form action="">
+                  <form>
                     <div class="eventReserve__form--title">
                       AED 1800 <span>per person</span>
                     </div>
@@ -253,7 +251,7 @@ const Dashboard = (props) => {
                     <div class="eventReserve__form--seats">
                       172 Seats still available
                     </div>
-                    <button class="btn__red">Reserve my seats</button>
+                    <button class="btn btn__black" onClick={Sucmsg}>Reserve my seats</button>
                     <ul class="guests__list">
                       <li class="guests__list--item">
                         <div class="guests">1800 x 1 adult</div>
@@ -269,6 +267,7 @@ const Dashboard = (props) => {
                       <div class="total__price">AED 1800</div>
                     </div>
                   </form>
+
                   <a href="#" class="eventReserve__form--help">
                     Need help?
                   </a>
@@ -277,11 +276,17 @@ const Dashboard = (props) => {
             </div>
           </div>
         </div>
-        <Trending />
+        {/* <Trending /> */}
+        <RatingSlider {...eventDetailPage.RatingSliderCardData} />
+
+        <Recommendations
+          {...eventDetailPage.RecommendationData}
+          showHeartIcon={true}
+        />
       </main>
       <Footer />
     </div>
   );
 };
 
-export default Dashboard;
+export default EventDetail;

@@ -8,11 +8,11 @@ import NextEventBanner from "../component/NextEventBanner";
 import Map from "../component/Map";
 import Trending from "../component/Trending";
 import Recommendations from "../component/Recommendations";
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
+import getJson from "../utils/homepageData";
+const homePage = getJson();
 
 const Home = ()=>{
     return(
@@ -21,8 +21,8 @@ const Home = ()=>{
             <main className="content home">
                 <Banner/>
                 <NextEventBanner/>
-                <Trending/>
-                <Recommendations/>
+                <Trending {...homePage.TrendingCardData} />
+                <Recommendations {...homePage.RecommendationData} />
                 <Map/>
             </main>
             <Footer/>

@@ -16,7 +16,7 @@ const EventSlider = (props) => {
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
-          slidesPerView={slidesPerView}
+          slidesPerView={4}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           //   navigation
@@ -31,9 +31,6 @@ const EventSlider = (props) => {
                   <div className="card__item">
                     <a href="#" className="card__link">
                       <div className="card__thumb">
-                        <button className="card__fav">
-                          <span className="icon-heart"></span>
-                        </button>
                         <img
                           src={process.env.PUBLIC_URL + "./img/" + item.img}
                           alt="event name"

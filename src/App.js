@@ -6,17 +6,24 @@ import {
 } from "react-router-dom";
 
 import './assets/scss/index.css';
-import { HomePage, Dashboard, Profiles, EditProfile,EventDetail } from './pages/index';
+import { HomePage, Dashboard, CompleteEventDetail, EditProfile, EventDetail, Feedback, Settings, Notifications, Recommendation } from './pages/index';
+
 function App() {
   return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage/>} />
+          <Route path="/" element={<Dashboard/>} />
           <Route path="/home" element={<HomePage/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
-          <Route path="/profiles" element={<Profiles/>} />
-            <Route path="/profiles/:id" element={<EditProfile/>} />
-            <Route path="/eventdetails" element={<EventDetail/>} />
+          <Route path="/edit-profile" element={<EditProfile/>} />
+            {/*<Route path="/profiles/:id" element={<EditProfile/>} />*/}
+          <Route path="/feedback" element={<Feedback/>} />
+          <Route path="/settings" element={<Settings/>} />
+          <Route path="/notifications" element={<Notifications/>} />
+          <Route path="/recommendation" element={<Recommendation/>} />
+          <Route path="/eventdetails" element={<EventDetail/>} />
+          <Route path="/eventdetailcomplete" element={<CompleteEventDetail/>} />
+
         </Routes>
       </BrowserRouter>
   );

@@ -28,11 +28,11 @@ const Banner = () => {
                 />
                 <div className="banner__info">
                   <div className="banner__info__title">
-                    Medusa's <br />
-                    New Year Musical Concert
+                    Music <br />
+                    Jazz Concert
                   </div>
                   <div className="banner__info__location">
-                    Jumeirah Palm Beach, Dubai
+                    Sindalah City, Dubai
                   </div>
                   <div className="banner__info__date">
                     Jan 01, 2023 at 00:00
@@ -41,60 +41,6 @@ const Banner = () => {
                     <div
                       className="counter"
                       data-date="2023-1-1 00:00:00"
-                    ></div>
-                  </div>
-                  <div className="banner__info__link">
-                    <a href="#">Yes, I am in</a>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={process.env.PUBLIC_URL + "./img/banner.jpg"}
-                  alt="event title"
-                />
-                <div className="banner__info">
-                  <div className="banner__info__title">
-                    Medusa's <br />
-                    New Year Musical Concert
-                  </div>
-                  <div className="banner__info__location">
-                    Jumeirah Palm Beach, Dubai
-                  </div>
-                  <div className="banner__info__date">
-                    Jan 01, 2023 at 00:00
-                  </div>
-                  <div className="banner__info__countdown">
-                    <div
-                      className="counter"
-                      data-date="2022-12-1 00:00:00"
-                    ></div>
-                  </div>
-                  <div className="banner__info__link">
-                    <a href="#">Yes, I am in</a>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={process.env.PUBLIC_URL + "./img/banner.jpg"}
-                  alt="event title"
-                />
-                <div className="banner__info">
-                  <div className="banner__info__title">
-                    Medusa's <br />
-                    New Year Musical Concert
-                  </div>
-                  <div className="banner__info__location">
-                    Jumeirah Palm Beach, Dubai
-                  </div>
-                  <div className="banner__info__date">
-                    Jan 01, 2023 at 00:00
-                  </div>
-                  <div className="banner__info__countdown">
-                    <div
-                      className="counter"
-                      data-date="2023-1-2 00:00:00"
                     ></div>
                   </div>
                   <div className="banner__info__link">

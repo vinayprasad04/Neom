@@ -91,8 +91,7 @@
 }
 
 .status {
-    font-size: 12px;
-    font-weight: 500;
+    @include font('BrownMedium',0.875rem,400,1);
 
     &.scheduled {
         color: $secondary;
@@ -141,9 +140,16 @@
         font-size: 14px;
         font-weight: 400;
         color: $secondary;
+        transition: all $easeTime ease;
 
         &:focus {
             outline: 0;
+            border-color: $primary;
+        }
+
+        &:hover{
+            border-color: $primary;
+            transition: all $easeTime ease;
         }
 
         &::placeholder {
@@ -224,8 +230,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     top: 2px;
     left: 2px;
     transition: all $easeTime ease;
-    // border: 0.5px solid rgba(0, 0, 0, 0.04);
-    // box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
 }
 
 .checkbox:checked+.toggle::after {
@@ -254,7 +258,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-right: 50px;
     cursor: pointer;
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     color: $secondary;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -286,11 +290,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: 1px solid #999999;
 }
 
-// /* On mouse-over, add a grey background color */
-// .radio-container:hover input~.checkmark {
-//     background-color: #ccc;
-// }
-
 /* When the radio button is checked, add a blue background */
 .radio-container input:checked~.checkmark {
     box-shadow: 0px 0px 10px #FF385C73;
@@ -318,4 +317,64 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 50%;
     background: $primary;
     transform: translate(-50%, -50%);
+}
+
+.vibes{
+    @include flex(center,flex-start);
+    padding-right: 15px;
+
+    &__icon{
+        width: 16px !important;
+        height: 16px !important;
+        margin-right: 8px;
+        min-height: unset !important;
+    }
+    &__text{
+        @include font('Brown',0.875rem,400,1);
+        color: $secondary;
+
+        @media screen and (max-width: $lg){
+            line-height: 15px;
+        }
+    }
+}
+
+.weather{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    @include flex(flex-start,flex-start);
+
+    &__icon{
+        img{
+            min-height: unset !important;
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 50%;
+        }
+    }
+
+    &__text{
+        margin-left: 10px;
+        h2{
+            font-family: 'Poppins' !important;
+            font-weight: 500;
+            font-size: 1.5rem;
+            color: $white;
+            sup{
+                font-size: 0.75rem;
+            }
+        }
+
+        &--wrap{
+            @include flex(center, space-between);
+            span{
+                font-family: 'Poppins' !important;
+                font-weight: 400;
+                font-size: 0.75rem;
+                color: $white;
+            }
+        }
+    }
 }
