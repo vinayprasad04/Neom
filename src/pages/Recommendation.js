@@ -6,6 +6,9 @@ import {
 } from "../component/index.js";
 import {Profile} from './../MockData';
 import Recommendations from "../component/Recommendations";
+import getJson from "../utils/eventDetailData";
+
+const recommendationsPage = getJson();
 
 const Recommendation = () =>{
     return(
@@ -51,7 +54,7 @@ const Recommendation = () =>{
                         </div>
 
                         <div className="card__grid">
-                            <Recommendations/>
+                            <Recommendations {...recommendationsPage.RecommendationData} showHeartIcon={true} />
                         </div>
                     </div>
                 </div>
