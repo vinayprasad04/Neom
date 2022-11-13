@@ -6,8 +6,7 @@ import {
 } from "react-router-dom";
 
 import './assets/scss/index.css';
-import { HomePage, Dashboard, Profiles, EditProfile } from './pages/index';
-
+import { HomePage, Dashboard, Profiles, EditProfile,EventDetail } from './pages/index';
 function App() {
   return (
       <BrowserRouter>
@@ -17,6 +16,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/profiles" element={<Profiles/>} />
             <Route path="/profiles/:id" element={<EditProfile/>} />
+            <Route path="/eventdetails" element={<EventDetail/>} />
         </Routes>
       </BrowserRouter>
   );

@@ -31,7 +31,7 @@ const SliderCard = (props) => {
             {SliderCard.map((item, index) => {
               return (
                 <SwiperSlide>
-                  <a href="#" class="recSlider__link">
+                  <a href="#" class="recSlider__link">                    
                     <img
                       src={process.env.PUBLIC_URL + "./img/" + item.img}
                       alt="event title"

@@ -58,6 +58,7 @@ const data = () => {
         /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
       ],
     },
+    
   };
 };
 export default data;

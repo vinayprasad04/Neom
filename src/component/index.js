@@ -10,4 +10,8 @@ export { default as Trending } from './Trending.js';
 export { default as SliderCard } from './Sliders/SliderCard.js';
 export { default as EventSlider } from './Sliders/EventSlider.js';
 export { default as SectionHeader } from './SectionHeader.js';
+export { default as useOpenWeather } from './Weather/Weather.js';
+export { default as SimpleMap } from './Map/Map.js';
+
+
 

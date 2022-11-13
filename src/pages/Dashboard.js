@@ -6,6 +6,9 @@ import {
   Trending,
   SliderCard,
   EventSlider,
+  useOpenWeather,
+  Map,
+  // SimpleMap
 } from "../component/index.js";
 
 import "swiper/css";
@@ -15,23 +18,32 @@ import getJson from "../utils/dashboardData";
 const dashboardPage = getJson();
 
 const Dashboard = (props) => {
+  const { data, isLoading, errorMessage } = useOpenWeather({
+    key: 'edb174adcaf962338a5b74bbb3498eb1',
+    lat: '48.137154',
+    lon: '11.576124',
+    lang: 'en',
+    unit: 'metric',
+  });
+  console.log(data, "data is callllled")
   return (
     <div>
       <Header />
       <main className="content home">
+        {/* <SimpleMap /> */}
+      <useOpenWeather
+      isLoading={isLoading}
+      errorMessage={errorMessage}
+      data={data}
+      lang="en"
+      locationLabel="Munich"
+      unitsLabels={{ temperature: 'C', windSpeed: 'Km/h' }}
+      showForecast
+    />
         <SliderCard {...dashboardPage.SliderCardData}/>
         <EventSlider {...dashboardPage.CartInfoSlider}/>
         <Trending />
-        <div class="vibeMeter">
-        <div class="container">
-            <h2 class="vibeMeter__title">Your master journey with Unified Guests</h2>
-            <div class="grid__row">
-                <div class="grid__col graph">
-                    <img src={process.env.PUBLIC_URL + "./img/graph.svg"} alt="Graph"/>
-                </div>
-            </div>
-        </div>
-    </div>
+        <Map />
       </main>
       <Footer />
     </div>
