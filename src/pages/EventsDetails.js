@@ -34,6 +34,8 @@ import boredom from './../assets/img/boredom.svg';
 import disappointed from './../assets/img/disappointed.svg';
 import anger from './../assets/img/anger.svg';
 import RatingValue from "../component/Rating";
+import SectionHeader from "../component/SectionHeader";
+import EventCart from "../component/EventCart";
 
 const imagesGallery = [Image120,Image118,Image122,Image121];
 const eventDetailPage = getJson();
@@ -44,21 +46,27 @@ const EmotionList = ({rating}) =>{
   return(
       <ul className="emotions__list">
         <li className={`emotions__list--item  ${rating>4 && 'active'}`}>
+          <div className="emotion overwhelmed"></div>
           <img src={overwhelmed} alt="overwhelmed"/>
         </li>
         <li className={`emotions__list--item  ${rating<4 && 'active'}`}>
+          <div className="emotion joy"></div>
           <img src={joy} alt="joy"/>
         </li>
         <li className={`emotions__list--item  ${rating<3.5 && 'active'}`}>
+          <div className="emotion appreciation"></div>
           <img src={appreciation} alt="appreciation"/>
         </li>
         <li className={`emotions__list--item  ${rating<3 && 'active'}`}>
+          <div className="emotion boredom"></div>
           <img src={boredom} alt="boredom"/>
         </li>
         <li className={`emotions__list--item  ${rating<2 && 'active'}`}>
+          <div className="emotion disappointed"></div>
           <img src={disappointed} alt="disappointed"/>
         </li>
         <li className={`emotions__list--item  ${rating<1 && 'active'}`}>
+          <div className="emotion anger"></div>
           <img src={anger} alt="anger"/>
         </li>
       </ul>
@@ -85,7 +93,7 @@ const EventDetail = (props) => {
     <div>
       <Header />
       <main className="content event">
-        <div class="eventAddReview">
+        <div class="eventAddReview" style={{display:'none'}}>
           <div class="container" id="sucmsg" style={{display:'none'}}>
             <div class="eventAddReview__card">
               <div>
@@ -98,9 +106,9 @@ const EventDetail = (props) => {
             </div>
           </div>
         </div>
-        <div class="eventDetails p-0">
+        <div class="eventDetails">
           <div class="container">
-              <div className="eventDetails__title">{eventData.Event_Name}</div>
+              <h2 className="eventDetails__title">{eventData.Event_Name}</h2>
             <div className="eventDetails__review">
               <RatingValue readOnly={true} initialValue={eventData.Overall_Event_Rating}/>
               <div className="review">{eventData.Overall_Event_Rating}<span>23 reviews</span></div>
@@ -114,7 +122,7 @@ const EventDetail = (props) => {
         <div class="eventReserve">
           <div class="container">
             <div class="eventReserve__grid">
-              <div class="eventReserve__grid--col flex__order--2">
+              <div class="eventReserve__grid--col">
                 <div class="event__meter">
                   <h4 class="event__reserve--title">
                     Vibe-o-meter of the event
@@ -273,10 +281,24 @@ const EventDetail = (props) => {
         {/* <Trending /> */}
         <RatingSlider {...eventDetailPage.RatingSliderCardData} />
 
-        <Recommendations
+{/*        <Recommendations
           {...eventDetailPage.RecommendationData}
           showHeartIcon={true}
-        />
+        />*/}
+        <div className="recommendations event--recommendations">
+          <div className="container">
+            <h2 className="recommendations__title">Some more recommendations for you, Charlie!</h2>
+            <div className="card__grid">
+              {
+                eventDetailPage.RecommendationData.Recommendation.map((item, index)=>{
+                  return(
+                      <EventCart key={index} item={item}/>
+                  )
+                })
+              }
+            </div>
+          </div>
+        </div>
       </main>
       <Footer />
     </div>

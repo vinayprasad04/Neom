@@ -7,17 +7,17 @@ const EventCart = ({ item }) => {
       <a href="#" className="card__link">
         <div className="card__thumb">
         {heartIcon &&
-        ( <button class="card__fav"><span class="icon-heart"></span></button> 
+        ( <button class="card__fav"><span class="icon-heart"></span></button>
         )}
           <img
-            src={process.env.PUBLIC_URL + "./img/" + img}
+            src={process.env.PUBLIC_URL + "./../img/" + img}
             alt="event name"
             className="card__img"
           />
           {rank && (
             <span className="card__count">
               <img
-                src={process.env.PUBLIC_URL + "./img/" + rank}
+                src={process.env.PUBLIC_URL + "./../img/" + rank}
                 alt="Top ranking 1"
               />
             </span>
@@ -28,12 +28,12 @@ const EventCart = ({ item }) => {
             <div class="vibes">
             {vibetext &&(
               <img
-                src={process.env.PUBLIC_URL + "./img/" + vibeicon}
+                src={process.env.PUBLIC_URL + "./../img/" + vibeicon}
                 alt="Overwhelmed"
                 class="vibes__icon"
               />
             )}
-               {vibetext && 
+               {vibetext &&
                ( <span class="vibes__text">{vibetext}</span>
                )}
                 {rating && (
