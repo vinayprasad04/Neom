@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import './app.scss';
 import './assets/scss/index.css';
-import { HomePage, Dashboard, CompleteEventDetail, EditProfile, EventDetail, Feedback, Settings, Notifications, Recommendation } from './pages/index';
+import { HomePage, Dashboard, CompleteEventDetail, EditProfile, EventDetail, Feedback, Settings, Notifications, Recommendation, Myfavorites,UpcomingEvent } from './pages/index';
 
 function App() {
   return (
@@ -22,7 +22,10 @@ function App() {
           <Route path="/notifications" element={<Notifications/>} />
           <Route path="/recommendation" element={<Recommendation/>} />
           <Route path="/eventdetails" element={<EventDetail/>} />
+          <Route path="/eventdetails/:id" element={<EventDetail/>} />
           <Route path="/eventdetailcomplete" element={<CompleteEventDetail/>} />
+          <Route path="/myfavorites" element={<Myfavorites/>} />
+          <Route path="/upcomingevent" element={<UpcomingEvent/>} />
 
         </Routes>
       </BrowserRouter>

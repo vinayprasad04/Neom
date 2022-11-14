@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper";
+import {Link} from 'react-router-dom';
 import "./Slider.scss";
 
 const SliderCard = (props) => {
@@ -31,54 +32,54 @@ const SliderCard = (props) => {
             {SliderCard.map((item, index) => {
               return (
                 <SwiperSlide>
-                  <a href="#" class="recSlider__link">   
-                  <div class="slider__image--wrapper">
-                              <img
-                      src={process.env.PUBLIC_URL + "./img/" + item.img}
-                      alt="event title"
-                    />
-                            </div>                 
-                    
-                    <div class="recSlider__info" key={index}>
-                      <div class="recSlider__info__title">{item.title}</div>
-                      <div class="recSlider__info__rating">
-                        <div class="rating"></div>
-                        <div class="review">{item.rating}</div>
+                    <Link className={"recSlider__link"} to={'/eventdetailcomplete'}>
+                        <div className="slider__image--wrapper">
+                            <img
+                                src={process.env.PUBLIC_URL + "./img/" + item.img}
+                                alt="event title"
+                            />
+                        </div>
+                    <div className="recSlider__info" key={index}>
+                      <div className="recSlider__info__title">{item.title}</div>
+                      <div className="recSlider__info__rating">
+                        <div className="rating"></div>
+                        <div className="review">{item.rating}</div>
                       </div>
-                      <div class="recSlider__info__row">
-                        <div class="recSlider__info__items recSlider__info__description">
-                          {item.desc} <span class="read--more">read more</span>
+                      <div className="recSlider__info__row">
+                        <div className="recSlider__info__items recSlider__info__description">
+                          {item.desc} <span className="read--more">read more</span>
                         </div>
                       </div>
-                      <div class="recSlider__info__row">
-                        <div class="recSlider__info__items">
-                          <span class="icon icon-calendar"></span>
+                      <div className="recSlider__info__row">
+                        <div className="recSlider__info__items">
+                          <span className="icon icon-calendar"></span>
                           {item.date}
                         </div>
                       </div>
-                      <div class="recSlider__info__row">
-                        <div class="recSlider__info__items">
-                          <span class="icon icon-location"></span>
+                      <div className="recSlider__info__row">
+                        <div className="recSlider__info__items">
+                          <span className="icon icon-location"></span>
                           {item.city}
                         </div>
                       </div>
-                      <div class="recSlider__info__row">
-                        <div class="recSlider__info__items">
-                          <span class="icon icon-category"></span>
+                      <div className="recSlider__info__row">
+                        <div className="recSlider__info__items">
+                          <span className="icon icon-category"></span>
                           {item.game}
                         </div>
                       </div>
-                      <div class="recSlider__info__row recSlider__footer">
-                        <div class="recSlider__footer__item">
+                      <div className="recSlider__info__row recSlider__footer">
+                        <div className="recSlider__footer__item">
                           <span>
                             Operated by River Stone (
-                            <span class="icon-star"></span> 4.9 )
+                            <span className="icon-star"></span> 4.9 )
                           </span>
-                          <span class="status scheduled">Scheduled</span>
+                          <span className="status scheduled">Scheduled</span>
                         </div>
                       </div>
                     </div>
-                  </a>
+                    </Link>
+
                 </SwiperSlide>
               );
             })}

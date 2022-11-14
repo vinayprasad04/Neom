@@ -53,12 +53,12 @@ const Header = () =>{
                             </Link>
                         </li>
                         <li className="header__nav__item header__nav__item--mobile">
-                            <Link to={'/'} className={"header__nav__link header__nav__link--underline"}>
+                            <Link to={'/myfavorites'} className={"header__nav__link header__nav__link--underline"}>
                                 My favorites
                             </Link>
                         </li>
                         <li className="header__nav__item header__nav__item--mobile">
-                            <Link to={'/'} className={"header__nav__link header__nav__link--underline"}>
+                            <Link to={'/upcomingevent'} className={"header__nav__link header__nav__link--underline"}>
                                 Upcoming events
                             </Link>
                         </li>
@@ -88,12 +88,12 @@ const Header = () =>{
                                     </Link>
                                 </li>
                                 <li class="nav__item nav__item--mobile">
-                                    <Link to={'/'} className={"nav__link"}>
+                                    <Link to={'/myfavorites'} className={"nav__link"}>
                                         My favorites
                                     </Link>
                                 </li>
                                 <li className="nav__item nav__item--mobile">
-                                    <Link to={'/'} className={"nav__link"}>
+                                    <Link to={'/upcomingevent'} className={"nav__link"}>
                                         Upcoming events
                                     </Link>
                                 </li>

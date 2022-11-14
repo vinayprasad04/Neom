@@ -1,12 +1,14 @@
 import React from 'react';
 import EventCart from "./EventCart";
+import SectionHeader from "./SectionHeader";
 
 const Recommendations = (props) =>{
-    const {Recommendation} = props;
+    const {Recommendation, heading, desc} = props;
     return(
         <div className="recommendations">
             <div className="container">
-                <div className="recommendations__title">Some more recommendations for you, Shane!</div>
+                <SectionHeader heading={heading} desc={desc}/>
+                {/*<h2 className="recommendations__title">Some more recommendations for you, Shane!</h2>*/}
                 <div className="card__grid">
                     {
                         Recommendation.map((item, index)=>{

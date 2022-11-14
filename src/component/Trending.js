@@ -9,7 +9,7 @@ const Trending = (props) =>{
                 <div className="trending__title">{heading}</div>
                 <div className="card__grid">
                     {
-                        Treading.map((item, index)=>{
+                        Treading?.map((item, index)=>{
                             return(
                                 <EventCart key={index} item={item}/>
                                 )
