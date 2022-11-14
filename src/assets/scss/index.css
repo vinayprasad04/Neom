@@ -1413,8 +1413,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
     display: block;
   }
 }
-.header__nav__item:hover .dropdown-menu, .header__nav__item:hover .popup {
-  opacity: 1;
+.header__nav__item:hover .dropdown-menu {
+  opacity: 1; /*, .header__nav__item:hover .popup*/
   visibility: visible;
   pointer-events: unset;
   top: 99%;

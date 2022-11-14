@@ -82,6 +82,24 @@
   }
 }
 
+.popup{
+  &.active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: unset;
+    top: 99%;
+  }
+}
+.inputPhoto{
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  position: absolute;
+  opacity: 0;
+}
+.react-datepicker__tab-loop{
+  z-index: 99;
+}
 @media(max-width: 767px){
   .lightBoxOverlay{
     .cancelBox{

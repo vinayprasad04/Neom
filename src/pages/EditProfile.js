@@ -3,6 +3,9 @@ import Header from "../component/Header";
 import Footer from "../component/Footer";
 import {Link, useParams} from "react-router-dom";
 
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 import user from './../assets/img/user.svg';
 import golf from './../assets/img/golf.png';
 import music from './../assets/img/music.png';
@@ -109,6 +112,13 @@ const EditProfile = () =>{
         setActivityList(newArray);*/
     }
 
+    const [photo, setPhoto] = useState(music);
+    const [startDate, setStartDate] = useState(new Date(profileValue.dop));
+    const onChangePhoto = (e) =>{
+        setPhoto(URL.createObjectURL(e.target.files[0]));
+    }
+    console.log("vinay",startDate)
+
     return(
         <>
             <Header/>
@@ -131,9 +141,10 @@ const EditProfile = () =>{
                                             <div className="profile__image">
                                                 <div className="profile__image--abstract"></div>
                                                 <div className="profile__main--image">
-                                                    <img src={music} alt="profile"/>
+                                                    <img src={photo} alt="profile"/>
                                                 </div>
                                                 <div className="profile__image--overlay"></div>
+                                                <input className={"inputPhoto"} type="file" onChange={onChangePhoto} name="filename" accept="image/gif, image/jpeg, image/png"/>
                                                 <div className="profile__icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="27.232" height="26"
                                                          viewBox="0 0 27.232 26">
@@ -234,7 +245,8 @@ const EditProfile = () =>{
                                     </div>*/}
                                     <div className="form__group">
                                         <label className="form__label">When can we wish a happy birthday?</label>
-                                        <input type="date"  className="form__input"  value={profileValue.dop} placeholder="" onChange={(e)=>onChangeProfile(e, 'dop')} required={true}/>
+                                        <DatePicker className="form__input" selected={startDate} onChange={(date:Date) => setStartDate(date)} />
+                                      {/*  <input type="text"  className="form__input"  value={profileValue.dop} placeholder="" onChange={(e)=>onChangeProfile(e, 'dop')}/>*/}
                                     </div>
                                     <ul className="activity__list">
                                         {

@@ -60,7 +60,7 @@
       position: relative;
       &--mobile {
         display: none;
-  
+
         @media (min-width: $lg) {
           display: block;
         }
@@ -137,7 +137,7 @@
             color: $primary;
           }
         }
-      
+
         .icon-menu {
           font-size: 1rem;
           align-self: center;
@@ -243,14 +243,14 @@
     background-color: $secondary;
     padding: 2.5rem;
     box-shadow: 0px 3px 16px #00000024;
-    border-radius: 0.75rem;   
+    border-radius: 0.75rem;
     max-width: 450px;
     width: 100%;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     z-index: 99;
-    transition: all 400ms ease; 
+    transition: all 400ms ease;
 
     @media screen and (min-width: $md){
         min-width: 460px;
@@ -316,7 +316,7 @@
       &:hover{
           background-color: $primary;
           color: $white;
-          transition: all 400ms ease; 
+          transition: all 400ms ease;
       }
 
       @media screen and (max-width: $sm){
@@ -332,13 +332,13 @@
       letter-spacing: 0.4px;
       text-decoration: underline;
       text-underline-offset: 5px;
-      transition: all 400ms ease; 
+      transition: all 400ms ease;
       cursor: pointer;
-      
+
       &:hover{
         color: $white;
         text-decoration: none;
-        transition: all 400ms ease; 
+        transition: all 400ms ease;
       }
 
       @media screen and (max-width: $sm){
@@ -399,7 +399,7 @@
   &__item{
     &--mobile {
       display: block;
-  
+
       @media (min-width: $lg) {
         display: none;
       }
