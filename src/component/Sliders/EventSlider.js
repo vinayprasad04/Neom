@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper";
 import {SectionHeader} from '../index'
 import RatingValue from "../Rating";
+import {Link} from "react-router-dom";
 
 const EventSlider = (props) => {
   const { Treading, heading, slidesPerView } = props;
@@ -31,7 +32,7 @@ const EventSlider = (props) => {
                 <SwiperSlide key={index}>
                   <div className={"card__grid card__grid--dashboard"}>
                     <div className="card__item">
-                      <a href="#" className="card__link">
+                      <Link className={"card__link"} to={`/eventdetails/10004`} >
                         <div className="card__thumb">
                           <img
                               src={process.env.PUBLIC_URL + "./img/" + item.img}
@@ -62,18 +63,7 @@ const EventSlider = (props) => {
                             </div>
                           </div>
                         </div>
-                        {/*                      <div className="card__info">
-                        <div className="card__row">
-                          <div className="card__rating">
-                            <span className="icon-star"></span>
-                            {item.rating}
-                          </div>
-                          <div className="card__date">{item.date}</div>
-                        </div>
-                        <div className="card__title">{item.title}</div>
-                        <div className="card__price">{item.desc}</div>
-                      </div>*/}
-                      </a>
+                      </Link>
                     </div>
                   </div>
 

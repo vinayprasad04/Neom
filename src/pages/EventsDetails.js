@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   Header,
   Footer,
@@ -19,7 +19,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import getJson from "../utils/eventDetailData";
-import {useParams} from "react-router-dom";
+import {useParams, Link} from "react-router-dom";
 import {EventDetail as detail} from "../MockData";
 
 import Image120 from './../assets/img/Image120.jpg';
@@ -34,7 +34,6 @@ import boredom from './../assets/img/boredom.svg';
 import disappointed from './../assets/img/disappointed.svg';
 import anger from './../assets/img/anger.svg';
 import RatingValue from "../component/Rating";
-import SectionHeader from "../component/SectionHeader";
 import EventCart from "../component/EventCart";
 
 const imagesGallery = [Image120,Image118,Image122,Image121];
@@ -42,7 +41,6 @@ const eventDetailPage = getJson();
 
 
 const EmotionList = ({rating}) =>{
-      console.log("rating",rating);
   return(
       <ul className="emotions__list">
         <li className={`emotions__list--item  ${rating>4 && 'active'}`}>
@@ -73,6 +71,81 @@ const EmotionList = ({rating}) =>{
   )
 }
 
+const Cart = ({eventData}) =>{
+  const [seatValue, setSeatValue] = useState(1);
+  const [alert, setAlert] = useState(false);
+
+  const onSelectSeat = (e) =>{
+    setSeatValue(e.target.value);
+  }
+  const onCancelAlert = ()=>{
+    setAlert(false);
+  }
+  const Sucmsg = () =>{
+    setAlert(true);
+    setTimeout(()=>{
+      setAlert(false);
+    },3000)
+  }
+  return(
+      <div className="eventReserve__form">
+        <div className={`alert ${alert && "open"}`}>
+          <div className="left">
+            <h2>Success!</h2>
+            <p>your data successfully submit</p>
+          </div>
+          <svg onClick={onCancelAlert} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="122.881px" height="122.88px" viewBox="0 0 122.881 122.88" enable-background="new 0 0 122.881 122.88"><g><path d="M61.44,0c16.966,0,32.326,6.877,43.445,17.996c11.119,11.118,17.996,26.479,17.996,43.444 c0,16.967-6.877,32.326-17.996,43.444C93.766,116.003,78.406,122.88,61.44,122.88c-16.966,0-32.326-6.877-43.444-17.996 C6.877,93.766,0,78.406,0,61.439c0-16.965,6.877-32.326,17.996-43.444C29.114,6.877,44.474,0,61.44,0L61.44,0z M80.16,37.369 c1.301-1.302,3.412-1.302,4.713,0c1.301,1.301,1.301,3.411,0,4.713L65.512,61.444l19.361,19.362c1.301,1.301,1.301,3.411,0,4.713 c-1.301,1.301-3.412,1.301-4.713,0L60.798,66.157L41.436,85.52c-1.301,1.301-3.412,1.301-4.713,0c-1.301-1.302-1.301-3.412,0-4.713 l19.363-19.362L36.723,42.082c-1.301-1.302-1.301-3.412,0-4.713c1.301-1.302,3.412-1.302,4.713,0l19.363,19.362L80.16,37.369 L80.16,37.369z M100.172,22.708C90.26,12.796,76.566,6.666,61.44,6.666c-15.126,0-28.819,6.13-38.731,16.042 C12.797,32.62,6.666,46.314,6.666,61.439c0,15.126,6.131,28.82,16.042,38.732c9.912,9.911,23.605,16.042,38.731,16.042 c15.126,0,28.82-6.131,38.732-16.042c9.912-9.912,16.043-23.606,16.043-38.732C116.215,46.314,110.084,32.62,100.172,22.708 L100.172,22.708z"></path></g></svg>
+        </div>
+        <form>
+          <div className="eventReserve__form--title">
+            AED 1800 <span>per person</span>
+          </div>
+          <div className="eventReserve__form--date"></div>
+          <div className="form__flex--row">
+            <div className="s-form-floating">
+              <input type="text" className="s-form-control" id="floatingFromInput" value={eventData.Event_Start_Date} readOnly/>
+              <label htmlFor="floatingFromInput">From</label>
+            </div>
+            <div className="s-form-floating">
+              <input type="text" className="s-form-control" id="floatingToInput" value={eventData.Event_End_Date} readOnly/>
+              <label htmlFor="floatingToInput">To</label>
+            </div>
+          </div>
+          <div className="s-form-floating">
+            <select className="s-form-select" id="floatingSelectGrid" aria-label="Floating label select example" onChange={onSelectSeat}>
+              <option value="1">1 adult</option>
+              <option value="2">2 adult</option>
+              <option value="3">3 adult</option>
+              <option value="4">4 adult</option>
+            </select>
+            <label htmlFor="floatingSelectGrid">Guests</label>
+          </div>
+          <div className="eventReserve__form--seats">
+            {eventData.Seat_Booking_Availability} Seats still available
+          </div>
+          <div className="btn btn__black" onClick={Sucmsg}>Reserve my seats</div>
+          <ul className="guests__list">
+            <li className="guests__list--item">
+              <div className="guests">1800 x {seatValue} adult</div>
+              <div className="price">{1800*seatValue}</div>
+            </li>
+            <li className="guests__list--item">
+              <div className="guests">600 x 0 children</div>
+              <div className="price">0</div>
+            </li>
+          </ul>
+          <div className="total">
+            <div className="total__title">Total</div>
+            <div className="total__price">AED {1800*seatValue}</div>
+          </div>
+        </form>
+        <Link className="eventReserve__form--help">
+          Need help?
+        </Link>
+
+      </div>
+  )
+}
 
 const EventDetail = (props) => {
   const {id} = useParams();
@@ -85,27 +158,11 @@ const EventDetail = (props) => {
     lang: "en",
     unit: "metric",
   });
-  const Sucmsg = () =>{
-    let el = document.getElementById('sucmsg')
-    el.style= 'display:block'
-  }
+
   return (
     <div>
       <Header />
       <main className="content event">
-        <div class="eventAddReview" style={{display:'none'}}>
-          <div class="container" id="sucmsg" style={{display:'none'}}>
-            <div class="eventAddReview__card">
-              <div>
-                <h2 class="eventAddReview__card--title">Congratulations</h2>
-                <p class="eventAddReview__card--subtitle">
-                  Message goes her We are sure that you have enjoyed this event
-                  a lot. Would you like to share your feedback with us.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="eventDetails">
           <div class="container">
               <h2 className="eventDetails__title">{eventData.Event_Name}</h2>
@@ -118,7 +175,6 @@ const EventDetail = (props) => {
             <GallaryItems imagesGallery={imagesGallery} status={eventData.Event_Status} />
           </div>
         </div>
-
         <div class="eventReserve">
           <div class="container">
             <div class="eventReserve__grid">
@@ -209,71 +265,7 @@ const EventDetail = (props) => {
                 </div>
               </div>
               <div className="eventReserve__grid--col flex__order--1">
-                <div className="eventReserve__form">
-                  <form>
-                    <div className="eventReserve__form--title">
-                      AED 1800 <span>per person</span>
-                    </div>
-                    <div className="eventReserve__form--date"></div>
-                    <div className="form__flex--row">
-                      <div className="s-form-floating">
-                        <input
-                          type="text"
-                          className="s-form-control"
-                          id="floatingFromInput"
-                          value={eventData.Event_Start_Date}
-                          readonly
-                        />
-                        <label for="floatingFromInput">From</label>
-                      </div>
-                      <div className="s-form-floating">
-                        <input
-                          type="text"
-                          className="s-form-control"
-                          id="floatingToInput"
-                          value={eventData.Event_End_Date}
-                          readonly
-                        />
-                        <label for="floatingToInput">To</label>
-                      </div>
-                    </div>
-                    <div className="s-form-floating">
-                      <select
-                          className="s-form-select"
-                        id="floatingSelectGrid"
-                        aria-label="Floating label select example"
-                      >
-                        <option value="0">1 adult</option>
-                        <option value="1">2 adult</option>
-                        <option value="2">3 adult</option>
-                        <option value="3">4 adult</option>
-                      </select>
-                      <label for="floatingSelectGrid">Guests</label>
-                    </div>
-                    <div className="eventReserve__form--seats">
-                      {eventData.Seat_Booking_Availability} Seats still available
-                    </div>
-                    <button className="btn btn__black" onClick={Sucmsg}>Reserve my seats</button>
-                    <ul className="guests__list">
-                      <li className="guests__list--item">
-                        <div className="guests">1800 x 1 adult</div>
-                        <div className="price">1800</div>
-                      </li>
-                      <li className="guests__list--item">
-                        <div className="guests">600 x 0 children</div>
-                        <div className="price">0</div>
-                      </li>
-                    </ul>
-                    <div className="total">
-                      <div className="total__title">Total</div>
-                      <div className="total__price">AED 1800</div>
-                    </div>
-                  </form>
-
-                  <a href="#" className="eventReserve__form--help">
-                    Need help?
-                  </a>
-                </div>
+                <Cart eventData={eventData}/>
               </div>
             </div>
           </div>
