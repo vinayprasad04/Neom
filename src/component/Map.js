@@ -11,7 +11,7 @@ const Map = () =>{
                     </div>
                 </div>
             </div>
-            <div className="about">
+{/*            <div className="about">
                 <div className="container">
                     <div className="about__title">About Unified Guests</div>
                     <div className="about__txt">
@@ -24,7 +24,7 @@ const Map = () =>{
                             gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                     </div>
                 </div>
-            </div>
+            </div>*/}
         </>
     )
 }

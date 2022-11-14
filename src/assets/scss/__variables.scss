@@ -206,7 +206,7 @@ $columns: 12; // Max number of columns
   &__white{
     background-color: $white;
     border-radius: 8px;
-    padding: 14px 25px;
+    padding: 1rem 25px;
     color: $secondary;
     font-size: 1rem;
     font-weight: 400;
@@ -232,7 +232,7 @@ $columns: 12; // Max number of columns
   &__transparent{
     background-color: transparent;
     color: $secondary;
-    padding: 14px 25px;
+    padding: 1rem 25px;
     border: 1px solid $secondary;
     border-radius: 6px;
     cursor: pointer;
@@ -256,7 +256,7 @@ $columns: 12; // Max number of columns
   &__red{
     background-color: $primary;
     border-radius: 6px;
-    padding: 18px 40px;
+    padding: 1.2rem 40px;
     color: $white;
     font-size: 1rem;
     font-weight: 300;

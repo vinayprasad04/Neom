@@ -2,17 +2,17 @@ import React from 'react';
 import { Navigation, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import RatingValue from './Rating';
+import overwhelmed from './../assets/img/overwhelmed.svg';
 
 const NextEventBanner = ()=>{
     return(
         <div className="recSlider" style={{margin:"0px 0px 0px 84px"}}>
-            <div className="recSlider__title">Good morning Shane!</div>
-            <div className="recSlider__subtitle">We have tailored a collection of some exiting activities for you today.</div>
-            <div className="swiper tailored">
-                <div className="swiper-wrapper">
+            <h2 className="trending__title">Charlie, we have find some recommendation for you</h2>
+            <div className="swiper tailored arrow_pos">
+                <div className="">
                     <Swiper
                         modules={[Navigation, Autoplay]}
-                        spaceBetween={50}
+                        spaceBetween={30}
                         slidesPerView={1.2}
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
@@ -20,15 +20,23 @@ const NextEventBanner = ()=>{
                     >
                         <SwiperSlide>
                             <a href="#" className="recSlider__link">
-                                <img src={process.env.PUBLIC_URL + "./img/trending1.jpg"} alt="event title" />
+                                <img src={process.env.PUBLIC_URL + "./img/Event-Banner.png"} alt="event title" />
                                 <div className="recSlider__info">
                                     <div className="recSlider__info__title">Explore the deep sea</div>
                                     <div className="recSlider__info__date">From Nov 10 to 29, 2022</div>
                                     <div className="recSlider__info__row">
                                         <div className="recSlider__info__price">AED 1800 <span>per person</span></div>
-                                        <div className="recSlider__info__rating">
+{/*                                        <div className="recSlider__info__rating">
                                             <RatingValue readOnly={true} initialValue={5}/>
-                                            <div className="review">5.0  (123 reviews)</div></div>
+                                            <div className="review">5.0  (123 reviews)</div></div>*/}
+                                            <div className="recSlider__info__rating">
+                                                <div className="vibes">
+                                                    <img src={overwhelmed} alt="Overwhelmed"
+                                                         className="vibes__icon"/>
+                                                    <span className="vibes__text">Overwhelmed</span>
+                                                </div>
+                                            </div>
+
                                     </div>
                                 </div>
                             </a>
@@ -42,7 +50,11 @@ const NextEventBanner = ()=>{
                                     <div className="recSlider__info__row">
                                         <div className="recSlider__info__price">AED 1800 <span>per person</span></div>
                                         <div className="recSlider__info__rating">
-                                            <RatingValue readOnly={true} initialValue={5}/>                                            <div className="review">5.0 (123 reviews)</div>
+                                            <div className="vibes">
+                                                <img src={overwhelmed} alt="Overwhelmed"
+                                                     className="vibes__icon"/>
+                                                <span className="vibes__text">Overwhelmed</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -57,8 +69,11 @@ const NextEventBanner = ()=>{
                                     <div className="recSlider__info__row">
                                         <div className="recSlider__info__price">AED 1800 <span>per person</span></div>
                                         <div className="recSlider__info__rating">
-                                            <RatingValue readOnly={true} initialValue={5}/>
-                                            <div className="review">5.0 (123 reviews)</div>
+                                            <div className="vibes">
+                                                <img src={overwhelmed} alt="Overwhelmed"
+                                                     className="vibes__icon"/>
+                                                <span className="vibes__text">Overwhelmed</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -73,8 +88,11 @@ const NextEventBanner = ()=>{
                                     <div className="recSlider__info__row">
                                         <div className="recSlider__info__price">AED 1800 <span>per person</span></div>
                                         <div className="recSlider__info__rating">
-                                            <RatingValue readOnly={true} initialValue={5}/>
-                                            <div className="review">5.0 (123 reviews)</div>
+                                            <div className="vibes">
+                                                <img src={overwhelmed} alt="Overwhelmed"
+                                                     className="vibes__icon"/>
+                                                <span className="vibes__text">Overwhelmed</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

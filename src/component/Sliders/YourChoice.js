@@ -7,7 +7,7 @@ import "./Slider.scss";
 const YourChoice = (props) => {
   const {heading, SliderCard} = props;
   return (
-    <div class="recSlider recSlider--cardView recSlider--cardView-fullWidth">
+    <div class="recSlider recSlider--cardView recSlider--cardView-fullWidth" style={{margin: "0px 0px 0px 84px"}}>
        {(heading) && (
           <SectionHeader heading={heading} />
       )}
@@ -27,14 +27,14 @@ const YourChoice = (props) => {
             {SliderCard.map((item, index) => {
               return (
                 <SwiperSlide>
-                  <a href="#" class="recSlider__link">   
+                  <a href="#" class="recSlider__link">
                   <div class="slider__image--wrapper">
                               <img
                       src={process.env.PUBLIC_URL + "./img/" + item.img}
                       alt="event title"
                     />
-                            </div>                 
-                    
+                            </div>
+
                     <div class="recSlider__info" key={index}>
                     <h3 class="recSlider__info__title">{item.title}</h3>
                                 <div class="recSlider__info__row">

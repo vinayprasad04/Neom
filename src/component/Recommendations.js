@@ -18,9 +18,9 @@ const Recommendations = (props) =>{
                         })
                     }
                 </div>
-                <div className="recommendations__more">
+               {/* <div className="recommendations__more">
                     <button className="btn btn__black">Load more</button>
-                </div>
+                </div>*/}
             </div>
         </div>
     )

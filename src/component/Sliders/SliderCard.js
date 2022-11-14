@@ -5,13 +5,13 @@ import {Link} from 'react-router-dom';
 import "./Slider.scss";
 import banner from './../../assets/img/spa_0.png';
 import abstract from './../../assets/img/abstract.jpg';
+import overwhelmed from './../../assets/img/overwhelmed.svg';
 import RatingValue from "../Rating";
 
 const SliderCard = ({EventDetail}) => {
-    console.log("EventDetail",EventDetail);
   //const {heading, SliderCard} = props;
   return (
-    <div class="recSlider recSlider--cardView">
+    <div class="recSlider recSlider--cardView" style={{margin: "0px 0px 0px 84px"}}>
       <h2 class="recSlider__title">Good morning Shane</h2>
       <div class="recSlider__subtitle">
         <p>
@@ -56,7 +56,7 @@ const SliderCard = ({EventDetail}) => {
                             </div>
                         </div>
                     <div className="recSlider__info" key={index}>
-                      <div className="recSlider__info__title">{item.Event_Name}</div>
+                      <h3 className="recSlider__info__title">{item.Event_Name}</h3>
                       <div className="recSlider__info__rating">
                           <RatingValue readOnly={true} initialValue={item.Overall_Event_Rating}/>
                               <div className="review">{item.Overall_Event_Rating}</div>
@@ -69,7 +69,7 @@ const SliderCard = ({EventDetail}) => {
                       <div className="recSlider__info__row">
                         <div className="recSlider__info__items">
                           <span className="icon icon-calendar"></span>
-                          {item.Event_Start_Date}
+                          {item.Event_Start_Date}, {item.Event_Start_Time} -  {item.Event_End_Date}, {item.Event_End_Time}
                         </div>
                       </div>
                       <div className="recSlider__info__row">
@@ -86,10 +86,10 @@ const SliderCard = ({EventDetail}) => {
                       </div>
                       <div className="recSlider__info__row recSlider__footer">
                         <div className="recSlider__footer__item">
-                          <span>
-                            Operated by {item.Operator_Name} (
-                            <span className="icon-star"></span> {item.Operator_Rating} )
-                          </span>
+                            <div className="vibes">
+                                <img src={overwhelmed} alt="Overwhelmed" className="vibes__icon"/>
+                                    <span className="vibes__text">Overwhelmed </span>
+                            </div>
                           <span className="status scheduled">{item.Event_Status}</span>
                         </div>
                       </div>

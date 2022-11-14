@@ -20,6 +20,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import getJson from "../utils/eventDetailData";
+import NextEventBanner from "../component/NextEventBanner";
 const eventDetailPage = getJson();
 
 const Myfavorites = (props) => {
@@ -36,12 +37,13 @@ const Myfavorites = (props) => {
     }
     return (
         <div>
-            <Header />
+            <Header active={"myfavorites"} />
             <main className="content favorites">
                 <Recommendations
                     {...eventDetailPage.RecommendationData}
                     showHeartIcon={true}
                 />
+                <NextEventBanner/>
                 <Trending {...eventDetailPage.RecommendationData} />
             </main>
             <Footer />

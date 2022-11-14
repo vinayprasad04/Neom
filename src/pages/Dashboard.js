@@ -30,8 +30,8 @@ const Dashboard = (props) => {
   });
   return (
     <div>
-      <Header />
-      <main className="content home">
+      <Header active={"dashboard"} />
+      <main className="content">
         {/* <SimpleMap /> */}
       <useOpenWeather
       isLoading={isLoading}

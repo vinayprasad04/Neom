@@ -4,7 +4,7 @@
     &__grid{
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
+      gap: 2rem 1.25rem;
     }
     &__link{
       text-decoration: none;
@@ -53,8 +53,12 @@
       background-color: transparent;
       font-size: 1.2rem;
       padding: 0;
+      transition: color 300ms ease;
       z-index: 1;
       cursor: pointer;
+      &:hover{
+        color: $primary;
+      }
     }
     &__remove{
         position: absolute;
@@ -94,13 +98,13 @@
     }
     &__title {
       @extend .nowrap;
-      font-size: 1.125rem;
-      font-weight: 400;
+      font-size: 1.2rem;
+      font-weight: 600;
       line-height: 1.8;
-      margin-top: 8px;
+      margin-top: 1rem;
     }
     &__price{
-        @include font('Brown', 0.875rem, 400, 20px);
+        @include font('BrownLight', 1rem, 400, 20px);
     }
     &__row {
       display: flex;
@@ -125,11 +129,22 @@
             transition: all $easeTime ease;
         }
       }
+
+      &__txt{
+        padding-right: 0.5rem;
+
+        &--link{
+          font-family: "BrownMedium";
+          text-decoration: underline;
+          &:hover{
+            color: $primary;
+          }
+        }
+      }
     }
 
     &__date{
-        @include font('Brown', 0.875rem, 400, 1);
-        opacity: 0.7;
+        @include font('BrownLight', 1rem, 400, 1);
     }
 }
 
@@ -137,19 +152,13 @@
     .card__info{
         margin-top: 0;
         .card__title{
-            margin-top: 0;
             margin-bottom: 6px;
         }
-        .card__price{
-            font-size: 0.875rem;
-        }
         .card__date{
-            font-size: 0.875rem;
-            opacity: 0.7;
-            margin: 4px 0 10px 0;
+            margin: 0.5rem 0 10px 0;
         }
         .card__rating{
-            @include font('Brown', 0.875rem, 400, 1);
+            @include font('BrownLight', 1rem, 400, 1);
         }
     }
 }
