@@ -107,7 +107,7 @@ const EventDetail = (props) => {
               <div className="location">{eventData.Event_Location}</div>
             </div>
 
-            <GallaryItems imagesGallery={imagesGallery} />
+            <GallaryItems imagesGallery={imagesGallery} status={eventData.Event_Status} />
           </div>
         </div>
 

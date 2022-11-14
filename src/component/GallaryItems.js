@@ -1,12 +1,13 @@
 import React from "react";
 import Image119 from './../assets/img/Image119.jpg';
+import LightBoxSlider from "./LightBoxSlider";
+
 const GallaryItems = (props) =>{
-    const { imagesGallery } = props;
+    const { imagesGallery ,status } = props;
     return(
     <div class="eventDetails__grid">
               <div class="eventDetails__grid--col grid__box">
                 {imagesGallery.map((item, index) => {
-                  console.log(item, "gallery item")
                   return (
                     <div class="grid__box--sm" key={index}>
                       <img
@@ -25,8 +26,8 @@ const GallaryItems = (props) =>{
                   class="grid__image border__rounded--topRight border__rounded--bottomRight"
                 />
               </div>
-              <div class="status scheduled">Scheduled</div>
-              <button class="btn__white">Show all</button>
+              <div class={`status ${(status=="Over") ?"completed":(status=="cancelled")?"cancelled":"scheduled"}`}>{status}</div>
+              <LightBoxSlider imagesGallery={imagesGallery}/>
             </div>
     )
 }
