@@ -16,7 +16,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import getJson from "../utils/dashboardData";
+import {EventDetail} from './../MockData';
 const dashboardPage = getJson();
+
 
 const Dashboard = (props) => {
   const { data, isLoading, errorMessage } = useOpenWeather({
@@ -26,7 +28,6 @@ const Dashboard = (props) => {
     lang: 'en',
     unit: 'metric',
   });
-  console.log(data, "data is callllled")
   return (
     <div>
       <Header />
@@ -41,7 +42,7 @@ const Dashboard = (props) => {
       unitsLabels={{ temperature: 'C', windSpeed: 'Km/h' }}
       showForecast
     />
-        <SliderCard {...dashboardPage.SliderCardData}/>
+        <SliderCard EventDetail={EventDetail}/>
         <YourChoice {...dashboardPage.YourChoice}/>
         <Trending {...dashboardPage.RecommendationsCard} />
         <EventSlider {...dashboardPage.AttendEventCard}/>
@@ -49,7 +50,7 @@ const Dashboard = (props) => {
       </main>
       <Footer />
     </div>
-    
+
   );
 };
 

@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   Header,
   Footer,
@@ -20,9 +19,57 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import getJson from "../utils/eventDetailData";
+import {useParams} from "react-router-dom";
+import {EventDetail as detail} from "../MockData";
+
+import Image120 from './../assets/img/Image120.jpg';
+import Image118 from './../assets/img/Image118.jpg';
+import Image122 from './../assets/img/Image122.jpg';
+import Image121 from './../assets/img/Image121.jpg';
+
+import overwhelmed from './../assets/img/overwhelmed.svg';
+import joy from './../assets/img/joy.svg';
+import appreciation from './../assets/img/appreciation.svg';
+import boredom from './../assets/img/boredom.svg';
+import disappointed from './../assets/img/disappointed.svg';
+import anger from './../assets/img/anger.svg';
+import RatingValue from "../component/Rating";
+
+const imagesGallery = [Image120,Image118,Image122,Image121];
 const eventDetailPage = getJson();
 
+
+const EmotionList = ({rating}) =>{
+      console.log("rating",rating);
+  return(
+      <ul className="emotions__list">
+        <li className={`emotions__list--item  ${rating>4 && 'active'}`}>
+          <img src={overwhelmed} alt="overwhelmed"/>
+        </li>
+        <li className={`emotions__list--item  ${rating<4 && 'active'}`}>
+          <img src={joy} alt="joy"/>
+        </li>
+        <li className={`emotions__list--item  ${rating<3.5 && 'active'}`}>
+          <img src={appreciation} alt="appreciation"/>
+        </li>
+        <li className={`emotions__list--item  ${rating<3 && 'active'}`}>
+          <img src={boredom} alt="boredom"/>
+        </li>
+        <li className={`emotions__list--item  ${rating<2 && 'active'}`}>
+          <img src={disappointed} alt="disappointed"/>
+        </li>
+        <li className={`emotions__list--item  ${rating<1 && 'active'}`}>
+          <img src={anger} alt="anger"/>
+        </li>
+      </ul>
+  )
+}
+
+
 const EventDetail = (props) => {
+  const {id} = useParams();
+
+  const eventData = detail.find((event) => JSON.stringify(event.Event_ID) === id);
   const { data, isLoading, errorMessage } = useOpenWeather({
     key: "edb174adcaf962338a5b74bbb3498eb1",
     lat: "48.137154",
@@ -30,10 +77,10 @@ const EventDetail = (props) => {
     lang: "en",
     unit: "metric",
   });
-const Sucmsg = () =>{
-  let el = document.getElementById('sucmsg')
-  el.style= 'display:block'
-}
+  const Sucmsg = () =>{
+    let el = document.getElementById('sucmsg')
+    el.style= 'display:block'
+  }
   return (
     <div>
       <Header />
@@ -53,16 +100,14 @@ const Sucmsg = () =>{
         </div>
         <div class="eventDetails p-0">
           <div class="container">
-            <div class="eventDetails__title">Men's Golf League</div>
-
-            <div class="eventDetails__review">
-              <div class="rating"></div>
-              <div class="review">
-                5.0 <span>23 reviews</span>
-              </div>
-              <div class="location">Sindalah City, Dubai</div>
+              <div className="eventDetails__title">{eventData.Event_Name}</div>
+            <div className="eventDetails__review">
+              <RatingValue readOnly={true} initialValue={eventData.Overall_Event_Rating}/>
+              <div className="review">{eventData.Overall_Event_Rating}<span>23 reviews</span></div>
+              <div className="location">{eventData.Event_Location}</div>
             </div>
-            <GallaryItems {...eventDetailPage.PhotoGallaryData} />
+
+            <GallaryItems imagesGallery={imagesGallery} />
           </div>
         </div>
 
@@ -74,62 +119,7 @@ const Sucmsg = () =>{
                   <h4 class="event__reserve--title">
                     Vibe-o-meter of the event
                   </h4>
-                  <ul class="emotions__list">
-                    <li class="emotions__list--item active">
-                      <div class="emotion overwhelmed"></div>
-                      <img
-                        src={process.env.PUBLIC_URL + "./img/overwhelmed.svg"}
-                        alt=""
-                        width="52"
-                        height="52px"
-                      />
-                    </li>
-                    <li class="emotions__list--item">
-                      <div class="emotion joy"></div>
-                      <img
-                        src={process.env.PUBLIC_URL + "./img/joy.svg"}
-                        alt=""
-                        width="52"
-                        height="52px"
-                      />
-                    </li>
-                    <li class="emotions__list--item">
-                      <div class="emotion appreciation"></div>
-                      <img
-                        src={process.env.PUBLIC_URL + "./img/appreciation.svg"}
-                        alt=""
-                        width="52"
-                        height="52px"
-                      />
-                    </li>
-                    <li class="emotions__list--item">
-                      <div class="emotion boredom"></div>
-                      <img
-                        src={process.env.PUBLIC_URL + "./img/boredom.svg"}
-                        alt=""
-                        width="52"
-                        height="52px"
-                      />
-                    </li>
-                    <li class="emotions__list--item">
-                      <div class="emotion disappointed"></div>
-                      <img
-                        src={process.env.PUBLIC_URL + "./img/disappointed.svg"}
-                        alt=""
-                        width="52"
-                        height="52px"
-                      />
-                    </li>
-                    <li class="emotions__list--item">
-                      <div class="emotion anger"></div>
-                      <img
-                        src={process.env.PUBLIC_URL + "./img/anger.svg"}
-                        alt=""
-                        width="52"
-                        height="52px"
-                      />
-                    </li>
-                  </ul>
+                  <EmotionList rating={eventData.Overall_Event_Rating}/>
                 </div>
                 <div class="event__description">
                   <h4 class="event__reserve--title">About the event</h4>
@@ -157,8 +147,8 @@ const Sucmsg = () =>{
                     <li class="event__description--list-item">
                       <div class="icon">
                         <img
-                          src={process.env.PUBLIC_URL + "./img/overwhelmed.svg"}
-                          alt=""
+                          src={overwhelmed}
+                          alt="overwhelmed"
                         />
                       </div>
                       <div class="description-details">
@@ -192,10 +182,10 @@ const Sucmsg = () =>{
                   </div>
                 </div>
                 <div class="event__review">
-                  <h4 class="event__reserve--title">Operated by River Stone</h4>
+                  <h4 class="event__reserve--title">Operated by {eventData.Operator_Name}</h4>
                   <div class="event__review--row">
-                    <div class="rating"></div>
-                    <div class="review">4.9</div>
+                    <div class="rating"><RatingValue readOnly={true} initialValue={eventData.Operator_Rating}/></div>
+                    <div class="review">{eventData.Operator_Rating}</div>
                   </div>
                   <div class="event__description--content">
                     <p>
@@ -210,34 +200,38 @@ const Sucmsg = () =>{
                   </div>
                 </div>
               </div>
-              <div class="eventReserve__grid--col flex__order--1">
-                <div class="eventReserve__form">
+              <div className="eventReserve__grid--col flex__order--1">
+                <div className="eventReserve__form">
                   <form>
-                    <div class="eventReserve__form--title">
+                    <div className="eventReserve__form--title">
                       AED 1800 <span>per person</span>
                     </div>
-                    <div class="eventReserve__form--date"></div>
-                    <div class="form__flex--row">
-                      <div class="s-form-floating">
+                    <div className="eventReserve__form--date"></div>
+                    <div className="form__flex--row">
+                      <div className="s-form-floating">
                         <input
                           type="text"
-                          class="s-form-control"
+                          className="s-form-control"
                           id="floatingFromInput"
+                          value={eventData.Event_Start_Date}
+                          readonly
                         />
                         <label for="floatingFromInput">From</label>
                       </div>
-                      <div class="s-form-floating">
+                      <div className="s-form-floating">
                         <input
                           type="text"
-                          class="s-form-control"
+                          className="s-form-control"
                           id="floatingToInput"
+                          value={eventData.Event_End_Date}
+                          readonly
                         />
                         <label for="floatingToInput">To</label>
                       </div>
                     </div>
-                    <div class="s-form-floating">
+                    <div className="s-form-floating">
                       <select
-                        class="s-form-select"
+                          className="s-form-select"
                         id="floatingSelectGrid"
                         aria-label="Floating label select example"
                       >
@@ -248,27 +242,27 @@ const Sucmsg = () =>{
                       </select>
                       <label for="floatingSelectGrid">Guests</label>
                     </div>
-                    <div class="eventReserve__form--seats">
-                      172 Seats still available
+                    <div className="eventReserve__form--seats">
+                      {eventData.Seat_Booking_Availability} Seats still available
                     </div>
-                    <button class="btn btn__black" onClick={Sucmsg}>Reserve my seats</button>
-                    <ul class="guests__list">
-                      <li class="guests__list--item">
-                        <div class="guests">1800 x 1 adult</div>
-                        <div class="price">1800</div>
+                    <button className="btn btn__black" onClick={Sucmsg}>Reserve my seats</button>
+                    <ul className="guests__list">
+                      <li className="guests__list--item">
+                        <div className="guests">1800 x 1 adult</div>
+                        <div className="price">1800</div>
                       </li>
-                      <li class="guests__list--item">
-                        <div class="guests">600 x 0 children</div>
-                        <div class="price">0</div>
+                      <li className="guests__list--item">
+                        <div className="guests">600 x 0 children</div>
+                        <div className="price">0</div>
                       </li>
                     </ul>
-                    <div class="total">
-                      <div class="total__title">Total</div>
-                      <div class="total__price">AED 1800</div>
+                    <div className="total">
+                      <div className="total__title">Total</div>
+                      <div className="total__price">AED 1800</div>
                     </div>
                   </form>
 
-                  <a href="#" class="eventReserve__form--help">
+                  <a href="#" className="eventReserve__form--help">
                     Need help?
                   </a>
                 </div>

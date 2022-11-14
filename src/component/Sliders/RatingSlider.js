@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper";
+import trending1 from './../../assets/img/trending1.jpg';
 import "./Slider.scss";
 
 const RatingSliderCard = (props) => {
@@ -23,18 +24,15 @@ const RatingSliderCard = (props) => {
             {SliderCard.map((item, index) => {
               return (
                 <SwiperSlide>
-                  <a href="#" class="recSlider__link">   
+                  <a href="#" class="recSlider__link">
                   <div class="recSlider__profile">
-                  <img
-                      src={process.env.PUBLIC_URL + "./img/" + item.img}
-                      alt="event title"
-                    />
+                  <img src={trending1} alt="event title"/>
                 <div class="recSlider__profile--info">
                     <h4>{item.title}</h4>
                     <span>{item.date}</span>
                 </div>
               </div>
-                  
+
                     <div class="recSlider__info">
                     <div class="recSlider__info__description">{item.desc}</div>
                 <div class="recSlider__info__row">
