@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
     Header,
     Footer,
 } from "../component/index.js";
 import {Profile} from "../MockData";
 const Settings = () =>{
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
     return(
         <>
             <Header/>

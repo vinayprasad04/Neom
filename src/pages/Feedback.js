@@ -41,7 +41,9 @@ const Feedback = () =>{
 
 /*const customerName = localStorage.getItem('User');
 const Name = JSON.parse(customerName);*/
-
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
     return(
             <div>
                 <Header/>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Header, Footer,} from "../component/index.js";
 import {Profile} from "../MockData";
 import {Link} from "react-router-dom";
@@ -15,6 +15,9 @@ const Notifications = () =>{
         let el = document.getElementById('modal')
         el.style = 'display:none';
     }
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
     return(
         <>
             <AddAReview closeModal={closeModal} vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>

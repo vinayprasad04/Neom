@@ -117,6 +117,9 @@ const EditProfile = () =>{
     const onChangePhoto = (e) =>{
         setPhoto(URL.createObjectURL(e.target.files[0]));
     }
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
     return(
         <>
             <Header/>

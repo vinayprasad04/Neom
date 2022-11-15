@@ -54,10 +54,9 @@ const Dashboard = (props) => {
         window.addEventListener('resize', setRecSlider)
     });
     useEffect(() => {
+        window.scrollTo(0, 0);
         setRecSlider()
     },[])
-
-
   return (
     <div>
       <Header active={"dashboard"} />

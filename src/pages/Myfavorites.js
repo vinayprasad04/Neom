@@ -58,6 +58,7 @@ const Myfavorites = (props) => {
         window.addEventListener('resize', setRecSlider)
     });
     useEffect(() => {
+        window.scrollTo(0, 0);
         setRecSlider()
     },[])
     return (
