@@ -1,10 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Header, Footer,} from "../component/index.js";
 import {Profile} from "../MockData";
+import {Link} from "react-router-dom";
+import AddAReview from "../component/AddAReview";
+import AddVivoMeaterReview from "../component/AddVivoMeaterReview";
 
 const Notifications = () =>{
+    const [vivoMeaterModal, setVivoMeaterModal] = useState(false);
+    function openModal() {
+        let el = document.getElementById('modal')
+        el.style = 'display:block'
+    }
+    function closeModal() {
+        let el = document.getElementById('modal')
+        el.style = 'display:none';
+    }
     return(
         <>
+            <AddAReview closeModal={closeModal} vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>
+            {vivoMeaterModal && <AddVivoMeaterReview vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>}
             <Header/>
             <main className="content">
                 <div className="notification">
@@ -53,7 +67,7 @@ const Notifications = () =>{
                                                     <div className="details">Nov 10-29</div>
                                                 </div>
                                             </div>
-                                            <button className="btn__transparent">View event</button>
+                                            <Link to={`/eventdetails/10005`} className="btn__transparent">View event</Link>
                                         </li>
                                         <li className="notification__list--item">
                                             <div className="notification__info">
@@ -70,7 +84,7 @@ const Notifications = () =>{
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button className="btn__transparent">Add a review</button>
+                                            <button className="btn__transparent" onClick={openModal}>Add a review</button>
                                         </li>
                                         <li className="notification__list--item">
                                             <div className="notification__info">
@@ -85,13 +99,12 @@ const Notifications = () =>{
                                                     <div className="details">Nov 10-29</div>
                                                 </div>
                                             </div>
-                                            <button className="btn__transparent">Go to home page</button>
+                                            <Link to={`/`} className="btn__transparent">Go to Dashboard</Link>
                                         </li>
                                         <li className="notification__list--item">
                                             <div className="notification__info">
                                                 <div className="image--wrapper">
-                                                    <img src={process.env.PUBLIC_URL + './img/Image118.jpg'} alt="" width="100px"
-                                                         height="100px"/>
+                                                    <img src={process.env.PUBLIC_URL + './img/Image118.jpg'} alt="" width="100px" height="100px"/>
                                                 </div>
                                                 <div className="content--wrapper">
                                                     <div className="title">CongratulationsCharlie!</div>
@@ -102,7 +115,7 @@ const Notifications = () =>{
                                                     </div>
                                                 </div>
                                             </div>
-                                            <button className="btn__transparent">Add a review</button>
+                                            <button className="btn__transparent" onClick={openModal}>Add a review</button>
                                         </li>
                                     </ul>
                                     <button className="btn btn__black">Load more</button>

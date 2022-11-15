@@ -22,6 +22,20 @@ const YourChoice = (props) => {
           autoplay={{
             delay: 112500,
           }}
+          breakpoints={{
+              1024: {
+                  slidesPerView: 2.4,
+                  spaceBetween: 20,
+              },
+              768: {
+                  slidesPerView: 2.1,
+                  spaceBetween: 20,
+              },
+              300: {
+                  slidesPerView:1,
+                  spaceBetween: 10,
+              },
+          }}
         >
           <div className="swiper-wrapper">
             {SliderCard.map((item, index) => {

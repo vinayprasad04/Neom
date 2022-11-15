@@ -13,7 +13,7 @@ const SliderCard = ({EventDetail}) => {
   //const {heading, SliderCard} = props;
     const userName = Profile[0].Customer_Name;
   return (
-    <div className="recSlider recSlider--cardView" style={{margin: "0px 0px 0px 84px"}}>
+    <div className="recSlider recSlider--cardView" id={"newId"}>
       <h2 className="recSlider__title">Good morning {userName}!</h2>
       <div className="recSlider__subtitle">
         <p>
@@ -32,6 +32,21 @@ const SliderCard = ({EventDetail}) => {
           navigation
           autoplay={{
             delay: 112500,
+          }}
+          breakpoints={{
+              1024: {
+                  slidesPerView: 2.4,
+                  spaceBetween: 20,
+              },
+              768: {
+                  slidesPerView: 2.1,
+                  spaceBetween: 20,
+              },
+              300: {
+                  slidesPerView:1,
+                  spaceBetween: 10,
+              },
+
           }}
         >
           <div className="swiper-wrapper">
@@ -92,7 +107,7 @@ const SliderCard = ({EventDetail}) => {
                                 <img src={overwhelmed} alt="Overwhelmed" className="vibes__icon"/>
                                     <span className="vibes__text">Overwhelmed </span>
                             </div>
-                          <span className="status scheduled">{item.Event_Status}</span>
+                          <span className={`status ${(item.Event_Status=="Over"||item.Event_Status=="Completed") ?"completed":(item.Event_Status=="cancelled")?"cancelled":"scheduled"}`}>{item.Event_Status}</span>
                         </div>
                       </div>
                     </div>

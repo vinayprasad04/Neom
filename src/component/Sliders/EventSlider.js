@@ -21,10 +21,20 @@ const EventSlider = (props) => {
           slidesPerView={4}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
-          //   navigation
-          //   autoplay={{
-          //     delay: 2500,
-          //   }}
+          breakpoints={{
+            640: {
+              slidesPerView:1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
         >
           <div className="card__grid">
             {Treading.map((item, index) => {

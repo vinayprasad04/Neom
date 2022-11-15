@@ -32,6 +32,32 @@ const Dashboard = (props) => {
         let user = Profile[0].Customer_ID;
         localStorage.setItem('User',JSON.stringify(Profile[0]));
     },[])
+
+    const setRecSlider = () => {
+        let wWidth = window.innerWidth,
+            cWidth = document.querySelector('.header .container').offsetWidth,
+            marg = (wWidth - cWidth) / 2,
+            recSlider = document.querySelectorAll(".recSlider");
+        if (wWidth > 767) {
+            recSlider.forEach((item) => {
+                item.style.margin = '0px';
+                item.style.marginLeft = marg + 'px';
+            })
+        }
+        else {
+            recSlider.forEach((item) => {
+                item.style.margin = '0 16px';
+            })
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('resize', setRecSlider)
+    });
+    useEffect(() => {
+        setRecSlider()
+    },[])
+
+
   return (
     <div>
       <Header active={"dashboard"} />

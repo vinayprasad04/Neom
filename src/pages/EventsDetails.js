@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {
   Header,
   Footer,
@@ -170,6 +170,30 @@ const EventDetail = (props) => {
     let el = document.getElementById('modal')
     el.style = 'display:none';
   }
+  const setRecSlider = () => {
+    let wWidth = window.innerWidth,
+        cWidth = document.querySelector('.header .container').offsetWidth,
+        marg = (wWidth - cWidth) / 2,
+        recSlider = document.querySelectorAll(".recSlider");
+    if (wWidth > 767) {
+      recSlider.forEach((item) => {
+        item.style.margin = '0px';
+        item.style.marginLeft = marg + 'px';
+      })
+    }
+    else {
+      recSlider.forEach((item) => {
+        item.style.margin = '0 16px';
+      })
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('resize', setRecSlider);
+  });
+  useEffect(() => {
+    setRecSlider();
+  },[])
+
   return (
     <div>
       <Header />
@@ -184,10 +208,8 @@ const EventDetail = (props) => {
                 <p className="eventAddReview__card--subtitle">It helps us to improve and serve you better.</p>
               </div>
               <button className="btn__black" id="modalBtn" onClick={openModal}>Add a review</button>
-              <AddAReview closeModal={closeModal} vivoMeaterModal={vivoMeaterModal}
-                          setVivoMeaterModal={setVivoMeaterModal}/>
-              {vivoMeaterModal &&
-              <AddVivoMeaterReview vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>}
+              <AddAReview closeModal={closeModal} vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>
+              {vivoMeaterModal && <AddVivoMeaterReview vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>}
             </div>
           </div>
         </div>}

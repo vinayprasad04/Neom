@@ -59,7 +59,7 @@ const AddVivoMeaterReview = ({vivoMeaterModal, setVivoMeaterModal}) => {
                     <div className="form__group">
                         <textarea onChange={(e)=>onChangeRating(e, "feedbackVivo")} value={(ratingVivo?.feedbackVivo)} rows="5" placeholder="Share your feedback and suggestions about this event..."></textarea>
                     </div>
-                    <button className="btn btn__black" onClick={onSubmitHandler}>Submit</button>
+                    <button className="btn btn__black" onClick={onSubmitHandler} style={{width:"140px"}}>Submit</button>
                 </div>
             </div>
         </div>

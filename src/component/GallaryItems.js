@@ -26,7 +26,7 @@ const GallaryItems = (props) =>{
                   className="grid__image border__rounded--topRight border__rounded--bottomRight"
                 />
               </div>
-              <div className={`status ${(status=="Over") ?"completed":(status=="cancelled")?"cancelled":"scheduled"}`}>{status}</div>
+              <div className={`status ${(status=="Over"||status=="Completed") ?"completed":(status=="cancelled")?"cancelled":"scheduled"}`}>{status}</div>
               <LightBoxSlider imagesGallery={imagesGallery}/>
             </div>
     )

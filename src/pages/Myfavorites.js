@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import {
     Header,
@@ -37,6 +37,29 @@ const Myfavorites = (props) => {
         let el = document.getElementById('sucmsg')
         el.style= 'display:block'
     }
+    const setRecSlider = () => {
+        let wWidth = window.innerWidth,
+            cWidth = document.querySelector('.header .container').offsetWidth,
+            marg = (wWidth - cWidth) / 2,
+            recSlider = document.querySelectorAll(".recSlider");
+        if (wWidth > 767) {
+            recSlider.forEach((item) => {
+                item.style.margin = '0px';
+                item.style.marginLeft = marg + 'px';
+            })
+        }
+        else {
+            recSlider.forEach((item) => {
+                item.style.margin = '0 16px';
+            })
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('resize', setRecSlider)
+    });
+    useEffect(() => {
+        setRecSlider()
+    },[])
     return (
         <div>
             <Header active={"myfavorites"} />

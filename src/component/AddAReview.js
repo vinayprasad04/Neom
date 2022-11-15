@@ -90,7 +90,7 @@ const AddAReview = ({closeModal, vivoMeaterModal, setVivoMeaterModal}) => {
                     <div className="form__group">
                         <textarea onChange={(e)=>onClickRating(e, "feedback")} value={(rating?.feedback) || ""} rows="5"placeholder="Share your feedback and suggestions about this event..."></textarea>
                     </div>
-                    <button className="btn btn__black" onClick={onSubmitHandler}>Submit</button>
+                    <button className="btn btn__black" onClick={onSubmitHandler} style={{width:"140px"}}>Submit</button>
                 </div>
             </div>
 
