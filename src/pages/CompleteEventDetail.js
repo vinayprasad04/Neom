@@ -46,21 +46,21 @@ const CompleteEventDetail = (props) => {
     <div>
       <Header />
       <main className="content event">
-      <div class="eventAddReview">
-            <div class="container">
-                <div class="eventAddReview__card">
+      <div className="eventAddReview">
+            <div className="container">
+                <div className="eventAddReview__card">
                     <div>
-                        <h2 class="eventAddReview__card--title">Hey Charlie,</h2>
-                        <p class="eventAddReview__card--subtitle">We are sure that you have enjoyed this event a lot.
+                        <h2 className="eventAddReview__card--title">Hey Charlie,</h2>
+                        <p className="eventAddReview__card--subtitle">We are sure that you have enjoyed this event a lot.
                             Would you like to share your feedback with us.</p>
-                        <p class="eventAddReview__card--subtitle">It helps us to improve and serve you better.</p>
+                        <p className="eventAddReview__card--subtitle">It helps us to improve and serve you better.</p>
                     </div>
 
-                    <button class="btn__black" id="modalBtn" onClick={openModal}>Add a review</button>
-                    <div id="modal" class="modal" >
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <span class="close">
+                    <button className="btn__black" id="modalBtn" onClick={openModal}>Add a review</button>
+                    <div id="modal" className="modal" >
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <span className="close">
                                     <img src={process.env.PUBLIC_URL + "./img/close.svg"} alt="Close" onClick={closeModal}/>
                                     {/* <svg version="1.1" id="Layer_1"
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -75,60 +75,60 @@ const CompleteEventDetail = (props) => {
                                 </span>
                                 <h2>Add a review</h2>
                             </div>
-                            <div class="modal-body">
-                                <p>HiCharlie, If you're here on this page, we bet you enjoy this event fully. Would you
+                            <div className="modal-body">
+                                <p>Hi Charlie, If you're here on this page, we bet you enjoy this event fully. Would you
                                     mind to share your valuable feedback review with us?</p>
-                                 {/* <div class="modal-image">
+                                 {/* <div className="modal-image">
                                 <img src="./assets/img/vibe-o-meter.svg" alt="">
                             </div>  */}
-                                <div class="card">
-                                    <div class="card__info">
-                                        <div class="card__info--image">
+                                <div className="card">
+                                    <div className="card__info">
+                                        <div className="card__info--image">
                                             <img src={process.env.PUBLIC_URL + "./img/trending1.jpg"} alt="" />
                                         </div>
-                                        <div class="card__info--details">
+                                        <div className="card__info--details">
                                             <h4>Men's Golf League</h4>
                                             <p>Nov 10-29</p>
                                         </div>
                                     </div>
-                                    <div class="card__review">
-                                        <div class="rating"></div>
-                                        <div class="review"><span>5.0</span>(23 reviews)</div>
+                                    <div className="card__review">
+                                        <div className="rating"></div>
+                                        <div className="review"><span>5.0</span>(23 reviews)</div>
                                     </div>
                                 </div>
-                                <div class="ratings__row">
-                                    <div class="ratings__row--item">
-                                        <div class="ratings--title">Quality of Event</div>
-                                        <div class="rating"></div>
+                                <div className="ratings__row">
+                                    <div className="ratings__row--item">
+                                        <div className="ratings--title">Quality of Event</div>
+                                        <div className="rating"></div>
                                     </div>
-                                    <div class="ratings__row--item">
-                                        <div class="ratings--title">Services at Event</div>
-                                        <div class="rating"></div>
-                                    </div>
-                                </div>
-                                <div class="ratings__row">
-                                    <div class="ratings__row--item">
-                                        <div class="ratings--title">Facilities of Event</div>
-                                        <div class="rating"></div>
-                                    </div>
-                                    <div class="ratings__row--item">
-                                        <div class="ratings--title">Operator of Event</div>
-                                        <div class="rating"></div>
+                                    <div className="ratings__row--item">
+                                        <div className="ratings--title">Services at Event</div>
+                                        <div className="rating"></div>
                                     </div>
                                 </div>
-                                <div class="ratings__row">
-                                    <div class="ratings__row--item">
-                                        <div class="ratings--title">Staff Politeness</div>
-                                        <div class="rating"></div>
+                                <div className="ratings__row">
+                                    <div className="ratings__row--item">
+                                        <div className="ratings--title">Facilities of Event</div>
+                                        <div className="rating"></div>
+                                    </div>
+                                    <div className="ratings__row--item">
+                                        <div className="ratings--title">Operator of Event</div>
+                                        <div className="rating"></div>
+                                    </div>
+                                </div>
+                                <div className="ratings__row">
+                                    <div className="ratings__row--item">
+                                        <div className="ratings--title">Staff Politeness</div>
+                                        <div className="rating"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
-                                <div class="form__group">
+                            <div className="modal-footer">
+                                <div className="form__group">
                                     <textarea name="" id="" rows="5"
                                         placeholder="Share your feedback and suggestions about this event..."></textarea>
                                 </div>
-                                <button class="btn btn__black">Submit</button>
+                                <button className="btn btn__black">Submit</button>
                             </div>
                         </div>
 
@@ -136,30 +136,30 @@ const CompleteEventDetail = (props) => {
                 </div>
             </div>
         </div>
-        <div class="eventDetails p-0">
-          <div class="container">
-            <div class="eventDetails__title">Men's Golf League</div>
+        <div className="eventDetails p-0">
+          <div className="container">
+            <div className="eventDetails__title">Men's Golf League</div>
 
-            <div class="eventDetails__review">
-              <div class="rating"></div>
-              <div class="review">
+            <div className="eventDetails__review">
+              <div className="rating"></div>
+              <div className="review">
                 5.0 <span>23 reviews</span>
               </div>
-              <div class="location">Sindalah City, Dubai</div>
+              <div className="location">Sindalah City, Dubai</div>
             </div>
             <GallaryItems {...eventDetailPage.PhotoGallaryData} />
           </div>
         </div>
 
-        <div class="eventReserve">
-          <div class="container">
-          <div class="eventReserve__grid">
-                <div class="eventReserve__grid--col flex__order--2">
-                    <div class="event__meter">
-                        <h4 class="event__reserve--title">Vibe-o-meter of the event</h4>
-                        <ul class="emotions__list">
-                    <li class="emotions__list--item active">
-                      <div class="emotion overwhelmed"></div>
+        <div className="eventReserve">
+          <div className="container">
+          <div className="eventReserve__grid">
+                <div className="eventReserve__grid--col flex__order--2">
+                    <div className="event__meter">
+                        <h4 className="event__reserve--title">Vibe-o-meter of the event</h4>
+                        <ul className="emotions__list">
+                    <li className="emotions__list--item active">
+                      <div className="emotion overwhelmed"></div>
                       <img
                         src={process.env.PUBLIC_URL + "./img/overwhelmed.svg"}
                         alt=""
@@ -167,8 +167,8 @@ const CompleteEventDetail = (props) => {
                         height="52px"
                       />
                     </li>
-                    <li class="emotions__list--item">
-                      <div class="emotion joy"></div>
+                    <li className="emotions__list--item">
+                      <div className="emotion joy"></div>
                       <img
                         src={process.env.PUBLIC_URL + "./img/joy.svg"}
                         alt=""
@@ -176,8 +176,8 @@ const CompleteEventDetail = (props) => {
                         height="52px"
                       />
                     </li>
-                    <li class="emotions__list--item">
-                      <div class="emotion appreciation"></div>
+                    <li className="emotions__list--item">
+                      <div className="emotion appreciation"></div>
                       <img
                         src={process.env.PUBLIC_URL + "./img/appreciation.svg"}
                         alt=""
@@ -185,8 +185,8 @@ const CompleteEventDetail = (props) => {
                         height="52px"
                       />
                     </li>
-                    <li class="emotions__list--item">
-                      <div class="emotion boredom"></div>
+                    <li className="emotions__list--item">
+                      <div className="emotion boredom"></div>
                       <img
                         src={process.env.PUBLIC_URL + "./img/boredom.svg"}
                         alt=""
@@ -194,8 +194,8 @@ const CompleteEventDetail = (props) => {
                         height="52px"
                       />
                     </li>
-                    <li class="emotions__list--item">
-                      <div class="emotion disappointed"></div>
+                    <li className="emotions__list--item">
+                      <div className="emotion disappointed"></div>
                       <img
                         src={process.env.PUBLIC_URL + "./img/disappointed.svg"}
                         alt=""
@@ -203,8 +203,8 @@ const CompleteEventDetail = (props) => {
                         height="52px"
                       />
                     </li>
-                    <li class="emotions__list--item">
-                      <div class="emotion anger"></div>
+                    <li className="emotions__list--item">
+                      <div className="emotion anger"></div>
                       <img
                         src={process.env.PUBLIC_URL + "./img/anger.svg"}
                         alt=""
@@ -214,64 +214,64 @@ const CompleteEventDetail = (props) => {
                     </li>
                   </ul>
                     </div>
-                    <div class="event__description">
-                        <h4 class="event__reserve--title">About the event</h4>
-                        <ul class="event__description--list">
-                            <li class="event__description--list-item">
-                                <div class="icon icon-category"></div>
-                                <div class="description-details">
+                    <div className="event__description">
+                        <h4 className="event__reserve--title">About the event</h4>
+                        <ul className="event__description--list">
+                            <li className="event__description--list-item">
+                                <div className="icon icon-category"></div>
+                                <div className="description-details">
                                     <h5>Golf</h5>
                                     <p>This is one of the many events comes under the Golf category.</p>
                                 </div>
                             </li>
-                            <li class="event__description--list-item">
-                                <div class="icon icon-location"></div>
-                                <div class="description-details">
+                            <li className="event__description--list-item">
+                                <div className="icon icon-location"></div>
+                                <div className="description-details">
                                     <h5>Great location</h5>
                                     <p>This is one of the many events comes under the Golf category.</p>
                                 </div>
                             </li>
-                            <li class="event__description--list-item">
-                                <div class="icon"><img src={process.env.PUBLIC_URL + "./img/overwhelmed.svg"} alt="" /></div>
-                                <div class="description-details">
+                            <li className="event__description--list-item">
+                                <div className="icon"><img src={process.env.PUBLIC_URL + "./img/overwhelmed.svg"} alt="" /></div>
+                                <div className="description-details">
                                     <h5>Overwhelmed experience</h5>
                                     <p>This event has a rating of 5.0 that make this event overwhelmed.</p>
                                 </div>
                             </li>
                         </ul>
-                        <div class="event__description--content">
+                        <div className="event__description--content">
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elit.</p>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elit.</p>
                         </div>
                     </div>
-                    <div class="event__review">
-                        <h4 class="event__reserve--title">Operated by River Stone</h4>
-                        <div class="event__review--row">
-                            <div class="rating"></div>
-                            <div class="review">4.9</div>
+                    <div className="event__review">
+                        <h4 className="event__reserve--title">Operated by River Stone</h4>
+                        <div className="event__review--row">
+                            <div className="rating"></div>
+                            <div className="review">4.9</div>
                         </div>
-                        <div class="event__description--content">
+                        <div className="event__description--content">
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elit.</p>
                         </div>
                     </div>
                 </div>
-                <div class="eventReserve__grid--col flex__order--1">
-                    <div class="eventReserve__form">
+                <div className="eventReserve__grid--col flex__order--1">
+                    <div className="eventReserve__form">
                         <form action="">
-                            <div class="eventReserve__form--title">AED 1800 <span>per person</span></div>
-                            <div class="eventReserve__form--date"></div>
-                            <div class="form__flex--row">
-                                <div class="s-form-floating">
-                                    <input type="text" class="s-form-control" id="floatingFromInput" />
+                            <div className="eventReserve__form--title">AED 1800 <span>per person</span></div>
+                            <div className="eventReserve__form--date"></div>
+                            <div className="form__flex--row">
+                                <div className="s-form-floating">
+                                    <input type="text" className="s-form-control" id="floatingFromInput" />
                                     <label for="floatingFromInput">From</label>
                                 </div>
-                                <div class="s-form-floating">
-                                    <input type="text" class="s-form-control" id="floatingToInput" />
+                                <div className="s-form-floating">
+                                    <input type="text" className="s-form-control" id="floatingToInput" />
                                     <label for="floatingToInput">To</label>
                                 </div>
                             </div>
-                            <div class="s-form-floating">
-                                <select class="s-form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                            <div className="s-form-floating">
+                                <select className="s-form-select" id="floatingSelectGrid" aria-label="Floating label select example">
                                     <option value="0">1 adult</option>
                                     <option value="1">2 adult</option>
                                     <option value="2">3 adult</option>
@@ -279,24 +279,24 @@ const CompleteEventDetail = (props) => {
                                 </select>
                                 <label for="floatingSelectGrid">Guests</label>
                             </div>
-                            <div class="eventReserve__form--seats">172 Seats still available</div>
-                            <ul class="guests__list">
-                                <li class="guests__list--item">
-                                    <div class="guests">1800 x 1 adult</div>
-                                    <div class="price">1800</div>
+                            <div className="eventReserve__form--seats">172 Seats still available</div>
+                            <ul className="guests__list">
+                                <li className="guests__list--item">
+                                    <div className="guests">1800 x 1 adult</div>
+                                    <div className="price">1800</div>
                                 </li>
-                                <li class="guests__list--item">
-                                    <div class="guests">600 x 0 children</div>
-                                    <div class="price">0</div>
+                                <li className="guests__list--item">
+                                    <div className="guests">600 x 0 children</div>
+                                    <div className="price">0</div>
                                 </li>
                             </ul>
-                            <div class="total">
-                                <div class="total__title">Total</div>
-                                <div class="total__price">AED 1800</div>
+                            <div className="total">
+                                <div className="total__title">Total</div>
+                                <div className="total__price">AED 1800</div>
                             </div>
                         </form>
 
-                        <a href="#" class="eventReserve__form--help">Need help?</a>
+                        <a href="#" className="eventReserve__form--help">Need help?</a>
                     </div>
                 </div>
             </div>

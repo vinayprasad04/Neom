@@ -35,6 +35,8 @@ import disappointed from './../assets/img/disappointed.svg';
 import anger from './../assets/img/anger.svg';
 import RatingValue from "../component/Rating";
 import EventCart from "../component/EventCart";
+import AddAReview from "../component/AddAReview";
+import AddVivoMeaterReview from "../component/AddVivoMeaterReview";
 
 const imagesGallery = [Image120,Image118,Image122,Image121];
 const eventDetailPage = getJson();
@@ -94,7 +96,7 @@ const Cart = ({eventData}) =>{
             <h2>Success!</h2>
             <p>your data successfully submit</p>
           </div>
-          <svg onClick={onCancelAlert} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="122.881px" height="122.88px" viewBox="0 0 122.881 122.88" enable-background="new 0 0 122.881 122.88"><g><path d="M61.44,0c16.966,0,32.326,6.877,43.445,17.996c11.119,11.118,17.996,26.479,17.996,43.444 c0,16.967-6.877,32.326-17.996,43.444C93.766,116.003,78.406,122.88,61.44,122.88c-16.966,0-32.326-6.877-43.444-17.996 C6.877,93.766,0,78.406,0,61.439c0-16.965,6.877-32.326,17.996-43.444C29.114,6.877,44.474,0,61.44,0L61.44,0z M80.16,37.369 c1.301-1.302,3.412-1.302,4.713,0c1.301,1.301,1.301,3.411,0,4.713L65.512,61.444l19.361,19.362c1.301,1.301,1.301,3.411,0,4.713 c-1.301,1.301-3.412,1.301-4.713,0L60.798,66.157L41.436,85.52c-1.301,1.301-3.412,1.301-4.713,0c-1.301-1.302-1.301-3.412,0-4.713 l19.363-19.362L36.723,42.082c-1.301-1.302-1.301-3.412,0-4.713c1.301-1.302,3.412-1.302,4.713,0l19.363,19.362L80.16,37.369 L80.16,37.369z M100.172,22.708C90.26,12.796,76.566,6.666,61.44,6.666c-15.126,0-28.819,6.13-38.731,16.042 C12.797,32.62,6.666,46.314,6.666,61.439c0,15.126,6.131,28.82,16.042,38.732c9.912,9.911,23.605,16.042,38.731,16.042 c15.126,0,28.82-6.131,38.732-16.042c9.912-9.912,16.043-23.606,16.043-38.732C116.215,46.314,110.084,32.62,100.172,22.708 L100.172,22.708z"></path></g></svg>
+          <svg onClick={onCancelAlert} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="122.881px" height="122.88px" viewBox="0 0 122.881 122.88" enableBackground="new 0 0 122.881 122.88"><g><path d="M61.44,0c16.966,0,32.326,6.877,43.445,17.996c11.119,11.118,17.996,26.479,17.996,43.444 c0,16.967-6.877,32.326-17.996,43.444C93.766,116.003,78.406,122.88,61.44,122.88c-16.966,0-32.326-6.877-43.444-17.996 C6.877,93.766,0,78.406,0,61.439c0-16.965,6.877-32.326,17.996-43.444C29.114,6.877,44.474,0,61.44,0L61.44,0z M80.16,37.369 c1.301-1.302,3.412-1.302,4.713,0c1.301,1.301,1.301,3.411,0,4.713L65.512,61.444l19.361,19.362c1.301,1.301,1.301,3.411,0,4.713 c-1.301,1.301-3.412,1.301-4.713,0L60.798,66.157L41.436,85.52c-1.301,1.301-3.412,1.301-4.713,0c-1.301-1.302-1.301-3.412,0-4.713 l19.363-19.362L36.723,42.082c-1.301-1.302-1.301-3.412,0-4.713c1.301-1.302,3.412-1.302,4.713,0l19.363,19.362L80.16,37.369 L80.16,37.369z M100.172,22.708C90.26,12.796,76.566,6.666,61.44,6.666c-15.126,0-28.819,6.13-38.731,16.042 C12.797,32.62,6.666,46.314,6.666,61.439c0,15.126,6.131,28.82,16.042,38.732c9.912,9.911,23.605,16.042,38.731,16.042 c15.126,0,28.82-6.131,38.732-16.042c9.912-9.912,16.043-23.606,16.043-38.732C116.215,46.314,110.084,32.62,100.172,22.708 L100.172,22.708z"></path></g></svg>
         </div>
         <form>
           <div className="eventReserve__form--title">
@@ -123,7 +125,7 @@ const Cart = ({eventData}) =>{
           <div className="eventReserve__form--seats">
             {eventData.Seat_Booking_Availability} Seats still available
           </div>
-          <div className="btn btn__black" onClick={Sucmsg}>Reserve my seats</div>
+          {!eventData.Client_Booked && <div className="btn btn__black" onClick={Sucmsg}>Reserve my seats</div>}
           <ul className="guests__list">
             {/*<li className="guests__list--item">
               <div className="guests">1800 x {seatValue} adult</div>
@@ -149,6 +151,8 @@ const Cart = ({eventData}) =>{
 
 const EventDetail = (props) => {
   const {id} = useParams();
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [vivoMeaterModal, setVivoMeaterModal] = useState(false);
 
   const eventData = detail.find((event) => JSON.stringify(event.Event_ID) === id);
   const { data, isLoading, errorMessage } = useOpenWeather({
@@ -158,39 +162,63 @@ const EventDetail = (props) => {
     lang: "en",
     unit: "metric",
   });
-
+  function openModal() {
+    let el = document.getElementById('modal')
+    el.style = 'display:block'
+  }
+  function closeModal() {
+    let el = document.getElementById('modal')
+    el.style = 'display:none';
+  }
   return (
     <div>
       <Header />
       <main className="content event" id={"eventDetail"}>
-        <div class="eventDetails">
-          <div class="container">
-              <h2 className="eventDetails__title">{eventData.Event_Name}</h2>
-            <div className="eventDetails__review">
-              <RatingValue readOnly={true} initialValue={eventData.Overall_Event_Rating}/>
-              <div className="review">{eventData.Overall_Event_Rating}<span>23 reviews</span></div>
-              <div className="location">{eventData.Event_Location}</div>
+        {eventData.Client_Booked && <div className="eventAddReview">
+          <div className="container">
+            <div className="eventAddReview__card">
+              <div>
+                <h2 className="eventAddReview__card--title">Hey Charlie,</h2>
+                <p className="eventAddReview__card--subtitle">We are sure that you have enjoyed this event a lot.
+                  Would you like to share your feedback with us.</p>
+                <p className="eventAddReview__card--subtitle">It helps us to improve and serve you better.</p>
+              </div>
+              <button className="btn__black" id="modalBtn" onClick={openModal}>Add a review</button>
+              <AddAReview closeModal={closeModal} vivoMeaterModal={vivoMeaterModal}
+                          setVivoMeaterModal={setVivoMeaterModal}/>
+              {vivoMeaterModal &&
+              <AddVivoMeaterReview vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>}
             </div>
+          </div>
+        </div>}
+        <div className={`eventDetails  ${eventData.Client_Booked ?"p-0":""}`}>
+          <div className="container">
+              <h2 className="eventDetails__title">{eventData.Event_Name}</h2>
+              <div className="eventDetails__review">
+                <RatingValue readOnly={true} fillColor={"#FF385C"} initialValue={eventData.Overall_Event_Rating}/>
+                <div className="review">{eventData.Overall_Event_Rating}<span>23 reviews</span></div>
+                <div className="location">{eventData.Event_Location}</div>
+              </div>
 
             <GallaryItems imagesGallery={imagesGallery} status={eventData.Event_Status} />
           </div>
         </div>
-        <div class="eventReserve">
-          <div class="container">
-            <div class="eventReserve__grid">
-              <div class="eventReserve__grid--col">
-                <div class="event__meter">
-                  <h4 class="event__reserve--title">
+        <div className="eventReserve">
+          <div className="container">
+            <div className="eventReserve__grid">
+              <div className="eventReserve__grid--col">
+                <div className="event__meter">
+                  <h4 className="event__reserve--title">
                     Vibe-o-meter of the event
                   </h4>
                   <EmotionList rating={eventData.Overall_Event_Rating}/>
                 </div>
-                <div class="event__description">
-                  <h4 class="event__reserve--title">About the event</h4>
-                  <ul class="event__description--list">
-                    <li class="event__description--list-item">
-                      <div class="icon icon-category"></div>
-                      <div class="description-details">
+                <div className="event__description">
+                  <h4 className="event__reserve--title">About the event</h4>
+                  <ul className="event__description--list">
+                    <li className="event__description--list-item">
+                      <div className="icon icon-category"></div>
+                      <div className="description-details">
                         <h5>Golf</h5>
                         <p>
                           This is one of the many events comes under the Golf
@@ -198,9 +226,9 @@ const EventDetail = (props) => {
                         </p>
                       </div>
                     </li>
-                    <li class="event__description--list-item">
-                      <div class="icon icon-location"></div>
-                      <div class="description-details">
+                    <li className="event__description--list-item">
+                      <div className="icon icon-location"></div>
+                      <div className="description-details">
                         <h5>Great location</h5>
                         <p>
                           This is one of the many events comes under the Golf
@@ -208,14 +236,14 @@ const EventDetail = (props) => {
                         </p>
                       </div>
                     </li>
-                    <li class="event__description--list-item">
-                      <div class="icon">
+                    <li className="event__description--list-item">
+                      <div className="icon">
                         <img
                           src={overwhelmed}
                           alt="overwhelmed"
                         />
                       </div>
-                      <div class="description-details">
+                      <div className="description-details">
                         <h5>Overwhelmed experience</h5>
                         <p>
                           This event has a rating of 5.0 that make this event
@@ -224,7 +252,7 @@ const EventDetail = (props) => {
                       </div>
                     </li>
                   </ul>
-                  <div class="event__description--content">
+                  <div className="event__description--content">
                     <p>
                       Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                       sed diam nonumy eirmod tempor invidunt ut labore et dolore
@@ -245,13 +273,13 @@ const EventDetail = (props) => {
                     </p>
                   </div>
                 </div>
-                <div class="event__review">
-                  <h4 class="event__reserve--title">Operated by {eventData.Operator_Name}</h4>
-                  <div class="event__review--row">
-                    <div class="rating"><RatingValue readOnly={true} initialValue={eventData.Operator_Rating}/></div>
-                    <div class="review">{eventData.Operator_Rating}</div>
+                <div className="event__review">
+                  <h4 className="event__reserve--title">Operated by {eventData.Operator_Name}</h4>
+                  <div className="event__review--row">
+                    <div className="rating"><RatingValue fillColor={"#FF385C"} readOnly={true} initialValue={eventData.Operator_Rating}/></div>
+                    <div className="review">{eventData.Operator_Rating}</div>
                   </div>
-                  <div class="event__description--content">
+                  <div className="event__description--content">
                     <p>
                       Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                       sed diam nonumy eirmod tempor invidunt ut labore et dolore
@@ -270,13 +298,7 @@ const EventDetail = (props) => {
             </div>
           </div>
         </div>
-        {/* <Trending /> */}
         <RatingSlider {...eventDetailPage.RatingSliderCardData} />
-
-{/*        <Recommendations
-          {...eventDetailPage.RecommendationData}
-          showHeartIcon={true}
-        />*/}
         <div className="recommendations event--recommendations">
           <div className="container">
             <h2 className="recommendations__title">Some more recommendations for you, Charlie!</h2>

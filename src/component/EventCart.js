@@ -4,7 +4,7 @@ const EventCart = ({ item }) => {
   const { img, rank, rating, date, title, desc, vibeicon, vibetext, heartIcon, showCancelFavorite} = item;
   return (
     <div className="card__item">
-      <Link className={"card__link"} to={`/eventdetails/10004`} >
+      <Link className={"card__link"} to={`/eventdetails/10005`} >
         <div className="card__thumb">
           {heartIcon &&
           (<button className="card__fav"><span className="icon-heart"></span></button>

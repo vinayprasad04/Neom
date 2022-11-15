@@ -13,16 +13,16 @@ const SliderCard = ({EventDetail}) => {
   //const {heading, SliderCard} = props;
     const userName = Profile[0].Customer_Name;
   return (
-    <div class="recSlider recSlider--cardView" style={{margin: "0px 0px 0px 84px"}}>
-      <h2 class="recSlider__title">Good morning {userName}!</h2>
-      <div class="recSlider__subtitle">
+    <div className="recSlider recSlider--cardView" style={{margin: "0px 0px 0px 84px"}}>
+      <h2 className="recSlider__title">Good morning {userName}!</h2>
+      <div className="recSlider__subtitle">
         <p>
           Below listed are your itineraries, have a look to the timings and the
           location.
         </p>
         <p>We wish you to enjoy the activities and the weather!</p>
       </div>
-      <div class="swiper tailored arrow_pos">
+      <div className="swiper tailored arrow_pos">
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
@@ -34,7 +34,7 @@ const SliderCard = ({EventDetail}) => {
             delay: 112500,
           }}
         >
-          <div class="swiper-wrapper">
+          <div className="swiper-wrapper">
             {EventDetail.map((item, index) => {
               return (
                 <SwiperSlide>
@@ -45,12 +45,12 @@ const SliderCard = ({EventDetail}) => {
                                 alt="event title"
                             />
                             <div className="weather">
-                               <div class="weather__icon">
+                               <div className="weather__icon">
                             <img src={abstract} alt="Weather" />
                             </div>
-                            <div class="weather__text">
+                            <div className="weather__text">
                                 <h2>18&#176;<sup>C</sup></h2>
-                                <div class="weather__text--wrap">
+                                <div className="weather__text--wrap">
                                     <span>29&#176;</span>
                                     <span>16&#176;</span>
                                 </div>

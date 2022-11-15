@@ -52,7 +52,8 @@ const EventDetail =
           "Event_Status": "Not Started",
           "Event_Capacity": 300,
           "Overall_Event_Rating": 3.8,
-          "Operator_Rating": 3
+          "Operator_Rating": 3,
+           "Client_Booked": true,
         },
         {
           "Event_ID": 10002,
@@ -70,7 +71,8 @@ const EventDetail =
           "Event_Status": "Not Started",
           "Event_Capacity": 200,
           "Overall_Event_Rating": 4.8,
-          "Operator_Rating": 4
+          "Operator_Rating": 4,
+            "Client_Booked": true,
         },
         {
           "Event_ID": 10003,
@@ -88,7 +90,8 @@ const EventDetail =
           "Event_Status": "Not Started",
           "Event_Capacity": 300,
           "Overall_Event_Rating": 4.6,
-          "Operator_Rating": 5
+          "Operator_Rating": 5,
+            "Client_Booked": true,
         },
         {
           "Event_ID": 10004,
@@ -106,7 +109,8 @@ const EventDetail =
           "Event_Status": "Over",
           "Event_Capacity": 100,
           "Overall_Event_Rating": 4.6,
-          "Operator_Rating": 3
+          "Operator_Rating": 3,
+            "Client_Booked": true,
         },
         {
           "Event_ID": 10005,
