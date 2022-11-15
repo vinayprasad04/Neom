@@ -20,8 +20,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import getJson from "../utils/eventDetailData";
+import getJsonFavorite from "../utils/myfavoritesData";
 import NextEventBanner from "../component/NextEventBanner";
 const eventDetailPage = getJson();
+const FavoriteData = getJsonFavorite();
 
 const Myfavorites = (props) => {
     const { data, isLoading, errorMessage } = useOpenWeather({
@@ -40,11 +42,11 @@ const Myfavorites = (props) => {
             <Header active={"myfavorites"} />
             <main className="content favorites">
                 <Recommendations
-                    {...eventDetailPage.RecommendationData}
-                    showHeartIcon={true}
+                    {...FavoriteData.FavoritesData}
+                    showCancelFavorite={true}
                 />
-                <NextEventBanner/>
-                <Trending {...eventDetailPage.RecommendationData} />
+                <NextEventBanner showHeartIcon={true}/>
+                <Trending {...eventDetailPage.RecommendationData} headingNew={"Top 5 activities on this island today"} showHeartIcon={true} />
             </main>
             <Footer />
         </div>

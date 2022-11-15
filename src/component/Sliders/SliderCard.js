@@ -7,12 +7,14 @@ import banner from './../../assets/img/spa_0.png';
 import abstract from './../../assets/img/abstract.jpg';
 import overwhelmed from './../../assets/img/overwhelmed.svg';
 import RatingValue from "../Rating";
+import {Profile} from './../../MockData';
 
 const SliderCard = ({EventDetail}) => {
   //const {heading, SliderCard} = props;
+    const userName = Profile[0].Customer_Name;
   return (
     <div class="recSlider recSlider--cardView" style={{margin: "0px 0px 0px 84px"}}>
-      <h2 class="recSlider__title">Good morning Shane</h2>
+      <h2 class="recSlider__title">Good morning {userName}!</h2>
       <div class="recSlider__subtitle">
         <p>
           Below listed are your itineraries, have a look to the timings and the
@@ -58,7 +60,7 @@ const SliderCard = ({EventDetail}) => {
                     <div className="recSlider__info" key={index}>
                       <h3 className="recSlider__info__title">{item.Event_Name}</h3>
                       <div className="recSlider__info__rating">
-                          <RatingValue readOnly={true} initialValue={item.Overall_Event_Rating}/>
+                          <RatingValue fillColor={"#FF385C"} readOnly={true} initialValue={item.Overall_Event_Rating}/>
                               <div className="review">{item.Overall_Event_Rating}</div>
                           </div>
                       <div className="recSlider__info__row">

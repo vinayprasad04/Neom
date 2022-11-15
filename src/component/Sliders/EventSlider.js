@@ -59,7 +59,7 @@ const EventSlider = (props) => {
                             <div className="card__rating">
                             <span className="card__rating__txt">
                               <span className="card__rating__txt">You rated this event</span></span>
-                              <RatingValue readOnly={true} initialValue={4}/>
+                              <RatingValue fillColor={"black"} readOnly={true} initialValue={4}/>
                             </div>
                           </div>
                         </div>

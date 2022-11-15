@@ -14,7 +14,7 @@ const Profiles = () =>{
         useEffect(()=>{
             let user = Profile[0].Customer_ID;
             setUserSelect({[user]: true});
-            localStorage.setItem('User',JSON.stringify(Profile[0]));
+            //localStorage.setItem('User',JSON.stringify(Profile[0]));
         },[])
     return(
         <>

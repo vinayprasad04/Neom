@@ -62,7 +62,7 @@ const Notifications = () =>{
                                                          height="100px"/>
                                                 </div>
                                                 <div className="content--wrapper">
-                                                    <div className="title">Congratulations Shane!</div>
+                                                    <div className="title">CongratulationsCharlie!</div>
                                                     <div className="details">You have completed event "Men's Golf
                                                         League". Hope you have enjoyed the activity. Please do share
                                                         your valuable feedback with us to improve and serve you the
@@ -94,7 +94,7 @@ const Notifications = () =>{
                                                          height="100px"/>
                                                 </div>
                                                 <div className="content--wrapper">
-                                                    <div className="title">Congratulations Shane!</div>
+                                                    <div className="title">CongratulationsCharlie!</div>
                                                     <div className="details">You have completed event "Men's Golf
                                                         League". Hope you have enjoyed the activity. Please do share
                                                         your valuable feedback with us to improve and serve you the

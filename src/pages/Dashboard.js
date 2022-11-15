@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import {
   Header,
@@ -16,7 +16,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import getJson from "../utils/dashboardData";
-import {EventDetail} from './../MockData';
+import {EventDetail, Profile} from './../MockData';
 const dashboardPage = getJson();
 
 
@@ -28,6 +28,10 @@ const Dashboard = (props) => {
     lang: 'en',
     unit: 'metric',
   });
+    useEffect(()=>{
+        let user = Profile[0].Customer_ID;
+        localStorage.setItem('User',JSON.stringify(Profile[0]));
+    },[])
   return (
     <div>
       <Header active={"dashboard"} />
@@ -44,7 +48,7 @@ const Dashboard = (props) => {
     />
         <SliderCard EventDetail={EventDetail}/>
         <YourChoice {...dashboardPage.YourChoice}/>
-        <Trending {...dashboardPage.RecommendationsCard} />
+        <Trending {...dashboardPage.RecommendationsCard} showHeartIcon={true}/>
         <EventSlider {...dashboardPage.AttendEventCard}/>
         <Map />
       </main>

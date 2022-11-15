@@ -1,7 +1,7 @@
 const data = () => {
     return {
       SliderCardData:{
-        heading: "Good morning Shane!",
+        heading: "Good morning Charlie!",
         SliderCard: [
           {img:"Image120.jpg", rank:"one.svg"},
           {img:"Image118.jpg", rank:"one.svg"},
@@ -12,7 +12,7 @@ const data = () => {
       ]
       },
       RatingSliderCardData:{
-        heading: "Good morning Shane!",
+        heading: "Good morning Charlie!",
         SliderCard: [
           {Event_ID:10001,img:"trending1.jpg", rank:"one.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
           {Event_ID:10002,img:"recommend2.jpg", rank:"two.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
@@ -23,7 +23,7 @@ const data = () => {
       ]
       },
       RecommendationData:{
-        heading: "Good morning Shane!",
+        heading: "Good morning Charlie!",
         desc:"You have short listed 8 events to join later.",
         Recommendation : [
           {img:"trending1.jpg", heartIcon:true,  vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
@@ -39,11 +39,11 @@ const data = () => {
           {img:"recommend2.jpg", heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
       ],
         Treading : [
-          {img:"trending1.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"one.svg",  date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-          {img:"recommend2.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"two.svg",  date:"Nov 10-29", title:"Swimming game for below 18 year kids", desc:"AED 1800 per person"},
-          {img:"trending2.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"three.svg",  date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-          {img:"trending1.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"four.svg",  date:"Nov 10-29", title:"Swimming game for below 18 year kids", desc:"AED 1800 per person"},
-          {img:"recommend2.jpg", vibetext:'Overwhelmed',  vibeicon:'overwhelmed.svg', rank:"five.svg",  date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"trending1.jpg",  heartIcon:true,vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"one.svg",  date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend2.jpg", heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"two.svg",  date:"Nov 10-29", title:"Swimming game for below 18 year kids", desc:"AED 1800 per person"},
+          {img:"trending2.jpg",  heartIcon:true,vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"three.svg",  date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"trending1.jpg",  heartIcon:true,vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"four.svg",  date:"Nov 10-29", title:"Swimming game for below 18 year kids", desc:"AED 1800 per person"},
+          {img:"recommend2.jpg", heartIcon:true, vibetext:'Overwhelmed',  vibeicon:'overwhelmed.svg', rank:"five.svg",  date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
         ]
       },
       PhotoGallaryData : {
