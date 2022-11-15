@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Header,
@@ -10,9 +10,32 @@ import "photoswipe/dist/photoswipe.css";
 
 import getJson from "../utils/eventDetailData";
 import EventCart from "../component/EventCart";
+import { filter } from "dom7";
 const eventDetailPage = getJson();
-
+const itemPerRow = 10;
+let totalFilters = []
 const UpcomingEvent = (props) => {
+  const [next, setNext] = useState(itemPerRow);
+  const [filterItem, setItemFilter ] = useState()
+  const [drive, setDrive] = useState()
+  // const [ cardData, setCardData ] = useState(eventDetailPage.RecommendationData.Recommendation.length)
+  const selectedFilter = (filter) =>{
+    setNext(100)
+    totalFilters.push(filter)
+    setDrive(null)
+    setItemFilter(filter)
+  }
+  const slectedDrive = (driveFilter) =>{
+    setNext(100)
+    totalFilters=[]
+    setDrive(driveFilter)
+    console.log(filterItem, "callled")
+    console.log(totalFilters, "callllllllled")
+  }
+  const handleMoreItem = () => {
+    setNext(next + itemPerRow);
+  };
+ 
   return (
     <div>
       <Header active={"upcomingevent"}/>
@@ -52,19 +75,23 @@ const UpcomingEvent = (props) => {
                     <div className="schedule__title">How far are you willing to travel?</div>
                     <div className="time">
                       <ul className="time__list">
-                        <li className="time__list--item">10 mins walking</li>
-                        <li className="time__list--item active">20 mins walking</li>
-                        <li className="time__list--item">30 mins walking</li>
+                        {eventDetailPage.FilterList.DistanceFilter.map((item, index) => {
+                          return(
+                            <li className={`time__list--item ${totalFilters.includes(item.title) && 'active'}`} onClick={(()=> selectedFilter(item.title))}>{item.title}</li>
+                          )
+                        })}
                       </ul>
 
                       <ul className="time__list">
-                        <li className="time__list--item">10 mins drive</li>
-                        <li className="time__list--item active">20 mins drive</li>
-                        <li className="time__list--item">30 mins drive</li>
+                        {eventDetailPage.FilterList.DriveFilter.map((item, index) => {
+                          return(
+                            <li className={`time__list--item ${drive == item.title && 'active'}`} onClick={(()=> slectedDrive(item.title))}>{item.title}</li>
+                          )
+                        })}
                       </ul>
 
                       <ul className="time__list">
-                        <li className="time__list--item border-rounded">No limits</li>
+                        <li className="time__list--item border-rounded" onClick={(()=> setItemFilter(undefined))}>No limits</li>
                       </ul>
                     </div>
                   </div>
@@ -73,15 +100,10 @@ const UpcomingEvent = (props) => {
                 <div className="category">
                   <div className="category__title">You can always filter out the events by category wise.</div>
                   <ul className="category__list">
-                    <li className="category__list--item">Stand Up Comedy</li>
-                    <li className="category__list--item">RAMP Walk</li>
-                    <li className="category__list--item">Box Cricket</li>
-                    <li className="category__list--item">Swimming</li>
-                    <li className="category__list--item active">Golf Tournament</li>
-                    <li className="category__list--item">Singing</li>
-                    <li className="category__list--item">Talks Shows</li>
-                    <li className="category__list--item">Kite Surfing</li>
-                    <li className="category__list--item">Book Exhibitions</li>
+                    {eventDetailPage.FilterList.Filter.map((item, index) => {
+                      return(
+                   <li key={index} className={`category__list--item  ${totalFilters.includes(item.title)  && 'active'}`} onClick={(()=> selectedFilter(item.title))}>{item.title}</li>
+                    )})}
                   </ul>
                 </div>
               </div>
@@ -91,10 +113,12 @@ const UpcomingEvent = (props) => {
             </div>
             <div className="card__grid">
               {
-                eventDetailPage.RecommendationData.Recommendation.map((item, index)=>{
+                eventDetailPage.RecommendationData.Recommendation.slice(0, next)?.map((item, index)=>{
+                   return totalFilters.length ? totalFilters.map((filter, index)=>{
                   return(
-                      <EventCart key={index} item={item}/>
+                      (filter == item.category) ? <EventCart key={index} item={item}/> :  null
                   )
+                }) : (drive == item.drive) ? <EventCart key={index} item={item}/> : null
                 })
               }
             </div>
@@ -102,7 +126,9 @@ const UpcomingEvent = (props) => {
         </div>
 
         <div className="recommendations__more">
-          <button className="btn btn__black">Load more</button>
+        {next < eventDetailPage.RecommendationData.Recommendation?.length && (
+          <button className="btn btn__black" onClick={handleMoreItem}>Load more</button>
+          )}
         </div>
 
       </main>

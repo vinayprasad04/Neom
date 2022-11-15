@@ -1,5 +1,6 @@
 const data = () => {
     return {
+      
       SliderCardData:{
         heading: "Good morning Shane!",
         SliderCard: [
@@ -26,26 +27,87 @@ const data = () => {
         heading: "Good morning Shane!",
         desc:"You have short listed 8 events to join later.",
         Recommendation : [
-          {img:"trending1.jpg", heartIcon:true,  vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-          {img:"recommend2.jpg", heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-          {img:"trending2.jpg", heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-          {img:"trending1.jpg", heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-          {img:"recommend2.jpg", heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"trending2.jpg", walking:'10 mins walking', drive:'10 mins drive', category:'RAMP Walk', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend2.jpg", walking:'10 mins walking', drive:'10 mins drive', category:'RAMP Walk', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend2.jpg", walking:'10 mins walking', drive:'10 mins drive', category:'RAMP Walk', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"trending1.jpg", walking:'10 mins walking', drive:'10 mins drive', category:'RAMP Walk', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"trending1.jpg", walking:'10 mins walking', drive:'10 mins drive', category:'RAMP Walk', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
 
-          {img:"trending1.jpg", heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-          {img:"recommend2.jpg", heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-          {img:"trending2.jpg", heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-          {img:"trending1.jpg", heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-          {img:"recommend2.jpg", heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          
+          {img:"recommend2.jpg", walking:'20 mins walking', drive:'20 mins drive', category:'Stand Up Comedy', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"trending1.jpg", walking:'20 mins walking',  drive:'20 mins drive',  category:'Stand Up Comedy', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"trending1.jpg", walking:'20 mins walking',  drive:'20 mins drive',  category:'Stand Up Comedy', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"trending1.jpg", walking:'20 mins walking',  drive:'20 mins drive',  category:'Stand Up Comedy', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"trending1.jpg", walking:'20 mins walking', drive:'20 mins drive',  category:'Stand Up Comedy', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+
+          {img:"recommend2.jpg", walking:'30 mins walking', drive:'30 mins drive',  category:'Box Cricket', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"trending2.jpg", walking:'30 mins walking', drive:'30 mins drive',  category:'Box Cricket', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"trending1.jpg", walking:'30 mins walking', drive:'30 mins drive',   category:'Box Cricket', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"trending2.jpg", walking:'30 mins walking', drive:'30 mins drive',  category:'Box Cricket', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"trending1.jpg", walking:'30 mins walking', drive:'30 mins drive',  category:'Box Cricket', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          
+          {img:"recommend2.jpg", category:'Golf Tournament', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend1.jpg", category:'Golf Tournament', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend2.jpg", category:'Golf Tournament', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend2.jpg", category:'Golf Tournament', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend1.jpg", category:'Golf Tournament', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          
+          {img:"recommend2.jpg", category:'Singing', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend1.jpg", category:'Singing', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend2.jpg", category:'Singing', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend2.jpg", category:'Singing', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend1.jpg", category:'Singing', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+         
+          {img:"recommend2.jpg", category:'Talk Show', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend1.jpg", category:'Talk Show', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend1.jpg", category:'Talk Show', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend2.jpg", category:'Talk Show', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend1.jpg", category:'Talk Show', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          
+          {img:"recommend1.jpg", category:'Kite Surfing', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend2.jpg", category:'Kite Surfing', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend1.jpg", category:'Kite Surfing', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend2.jpg", category:'Kite Surfing', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend1.jpg", category:'Kite Surfing', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          
+          {img:"recommend2.jpg", category:'Book Exhibitions', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend1.jpg", category:'Book Exhibitions', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend2.jpg", category:'Book Exhibitions', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend2.jpg", category:'Book Exhibitions', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend1.jpg", category:'Book Exhibitions', heartIcon:true, vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          
       ],
+      
         Treading : [
-          {img:"trending1.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"one.svg",  date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-          {img:"recommend2.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"two.svg",  date:"Nov 10-29", title:"Swimming game for below 18 year kids", desc:"AED 1800 per person"},
+          {img:"trending2.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"one.svg",  date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+          {img:"recommend1.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"two.svg",  date:"Nov 10-29", title:"Swimming game for below 18 year kids", desc:"AED 1800 per person"},
           {img:"trending2.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"three.svg",  date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
           {img:"trending1.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"four.svg",  date:"Nov 10-29", title:"Swimming game for below 18 year kids", desc:"AED 1800 per person"},
           {img:"recommend2.jpg", vibetext:'Overwhelmed',  vibeicon:'overwhelmed.svg', rank:"five.svg",  date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
         ]
       },
+      FilterList:{
+        Filter : [
+          {title:"Stand Up Comedy"},
+          {title:"RAMP Walk"},
+          {title:"Box Cricket"},
+          {title:"Golf Tournament"},
+          {title:"Singing"},
+          {title:"Talk Show"},
+          {title:"Kite Surfing"},
+          {title:"Book Exhibitions"},
+      ],
+      DistanceFilter : [
+        {title:"10 mins walking"},
+        {title:"20 mins walking"},
+        {title:"30 mins walking"},
+    ],
+    DriveFilter : [
+      {title:"10 mins drive"},
+      {title:"20 mins drive"},
+      {title:"30 mins drive"},
+  ]
+    },
       PhotoGallaryData : {
         PhotoGallary : [
           {img:"Image120.jpg"},
@@ -54,6 +116,7 @@ const data = () => {
           {img:"Image121.jpg"},
       ]
       }
+      
     }
   };
   export default data;
