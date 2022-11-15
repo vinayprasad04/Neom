@@ -42,11 +42,11 @@ const Header = ({active}) =>{
     useEffect(()=>{
         setTimeout(()=>{
             setHeaderAlert(true);
-        },7000)
+        },10000)
         if(!headerAlert){
             setInterval(()=>{
                 setHeaderAlert(true);
-            },120000)
+            },12000000)
         }
     },[])
     return(

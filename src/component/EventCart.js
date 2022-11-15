@@ -44,7 +44,7 @@ const EventCart = ({ item }) => {
             <div className="card__date">{date}</div>
           </div>
           <div className="card__title">{title}</div>
-          <div className="card__price">{desc}</div>
+          {/*<div className="card__price">{desc}</div>*/}
         </div>
       </Link>
     </div>
