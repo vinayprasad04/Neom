@@ -25,11 +25,11 @@ const data = () => {
     RecommendationsCard:{
       heading: "Today's recommendations for you, Charlie!",
       Treading : [
-        {img:"trending1.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"one.svg",  date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-        {img:"recommend2.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"two.svg",  date:"Nov 10-29", title:"Swimming game for below 18 year kids", desc:"AED 1800 per person"},
-        {img:"trending2.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"three.svg",  date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-        {img:"trending1.jpg", vibetext:'Overwhelmed', vibeicon:'overwhelmed.svg', rank:"four.svg",  date:"Nov 10-29", title:"Swimming game for below 18 year kids", desc:"AED 1800 per person"},
-        {img:"recommend2.jpg", vibetext:'Overwhelmed',  vibeicon:'overwhelmed.svg', rank:"five.svg",  date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+        {img:"trending1.jpg", vibetext:'Invigorating & Uplifting', vibeicon:'overwhelmed.svg', rank:"one.svg",  date:"Nov 10-29", title:"Round of Golf", desc:"AED 1800 per person"},
+        {img:"recommend2.jpg", vibetext:'Active & Energizing', vibeicon:'joy.svg', rank:"two.svg",  date:"Nov 10-29", title:"Surfing", desc:"AED 1800 per person"},
+        {img:"trending2.jpg", vibetext:'Vibrant & Social', vibeicon:'joy.svg', rank:"three.svg",  date:"Nov 10-29", title:"Jazz Misuc", desc:"AED 1800 per person"},
+        {img:"trending1.jpg", vibetext:'Glamorous & Grand', vibeicon:'overwhelmed.svg', rank:"four.svg",  date:"Nov 10-29", title:"Sweet Wonderland", desc:"AED 1800 per person"},
+        {img:"recommend2.jpg", vibetext:'Active & Energizing',  vibeicon:'overwhelmed.svg', rank:"five.svg",  date:"Nov 10-29", title:"Kite Surfing", desc:"AED 1800 per person"},
     ]
     },
     AttendEventCard:{

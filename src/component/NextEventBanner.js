@@ -25,6 +25,7 @@ const NextEventBanner = ()=>{
                                     <div className="recSlider__info__title">Explore the deep sea</div>
                                     <div className="recSlider__info__date">From Nov 10 to 29, 2022</div>
                                     <div className="recSlider__info__row">
+                                        <div className="recSlider__info__price">10:30AM - 7:30PM</div>
                                         {/*<div className="recSlider__info__price">AED 1800 <span>per person</span></div>*/}
 {/*                                        <div className="recSlider__info__rating">
                                             <RatingValue readOnly={true} initialValue={5}/>

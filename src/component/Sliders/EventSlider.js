@@ -53,7 +53,7 @@ const EventSlider = (props) => {
 
                         <div className="card__info">
                           <h3 className="card__title">{item.title}</h3>
-                          {/*<div className="card__price">{item.desc}</div>*/}
+                          <div className="card__price">{/*{item.desc}*/}10:30AM - 7:30PM</div>
                           <div className="card__date">on {item.date}</div>
                           <div className="card__row">
                             <div className="card__rating">

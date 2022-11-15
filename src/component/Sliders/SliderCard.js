@@ -69,7 +69,7 @@ const SliderCard = ({EventDetail}) => {
                       <div className="recSlider__info__row">
                         <div className="recSlider__info__items">
                           <span className="icon icon-calendar"></span>
-                          {item.Event_Start_Date}{/*, {item.Event_Start_Time}*/} -  {item.Event_End_Date}{/*, {item.Event_End_Time}*/}
+                          {item.Event_Start_Date}, {item.Event_Start_Time} -  {item.Event_End_Date}, {item.Event_End_Time}
                         </div>
                       </div>
                       <div className="recSlider__info__row">

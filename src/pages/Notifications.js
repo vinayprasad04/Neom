@@ -49,7 +49,7 @@ const Notifications = () =>{
                                                 <div className="content--wrapper">
                                                     <div className="title">We have added a new activity for you.</div>
                                                     <div className="subtitle">Men's Golf League</div>
-                                                    {/*<div className="details">AED 1800 per person</div>*/}
+                                                    <div className="details">{/*AED 1800 per person*/}10:30AM - 7:30PM</div>
                                                     <div className="details">Nov 10-29</div>
                                                 </div>
                                             </div>
@@ -81,7 +81,7 @@ const Notifications = () =>{
                                                 <div className="content--wrapper">
                                                     <div className="title">We have added a new activity for you.</div>
                                                     <div className="subtitle">Men's Golf League</div>
-                                                    {/*<div className="details">AED 1800 per person</div>*/}
+                                                    <div className="details">{/*AED 1800 per person*/}10:30AM - 7:30PM</div>
                                                     <div className="details">Nov 10-29</div>
                                                 </div>
                                             </div>

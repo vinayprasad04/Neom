@@ -1,7 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
 const EventCart = ({ item }) => {
-  console.log("item", item);
   const { img, rank, rating, date, title, desc, vibeicon, vibetext, heartIcon} = item;
   return (
     <div className="card__item">
@@ -44,7 +43,7 @@ const EventCart = ({ item }) => {
             <div className="card__date">{date}</div>
           </div>
           <div className="card__title">{title}</div>
-          {/*<div className="card__price">{desc}</div>*/}
+          <div className="card__price">{/*{desc}*/}10:30AM - 7:30PM</div>
         </div>
       </Link>
     </div>
