@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Rating } from 'react-simple-star-rating'
 
-const RatingValue = ({initialValue, readOnly= false}) =>{
+const RatingValue = ({initialValue, readOnly= false, fillColor="#ffbc0b"}) =>{
     const [rating, setRating] = useState(0)
 
     // Catch Rating value
@@ -9,7 +9,7 @@ const RatingValue = ({initialValue, readOnly= false}) =>{
         setRating(rate)
     }
     return (
-        <Rating onClick={handleRating} initialValue={initialValue?initialValue:rating} size={18} readonly={readOnly} />
+        <Rating fillColor={fillColor} onClick={handleRating} initialValue={initialValue?initialValue:rating} size={18} readonly={readOnly} />
     )
 }
 export default RatingValue;

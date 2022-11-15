@@ -294,7 +294,7 @@ const Profile = [
     {
         "Booking_ID":10001,
         "Customer_ID":'001',
-        "Customer_Name":"Jane Mathew",
+        "Customer_Name":"Charlie",
         "Customer_Image":"filepath",
         "Contact_Number":8899112233,
         "Contact_Email":"syed.kashif@techmahindra.com",

@@ -88,7 +88,7 @@ const Cart = ({eventData}) =>{
     },3000)
   }
   return(
-      <div className="eventReserve__form">
+      <div className="eventReserve__form" >
         <div className={`alert ${alert && "open"}`}>
           <div className="left">
             <h2>Success!</h2>
@@ -98,7 +98,7 @@ const Cart = ({eventData}) =>{
         </div>
         <form>
           <div className="eventReserve__form--title">
-            AED 1800 <span>per person</span>
+          {/*  AED 1800 <span>per person</span>*/}10:30AM - 7:30PM
           </div>
           <div className="eventReserve__form--date"></div>
           <div className="form__flex--row">
@@ -125,19 +125,19 @@ const Cart = ({eventData}) =>{
           </div>
           <div className="btn btn__black" onClick={Sucmsg}>Reserve my seats</div>
           <ul className="guests__list">
-            <li className="guests__list--item">
+            {/*<li className="guests__list--item">
               <div className="guests">1800 x {seatValue} adult</div>
               <div className="price">{1800*seatValue}</div>
             </li>
             <li className="guests__list--item">
               <div className="guests">600 x 0 children</div>
               <div className="price">0</div>
-            </li>
+            </li>*/}
           </ul>
-          <div className="total">
+         {/* <div className="total">
             <div className="total__title">Total</div>
             <div className="total__price">AED {1800*seatValue}</div>
-          </div>
+          </div>*/}
         </form>
         <Link className="eventReserve__form--help">
           Need help?
@@ -162,7 +162,7 @@ const EventDetail = (props) => {
   return (
     <div>
       <Header />
-      <main className="content event">
+      <main className="content event" id={"eventDetail"}>
         <div class="eventDetails">
           <div class="container">
               <h2 className="eventDetails__title">{eventData.Event_Name}</h2>

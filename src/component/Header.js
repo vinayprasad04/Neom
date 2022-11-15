@@ -9,7 +9,7 @@ const HeaderAlert = ({headerAlert, setHeaderAlert}) =>{
     }
     return(
         <div className={`popup ${headerAlert ? "active":"" }`}>
-            <h4 className="popup__title">Hey Shane
+            <h4 className="popup__title">Hey Charlie
                 <span className="popup__icon"><img src={hand} alt=""/></span>
             </h4>
             <p className="popup__content">We noticed that you have changed your preferences. We have added
@@ -42,11 +42,11 @@ const Header = ({active}) =>{
     useEffect(()=>{
         setTimeout(()=>{
             setHeaderAlert(true);
-        },7000)
+        },10000)
         if(!headerAlert){
             setInterval(()=>{
                 setHeaderAlert(true);
-            },120000)
+            },12000000)
         }
     },[])
     return(

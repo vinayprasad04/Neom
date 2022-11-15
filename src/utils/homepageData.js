@@ -1,7 +1,7 @@
 const data = () => {
     return {
       TrendingCardData:{
-        heading: "Good morning Shane",
+        heading: "Good morningCharlie",
         Treading : [
             {img:"trending1.jpg", rank:"one.svg", rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
             {img:"recommend2.jpg", rank:"two.svg", rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
@@ -18,7 +18,7 @@ const data = () => {
           {img:"trending2.jpg",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
           {img:"trending1.jpg",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
           {img:"recommend2.jpg", rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
-      
+
           {img:"trending1.jpg",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
           {img:"recommend2.jpg",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
           {img:"trending2.jpg",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
@@ -29,4 +29,3 @@ const data = () => {
   }
 };
   export default data;
-  

@@ -34,10 +34,10 @@ const EmotionList = ({rating}) =>{
 }
 
 const Feedback = () =>{
-    useEffect(()=>{
+/*    useEffect(()=>{
         let user = Profile[0].Customer_ID;
         localStorage.setItem('User',JSON.stringify(Profile[0]));
-    },[])
+    },[])*/
 
 /*const customerName = localStorage.getItem('User');
 const Name = JSON.parse(customerName);*/
@@ -158,7 +158,7 @@ const Name = JSON.parse(customerName);*/
                                     </div>
                                     <div className="feedback__list--content">
                                         <div className="card--date">Nov 12, 2022</div>
-                                        <div className="card--subtitle">Hey Shane, you haven't added you feedback yet.
+                                        <div className="card--subtitle">Hey Charlie, you haven't added you feedback yet.
                                             Please share your experience with us to serve you better next time.
                                         </div>
                                         <button className="btn btn__black">Add a review</button>
