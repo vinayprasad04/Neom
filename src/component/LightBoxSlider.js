@@ -33,7 +33,7 @@ const LightBoxSlider = ({imagesGallery}) =>{
                     >
                         {imagesGallery.map((item, index)=>{
                             return(
-                                <SwiperSlide key={index}><img src={item} alt="event title"/></SwiperSlide>
+                                <SwiperSlide key={index}><img src={process.env.PUBLIC_URL + "./../img/" + item?.imgurl.img} alt="event title"/></SwiperSlide>
                             )
                         })}
                     </Swiper>

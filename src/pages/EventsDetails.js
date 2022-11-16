@@ -14,7 +14,7 @@ import Recommendations from "../component/Recommendations";
 
 import "photoswipe/dist/photoswipe.css";
 import { Gallery, Item } from "react-photoswipe-gallery";
-import { eventDetailImage } from "../MockData.js";
+import { DashboardEventDetail,  } from "../MockData.js";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -39,6 +39,7 @@ import AddAReview from "../component/AddAReview";
 import AddVivoMeaterReview from "../component/AddVivoMeaterReview";
 
 const imagesGallery = [Image120,Image118,Image122,Image121];
+console.log(imagesGallery, "callllled")
 const eventDetailPage = getJson();
 
 
@@ -225,7 +226,7 @@ const EventDetail = (props) => {
                 <div className="location">{eventData.Event_Location}</div>
               </div>
 
-            <GallaryItems imagesGallery={imagesGallery} status={eventData.Event_Status} />
+            <GallaryItems imagesGallery={DashboardEventDetail} status={eventData.Event_Status} />
           </div>
         </div>
         <div className="eventReserve">
