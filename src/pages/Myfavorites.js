@@ -1,15 +1,12 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 
 import {
     Header,
     Footer,
     Trending,
-    SliderCard,
-    EventSlider,
+
     useOpenWeather,
-    RatingSlider,
-    GallaryItems,
-    // SimpleMap
+
 } from "../component/index.js";
 import Recommendations from "../component/Recommendations";
 
@@ -26,6 +23,10 @@ const eventDetailPage = getJson();
 const FavoriteData = getJsonFavorite();
 
 const Myfavorites = (props) => {
+    const [myFavorites, setMyFavorites] = useState(FavoriteData);
+    const onRemoveFavoriteList = (e, item) =>{
+        setMyFavorites(...myFavorites, myFavorites.FavoritesData[item]);
+    }
     const { data, isLoading, errorMessage } = useOpenWeather({
         key: "edb174adcaf962338a5b74bbb3498eb1",
         lat: "48.137154",
@@ -33,10 +34,7 @@ const Myfavorites = (props) => {
         lang: "en",
         unit: "metric",
     });
-    const Sucmsg = () =>{
-        let el = document.getElementById('sucmsg')
-        el.style= 'display:block'
-    }
+
     const setRecSlider = () => {
         let wWidth = window.innerWidth,
             cWidth = document.querySelector('.header .container').offsetWidth,
@@ -66,7 +64,7 @@ const Myfavorites = (props) => {
             <Header active={"myfavorites"} />
             <main className="content favorites">
                 <Recommendations
-                    {...FavoriteData.FavoritesData}
+                    {...myFavorites.FavoritesData}
                     showCancelFavorite={true}
                 />
                 <NextEventBanner showHeartIcon={true}/>

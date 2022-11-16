@@ -155,6 +155,8 @@ const EventDetail = (props) => {
   const [vivoMeaterModal, setVivoMeaterModal] = useState(false);
 
   const eventData = detail.find((event) => JSON.stringify(event.Event_ID) === id);
+  const [eventAddReviewPanel, setEventAddReviewPanel] = useState(eventData.Client_Booked);
+
   const { data, isLoading, errorMessage } = useOpenWeather({
     key: "edb174adcaf962338a5b74bbb3498eb1",
     lat: "48.137154",
@@ -199,7 +201,7 @@ const EventDetail = (props) => {
     <div>
       <Header />
       <main className="content event" id={"eventDetail"}>
-        {eventData.Client_Booked && <div className="eventAddReview">
+        {eventAddReviewPanel && <div className="eventAddReview">
           <div className="container">
             <div className="eventAddReview__card">
               <div>
@@ -210,11 +212,11 @@ const EventDetail = (props) => {
               </div>
               <button className="btn__black" id="modalBtn" onClick={openModal}>Add a review</button>
               <AddAReview closeModal={closeModal} vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>
-              {vivoMeaterModal && <AddVivoMeaterReview vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>}
+              {vivoMeaterModal && <AddVivoMeaterReview vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal} setEventAddReviewPanel={setEventAddReviewPanel}/>}
             </div>
           </div>
         </div>}
-        <div className={`eventDetails  ${eventData.Client_Booked ?"p-0":""}`}>
+        <div className={`eventDetails  ${eventAddReviewPanel ?"p-0":""}`}>
           <div className="container">
               <h2 className="eventDetails__title">{eventData.Event_Name}</h2>
               <div className="eventDetails__review">

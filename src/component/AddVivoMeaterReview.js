@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import RatingValue from "./Rating";
 import vibe from './../assets/img/vibe-o-meter.svg';
 
-const AddVivoMeaterReview = ({vivoMeaterModal, setVivoMeaterModal}) => {
+const AddVivoMeaterReview = ({vivoMeaterModal, setVivoMeaterModal, setEventAddReviewPanel}) => {
     const [ratingVivo, setRatingVivo] = useState({});
     const [alert, setAlert] = useState(false);
     const onChangeRating = (e, item)=> {
@@ -20,6 +20,7 @@ const AddVivoMeaterReview = ({vivoMeaterModal, setVivoMeaterModal}) => {
         setAlert(true);
         setTimeout(()=>{
             closeModal()
+            setEventAddReviewPanel(false);
         },1500);
     }
     const onCancelAlert = ()=>{

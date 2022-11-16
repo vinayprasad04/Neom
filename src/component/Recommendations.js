@@ -4,7 +4,6 @@ import SectionHeader from "./SectionHeader";
 
 const Recommendations = (props) =>{
     const {Recommendation, heading, desc} = props;
-    console.log("FavoritesData",Recommendation);
     return(
         <div className="recommendations">
             <div className="container">
