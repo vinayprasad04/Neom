@@ -10,7 +10,7 @@ import "photoswipe/dist/photoswipe.css";
 
 import getJson from "../utils/eventDetailData";
 import EventCart from "../component/EventCart";
-import { filter } from "dom7";
+import { filter, height } from "dom7";
 const eventDetailPage = getJson();
 const itemPerRow = 10;
 let totalFilters = []
@@ -18,23 +18,58 @@ const UpcomingEvent = (props) => {
   const [next, setNext] = useState(itemPerRow);
   const [filterItem, setItemFilter ] = useState()
   const [drive, setDrive] = useState()
-  // const [ cardData, setCardData ] = useState(eventDetailPage.RecommendationData.Recommendation.length)
-  const selectedFilter = (filter) =>{
-    setNext(100)
-    totalFilters.push(filter)
+  const [distance, setDistance] = useState()
+  const [location, setLocation] = useState()
+  const [date, setDate] = useState()
+  const cards = eventDetailPage.RecommendationData.Recommendation
+const [filterCards, setFilterCards] = useState(eventDetailPage.RecommendationData.Recommendation.slice(0, next));
+
+const selectedFilter = (filter) =>{
+    // totalFilters.push(filter)
     setDrive(null)
     setItemFilter(filter)
+    let cardsFilterd = cards.filter((item)=>item.category == filter)
+    setFilterCards(cardsFilterd) 
+    setNext(100)
   }
   const slectedDrive = (driveFilter) =>{
+    let cardsFilterd = cards.filter((item)=>item.drive == driveFilter) 
+    setFilterCards(cardsFilterd) 
     setNext(100)
-    totalFilters=[]
+    setItemFilter(null)
     setDrive(driveFilter)
-    console.log(filterItem, "callled")
-    console.log(totalFilters, "callllllllled")
+    setDistance(null)
+  }
+  const slectedWalkingDistance = (distanceFilter) =>{
+    let cardsFilterd = cards.filter((item)=>item.walking == distanceFilter) 
+    setFilterCards(cardsFilterd) 
+    setDistance(distanceFilter)
+    setNext(100)
+    setItemFilter(null)
+    setDrive(null)
+  }
+ 
+  const handleChnage = (newValue) =>{
+    const nValue = newValue.target.value
+    setLocation(nValue)
+    let cardsFilterd = cards.filter((item)=>item.location == location) 
+    setFilterCards(cardsFilterd) 
+    setDistance(null)
+    setNext(100)
+    setItemFilter(null)
+    setDrive(null)
   }
   const handleMoreItem = () => {
     setNext(next + itemPerRow);
   };
+  const noLimit = () =>{
+    let cardsFilterd = cards.filter((item)=>item.location == location) 
+    setFilterCards(cardsFilterd) 
+    setDistance(null)
+    setNext(100)
+    setItemFilter(null)
+    setDrive(null)
+  }
  
   return (
     <div>
@@ -58,6 +93,7 @@ const UpcomingEvent = (props) => {
               <div className="filterWrap__content">
                 <div className="schedule">
                   <div>
+                    <form>
                     <div className="schedule__title">What suits your schedules?</div>
                     <div className="schedule__input">
                       <div className="schedule__input--fields datepicker">
@@ -65,10 +101,17 @@ const UpcomingEvent = (props) => {
                         <input type="date"/>
                       </div>
                       <div className="schedule__input--fields locationpicker">
-                        <span className="icon icon-location"></span>
-                        <input type="text" placeholder="Pick a location"/>
+                        {/* <span className="icon icon-location"></span>
+                        <input type="text" placeholder="Pick a location" onChange={handleChnage}/> */}
+                        <select value={location} onChange={handleChnage} style={{width:'265px', height:'50px', border:'0', backgroundColor:'transparent', fontSize:'16px'}}>
+                        <option value="">Select Location</option>
+                        <option value="Location One">Location One</option>
+                        <option calue="Location Two">Location Two</option>
+                        <option Location One="Location Three">Location Three</option>
+                        </select>
                       </div>
                     </div>
+                    </form>
                   </div>
 
                   <div>
@@ -77,7 +120,7 @@ const UpcomingEvent = (props) => {
                       <ul className="time__list">
                         {eventDetailPage.FilterList.DistanceFilter.map((item, index) => {
                           return(
-                            <li className={`time__list--item ${totalFilters.includes(item.title) && 'active'}`} onClick={(()=> selectedFilter(item.title))}>{item.title}</li>
+                            <li className={`time__list--item ${distance == item.title && 'active'}`} onClick={(()=> slectedWalkingDistance(item.title))}>{item.title}</li>
                           )
                         })}
                       </ul>
@@ -91,7 +134,7 @@ const UpcomingEvent = (props) => {
                       </ul>
 
                       <ul className="time__list">
-                        <li className="time__list--item border-rounded" onClick={(()=> setItemFilter(undefined))}>No limits</li>
+                        <li className="time__list--item border-rounded" onClick={(()=> noLimit())}>No limits</li>
                       </ul>
                     </div>
                   </div>
@@ -102,7 +145,7 @@ const UpcomingEvent = (props) => {
                   <ul className="category__list">
                     {eventDetailPage.FilterList.Filter.map((item, index) => {
                       return(
-                   <li key={index} className={`category__list--item  ${totalFilters.includes(item.title)  && 'active'}`} onClick={(()=> selectedFilter(item.title))}>{item.title}</li>
+                   <li key={index} className={`category__list--item  ${filterItem == item.title  && 'active'}`} onClick={(()=> selectedFilter(item.title))}>{item.title}</li>
                     )})}
                   </ul>
                 </div>
@@ -113,14 +156,21 @@ const UpcomingEvent = (props) => {
             </div>
             <div className="card__grid">
               {
-                eventDetailPage.RecommendationData.Recommendation.slice(0, next)?.map((item, index)=>{
+                filterCards.map((item, index)=>{
+                  return(
+                    <EventCart key={index} item={item}/>
+                  )
+                })
+              }
+              {/* {
+                filterCards.map((item, index)=>{
                    return totalFilters.length ? totalFilters.map((filter, index)=>{
                   return(
                       (filter == item.category) ? <EventCart key={index} item={item}/> :  null
                   )
-                }) : (drive == item.drive) ? <EventCart key={index} item={item}/> : null
+                }) : (drive == item.drive ) ? <EventCart key={index} item={item}/> : null
                 })
-              }
+              } */}
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     Header,
     Footer,
@@ -7,10 +7,28 @@ import {
 import {Profile} from './../MockData';
 import Recommendations from "../component/Recommendations";
 import getJson from "../utils/eventDetailData";
-
-const recommendationsPage = getJson();
+import EventCart from "../component/EventCart";
 
 const Recommendation = () =>{
+    const recommendationsPage = getJson();
+const [drive, setDrive] = useState();
+const [distance, setDistance] = useState()
+const [filterCards, setFilterCards] = useState(recommendationsPage.RecommendationData.Recommendation);
+
+const cards = recommendationsPage.RecommendationData.Recommendation
+
+  const slectedDrive = (driveFilter) =>{
+    let cardsFilterd = cards.filter((item)=>item.drive == driveFilter)
+    setFilterCards(cardsFilterd) 
+    setDrive(driveFilter)
+    setDistance(null)
+  }
+  const slectedWalkingDistance = (distanceFilter) =>{
+    let cardsFilterd = cards.filter((item)=>item.walking == distanceFilter) 
+    setFilterCards(cardsFilterd) 
+    setDistance(distanceFilter)
+    setDrive(null)
+  }
     return(
         <>
         <Header/>
@@ -36,15 +54,19 @@ const Recommendation = () =>{
                         <div className="schedule">
                             <div className="time">
                                 <ul className="time__list">
-                                    <li className="time__list--item">10 mins walking</li>
-                                    <li className="time__list--item active">20 mins walking</li>
-                                    <li className="time__list--item">30 mins walking</li>
+                                {recommendationsPage.FilterList.DistanceFilter.map((item, index) => {
+                          return(
+                            <li className={`time__list--item ${distance == item.title && 'active'}`} onClick={(()=> slectedWalkingDistance(item.title))}>{item.title}</li>
+                          )
+                        })}
                                 </ul>
 
                                 <ul className="time__list">
-                                    <li className="time__list--item">10 mins drive</li>
-                                    <li className="time__list--item active">20 mins drive</li>
-                                    <li className="time__list--item">30 mins drive</li>
+                                {recommendationsPage.FilterList.DriveFilter.map((item, index) => {
+                          return(
+                            <li className={`time__list--item ${drive == item.title && 'active'}`} onClick={(()=> slectedDrive(item.title))}>{item.title}</li>
+                          )
+                        })}
                                 </ul>
 
                                 <ul className="time__list">
@@ -54,7 +76,14 @@ const Recommendation = () =>{
                         </div>
 
                         <div className="card__grid">
-                            <Recommendations {...recommendationsPage.RecommendationData} showHeartIcon={true} />
+                        {
+                filterCards.map((item, index)=>{
+                  return(
+                    <EventCart key={index} item={item}/>
+                  )
+                })
+              }
+                            
                         </div>
                     </div>
                 </div>
