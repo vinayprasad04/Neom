@@ -18,7 +18,7 @@ const EventSlider = (props) => {
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
-          slidesPerView={4}
+          slidesPerView={5}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           breakpoints={{
@@ -31,7 +31,7 @@ const EventSlider = (props) => {
               spaceBetween: 20,
             },
             1024: {
-              slidesPerView: 3,
+              slidesPerView: 5,
               spaceBetween: 20,
             },
           }}

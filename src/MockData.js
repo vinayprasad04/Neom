@@ -51,14 +51,14 @@ const DashboardEventDetail =
       "Event_End_Time": "11:00 PM",
       "Seat_Booking_Availability": 20,
       "Event_Location": "Sindalah City",
-      "Event_Status": "Completed",
+      "Event_Status": "Scheduled",
       "Event_Capacity": 200,
       "Overall_Event_Rating": 4.8,
       "Operator_Rating": 4,
-        "Client_Booked": true,
+       // "Client_Booked": true,
         "imgurl":
           {"img": "golf.jpg"},
-        
+
     },
     {
       "Event_ID": 10003,
@@ -81,7 +81,7 @@ const DashboardEventDetail =
         "Client_Booked": true,
         "imgurl":
         {"img": "golf.jpg"},
-        
+
     },
     {
       "Event_ID": 10004,
@@ -104,7 +104,7 @@ const DashboardEventDetail =
         "Client_Booked": true,
         "imgurl":
         {"img": "golf.jpg"},
-        
+
     },
     {
       "Event_ID": 10002,
@@ -127,7 +127,7 @@ const DashboardEventDetail =
         "Client_Booked": true,
         "imgurl":
           {"img": "golf.jpg"},
-        
+
     },
   ]
 const EventDetail =
@@ -147,11 +147,11 @@ const EventDetail =
           "Event_End_Time": "11:00 PM",
           "Seat_Booking_Availability": 20,
           "Event_Location": "Sindalah City",
-          "Event_Status": "Completed",
+          "Event_Status": "Scheduled",
           "Event_Capacity": 200,
           "Overall_Event_Rating": 4.8,
           "Operator_Rating": 4,
-            "Client_Booked": true,
+            //"Client_Booked": true,
         },
         {
           "Event_ID": 10003,

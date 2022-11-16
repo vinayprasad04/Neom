@@ -39,7 +39,8 @@ const data = () => {
         {img:"Event-Banner.png", rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Swimming game for below 18 year kids", desc:"AED 1800 per person"},
         {img:"holiday_0.png",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
         {img:"spa_0.png",   rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Swimming game for below 18 year kids", desc:"AED 1800 per person"},
-    ]
+        {img:"Event-Banner.png", rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Swimming game for below 18 year kids", desc:"AED 1800 per person"},
+      ]
     },
     CartInfoSlider: {
       heading: "Top 5 activities on this island today",
