@@ -16,7 +16,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import getJson from "../utils/dashboardData";
-import {EventDetail, Profile} from './../MockData';
+import {DashboardEventDetail, Profile} from './../MockData';
 const dashboardPage = getJson();
 
 
@@ -61,17 +61,7 @@ const Dashboard = (props) => {
     <div>
       <Header active={"dashboard"} />
       <main className="content">
-        {/* <SimpleMap /> */}
-      <useOpenWeather
-      isLoading={isLoading}
-      errorMessage={errorMessage}
-      data={data}
-      lang="en"
-      locationLabel="Munich"
-      unitsLabels={{ temperature: 'C', windSpeed: 'Km/h' }}
-      showForecast
-    />
-        <SliderCard EventDetail={EventDetail}/>
+        <SliderCard EventDetail={DashboardEventDetail}/>
         <YourChoice {...dashboardPage.YourChoice}/>
         <Trending {...dashboardPage.RecommendationsCard} showHeartIcon={true}/>
         <EventSlider {...dashboardPage.AttendEventCard}/>

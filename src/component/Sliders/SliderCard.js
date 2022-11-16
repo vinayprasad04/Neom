@@ -56,7 +56,7 @@ const SliderCard = ({EventDetail}) => {
                     <Link className={"recSlider__link"} to={`/eventdetails/${item.Event_ID}`} >
                         <div className="slider__image--wrapper">
                             <img
-                                src={banner}
+                                src={process.env.PUBLIC_URL + "./../img/" + item?.url}
                                 alt="event title"
                             />
                             <div className="weather">

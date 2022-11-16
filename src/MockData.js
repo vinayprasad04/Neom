@@ -34,34 +34,113 @@ const SliderCardData = [
     {img:"recommend2.jpg", rank:"five.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod dolore magna aliquyam erat…"},
     /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
 ]
+const DashboardEventDetail =
+[
+
+    {
+      "Event_ID": 10002,
+      "Operator_ID": 20002,
+      "url":'golf.jpg',
+      "Operator_Name": "Dark Roast",
+      "Event_Category": "Fashion Shows",
+      "Event_Name": "Round of Golf",
+      "Event_Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+      "Event_Start_Date": "11/10/2022",
+      "Event_End_Date": "11/29/2022",
+      "Event_Start_Time": "7:00 PM",
+      "Event_End_Time": "11:00 PM",
+      "Seat_Booking_Availability": 20,
+      "Event_Location": "Sindalah City",
+      "Event_Status": "Completed",
+      "Event_Capacity": 200,
+      "Overall_Event_Rating": 4.8,
+      "Operator_Rating": 4,
+        "Client_Booked": true,
+        "imgurl":
+          {"img": "golf.jpg"},
+        
+    },
+    {
+      "Event_ID": 10003,
+      "Operator_ID": 20003,
+      "url":'surfing.jpg',
+      "Operator_Name": "Basket of gold",
+      "Event_Category": "Plays",
+      "Event_Name": "Surfing at leasure",
+      "Event_Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+      "Event_Start_Date": "11/11/2022",
+      "Event_End_Date": "11/30/2022",
+      "Event_Start_Time": "10:00 PM",
+      "Event_End_Time": "05:00 PM",
+      "Seat_Booking_Availability": 20,
+      "Event_Location": "Sindalah City",
+      "Event_Status": "Completed",
+      "Event_Capacity": 300,
+      "Overall_Event_Rating": 4.6,
+      "Operator_Rating": 5,
+        "Client_Booked": true,
+        "imgurl":
+        {"img": "golf.jpg"},
+        
+    },
+    {
+      "Event_ID": 10004,
+      "Operator_ID": 20003,
+      "url":'dive.jpg',
+      "Operator_Name": "Basket of gold",
+      "Event_Category": "Water Activity",
+      "Event_Name": "Dive into Exciting",
+      "Event_Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+      "Event_Start_Date": "11/10/2022",
+      "Event_End_Date": "11/29/2022",
+      "Event_Start_Time": "03:00 PM",
+      "Event_End_Time": "05:00 PM",
+      "Seat_Booking_Availability": 20,
+      "Event_Location": "Sindalah City",
+      "Event_Status": "Completed",
+      "Event_Capacity": 100,
+      "Overall_Event_Rating": 4.6,
+      "Operator_Rating": 3,
+        "Client_Booked": true,
+        "imgurl":
+        {"img": "golf.jpg"},
+        
+    },
+    {
+      "Event_ID": 10002,
+      "Operator_ID": 20002,
+      "url":'golf.jpg',
+      "Operator_Name": "Dark Roast",
+      "Event_Category": "Fashion Shows",
+      "Event_Name": "Round of Golf",
+      "Event_Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+      "Event_Start_Date": "11/10/2022",
+      "Event_End_Date": "11/29/2022",
+      "Event_Start_Time": "7:00 PM",
+      "Event_End_Time": "11:00 PM",
+      "Seat_Booking_Availability": 20,
+      "Event_Location": "Sindalah City",
+      "Event_Status": "Completed",
+      "Event_Capacity": 200,
+      "Overall_Event_Rating": 4.8,
+      "Operator_Rating": 4,
+        "Client_Booked": true,
+        "imgurl":
+          {"img": "golf.jpg"},
+        
+    },
+  ]
 const EventDetail =
     [
-        {
-          "Event_ID": 10001,
-          "Operator_ID": 20001,
-          "Operator_Name": "Indigo",
-          "Event_Category": "comedy show",
-          "Event_Name": "Stand Up Comedy",
-          "Event_Description": "Live comedy Performance infront of Audience",
-          "Event_Start_Date": "11/10/2022",
-          "Event_End_Date": "11/29/2022",
-          "Event_Start_Time": "3:00 PM",
-          "Event_End_Time": "7:30 PM",
-          "Seat_Booking_Availability": 50,
-          "Event_Location": "Sindalah City",
-          "Event_Status": "Completed",
-          "Event_Capacity": 300,
-          "Overall_Event_Rating": 3.8,
-          "Operator_Rating": 3,
-           "Client_Booked": true,
-        },
+
         {
           "Event_ID": 10002,
           "Operator_ID": 20002,
+          "url":'golf.jpg',
           "Operator_Name": "Dark Roast",
           "Event_Category": "Fashion Shows",
-          "Event_Name": "RAMP Walk",
-          "Event_Description": "Manish Malhotra's new upcoming line clothing",
+          "Event_Name": "Round of Golf",
+          "Event_Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
           "Event_Start_Date": "11/10/2022",
           "Event_End_Date": "11/29/2022",
           "Event_Start_Time": "7:00 PM",
@@ -77,10 +156,11 @@ const EventDetail =
         {
           "Event_ID": 10003,
           "Operator_ID": 20003,
+          "url":'surfing.jpg',
           "Operator_Name": "Basket of gold",
           "Event_Category": "Plays",
-          "Event_Name": "Othelo",
-          "Event_Description": "Shakespear Othelo Play",
+          "Event_Name": "Surfing at leasure",
+          "Event_Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
           "Event_Start_Date": "11/11/2022",
           "Event_End_Date": "11/30/2022",
           "Event_Start_Time": "10:00 PM",
@@ -96,10 +176,11 @@ const EventDetail =
         {
           "Event_ID": 10004,
           "Operator_ID": 20003,
+          "url":'dive.jpg',
           "Operator_Name": "Basket of gold",
           "Event_Category": "Water Activity",
-          "Event_Name": "Surfing",
-          "Event_Description": "Surfing at leasure",
+          "Event_Name": "Dive into Exciting",
+          "Event_Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
           "Event_Start_Date": "11/10/2022",
           "Event_End_Date": "11/29/2022",
           "Event_Start_Time": "03:00 PM",
@@ -115,6 +196,7 @@ const EventDetail =
         {
           "Event_ID": 10005,
           "Operator_ID": 20004,
+          "url":'golf.jpg',
           "Operator_Name": "Northern lights",
           "Event_Category": "Golf",
           "Event_Name": "Golf tournament",
@@ -133,6 +215,7 @@ const EventDetail =
         {
           "Event_ID": 10006,
           "Operator_ID": 20005,
+          "url":'surfing.jpg',
           "Operator_Name": "Eden Spring",
           "Event_Category": "concerts",
           "Event_Name": "Singing",
@@ -381,4 +464,4 @@ const Profile = [
 ]
 
 
-export {RecommendationData, Treading, Profile, eventDetailImage, EventDetail};
+export {RecommendationData, Treading, Profile, eventDetailImage, EventDetail, DashboardEventDetail};
