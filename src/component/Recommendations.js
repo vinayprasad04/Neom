@@ -1,18 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import EventCart from "./EventCart";
 import SectionHeader from "./SectionHeader";
 
 const Recommendations = (props) =>{
     const {Recommendation, heading, desc} = props;
+    const [evnetData, setEventData] = useState(Recommendation);
+    const onRemoveItem = (e, item) =>{
+        const filteredData = evnetData.filter((person) => person.favorites_Id !== item)
+        setEventData(filteredData);
+    }
     return(
         <div className="recommendations">
             <div className="container">
                 <SectionHeader heading={heading} desc={desc}/>
                 <div className="card__grid">
                     {
-                        Recommendation.map((item, index)=>{
+                        evnetData.map((item, index)=>{
                             return(
-                                <EventCart key={index} item={item} />
+                                <EventCart key={index} item={item} setEventData={setEventData} onRemoveItem={onRemoveItem}/>
                             )
                         })
                     }

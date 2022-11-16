@@ -1,28 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
-const EventCart = ({ item }) => {
-  const { img, rank, rating, date, title, desc, vibeicon, vibetext, heartIcon, showCancelFavorite} = item;
+const EventCart = ({ item, setEventData, onRemoveItem }) => {
+  const { img, rank, rating, date, title, desc, vibeicon, vibetext, heartIcon, showCancelFavorite,favorites_Id} = item;
+  const [heartAdd, setHeartAdd] = useState(false);
+  const onHeartClick = ()=>{
+      setHeartAdd(!heartAdd);
+  }
   return (
     <div className="card__item">
-      <Link className={"card__link"} to={`/eventdetails/10005`} >
         <div className="card__thumb">
-          {heartIcon &&
-          (<button className="card__fav"><span className="icon-heart"></span></button>
-          )}
-          {showCancelFavorite && <button className="card__remove">Remove</button>}
-          <img
-              src={process.env.PUBLIC_URL + "./../img/" + img}
-              alt="event name"
-              className="card__img"
-          />
-          {rank && (
-              <span className="card__count">
+          {heartIcon && (<button className="card__fav" onClick={onHeartClick}><span className="icon-heart" style={{color:heartAdd ?"red":""}}></span></button>)}
+          {showCancelFavorite && <button className="card__remove" onClick={(e)=>onRemoveItem(e, favorites_Id)}>Remove</button>}
+          <Link className={"card__link"} to={`/eventdetails/10005`} >
               <img
-                  src={process.env.PUBLIC_URL + "./../img/" + rank}
-                  alt="Top ranking 1"
+                  src={process.env.PUBLIC_URL + "./../img/" + img}
+                  alt="event name"
+                  className="card__img"
               />
-            </span>
-          )}
+              {rank && (
+                  <span className="card__count">
+                    <img src={process.env.PUBLIC_URL + "./../img/" + rank} alt="Top ranking 1"/>
+                  </span>
+              )}
+          </Link>
         </div>
         <div className="card__info">
           <div className="card__row">
@@ -46,7 +46,7 @@ const EventCart = ({ item }) => {
           <div className="card__title">{title}</div>
           <div className="card__price">{/*{desc}*/}10:30AM - 7:30PM</div>
         </div>
-      </Link>
+
     </div>
   );
 };
