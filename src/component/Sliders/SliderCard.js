@@ -80,7 +80,7 @@ const SliderCard = ({EventDetail}) => {
                           </div>
                       <div className="recSlider__info__row">
                         <div className="recSlider__info__items recSlider__info__description">
-                          {item.Event_Description}<br/> <span className="read--more">read more</span>
+                          {item.Event_Description} <span className="read--more">read more</span>
                         </div>
                       </div>
                       <div className="recSlider__info__row">
@@ -105,7 +105,7 @@ const SliderCard = ({EventDetail}) => {
                         <div className="recSlider__footer__item">
                             <div className="vibes">
                                 <img src={overwhelmed} alt="Overwhelmed" className="vibes__icon"/>
-                                    <span className="vibes__text">Overwhelmed </span>
+                                    <span className="vibes__text">{item.vibes_text} </span>
                             </div>
                           <span className={`status ${(item.Event_Status=="Over"||item.Event_Status=="Completed") ?"completed":(item.Event_Status=="cancelled")?"cancelled":"scheduled"}`}>{item.Event_Status}</span>
                         </div>

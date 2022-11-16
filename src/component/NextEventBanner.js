@@ -35,7 +35,7 @@ const NextEventBanner = ({showHeartIcon})=>{
                         <SwiperSlide>
                             <a href="#" className="recSlider__link">
                                 {showHeartIcon && <button className="card__fav"><span className="icon-heart"></span></button>}
-                                <img src={process.env.PUBLIC_URL + "./img/Event-Banner.png"} alt="event title" />
+                                <img src={process.env.PUBLIC_URL + "./img/surfing.jpg"} alt="event title" />
                                 <div className="recSlider__info">
                                     <div className="recSlider__info__title">Explore the deep sea</div>
                                     <div className="recSlider__info__date">From Nov 10 to 29, 2022</div>
@@ -60,7 +60,7 @@ const NextEventBanner = ({showHeartIcon})=>{
                         <SwiperSlide>
                             <a href="#" className="recSlider__link">
                                 {showHeartIcon && <button className="card__fav"><span className="icon-heart"></span></button>}
-                                <img src={process.env.PUBLIC_URL + "./img/recommend2.jpg"} alt="event title" />
+                                <img src={process.env.PUBLIC_URL + "./img/golf.jpg"} alt="event title" />
                                 <div className="recSlider__info">
                                     <div className="recSlider__info__title">Swimming game for below 18 year kids</div>
                                     <div className="recSlider__info__date">From Nov 10 to 29, 2022</div>
@@ -80,7 +80,7 @@ const NextEventBanner = ({showHeartIcon})=>{
                         <SwiperSlide>
                             <a href="#" className="recSlider__link">
                                 {showHeartIcon && <button className="card__fav"><span className="icon-heart"></span></button>}
-                                <img src={process.env.PUBLIC_URL + "./img/recommend1.jpg"} alt="event title" />
+                                <img src={process.env.PUBLIC_URL + "./img/yacht.jpg"} alt="event title" />
                                 <div className="recSlider__info">
                                     <div className="recSlider__info__title">Explore the deep sea</div>
                                     <div className="recSlider__info__date">From Nov 10 to 29, 2022</div>
@@ -100,7 +100,7 @@ const NextEventBanner = ({showHeartIcon})=>{
                         <SwiperSlide>
                             <a href="#" className="recSlider__link">
                                 {showHeartIcon && <button className="card__fav"><span className="icon-heart"></span></button>}
-                                <img src={process.env.PUBLIC_URL + "./img/recommend2.jpg"} alt="event title" />
+                                <img src={process.env.PUBLIC_URL + "./img/dive.jpg"} alt="event title" />
                                 <div className="recSlider__info">
                                     <div className="recSlider__info__title">Swimming game for below 18 year kids</div>
                                     <div className="recSlider__info__date">From Nov 10 to 29, 2022</div>

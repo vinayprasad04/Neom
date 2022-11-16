@@ -90,7 +90,7 @@ const Name = JSON.parse(customerName);*/
                                             <li className="feedback__list--item">
                                                 <div className="feedback__list--image">
                                                     <div className="card--image">
-                                                        <img src={process.env.PUBLIC_URL + "./img/trending1.jpg"} alt=""/>
+                                                        <img src={process.env.PUBLIC_URL + "./img/golf.jpg"} alt=""/>
                                                     </div>
                                                     <div className="card--text">
                                                         <h4>{item.Event_Description}</h4>
