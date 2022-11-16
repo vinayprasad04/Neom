@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 
 import {
   Header,
@@ -70,7 +70,9 @@ const selectedFilter = (filter) =>{
     setItemFilter(null)
     setDrive(null)
   }
- 
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   return (
     <div>
       <Header active={"upcomingevent"}/>

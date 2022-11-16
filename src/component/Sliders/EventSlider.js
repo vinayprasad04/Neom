@@ -21,10 +21,20 @@ const EventSlider = (props) => {
           slidesPerView={4}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
-          //   navigation
-          //   autoplay={{
-          //     delay: 2500,
-          //   }}
+          breakpoints={{
+            640: {
+              slidesPerView:1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
         >
           <div className="card__grid">
             {Treading.map((item, index) => {
@@ -32,7 +42,7 @@ const EventSlider = (props) => {
                 <SwiperSlide key={index}>
                   <div className={"card__grid card__grid--dashboard"}>
                     <div className="card__item">
-                      <Link className={"card__link"} to={`/eventdetails/10004`} >
+                      <Link className={"card__link"} to={`/eventdetails/10005`} >
                         <div className="card__thumb">
                           <img
                               src={process.env.PUBLIC_URL + "./img/" + item.img}

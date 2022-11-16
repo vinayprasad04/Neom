@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     Header,
     Footer,
@@ -29,6 +29,9 @@ const cards = recommendationsPage.RecommendationData.Recommendation
     setDistance(distanceFilter)
     setDrive(null)
   }
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+},[])
     return(
         <>
         <Header/>

@@ -17,6 +17,20 @@ const NextEventBanner = ({showHeartIcon})=>{
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
                         navigation
+                        breakpoints={{
+                            1024: {
+                                slidesPerView: 1.2,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 1.2,
+                                spaceBetween: 20,
+                            },
+                            300: {
+                                slidesPerView:1,
+                                spaceBetween: 10,
+                            },
+                        }}
                     >
                         <SwiperSlide>
                             <a href="#" className="recSlider__link">

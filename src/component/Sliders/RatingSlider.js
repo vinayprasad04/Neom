@@ -10,8 +10,8 @@ import "./Slider.scss";
 const RatingSliderCard = (props) => {
   const {heading, SliderCard} = props;
   return (
-    <div class="recSlider recSlider--ratingCards" style={{margin:"0px 0px 0px 84px"}}>
-      <div class="swiper tailored arrow_pos">
+    <div className="recSlider recSlider--ratingCards" style={{margin:"0px 0px 0px 84px"}}>
+      <div className="swiper tailored arrow_pos">
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
@@ -22,31 +22,45 @@ const RatingSliderCard = (props) => {
           autoplay={{
             delay: 112500,
           }}
+          breakpoints={{
+            1024: {
+              slidesPerView: 3.4,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2.1,
+              spaceBetween: 20,
+            },
+            300: {
+              slidesPerView:1,
+              spaceBetween: 10,
+            },
+          }}
         >
-          <div class="swiper-wrapper">
+          <div className="swiper-wrapper">
             {SliderCard.map((item, index) => {
               return (
-                <SwiperSlide>
-                  <a href="#" class="recSlider__link">
-                  <div class="recSlider__profile">
+                <SwiperSlide key ={index}>
+                  <a href="#" className="recSlider__link">
+                  <div className="recSlider__profile">
                   <img src={trending1} alt="event title"/>
-                <div class="recSlider__profile--info">
+                <div className="recSlider__profile--info">
                     <h4>{item.title}</h4>
                     <span>{item.date}</span>
                 </div>
               </div>
 
-                    <div class="recSlider__info">
-                    <div class="recSlider__info__description">{item.desc}</div>
-                <div class="recSlider__info__row">
-                  <div class="recSlider__info__rating">
-                    <div class="rating">
-                      <RatingValue readOnly={true} initialValue={5}/>
+                    <div className="recSlider__info">
+                    <div className="recSlider__info__description">{item.desc}</div>
+                <div className="recSlider__info__row">
+                  <div className="recSlider__info__rating">
+                    <div className="rating">
+                      <RatingValue fillColor={"#FF385C"} readOnly={true} initialValue={5}/>
                     </div>
-                    <div class="review">5.0</div></div>
+                    <div className="review">5.0</div></div>
                 </div>
               </div>
-              <button class="recSlider__button">Read more</button>
+              <button className="recSlider__button">Read more</button>
                   </a>
                 </SwiperSlide>
               );

@@ -49,10 +49,11 @@ const EventDetail =
           "Event_End_Time": "7:30 PM",
           "Seat_Booking_Availability": 50,
           "Event_Location": "Sindalah City",
-          "Event_Status": "Not Started",
+          "Event_Status": "Completed",
           "Event_Capacity": 300,
           "Overall_Event_Rating": 3.8,
-          "Operator_Rating": 3
+          "Operator_Rating": 3,
+           "Client_Booked": true,
         },
         {
           "Event_ID": 10002,
@@ -67,10 +68,11 @@ const EventDetail =
           "Event_End_Time": "11:00 PM",
           "Seat_Booking_Availability": 20,
           "Event_Location": "Sindalah City",
-          "Event_Status": "Not Started",
+          "Event_Status": "Completed",
           "Event_Capacity": 200,
           "Overall_Event_Rating": 4.8,
-          "Operator_Rating": 4
+          "Operator_Rating": 4,
+            "Client_Booked": true,
         },
         {
           "Event_ID": 10003,
@@ -85,10 +87,11 @@ const EventDetail =
           "Event_End_Time": "05:00 PM",
           "Seat_Booking_Availability": 20,
           "Event_Location": "Sindalah City",
-          "Event_Status": "Not Started",
+          "Event_Status": "Completed",
           "Event_Capacity": 300,
           "Overall_Event_Rating": 4.6,
-          "Operator_Rating": 5
+          "Operator_Rating": 5,
+            "Client_Booked": true,
         },
         {
           "Event_ID": 10004,
@@ -103,10 +106,11 @@ const EventDetail =
           "Event_End_Time": "05:00 PM",
           "Seat_Booking_Availability": 20,
           "Event_Location": "Sindalah City",
-          "Event_Status": "Over",
+          "Event_Status": "Completed",
           "Event_Capacity": 100,
           "Overall_Event_Rating": 4.6,
-          "Operator_Rating": 3
+          "Operator_Rating": 3,
+            "Client_Booked": true,
         },
         {
           "Event_ID": 10005,
@@ -121,7 +125,7 @@ const EventDetail =
           "Event_End_Time": "05:00 PM",
           "Seat_Booking_Availability": 30,
           "Event_Location": "Sindalah City",
-          "Event_Status": "Over",
+          "Event_Status": "Not Sarted",
           "Event_Capacity": 250,
           "Overall_Event_Rating": 4.6,
           "Operator_Rating": 4
@@ -139,7 +143,7 @@ const EventDetail =
           "Event_End_Time": "11:00 PM",
           "Seat_Booking_Availability": 10,
           "Event_Location": "Sindalah City",
-          "Event_Status": "Over",
+          "Event_Status": "Not Sarted",
           "Event_Capacity": 100,
           "Overall_Event_Rating": 4.4,
           "Operator_Rating": 3
