@@ -71,7 +71,7 @@ const EventDetail =
         "url":'surfing.jpg',
         "Operator_Name": "Basket of gold",
         "Event_Category": "Surfing",
-        "Event_Name": "Surfing at leasure",
+        "Event_Name": "Surfing at leisure",
         "Event_Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut...",
         "Event_Start_Date": "11/11/2022",
         "Event_End_Date": "11/30/2022",

@@ -11,7 +11,7 @@ const NotificationData = [
         notification_type:"event",
         notification_date:"Nov 5",
         event_id:"10004",
-        title:"Surfing at leasure",
+        title:"Surfing at leisure",
         time:"10:30AM - 7:30PM",
         event_date:"Nov 10-29",
         desc:"",
@@ -25,7 +25,7 @@ const NotificationData = [
         title:"Congratulations Charlie!",
         time:"",
         event_date:"",
-        desc:"You have completed event \"Surfing at leasure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
+        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
         img:"Product1.png"
     },
     {
@@ -33,7 +33,7 @@ const NotificationData = [
         notification_type:"dashboard",
         notification_date:"Nov 4",
         event_id:"",
-        title:"Surfing at leasure",
+        title:"Surfing at leisure",
         time:"10:30AM - 7:30PM",
         event_date:"Nov 10-29",
         desc:"",
@@ -47,7 +47,7 @@ const NotificationData = [
         title:"Congratulations Charlie!",
         time:"",
         event_date:"",
-        desc:"You have completed event \"Surfing at leasure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
+        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
         img:"Product1.png"
     },
     {
@@ -55,7 +55,7 @@ const NotificationData = [
         notification_type:"event",
         notification_date:"Nov 3",
         event_id:"10004",
-        title:"Surfing at leasure",
+        title:"Surfing at leisure",
         time:"10:30AM - 7:30PM",
         event_date:"Nov 10-29",
         desc:"",
@@ -69,7 +69,7 @@ const NotificationData = [
         title:"Congratulations Charlie!",
         time:"",
         event_date:"",
-        desc:"You have completed event \"Surfing at leasure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
+        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
         img:"Product1.png"
     },
     {
@@ -77,7 +77,7 @@ const NotificationData = [
         notification_type:"dashboard",
         notification_date:"Nov 3",
         event_id:"",
-        title:"Surfing at leasure",
+        title:"Surfing at leisure",
         time:"10:30AM - 7:30PM",
         event_date:"Nov 10-29",
         desc:"",
@@ -91,7 +91,7 @@ const NotificationData = [
         title:"Congratulations Charlie!",
         time:"",
         event_date:"",
-        desc:"You have completed event \"Surfing at leasure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
+        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
         img:"Product1.png"
     },
     {
@@ -99,7 +99,7 @@ const NotificationData = [
         notification_type:"event",
         notification_date:"Nov 2",
         event_id:"10004",
-        title:"Surfing at leasure",
+        title:"Surfing at leisure",
         time:"10:30AM - 7:30PM",
         event_date:"Nov 10-29",
         desc:"",
@@ -113,7 +113,7 @@ const NotificationData = [
         title:"Congratulations Charlie!",
         time:"",
         event_date:"",
-        desc:"You have completed event \"Surfing at leasure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
+        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
         img:"Product1.png"
     },
     {
@@ -121,7 +121,7 @@ const NotificationData = [
         notification_type:"dashboard",
         notification_date:"Nov 2",
         event_id:"",
-        title:"Surfing at leasure",
+        title:"Surfing at leisure",
         time:"10:30AM - 7:30PM",
         event_date:"Nov 10-29",
         desc:"",
@@ -135,7 +135,7 @@ const NotificationData = [
         title:"Congratulations Charlie!",
         time:"",
         event_date:"",
-        desc:"You have completed event \"Surfing at leasure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
+        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
         img:"Product1.png"
     },
     {
@@ -143,7 +143,7 @@ const NotificationData = [
         notification_type:"event",
         notification_date:"Nov 2",
         event_id:"10004",
-        title:"Surfing at leasure",
+        title:"Surfing at leisure",
         time:"10:30AM - 7:30PM",
         event_date:"Nov 10-29",
         desc:"",
@@ -157,7 +157,7 @@ const NotificationData = [
         title:"Congratulations Charlie!",
         time:"",
         event_date:"",
-        desc:"You have completed event \"Surfing at leasure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
+        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
         img:"Product1.png"
     },
     {
@@ -165,7 +165,7 @@ const NotificationData = [
         notification_type:"dashboard",
         notification_date:"Nov 1",
         event_id:"",
-        title:"Surfing at leasure",
+        title:"Surfing at leisure",
         time:"10:30AM - 7:30PM",
         event_date:"Nov 10-29",
         desc:"",
@@ -179,7 +179,7 @@ const NotificationData = [
         title:"Congratulations Charlie!",
         time:"",
         event_date:"",
-        desc:"You have completed event \"Surfing at leasure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
+        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
         img:"Product1.png"
     },
     {
@@ -187,7 +187,7 @@ const NotificationData = [
         notification_type:"event",
         notification_date:"Nov 1",
         event_id:"10004",
-        title:"Surfing at leasure",
+        title:"Surfing at leisure",
         time:"10:30AM - 7:30PM",
         event_date:"Nov 10-29",
         desc:"",
@@ -201,7 +201,7 @@ const NotificationData = [
         title:"Congratulations Charlie!",
         time:"",
         event_date:"",
-        desc:"You have completed event \"Surfing at leasure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
+        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
         img:"Product1.png"
     },
     {
@@ -209,7 +209,7 @@ const NotificationData = [
         notification_type:"dashboard",
         notification_date:"Nov 1",
         event_id:"",
-        title:"Surfing at leasure",
+        title:"Surfing at leisure",
         time:"10:30AM - 7:30PM",
         event_date:"Nov 10-29",
         desc:"",
@@ -223,7 +223,7 @@ const NotificationData = [
         title:"Congratulations Charlie!",
         time:"",
         event_date:"",
-        desc:"You have completed event \"Surfing at leasure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
+        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
         img:"Product1.png"
     },
     {
@@ -234,7 +234,7 @@ const NotificationData = [
         title:"Congratulations Charlie!",
         time:"",
         event_date:"",
-        desc:"You have completed event \"Surfing at leasure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
+        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
         img:"Product1.png"
     },
 ]

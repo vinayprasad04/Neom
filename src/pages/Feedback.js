@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     Header,
     Footer,
@@ -6,27 +6,29 @@ import {
 import {FeedData} from './../utils/FeedbackData';
 import {Profile} from "../MockData";
 import ChartSmile from "../component/Chart";
+import AddAReview from "../component/AddAReview";
+import AddVivoMeaterReview from "../component/AddVivoMeaterReview";
 
 const EmotionList = ({rating}) =>{
-
+let ratingNew = Number(rating).toFixed(0);
     return(
         <ul className="emotion__list">
-            <li className={`emotion__list--item  ${rating>4 && 'active'}`}>
+            <li className={`emotion__list--item  ${(ratingNew==5) && 'active'}`}>
                 <img src={process.env.PUBLIC_URL + "./img/overwhelmed.svg"} alt=""/>
             </li>
-            <li className={`emotion__list--item  ${rating<4 && 'active'}`}>
+            <li className={`emotion__list--item  ${ratingNew==4 && 'active'}`}>
                 <img src={process.env.PUBLIC_URL + "./img/joy.svg"} alt=""/>
             </li>
-            <li className={`emotion__list--item  ${rating<3.5 && 'active'}`}>
+            <li className={`emotion__list--item  ${ratingNew==3 && 'active'}`}>
                 <img src={process.env.PUBLIC_URL + "./img/appreciation.svg"} alt=""/>
             </li>
-            <li className={`emotion__list--item  ${rating<3 && 'active'}`}>
+            <li className={`emotion__list--item  ${ratingNew==2 && 'active'}`}>
                 <img src={process.env.PUBLIC_URL + "./img/boredom.svg"} alt=""/>
             </li>
-            <li className={`emotion__list--item  ${rating<2 && 'active'}`}>
+            <li className={`emotion__list--item  ${ratingNew==1 && 'active'}`}>
                 <img src={process.env.PUBLIC_URL + "./img/disappointed.svg"} alt=""/>
             </li>
-            <li className={`emotion__list--item  ${rating<1 && 'active'}`}>
+            <li className={`emotion__list--item  ${ratingNew==0 && 'active'}`}>
                 <img src={process.env.PUBLIC_URL + "./img/anger.svg"} alt=""/>
             </li>
         </ul>
@@ -34,18 +36,22 @@ const EmotionList = ({rating}) =>{
 }
 
 const Feedback = () =>{
-/*    useEffect(()=>{
-        let user = Profile[0].Customer_ID;
-        localStorage.setItem('User',JSON.stringify(Profile[0]));
-    },[])*/
-
-/*const customerName = localStorage.getItem('User');
-const Name = JSON.parse(customerName);*/
+    const [vivoMeaterModal, setVivoMeaterModal] = useState(false);
+    function openModal() {
+        let el = document.getElementById('modal')
+        el.style = 'display:block'
+    }
+    function closeModal() {
+        let el = document.getElementById('modal')
+        el.style = 'display:none';
+    }
     useEffect(()=>{
         window.scrollTo(0, 0);
     },[])
     return(
             <div>
+                <AddAReview closeModal={closeModal} vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>
+                {vivoMeaterModal && <AddVivoMeaterReview vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>}
                 <Header/>
                 <main className="content feedback">
                     <div className="feedback__banner">
@@ -85,33 +91,38 @@ const Name = JSON.parse(customerName);*/
                             </h2>
                             <ul className="feedback__list">
                                 {
-                                    FeedData.map((item)=>{
+                                    FeedData.map((item,index)=>{
                                         return(
-                                            <li className="feedback__list--item">
+                                            <li key={index} className="feedback__list--item">
                                                 <div className="feedback__list--image">
                                                     <div className="card--image">
-                                                        <img src={process.env.PUBLIC_URL + "./img/golf.jpg"} alt=""/>
+                                                        <img src={process.env.PUBLIC_URL + "./img/"+item.Event.Img_Url} alt=""/>
                                                     </div>
                                                     <div className="card--text">
-                                                        <h4>{item.Event_Description}</h4>
-                                                        <p>Nov 10-29, 2022</p>
+                                                        <h4>{item.Event.Event_Name}</h4>
+                                                        <p>{item.Event.Event_End_Date}</p>
                                                         <div className="card--review">
-                                                            <p>123 reviews</p>
-                                                            <div className="icon"><span className="icon-star"></span>5.0</div>
+                                                            <p>{item.Event.Total_reviews} reviews</p>
+                                                            <div className="icon"><span className="icon-star"></span>{item.Event.Overall_Event_Rating}</div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="feedback__list--content">
-                                                    <div className="card--date">Nov 17, 2022</div>
-                                                    <h3 className="card--title">{item.Feedback}</h3>
-                                                    <div className="card--description">Lorem ipsum dolor sit amet, consetetur
-                                                        sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                                                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                                                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                                                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                                                        sadipscing elit.
-                                                    </div>
-                                                    <EmotionList rating ={item.Overall_Rating}/>
+                                                    <div className="card--date">{item.Review.Date}</div>
+                                                {item.Review.Feedback && item.Review.Overall_Rating ?
+                                                    <>
+                                                        <h3 className="card--title">{item.Review.Feedback}</h3>
+                                                        <div className="card--description">{item.Review.Suggestion}</div>
+                                                        <EmotionList rating={item.Review.Overall_Rating}/>
+                                                    </>:
+                                                    <>
+                                                        <div className="card--subtitle">
+                                                            Hey Charlie, you haven't added you feedback yet.
+                                                            Please share your experience with us to serve you better next time.
+                                                        </div>
+                                                        <button className="btn btn__black" onClick={openModal}>Add a review</button>
+                                                     </>
+                                                    }
                                                 </div>
                                             </li>
                                         )
