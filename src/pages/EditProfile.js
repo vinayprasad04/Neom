@@ -7,7 +7,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import user from './../assets/img/user.svg';
-import golf from './../assets/img/golf.png';
+import golf from './../assets/img/golf.jpg';
 import music from './../assets/img/music.png';
 import exploring from './../assets/img/exploring.png';
 import cookingdinner from './../assets/img/cooking&dinner.png';
