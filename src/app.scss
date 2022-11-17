@@ -97,6 +97,19 @@
   position: absolute;
   opacity: 0;
 }
+.profileIconWrap{
+  position: relative;
+  .profileIcon{
+    &.icon-calendar{
+      position: absolute;
+      bottom: 16px;
+      right: 14px;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+}
+
 .react-datepicker__tab-loop{
   z-index: 99;
 }

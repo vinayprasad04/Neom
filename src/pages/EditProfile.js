@@ -9,7 +9,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import user from './../assets/img/user.svg';
 import golf from './../assets/img/golf.jpg';
 import music from './../assets/img/music.png';
-import exploring from './../assets/img/exploring.png';
+import exploring from './../assets/img/exploring2.png';
 import cookingdinner from './../assets/img/cooking&dinner.png';
 import rooms from './../assets/img/Product1.png';
 import socializing from './../assets/img/socializing.png';
@@ -23,8 +23,6 @@ import {Profile} from './../MockData';
 
 const activitylist = [
     {name:"Golf", img:golf, select:true,},
-    {name:"Golf", img:golf, select:true,},
-    {name:"Music", img:music, select:false,},
     {name:"Music", img:music, select:false,},
     {name:"Rooms", img:rooms, select:true,},
     {name:"Exploring", img:exploring, select:false,},
@@ -244,8 +242,9 @@ const EditProfile = () =>{
                                             </li>
                                         </ul>
                                     </div>*/}
-                                    <div className="form__group">
+                                    <div className="form__group profileIconWrap">
                                         <label className="form__label">When can we wish a happy birthday?</label>
+                                        <span className={"icon-calendar profileIcon"}></span>
                                         <DatePicker className="form__input" selected={startDate} onChange={(date:Date) => setStartDate(date)} />
                                       {/*  <input type="text"  className="form__input"  value={profileValue.dop} placeholder="" onChange={(e)=>onChangeProfile(e, 'dop')}/>*/}
                                     </div>
