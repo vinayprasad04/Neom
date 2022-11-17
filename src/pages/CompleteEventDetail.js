@@ -307,7 +307,6 @@ const CompleteEventDetail = (props) => {
 
         <Recommendations {...eventDetailPage.RecommendationData} showHeartIcon={true} />
       </main>
-      <Footer />
     </div>
   );
 };

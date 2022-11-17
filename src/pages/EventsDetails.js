@@ -336,7 +336,6 @@ const EventDetail = (props) => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
