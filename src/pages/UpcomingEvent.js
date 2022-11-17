@@ -12,7 +12,7 @@ import getJson from "../utils/eventDetailData";
 import EventCart from "../component/EventCart";
 import { filter, height } from "dom7";
 const eventDetailPage = getJson();
-const itemPerRow = 10;
+const itemPerRow = 15;
 let totalFilters = []
 const UpcomingEvent = (props) => {
   const [next, setNext] = useState(itemPerRow);

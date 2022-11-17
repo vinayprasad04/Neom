@@ -43,7 +43,7 @@ const RatingSliderCard = (props) => {
                 <SwiperSlide key ={index}>
                   <a href="#" className="recSlider__link">
                   <div className="recSlider__profile">
-                  <img src={trending1} alt="event title"/>
+                  <img src={process.env.PUBLIC_URL + "./../img/" + item.img} alt="event title"/>
                 <div className="recSlider__profile--info">
                     <h4>{item.title}</h4>
                     <span>{item.date}</span>
