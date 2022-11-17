@@ -113,6 +113,13 @@
 .react-datepicker__tab-loop{
   z-index: 99;
 }
+
+.feedback__banner--graphic{
+  svg{
+/*    width: 576px;
+    height: 299px;*/
+  }
+}
 @media(max-width: 767px){
   .lightBoxOverlay{
     .cancelBox{

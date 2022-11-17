@@ -8,7 +8,7 @@ import {Profile} from "../MockData";
 import ChartSmile from "../component/Chart";
 import AddAReview from "../component/AddAReview";
 import AddVivoMeaterReview from "../component/AddVivoMeaterReview";
-
+import GaugeChart from 'react-gauge-chart';
 const EmotionList = ({rating}) =>{
 let ratingNew = Number(rating).toFixed(0);
     return(
@@ -64,8 +64,7 @@ const Feedback = () =>{
                                                 <img src={process.env.PUBLIC_URL + "./img/overwhelmed.svg"} alt="Overwhelmed"/>
                                             </div>
                                             <h2 className="feedback__banner--title">Overwhelmed experience</h2>
-                                            <h3 className="feedback__banner--subtitle">Your Vibe-O-Meter reading exits
-                                                us too
+                                            <h3 className="feedback__banner--subtitle">Your Vibe-O-Meter reading exits us too
                                             </h3>
                                             <div className="feedback__banner--description">We are happy too because we
                                                 successfully keep you happy during this visit to Sindalah City.
@@ -74,8 +73,29 @@ const Feedback = () =>{
                                     </div>
                                     <div className="col_sm_12 col_md_12 col_lg_6">
                                         <div className="feedback__banner--graphic">
-                                            {/*<ChartSmile/>*/}
-                                            <img src={process.env.PUBLIC_URL + "./img/vibe-o-meter.svg"} alt=""/>
+                                            <GaugeChart id="gauge-chart5"
+                                                        nrOfLevels={30}
+                                                        arcsLength={[
+                                                            0.04,0.04,0.04,0.04,0.04,
+                                                            0.04,0.04,0.04,0.04,0.04,
+                                                            0.04,0.04,0.04,0.04,0.04,
+                                                            0.04,0.04,0.04,0.04,0.04,
+                                                            0.04,0.04,0.04,0.04,0.04,]}
+                                                        colors={[
+                                                            '#55bf3b', '#55bf3b','#55bf3b','#55bf3b','#55bf3b',
+                                                            '#9acc0d', '#9acc0d','#9acc0d','#9acc0d','#9acc0d',
+                                                            '#ace50d', '#ace50d','#ace50d','#ace50d','#ace50d',
+                                                            '#ffb03a','#ffb03a','#ffb03a','#ffb03a','#ffb03a',
+                                                            '#ff385c','#ff385c','#ff385c','#ff385c','#ff385c',]}
+                                                        percent={0.06}
+                                                        arcPadding={0.01}
+                                                        cornerRadius={0}
+                                                        needleColor="#222222"
+                                                        needleBaseColor="#222222"
+                                                        hideText={true}
+                                                        marginInPercent={0.03}
+                                            />
+                                          {/*  <img src={process.env.PUBLIC_URL + "./img/vibe-o-meter.svg"} alt=""/>*/}
                                         </div>
                                     </div>
                                 </div>
