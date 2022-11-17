@@ -56,6 +56,7 @@ const Dashboard = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0);
         setRecSlider()
+        localStorage.setItem("ApiSwitch", false)
     },[])
   return (
     <div>

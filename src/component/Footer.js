@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from "react-router-dom";
 
 const Footer = () =>{
+    const [api, setApi] = useState(false)
+    const onSwitch = () =>{
+        setApi(!api)
+        localStorage.setItem("ApiSwitch", api)
+    }
     return(
         <footer className="footer">
             <div className="container">
@@ -63,6 +68,13 @@ const Footer = () =>{
                         <Link className={"footer__social__link"}>Terms of Use</Link>
                         <Link className={"footer__social__link"}>Privacy</Link>
                         <Link className={"footer__social__link"}>Cookie</Link>
+                        <div  style={{display:'flex', alignItem:'center'}}>
+                        <span style={{color:'#fff', paddingRight:'10px'}}>Api switcher</span>
+                        <div className="form__group--toggle" style={{marginTop:'-8px'}}>
+                            <input type="checkbox" id="switch10" className="checkbox" onChange={onSwitch}/>
+                            <label htmlFor="switch10" className="toggle"></label>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
