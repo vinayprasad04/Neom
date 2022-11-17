@@ -1,19 +1,23 @@
 import React from "react";
 // import golf from './../assets/img/golf.jpg';
 import LightBoxSlider from "./LightBoxSlider";
-import { DashboardEventDetail,  } from "../MockData.js";
-
+import { EventDetail,  } from "../MockData.js";
 const GallaryItems = (props) =>{
     const { imagesGallery ,status } = props;
+    console.log(imagesGallery, "item callled");
+    const totalItem = imagesGallery.imgurl.length
+
     return(
     <div className="eventDetails__grid">
+      
               <div className="eventDetails__grid--col grid__box">
-                {imagesGallery.map((item, index) => {
-                  console.log(item, "callled")
+                {imagesGallery.imgurl.map((item, index) => {
+                  
+                  console.log(item, "item")
                   return (
-                    <div className="grid__box--sm" key={index}>
+                    totalItem > index + 1  && <div className="grid__box--sm" key={index}>
                       <img
-                        src={process.env.PUBLIC_URL + "./../img/" + item?.imgurl.img}
+                        src={process.env.PUBLIC_URL + "./../img/" + item?.img}
                         alt=""
                         className="grid__image border__rounded--topLeft"
                       />
@@ -23,13 +27,13 @@ const GallaryItems = (props) =>{
               </div>
               <div className="eventDetails__grid--col">
                 <img
-                  src={process.env.PUBLIC_URL + "./../img/golf.jpg"}
+                  src={process.env.PUBLIC_URL + "./../img/" + imagesGallery?.imgurl[totalItem-1].img}
                   alt=""
                   className="grid__image border__rounded--topRight border__rounded--bottomRight"
                 />
               </div>
               <div className={`status ${(status=="Over"||status=="Completed") ?"completed":(status=="cancelled")?"cancelled":"scheduled"}`}>{status}</div>
-              <LightBoxSlider imagesGallery={DashboardEventDetail}/>
+              <LightBoxSlider imagesGallery={imagesGallery}/>
             </div>
     )
 }

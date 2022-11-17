@@ -16,7 +16,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import getJson from "../utils/dashboardData";
-import {DashboardEventDetail, Profile} from './../MockData';
+import {EventDetail, Profile} from './../MockData';
 const dashboardPage = getJson();
 
 
@@ -61,7 +61,7 @@ const Dashboard = (props) => {
     <div>
       <Header active={"dashboard"} />
       <main className="content">
-        <SliderCard EventDetail={DashboardEventDetail}/>
+        <SliderCard EventDetail={EventDetail.slice(0, 4)}/>
         <YourChoice {...dashboardPage.YourChoice}/>
         <Trending {...dashboardPage.RecommendationsCard} showHeartIcon={true}/>
         <EventSlider {...dashboardPage.AttendEventCard}/>

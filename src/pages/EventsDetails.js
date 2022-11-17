@@ -14,7 +14,6 @@ import Recommendations from "../component/Recommendations";
 
 import "photoswipe/dist/photoswipe.css";
 import { Gallery, Item } from "react-photoswipe-gallery";
-import { DashboardEventDetail,  } from "../MockData.js";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -207,8 +206,7 @@ const EventDetail = (props) => {
             <div className="eventAddReview__card">
               <div>
                 <h2 className="eventAddReview__card--title">Hey Charlie,</h2>
-                <p className="eventAddReview__card--subtitle">We are sure that you have enjoyed this event a lot.
-                  Would you like to share your feedback with us.</p>
+                <p className="eventAddReview__card--subtitle">We are sure that you have enjoyed this event a lot. Would you like to share your feedback with us.</p>
                 <p className="eventAddReview__card--subtitle">It helps us to improve and serve you better.</p>
               </div>
               <button className="btn__black" id="modalBtn" onClick={openModal}>Add a review</button>
@@ -226,7 +224,7 @@ const EventDetail = (props) => {
                 <div className="location">{eventData.Event_Location}</div>
               </div>
 
-            <GallaryItems imagesGallery={DashboardEventDetail} status={eventData.Event_Status} />
+            <GallaryItems imagesGallery={eventData} status={eventData.Event_Status} />
           </div>
         </div>
         <div className="eventReserve">
@@ -257,8 +255,7 @@ const EventDetail = (props) => {
                       <div className="description-details">
                         <h5>Great location</h5>
                         <p>
-                          This is one of the many events comes under the Golf
-                          category.
+                        Every guest has given a five star rating to this location.
                         </p>
                       </div>
                     </li>
@@ -270,10 +267,9 @@ const EventDetail = (props) => {
                         />
                       </div>
                       <div className="description-details">
-                        <h5>Overwhelmed experience</h5>
+                        <h5>Invigorating & uplifting experience</h5>
                         <p>
-                          This event has a rating of 5.0 that make this event
-                          overwhelmed.
+                        This event has a rating of 5.0 that make this event overwhelmed.
                         </p>
                       </div>
                     </li>
@@ -300,7 +296,7 @@ const EventDetail = (props) => {
                   </div>
                 </div>
                 <div className="event__review">
-                  <h4 className="event__reserve--title">Operated by {eventData.Operator_Name}</h4>
+                  <h4 className="event__reserve--title">Operator River Stone {eventData.Operator_Name}</h4>
                   <div className="event__review--row">
                     <div className="rating"><RatingValue fillColor={"#FF385C"} readOnly={true} initialValue={eventData.Operator_Rating}/></div>
                     <div className="review">{eventData.Operator_Rating}</div>
@@ -330,7 +326,7 @@ const EventDetail = (props) => {
             <h2 className="recommendations__title">Some more recommendations for you, Charlie!</h2>
             <div className="card__grid">
               {
-                eventDetailPage.RecommendationData.Recommendation.map((item, index)=>{
+                eventDetailPage.RecommendationData.Recommendation.slice(0,10).map((item, index)=>{
                   return(
                       <EventCart key={index} item={item}/>
                   )
