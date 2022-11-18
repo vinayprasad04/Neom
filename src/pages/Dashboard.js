@@ -17,7 +17,7 @@ import "swiper/css/pagination";
 import getJson from "../utils/dashboardData";
 import {EventDetail, Profile} from './../MockData';
 import { getEventList } from '../utils/Api';
-import {apiChecker} from '../utils/ApiChecker'
+import apiChecker from '../utils/ApiChecker'
 
 const dashboardPage = getJson();
 
@@ -31,7 +31,7 @@ const Dashboard = (props) => {
     useEffect(() => {
       fetchEvents();
     }, []);
-    const [data, setData] = useState(apiChecker ? EventDetail : list)
+    const [data, setData] = useState(EventDetail)
 
     const fetchEvents = () =>
     getEventList().then(items => {

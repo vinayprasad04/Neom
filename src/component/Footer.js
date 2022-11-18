@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from "react-router-dom";
-
+const apiS = localStorage.getItem("ApiSwitch")
+console.log(apiS, "value is printed")
 const Footer = () =>{
-    const [api, setApi] = useState(true)
+    const apiIntract = apiS === null ? true : localStorage.getItem("ApiSwitch")
+    const [api, setApi] = useState(apiIntract)
     const onSwitch = () =>{
         setApi(!api)
     }

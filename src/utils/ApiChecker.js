@@ -1,6 +1,6 @@
 export const apiChecker = async () => {
     const apiResponse = localStorage.getItem("ApiSwitch")
-    if(apiResponse){
+    if(apiResponse == true){
         return true
     }else{return false}
 }
