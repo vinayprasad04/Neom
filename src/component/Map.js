@@ -7,7 +7,7 @@ const Map = () =>{
                 <div className="container">
                     <div className="onmap__title">Find events on map</div>
                     <div className="onmap__map">
-                        <img src={process.env.PUBLIC_URL + "./img/map.jpg"} alt="event" />
+                        <img src={process.env.PUBLIC_URL + "./img/map.png"} alt="event" />
                     </div>
                 </div>
             </div>

@@ -55,7 +55,7 @@ const EventDetail =
         "Event_Capacity": 200,
         "Overall_Event_Rating": 5.0,
         "Operator_Rating": 4.9,
-          "vibes_text":"Overwhelmed vibes are coming here",
+          "vibes_text":"Overwhelmed",
          // "Client_Booked": true,
           "imgurl":[
             {"img": "golf.jpg"},
@@ -84,7 +84,7 @@ const EventDetail =
         "Overall_Event_Rating": 4.6,
         "Operator_Rating": 5,
           "Client_Booked": true,
-          "vibes_text":"Overwhelmed vibes are coming here",
+          "vibes_text":"Overwhelmed",
           "imgurl":[
             {"img": "surfing.jpg"},
             {"img": "surfing.jpg"},
@@ -112,7 +112,7 @@ const EventDetail =
         "Overall_Event_Rating": 4.6,
         "Operator_Rating": 3,
           "Client_Booked": true,
-          "vibes_text":"Joyed vibes are coming here",
+          "vibes_text":"Joyed",
           "imgurl":[
             {"img": "surfing.jpg"},
             {"img": "surfing.jpg"},
@@ -140,7 +140,7 @@ const EventDetail =
         "Overall_Event_Rating": 4.8,
         "Operator_Rating": 4,
           "Client_Booked": true,
-          "vibes_text":"Overwhelmed vibes are coming here",
+          "vibes_text":"Overwhelmed",
           "imgurl":[
             {"img": "golf.jpg"},
             {"img": "golf.jpg"},
