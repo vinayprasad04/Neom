@@ -27,7 +27,7 @@ const cards = recommendationsPage.RecommendationData.Recommendation
     let cardsFilterd = cards.filter((item)=>item.walking == distanceFilter)
     setFilterCards(cardsFilterd)
     setDistance(distanceFilter)
-    setDrive(null)
+    setDrive(null);
   }
   useEffect(()=>{
     window.scrollTo(0, 0);
