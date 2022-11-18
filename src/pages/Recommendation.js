@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {
     Header,
-    Footer,
     Banner
 } from "../component/index.js";
 import {Profile} from './../MockData';
-import Recommendations from "../component/Recommendations";
 import getJson from "../utils/eventDetailData";
 import EventCart from "../component/EventCart";
 
@@ -18,13 +16,13 @@ const [filterCards, setFilterCards] = useState(recommendationsPage.Recommendatio
 const cards = recommendationsPage.RecommendationData.Recommendation
 
   const slectedDrive = (driveFilter) =>{
-    let cardsFilterd = cards.filter((item)=>item.drive == driveFilter)
+    let cardsFilterd = cards.filter((item)=>item.drive === driveFilter)
     setFilterCards(cardsFilterd)
     setDrive(driveFilter)
     setDistance(null)
   }
   const slectedWalkingDistance = (distanceFilter) =>{
-    let cardsFilterd = cards.filter((item)=>item.walking == distanceFilter)
+    let cardsFilterd = cards.filter((item)=>item.walking === distanceFilter)
     setFilterCards(cardsFilterd)
     setDistance(distanceFilter)
     setDrive(null);
@@ -59,7 +57,7 @@ const cards = recommendationsPage.RecommendationData.Recommendation
                                 <ul className="time__list">
                                 {recommendationsPage.FilterList.DistanceFilter.map((item, index) => {
                           return(
-                            <li className={`time__list--item ${distance == item.title && 'active'}`} onClick={(()=> slectedWalkingDistance(item.title))}>{item.title}</li>
+                            <li className={`time__list--item ${distance === item.title && 'active'}`} onClick={(()=> slectedWalkingDistance(item.title))}>{item.title}</li>
                           )
                         })}
                                 </ul>
@@ -67,7 +65,7 @@ const cards = recommendationsPage.RecommendationData.Recommendation
                                 <ul className="time__list">
                                 {recommendationsPage.FilterList.DriveFilter.map((item, index) => {
                           return(
-                            <li className={`time__list--item ${drive == item.title && 'active'}`} onClick={(()=> slectedDrive(item.title))}>{item.title}</li>
+                            <li className={`time__list--item ${drive === item.title && 'active'}`} onClick={(()=> slectedDrive(item.title))}>{item.title}</li>
                           )
                         })}
                                 </ul>
