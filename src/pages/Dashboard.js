@@ -17,12 +17,26 @@ import "swiper/css/pagination";
 import getJson from "../utils/dashboardData";
 import {EventDetail, Profile} from './../MockData';
 import { getEventList } from '../utils/Api';
-import apiChecker from '../utils/ApiChecker'
 
 const dashboardPage = getJson();
 
 const Dashboard = (props) => {
-  const [list, setList] = useState([]);
+    const {api} = props;
+    const [data, setData] = useState(EventDetail);
+    const [list, setList] = useState([]);
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            const apiResponse = localStorage.getItem("ApiSwitch");
+            if(apiResponse===JSON.stringify(true)){
+                setData(list);
+            } else {
+                setData(EventDetail)
+            }
+        },10)
+    },[api]);
+
+
     useEffect(()=>{
         let user = Profile[0].Customer_ID;
         localStorage.setItem('User',JSON.stringify(Profile[0]));
@@ -31,7 +45,6 @@ const Dashboard = (props) => {
     useEffect(() => {
       fetchEvents();
     }, []);
-    const [data, setData] = useState(EventDetail)
 
     const fetchEvents = () =>
     getEventList().then(items => {
@@ -73,7 +86,6 @@ const Dashboard = (props) => {
         <EventSlider {...dashboardPage.AttendEventCard}/>
         <Map />
       </main>
-      <Footer />
     </div>
 
   );

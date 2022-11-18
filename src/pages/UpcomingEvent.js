@@ -29,31 +29,31 @@ const selectedFilter = (filter) =>{
     setDrive(null)
     setItemFilter(filter)
     let cardsFilterd = cards.filter((item)=>item.category == filter)
-    setFilterCards(cardsFilterd) 
+    setFilterCards(cardsFilterd)
     setNext(100)
   }
   const slectedDrive = (driveFilter) =>{
-    let cardsFilterd = cards.filter((item)=>item.drive == driveFilter) 
-    setFilterCards(cardsFilterd) 
+    let cardsFilterd = cards.filter((item)=>item.drive == driveFilter)
+    setFilterCards(cardsFilterd)
     setNext(100)
     setItemFilter(null)
     setDrive(driveFilter)
     setDistance(null)
   }
   const slectedWalkingDistance = (distanceFilter) =>{
-    let cardsFilterd = cards.filter((item)=>item.walking == distanceFilter) 
-    setFilterCards(cardsFilterd) 
+    let cardsFilterd = cards.filter((item)=>item.walking == distanceFilter)
+    setFilterCards(cardsFilterd)
     setDistance(distanceFilter)
     setNext(100)
     setItemFilter(null)
     setDrive(null)
   }
- 
+
   const handleChnage = (newValue) =>{
     const nValue = newValue.target.value
     setLocation(nValue)
-    let cardsFilterd = cards.filter((item)=>item.location == location) 
-    setFilterCards(cardsFilterd) 
+    let cardsFilterd = cards.filter((item)=>item.location == location)
+    setFilterCards(cardsFilterd)
     setDistance(null)
     setNext(100)
     setItemFilter(null)
@@ -63,8 +63,8 @@ const selectedFilter = (filter) =>{
     setNext(next + itemPerRow);
   };
   const noLimit = () =>{
-    let cardsFilterd = cards.filter((item)=>item.location == location) 
-    setFilterCards(cardsFilterd) 
+    let cardsFilterd = cards.filter((item)=>item.location == location)
+    setFilterCards(cardsFilterd)
     setDistance(null)
     setNext(100)
     setItemFilter(null)
@@ -184,7 +184,6 @@ const selectedFilter = (filter) =>{
         </div>
 
       </main>
-      <Footer/>
     </div>
   );
 };

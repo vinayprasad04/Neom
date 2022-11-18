@@ -430,7 +430,6 @@ const EditProfile = () =>{
                     </div>
                 </div>
             </main>
-            <Footer/>
         </>
     )
 }

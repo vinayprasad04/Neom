@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from "react-router-dom";
-const apiS = localStorage.getItem("ApiSwitch")
-console.log(apiS, "value is printed")
-const Footer = () =>{
-    const apiIntract = apiS === null ? true : localStorage.getItem("ApiSwitch")
-    const [api, setApi] = useState(apiIntract)
+import {Dashboard} from "../pages";
+
+const Footer = ({api, setApi}) =>{
     const onSwitch = () =>{
-        setApi(!api)
+        setApi(!api);
     }
     useEffect(()=>{
-        localStorage.setItem("ApiSwitch", api)
-    },[api])
+        localStorage.setItem("ApiSwitch", api);
+    },[api]);
     return(
         <footer className="footer">
             <div className="container">

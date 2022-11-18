@@ -229,7 +229,6 @@ const Name = JSON.parse(customerName);*/
 
 
                 </main>
-                <Footer/>
             </div>
     )
 }

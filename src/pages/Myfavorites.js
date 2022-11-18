@@ -70,7 +70,6 @@ const Myfavorites = (props) => {
                 <NextEventBanner showHeartIcon={true}/>
                 <Trending {...eventDetailPage.RecommendationData} headingNew={"Top 5 activities on this island today"} showHeartIcon={true} />
             </main>
-            <Footer />
         </div>
     );
 };
