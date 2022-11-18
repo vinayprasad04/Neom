@@ -23,13 +23,13 @@ const dashboardPage = getJson();
 const Dashboard = (props) => {
     const {api} = props;
     const [data, setData] = useState(EventDetail);
-    const [list, setList] = useState([]);
+    const [eventList, setEventList] = useState([]);
 
     useEffect(()=>{
         setTimeout(()=>{
             const apiResponse = localStorage.getItem("ApiSwitch");
             if(apiResponse===JSON.stringify(true)){
-                setData(list);
+                setData(eventList);
             } else {
                 setData(EventDetail)
             }
@@ -48,8 +48,7 @@ const Dashboard = (props) => {
 
     const fetchEvents = () =>
     getEventList().then(items => {
-        setList(items.res.docs);
-        console.log(list, "calllled")
+        setEventList(items);
       });
     const setRecSlider = () => {
         let wWidth = window.innerWidth,
