@@ -34,6 +34,92 @@ const SliderCardData = [
     {img:"recommend2.jpg", rank:"five.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod dolore magna aliquyam erat…"},
     /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
 ]
+const RecommendationBannerData =[
+    {
+        "Event_ID": 10001,
+        "Operator_ID": 20002,
+        "url":'golf.jpg',
+        "Operator_Name": "Dark Roast",
+        "Event_Category": "Golf",
+        "Event_Name": "Round of Golf",
+        "Event_Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut...",
+        "Event_Start_Date": "02/02/2023",
+        "Event_End_Date": "11/29/2022",
+        "Event_Start_Time": "7:00 PM",
+        "Event_End_Time": "11:00 PM",
+        "Seat_Booking_Availability": 20,
+        "Event_Location": "Sindalah City, Dubai",
+        "Event_Status": "Scheduled",
+        "Event_Capacity": 200,
+        "Overall_Event_Rating": 5.0,
+        "Operator_Rating": 4.9,
+        "vibes_text":"Overwhelmed vibes",
+        // "Client_Booked": true,
+        "imgurl":[
+            {"img": "golf.jpg"},
+            {"img": "golf.jpg"},
+            {"img": "golf.jpg"},
+            {"img": "golf.jpg"},
+            {"img": "golf.jpg"},
+        ]
+    },
+    {
+        "Event_ID": 10002,
+        "Operator_ID": 20003,
+        "url":'surfing.jpg',
+        "Operator_Name": "Basket of gold",
+        "Event_Category": "Surfing",
+        "Event_Name": "Surfing at leisure",
+        "Event_Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut...",
+        "Event_Start_Date": "02/02/2023",
+        "Event_End_Date": "11/30/2022",
+        "Event_Start_Time": "10:00 PM",
+        "Event_End_Time": "05:00 PM",
+        "Seat_Booking_Availability": 20,
+        "Event_Location": "Sindalah City, Dubai",
+        "Event_Status": "Scheduled",
+        "Event_Capacity": 300,
+        "Overall_Event_Rating": 4.6,
+        "Operator_Rating": 5,
+        "Client_Booked": true,
+        "vibes_text":"Overwhelmed vibes",
+        "imgurl":[
+            {"img": "surfing.jpg"},
+            {"img": "surfing.jpg"},
+            {"img": "surfing.jpg"},
+            {"img": "surfing.jpg"},
+            {"img": "surfing.jpg"},
+        ]
+    },
+    {
+        "Event_ID": 10003,
+        "Operator_ID": 20003,
+        "url":'dive.jpg',
+        "Operator_Name": "Basket of gold",
+        "Event_Category": "Water Activity",
+        "Event_Name": "Dive into Exciting",
+        "Event_Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut...",
+        "Event_Start_Date": "02/02/2023",
+        "Event_End_Date": "11/29/2022",
+        "Event_Start_Time": "03:00 PM",
+        "Event_End_Time": "05:00 PM",
+        "Seat_Booking_Availability": 20,
+        "Event_Location": "Sindalah City",
+        "Event_Status": "Completed",
+        "Event_Capacity": 100,
+        "Overall_Event_Rating": 4.6,
+        "Operator_Rating": 3,
+        "Client_Booked": true,
+        "vibes_text":"Joyed vibes",
+        "imgurl":[
+            {"img": "surfing.jpg"},
+            {"img": "surfing.jpg"},
+            {"img": "surfing.jpg"},
+            {"img": "surfing.jpg"},
+            {"img": "surfing.jpg"},
+        ]
+    }
+]
 const EventDetail =
     [
       {
@@ -426,4 +512,4 @@ const Profile = [
 ]
 
 
-export {RecommendationData, Treading, Profile, eventDetailImage, EventDetail};
+export {RecommendationData, Treading, Profile, eventDetailImage, EventDetail, RecommendationBannerData};
