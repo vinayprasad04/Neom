@@ -80,7 +80,7 @@ const cards = recommendationsPage.RecommendationData.Recommendation
 
                         <div className="card__grid">
                         {
-                filterCards.map((item, index)=>{
+                filterCards.slice(0, 15).map((item, index)=>{
                   return(
                     <EventCart key={index} item={item}/>
                   )

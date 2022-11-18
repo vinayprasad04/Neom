@@ -146,6 +146,7 @@ const EventDetail =
             {"img": "golf.jpg"},
             {"img": "golf.jpg"},
             {"img": "golf.jpg"},
+            {"img": "golf.jpg"},
           ]
       },
         {
@@ -167,6 +168,7 @@ const EventDetail =
           "Overall_Event_Rating": 4.6,
           "Operator_Rating": 4,
           "imgurl":[
+            {"img": "golf.jpg"},
             {"img": "golf.jpg"},
             {"img": "golf.jpg"},
             {"img": "golf.jpg"},
