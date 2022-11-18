@@ -8,7 +8,6 @@ import abstract from './../../assets/img/abstract.jpg';
 import overwhelmed from './../../assets/img/overwhelmed.svg';
 import RatingValue from "../Rating";
 import {Profile} from './../../MockData';
-
 const SliderCard = ({EventDetail}) => {
   //const {heading, SliderCard} = props;
     const userName = Profile[0].Customer_Name;

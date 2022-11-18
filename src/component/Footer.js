@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {Link} from "react-router-dom";
+import {Dashboard} from "../pages";
 
-const Footer = () =>{
-    const [api, setApi] = useState(false)
+const Footer = ({api, setApi}) =>{
     const onSwitch = () =>{
-        setApi(!api)
-        localStorage.setItem("ApiSwitch", api)
+        setApi(!api);
     }
+    useEffect(()=>{
+        localStorage.setItem("ApiSwitch", api);
+    },[api]);
     return(
         <footer className="footer">
             <div className="container">

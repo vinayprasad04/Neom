@@ -115,7 +115,6 @@ const Settings = () =>{
                     </div>
                 </div>
             </main>
-            <Footer/>
         </>
     )
 }

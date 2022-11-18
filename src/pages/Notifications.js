@@ -343,7 +343,6 @@ const Notifications = () =>{
                     </div>
                 </div>
             </main>
-            <Footer/>
         </>
     )
 }

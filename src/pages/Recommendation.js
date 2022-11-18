@@ -19,13 +19,13 @@ const cards = recommendationsPage.RecommendationData.Recommendation
 
   const slectedDrive = (driveFilter) =>{
     let cardsFilterd = cards.filter((item)=>item.drive == driveFilter)
-    setFilterCards(cardsFilterd) 
+    setFilterCards(cardsFilterd)
     setDrive(driveFilter)
     setDistance(null)
   }
   const slectedWalkingDistance = (distanceFilter) =>{
-    let cardsFilterd = cards.filter((item)=>item.walking == distanceFilter) 
-    setFilterCards(cardsFilterd) 
+    let cardsFilterd = cards.filter((item)=>item.walking == distanceFilter)
+    setFilterCards(cardsFilterd)
     setDistance(distanceFilter)
     setDrive(null)
   }
@@ -86,13 +86,12 @@ const cards = recommendationsPage.RecommendationData.Recommendation
                   )
                 })
               }
-                            
+
                         </div>
                     </div>
                 </div>
 
             </main>
-        <Footer/>
         </>
     )
 }

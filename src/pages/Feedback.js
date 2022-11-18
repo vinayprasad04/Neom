@@ -260,7 +260,6 @@ const Feedback = () =>{
 
 
                 </main>
-                <Footer/>
             </div>
     )
 }
