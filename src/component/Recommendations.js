@@ -12,7 +12,7 @@ const Recommendations = (props) =>{
     return(
         <div className="recommendations">
             <div className="container">
-                <SectionHeader heading={heading} desc={desc}/>
+                <SectionHeader heading={"Good morning Charlie!"} desc={`You have short listed ${evnetData.length} events to join later.`}/>
                 <div className="card__grid">
                     {
                         evnetData.map((item, index)=>{

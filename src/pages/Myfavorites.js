@@ -24,9 +24,6 @@ const FavoriteData = getJsonFavorite();
 
 const Myfavorites = (props) => {
     const [myFavorites, setMyFavorites] = useState(FavoriteData);
-    const onRemoveFavoriteList = (e, item) =>{
-        setMyFavorites(...myFavorites, myFavorites.FavoritesData[item]);
-    }
     const { data, isLoading, errorMessage } = useOpenWeather({
         key: "edb174adcaf962338a5b74bbb3498eb1",
         lat: "48.137154",
@@ -53,7 +50,7 @@ const Myfavorites = (props) => {
         }
     }
     useEffect(() => {
-        window.addEventListener('resize', setRecSlider)
+        window.addEventListener('resize', setRecSlider);
     });
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -63,12 +60,14 @@ const Myfavorites = (props) => {
         <div>
             <Header active={"myfavorites"} />
             <main className="content favorites">
-                <Recommendations
-                    {...myFavorites.FavoritesData}
-                    showCancelFavorite={true}
-                />
+                <Recommendations{...myFavorites.FavoritesData} showCancelFavorite={true}/>
                 <NextEventBanner showHeartIcon={true}/>
-                <Trending {...eventDetailPage.RecommendationData} headingNew={"Top 5 activities on this island today"} showHeartIcon={true} />
+                <div className="trending">
+                    <div className="container">
+                        <h2 className="trending__title">Top 5 activities on this island today</h2>
+                            <Trending {...eventDetailPage.RecommendationData}  showHeartIcon={true} />
+                    </div>
+                </div>
             </main>
         </div>
     );

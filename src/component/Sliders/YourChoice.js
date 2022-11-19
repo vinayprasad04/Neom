@@ -1,16 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper";
-import {SectionHeader} from '../index.js'
 import "./Slider.scss";
 
 const YourChoice = (props) => {
-  const {heading, SliderCard} = props;
+  const {SliderCard} = props;
   return (
-    <div className="recSlider recSlider--cardView recSlider--cardView-fullWidth" style={{margin: "0px 0px 0px 84px"}}>
-       {(heading) && (
-          <SectionHeader heading={heading} />
-      )}
       <div className="swiper tailored arrow_pos">
         <Swiper
           modules={[Navigation, Autoplay]}
@@ -74,7 +69,6 @@ const YourChoice = (props) => {
           </div>
         </Swiper>
       </div>
-    </div>
   );
 };
 export default YourChoice;

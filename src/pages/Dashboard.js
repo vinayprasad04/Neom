@@ -16,6 +16,7 @@ import "swiper/css/pagination";
 import getJson from "../utils/dashboardData";
 import { EventDetail, Profile } from "./../MockData";
 import { getEventList, getYourChoiceList, getRecommendationsList, getAttendedEvent } from "../utils/Api";
+import {SectionHeader} from "../component/index";
 
 const dashboardPage = getJson();
 
@@ -104,9 +105,26 @@ const Dashboard = (props) => {
       <Header active={"dashboard"} />
       <main className="content">
         <SliderCard EventDetail={data.slice(0, 4)} />
-        <YourChoice SliderCard={dataYourchoice} />
-        <Trending Treading={dataRecList} showHeartIcon={true} />
-        <EventSlider Treading={dataAttend} />
+
+        <div className="recSlider recSlider--cardView recSlider--cardView-fullWidth">
+              <SectionHeader heading={"Charlie, hope we understand you better"} />
+          <YourChoice SliderCard={dataYourchoice} />
+        </div>
+        <div className="trending">
+          <div className="container">
+            <h2 className="trending__title">Today's recommendations for you, Charlie!</h2>
+            <Trending Treading={dataRecList} showHeartIcon={true} />
+          </div>
+        </div>
+
+        <div className="trending">
+          <div className="container">
+            <div className="trending__title">
+                  <SectionHeader heading={"Charlie, here is your master journey with us so far"} />
+            </div>
+            <EventSlider Treading={dataAttend} />
+          </div>
+        </div>
         <Map />
       </main>
     </div>

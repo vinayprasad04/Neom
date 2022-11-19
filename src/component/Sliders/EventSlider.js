@@ -6,15 +6,8 @@ import RatingValue from "../Rating";
 import {Link} from "react-router-dom";
 
 const EventSlider = (props) => {
-  const { Treading, heading, slidesPerView } = props;
+  const { Treading } = props;
   return (
-    <div className="trending">
-      <div className="container">
-        <div className="trending__title">
-        {(heading) && (
-          <SectionHeader heading={heading} />
-      )}
-        </div>
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
@@ -82,8 +75,6 @@ const EventSlider = (props) => {
             })}
           </div>
         </Swiper>
-      </div>
-    </div>
   );
 };
 
