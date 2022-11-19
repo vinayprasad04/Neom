@@ -15,7 +15,7 @@ import AlertMsg from "../component/AlertMsg";
 import CircleTimer from "./../component/CircleTimer";
 
 
-const Recommendation = () =>{
+const Recommendation = ({setCancelled}) =>{
     let location = useLocation().hash;
     const recommendationsPage = getJson();
     const cards = recommendationsPage.RecommendationData.Recommendation;
@@ -25,8 +25,6 @@ const [filterCards, setFilterCards] = useState(cards);
 const [noLimit, setNoLimit] = useState(false);
 const [alertBooked, setAlterBooked] = useState(false);
 const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""});
-
-
 
   const slectedDrive = (driveFilter) =>{
     let cardsFilterd = cards.filter((item)=>item.drive === driveFilter)
@@ -57,6 +55,9 @@ const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""}
   }
   useEffect(()=>{
     window.scrollTo(0, 0);
+    if(location === "#confirmAlert"){
+        setCancelled(true);
+    }
 },[])
 
     return(

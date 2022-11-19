@@ -12,11 +12,12 @@ import Layout from './component/Layout';
 
 function App() {
   const [api, setApi] = useState(false);
+  const [cancelled, setCancelled] = useState(false);
   return (
       <BrowserRouter>
         <Routes>
-          <Route element={<Layout api={api} setApi={setApi}/>}>
-            <Route path="/" element={<Dashboard api={api}/>} />
+          <Route element={<Layout api={api} setApi={setApi} />}>
+            <Route path="/" element={<Dashboard api={api} cancelled={cancelled}/>} />
             <Route path="/home" element={<HomePage/>} />
             <Route path="/dashboard" element={<Dashboard api={api}/>} />
             <Route path="/edit-profile" element={<EditProfile api={api}/>} />
@@ -24,7 +25,7 @@ function App() {
             <Route path="/feedback" element={<Feedback api={api}/>} />
             <Route path="/settings" element={<Settings api={api}/>} />
             <Route path="/notifications" element={<Notifications api={api}/>} />
-            <Route path="/recommendation" element={<Recommendation api={api}/>} />
+            <Route path="/recommendation" element={<Recommendation api={api} setCancelled={setCancelled}/>} />
             <Route path="/eventdetails" element={<EventDetail api={api}/>} />
             <Route path="/eventdetails/:id" element={<EventDetail api={api}/>} />
             <Route path="/eventdetailcomplete" element={<CompleteEventDetail api={api}/>} />

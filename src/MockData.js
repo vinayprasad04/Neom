@@ -141,6 +141,7 @@ const EventDetail =
         "Overall_Event_Rating": 5.0,
         "Operator_Rating": 4.9,
           "vibes_text":"Overwhelmed vibes",
+           "isCancelledPossible":true,
          // "Client_Booked": true,
           "imgurl":[
             {"img": "Golf11.png"},
@@ -198,11 +199,11 @@ const EventDetail =
         "Operator_Rating": 3,
           "vibes_text":"Joyed vibes",
           "imgurl":[
-            {"img": "surfing.jpg"},
-            {"img": "surfing.jpg"},
-            {"img": "surfing.jpg"},
-            {"img": "surfing.jpg"},
-            {"img": "surfing.jpg"},
+            {"img": "dive.jpg"},
+            {"img": "dive.jpg"},
+            {"img": "dive.jpg"},
+            {"img": "dive.jpg"},
+            {"img": "dive.jpg"},
           ]
         },
         {

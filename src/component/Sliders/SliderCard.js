@@ -8,7 +8,7 @@ import abstract from './../../assets/img/abstract.jpg';
 import overwhelmed from './../../assets/img/overwhelmed.svg';
 import RatingValue from "../Rating";
 import {Profile} from './../../MockData';
-const SliderCard = ({EventDetail}) => {
+const SliderCard = ({EventDetail,cancelled}) => {
   //const {heading, SliderCard} = props;
     const userName = Profile[0].Customer_Name;
   return (
@@ -106,7 +106,10 @@ const SliderCard = ({EventDetail}) => {
                                 <img src={overwhelmed} alt="Overwhelmed" className="vibes__icon"/>
                                     <span className="vibes__text">{item.vibes_text} </span>
                             </div>
-                          <span className={`status ${(item.Event_Status=="Over"||item.Event_Status=="Completed") ?"completed":(item.Event_Status=="cancelled")?"cancelled":"scheduled"}`}>{item.Event_Status}</span>
+                            {item.isCancelledPossible && <span>{cancelled ?<span className={"status cancelled"}>Cancelled</span>:<span className={"status scheduled"}>Scheduled</span>}</span> }
+
+                            {!item.isCancelledPossible && <span
+                                className={`status ${(item.Event_Status == "Over" || item.Event_Status == "Completed") ? "completed" : (item.Event_Status == "cancelled") ? "cancelled" : "scheduled"}`}>{item.Event_Status}</span>}
                         </div>
                       </div>
                     </div>
