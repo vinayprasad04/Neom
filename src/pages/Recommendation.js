@@ -12,9 +12,10 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper";
 import AlertBooked from "../component/AlertBooked";
 import AlertMsg from "../component/AlertMsg";
+import CircleTimer from "./../component/CircleTimer";
 
 
-const Recommendation = (props) =>{
+const Recommendation = () =>{
     let location = useLocation().hash;
     const recommendationsPage = getJson();
 const [drive, setDrive] = useState();
@@ -38,7 +39,6 @@ const cards = recommendationsPage.RecommendationData.Recommendation;
     setDrive(null);
   }
   const onAlertOpen = (e, name, date, time) =>{
-      console.log("onAlertOpen",alertBooked)
       setAlterBookedData({name: name, date: date, time: time})
       setAlterBooked(true);
   }
@@ -48,7 +48,7 @@ const cards = recommendationsPage.RecommendationData.Recommendation;
   useEffect(()=>{
     window.scrollTo(0, 0);
 },[])
-const container = document.getElementById("root");
+
     return(
         <>
             {alertBooked &&
@@ -107,7 +107,8 @@ const container = document.getElementById("root");
                                                         <div className="banner__info__location">{item.Event_Location}</div>
                                                         <div className="banner__info__date">{item.Event_Start_Date} at {item.Event_Start_Time}</div>
                                                         <div className="banner__info__countdown">
-                                                            <div className="counter" data-date={item.Event_Start_Date}></div>
+                                                            <CircleTimer itemTime={item.Event_Start_Date}/>
+                                                            {/*<div className="counter" id={"counterNew"} data-date={item.Event_Start_Date}></div>*/}
                                                         </div>
                                                         <div className="banner__info__link">
                                                             <Link onClick={(e)=>onAlertOpen(e, item.Event_Name, item.Event_Start_Date, item.Event_Start_Time)}>Yes, I am in</Link>

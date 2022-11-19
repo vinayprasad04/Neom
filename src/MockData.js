@@ -43,7 +43,7 @@ const RecommendationBannerData =[
         "Event_Category": "Golf",
         "Event_Name": "Round of Golf",
         "Event_Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut...",
-        "Event_Start_Date": "02/02/2023",
+        "Event_Start_Date": "2023/02/02",
         "Event_End_Date": "11/29/2022",
         "Event_Start_Time": "7:00 PM",
         "Event_End_Time": "11:00 PM",

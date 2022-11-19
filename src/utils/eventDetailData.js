@@ -101,7 +101,7 @@ const data = () => {
         {title:"10 mins walking"},
         {title:"20 mins walking"},
         {title:"30 mins walking"},
-    ],
+      ],
     DriveFilter : [
       {title:"10 mins drive"},
       {title:"20 mins drive"},
