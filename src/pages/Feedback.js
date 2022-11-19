@@ -73,7 +73,7 @@ const Feedback = () =>{
                                     </div>
                                     <div className="col_sm_12 col_md_12 col_lg_6">
                                         <div className="feedback__banner--graphic">
-                                            <GaugeChart id="gauge-chart5"
+                                            {/*<GaugeChart id="gauge-chart5"
                                                         nrOfLevels={30}
                                                         arcsLength={[
                                                             0.04,0.04,0.04,0.04,0.04,
@@ -94,8 +94,8 @@ const Feedback = () =>{
                                                         needleBaseColor="#222222"
                                                         hideText={true}
                                                         marginInPercent={0.03}
-                                            />
-                                          {/*  <img src={process.env.PUBLIC_URL + "./img/vibe-o-meter.svg"} alt=""/>*/}
+                                            />*/}
+                                            <img src={process.env.PUBLIC_URL + "./img/vibe-o-meter.svg"} alt=""/>
                                         </div>
                                     </div>
                                 </div>
