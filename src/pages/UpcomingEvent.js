@@ -41,7 +41,7 @@ const selectedFilter = (filter) =>{
     setDistance(null)
   }
   const slectedWalkingDistance = (distanceFilter) =>{
-    let cardsFilterd = cards.filter((item)=>item.walking == distanceFilter)
+    let cardsFilterd = cards.filter((item)=>item.drive == distanceFilter)
     setFilterCards(cardsFilterd)
     setDistance(distanceFilter)
     setNext(100)

@@ -18,25 +18,29 @@ import CircleTimer from "./../component/CircleTimer";
 const Recommendation = () =>{
     let location = useLocation().hash;
     const recommendationsPage = getJson();
+    const cards = recommendationsPage.RecommendationData.Recommendation;
 const [drive, setDrive] = useState();
 const [distance, setDistance] = useState()
-const [filterCards, setFilterCards] = useState(recommendationsPage.RecommendationData.Recommendation);
+const [filterCards, setFilterCards] = useState(cards);
+const [noLimit, setNoLimit] = useState(false);
 const [alertBooked, setAlterBooked] = useState(false);
 const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""});
 
-const cards = recommendationsPage.RecommendationData.Recommendation;
+
 
   const slectedDrive = (driveFilter) =>{
     let cardsFilterd = cards.filter((item)=>item.drive === driveFilter)
     setFilterCards(cardsFilterd)
     setDrive(driveFilter)
     setDistance(null)
+      setNoLimit(false);
   }
   const slectedWalkingDistance = (distanceFilter) =>{
-    let cardsFilterd = cards.filter((item)=>item.walking === distanceFilter)
+    let cardsFilterd = cards.filter((item)=>item.drive === distanceFilter)
     setFilterCards(cardsFilterd)
     setDistance(distanceFilter)
     setDrive(null);
+      setNoLimit(false);
   }
   const onAlertOpen = (e, name, date, time) =>{
       setAlterBookedData({name: name, date: date, time: time})
@@ -44,6 +48,12 @@ const cards = recommendationsPage.RecommendationData.Recommendation;
   }
   const onCancelAlert = () =>{
       setAlterBooked(false);
+  }
+  const onNoLimit = () =>{
+      setNoLimit(true);
+      setFilterCards(cards);
+      setDrive(null);
+      setDistance(null)
   }
   useEffect(()=>{
     window.scrollTo(0, 0);
@@ -91,7 +101,6 @@ const cards = recommendationsPage.RecommendationData.Recommendation;
                         </div>
                     </div>
                 </div>*/}
-                {/*<Banner/>*/}
                 <div className="banner">
                     <div className="container">
                         <div className="swiper mainbanner">
@@ -114,12 +123,6 @@ const cards = recommendationsPage.RecommendationData.Recommendation;
                                                             <Link onClick={(e)=>onAlertOpen(e, item.Event_Name, item.Event_Start_Date, item.Event_Start_Time)}>Yes, I am in</Link>
                                                         </div>
                                                     </div>
-{/*                                                    {
-                                                        ReactDOM.createPortal(
-                                                            alertBooked ? <AlertBooked  heading={"Hi, Charlie"} dec={`You have chosen a new ${item.Event_Name} event on ${item.Event_Start_Date} at ${item.Event_Start_Time}. Have a great day ahead and enjoy your new ${item.Event_Name}!`}/>:"",
-                                                            container
-                                                    )}*/}
-
                                                 </SwiperSlide>
                                             )
                                         })
@@ -153,7 +156,7 @@ const cards = recommendationsPage.RecommendationData.Recommendation;
                                 </ul>
 
                                 <ul className="time__list">
-                                    <li className="time__list--item border-rounded">No limits</li>
+                                    <li className={`time__list--item border-rounded ${noLimit ? "active":""}`} onClick={onNoLimit}>No limits</li>
                                 </ul>
                             </div>
                         </div>
