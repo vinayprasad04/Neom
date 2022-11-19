@@ -6,7 +6,7 @@ const GallaryItems = (props) =>{
     return(
     <div className="eventDetails__grid">
               <div className="eventDetails__grid--col grid__box">
-                {imagesGallery.imgurl.map((item, index) => {
+                {imagesGallery.imgurl.slice(0,4).map((item, index) => {
                   return (
                     totalItem > index + 1  && <div className="grid__box--sm" key={index}>
                       <img

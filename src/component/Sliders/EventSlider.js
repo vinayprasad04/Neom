@@ -35,7 +35,7 @@ const EventSlider = (props) => {
                 <SwiperSlide key={index}>
                   <div className={"card__grid card__grid--dashboard"}>
                     <div className="card__item">
-                      <Link className={"card__link"} to={`/eventdetails/10005`} >
+                      <Link className={"card__link"}  to={`/eventdetails/${item.Event_ID || 10005}`} >
                         <div className="card__thumb">
                           <img
                               src={process.env.PUBLIC_URL + "./img/" + item.img}

@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 const EventCart = ({ item, setEventData, onRemoveItem }) => {
-  const { img, rank, rating, date, title, desc, vibeicon, vibetext, heartIcon, showCancelFavorite,favorites_Id} = item;
+    console.log("item",item);
+  const { img, rank, rating, date, title, desc, vibeicon, vibetext, heartIcon, showCancelFavorite,favorites_Id,Event_ID=10005} = item;
   const [heartAdd, setHeartAdd] = useState(false);
   const onHeartClick = ()=>{
       setHeartAdd(!heartAdd);
@@ -11,7 +12,7 @@ const EventCart = ({ item, setEventData, onRemoveItem }) => {
         <div className="card__thumb">
           {heartIcon && (<button className="card__fav" onClick={onHeartClick}><span className="icon-heart" style={{color:heartAdd ?"red":""}}></span></button>)}
           {showCancelFavorite && <button className="card__remove" onClick={(e)=>onRemoveItem(e, favorites_Id)}>Remove</button>}
-          <Link className={"card__link"} to={`/eventdetails/10005`} >
+          <Link className={"card__link"} to={`/eventdetails/${Event_ID}`} >
               <img
                   src={process.env.PUBLIC_URL + "./../img/" + img}
                   alt="event name"
