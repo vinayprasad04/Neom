@@ -54,7 +54,7 @@ const Header = ({active}) =>{
     useEffect(()=>{
         setTimeout(()=>{
             setHeaderAlert(true);
-        },1000)
+        },5000)
         if(!headerAlert){
             setInterval(()=>{
                 setHeaderAlert(true);

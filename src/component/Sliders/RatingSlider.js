@@ -16,8 +16,6 @@ const RatingSliderCard = (props) => {
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
           slidesPerView={3.4}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
           navigation
           autoplay={{
             delay: 112500,

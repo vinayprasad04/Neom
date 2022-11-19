@@ -1,19 +1,12 @@
 import React from "react";
-// import golf from './../assets/img/golf.jpg';
 import LightBoxSlider from "./LightBoxSlider";
-import { EventDetail,  } from "../MockData.js";
 const GallaryItems = (props) =>{
     const { imagesGallery ,status } = props;
-    console.log(imagesGallery, "item callled");
     const totalItem = imagesGallery.imgurl.length
-
     return(
     <div className="eventDetails__grid">
-      
               <div className="eventDetails__grid--col grid__box">
                 {imagesGallery.imgurl.map((item, index) => {
-                  
-                  console.log(item, "item")
                   return (
                     totalItem > index + 1  && <div className="grid__box--sm" key={index}>
                       <img
