@@ -117,7 +117,7 @@ const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAl
           <div className="eventReserve__form--seats">
             {eventData.Seat_Booking_Availability} Seats still available
           </div>
-          {!eventData.Client_Booked && <div className="btn btn__black" onClick={Sucmsg}>Reserve my seats</div>}
+          {(!eventData.itinerary) && <div className="btn btn__black" onClick={Sucmsg}>Reserve my seats</div>} {/*!eventData.Client_Booked*/}
           <ul className="guests__list">
             {/*<li className="guests__list--item">
               <div className="guests">1800 x {seatValue} adult</div>

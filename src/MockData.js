@@ -124,6 +124,7 @@ const EventDetail =
     [
         {
             "Event_ID": 10101,
+            "itinerary":true,
             "Operator_ID": 20005,
             "url":'yacht.jpg',
             "Operator_Name": "Basket of gold",
@@ -151,6 +152,7 @@ const EventDetail =
         },
         {
         "Event_ID": 10102,
+            "itinerary":true,
         "Operator_ID": 20002,
         "url":'golf.jpg',
         "Operator_Name": "Dark Roast",
@@ -181,6 +183,7 @@ const EventDetail =
         },
         {
             "Event_ID": 10103,
+            "itinerary":true,
             "Operator_ID": 20002,
             "url":'Dining.jpg',
             "Operator_Name": "Dark Roast",
@@ -210,6 +213,7 @@ const EventDetail =
 
         {
             "Event_ID": 10104,
+            "itinerary":true,
             "Operator_ID": 20002,
             "url":'golf.jpg',
             "Operator_Name": "Dark Roast",
@@ -240,6 +244,7 @@ const EventDetail =
         },
         {
             "Event_ID": 10105,
+            "itinerary":true,
             "Operator_ID": 20002,
             "url":'Dining.jpg',
             "Operator_Name": "Dark Roast",
@@ -270,6 +275,7 @@ const EventDetail =
 
         {
             "Event_ID": 10106,
+            "itinerary":true,
             "Operator_ID": 20002,
             "url":'golf.jpg',
             "Operator_Name": "Dark Roast",
@@ -300,6 +306,7 @@ const EventDetail =
         },
         {
             "Event_ID": 10107,
+            "itinerary":true,
             "Operator_ID": 20002,
             "url":'Dining.jpg',
             "Operator_Name": "Dark Roast",
@@ -467,6 +474,7 @@ const EventDetail =
 
         {
             "Event_ID": 10010,
+            "itinerary":true,
             "Operator_ID": 20004,
             "url":'golf.jpg',
             "Operator_Name": "Northern lights",
@@ -495,6 +503,7 @@ const EventDetail =
         },
         {
             "Event_ID": 10011,
+            "itinerary":true,
             "Operator_ID": 20005,
             "url":'surfing.jpg',
             "Operator_Name": "Basket of gold",
@@ -523,6 +532,7 @@ const EventDetail =
         },
         {
             "Event_ID": 10012,
+            "itinerary":true,
             "Operator_ID": 20005,
             "url":'yacht.jpg',
             "Operator_Name": "Basket of gold",
@@ -551,6 +561,7 @@ const EventDetail =
         },
         {
             "Event_ID": 10013,
+            "itinerary":true,
             "Operator_ID": 20006,
             "url":'dive.jpg',
             "Operator_Name": "Basket of gold",
@@ -579,6 +590,7 @@ const EventDetail =
         },
         {
             "Event_ID": 10014,
+            "itinerary":true,
             "Operator_ID": 20007,
             "url":'beach.jpg',
             "Operator_Name": "Basket of gold",
