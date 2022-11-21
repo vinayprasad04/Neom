@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import ReactDOM from "react-dom";
 import { useLocation, Link } from 'react-router-dom';
 import {
-    Header,
-    Banner
+    Header
 } from "../component/index.js";
 import {Profile,RecommendationBannerData} from './../MockData';
 import getJson from "../utils/eventDetailData";
@@ -11,12 +9,11 @@ import EventCart from "../component/EventCart";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper";
 import AlertBooked from "../component/AlertBooked";
-import AlertMsg from "../component/AlertMsg";
 import CircleTimer from "./../component/CircleTimer";
 
 
 const Recommendation = (props) =>{
-    const {setCancelled, rCancelAlert, setRCancelAlert} = props;
+    const { rCancelAlert, setRCancelAlert} = props;
 
     let location = useLocation().hash;
     const recommendationsPage = getJson();
@@ -57,17 +54,15 @@ const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""}
   }
   useEffect(()=>{
     window.scrollTo(0, 0);
-    if(location === "#confirmAlert"){
-        setCancelled(true);
-    }
 },[])
-
+const bookedMsgFlash = rCancelAlert.crBookedAlert ? "As you have scheduled new \"Jazz Music\" event":"As you have just rescheduled your \"Round of Golf\" event.";  //crAlert:false, srAlert:false, crBookedAlert:false, srBookedAlert:false
 const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAlert) ? RecommendationBannerData.slice(1,3):RecommendationBannerData;
     return(
         <>
             {alertBooked &&
-            <AlertBooked onCancelAlert={onCancelAlert}
+            <AlertBooked onCancelAlert={onCancelAlert} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}
                 heading={"Hi, Charlie"}
+                         eventName={alertBookedData.name}
                 dec={`You have chosen a new ${alertBookedData.name} event on ${alertBookedData.date} at ${alertBookedData.time}. Have a great day ahead and enjoy your new ${alertBookedData.name}!`}/>
             }
         <Header {...props}/>
@@ -87,8 +82,9 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                                     And one of them is just starting in an hour and 5 minutes drive away.
                                 </p>}
                                 {location === "#bookedSeat" && <p className="eventAddReview__card--subtitle">
-                                    As you have just rescheduled your "Round of Golf" event and your slot is free, we have found alternate events for you.
-                                    And one of them is just an hour and 5 minutes drive away.
+                                    {bookedMsgFlash}
+                                   {/* and your slot is free, we have found alternate events for you.
+                                    And one of them is just an hour and 5 minutes drive away.*/}
                                 </p>}
                             </div>
                         </div>

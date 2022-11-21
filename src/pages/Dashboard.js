@@ -22,7 +22,7 @@ import {HomePage} from "./index";
 const dashboardPage = getJson();
 
 const Dashboard = (props) => {
-  const { api } = props;
+  const { api, rCancelAlert } = props;
   const [data, setData] = useState(EventDetail);
   const [dataYourchoice, setDataYourchoice] = useState([...dashboardPage.YourChoice.SliderCard]);
   const [dataRecList, setdataRecList] = useState([...dashboardPage.RecommendationsCard.Treading]);
@@ -101,11 +101,13 @@ const Dashboard = (props) => {
     setRecSlider();
     // localStorage.setItem("ApiSwitch", false)
   }, []);
+
+  const itneryData = rCancelAlert.srBookedAlert? data.slice(3,5): rCancelAlert.crBookedAlert ? data.slice(0,3): rCancelAlert.crAlert? data.slice(1,3):data.slice(5, 7);
   return (
     <div>
       <Header active={"dashboard"} {...props}/>
       <main className="content">
-        <SliderCard EventDetail={data.slice(0, 2)} />
+        <SliderCard EventDetail={itneryData} />
 
         <div className="recSlider recSlider--cardView recSlider--cardView-fullWidth">
               <SectionHeader heading={"Charlie, hope we understand you better"} />

@@ -102,7 +102,7 @@ const SliderCard = ({EventDetail}) => {
                                 <img src={overwhelmed} alt="Overwhelmed" className="vibes__icon"/>
                                     <span className="vibes__text">{item.vibes_text} </span>
                             </div>
-                            <span className={`status ${(item.Event_Status == "Over" || item.Event_Status == "Completed") ? "completed" : (item.Event_Status == "cancelled") ? "cancelled" : "scheduled"}`}>{item.Event_Status}</span>
+                            <span className={`status ${(item.Event_Status == "Over" || item.Event_Status == "Completed") ? "completed" : (item.Event_Status == "Cancelled") ? "cancelled" : "scheduled"}`}>{item.Event_Status}</span>
                         </div>
                       </div>
                     </div>

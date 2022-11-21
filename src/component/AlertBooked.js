@@ -2,8 +2,17 @@ import React from "react";
 import {Link} from "react-router-dom";
 import walkingforlong from "../assets/img/walking-for-long.png";
 
-const AlertBooked = ({onCancelAlert, heading, dec, }) =>{
+const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setRCancelAlert}) =>{
     const onSubmit =() =>{
+        if(eventName ==="Round of Golf"){
+            console.log("vinay inside of golf", eventName);
+            setRCancelAlert({...rCancelAlert, crBookedAlert:false, srBookedAlert:true})
+        }else if(eventName ==="Jazz Music"){
+            console.log("vinay inside of Jazz", eventName);
+            setRCancelAlert({...rCancelAlert, crBookedAlert:true, srBookedAlert:false})
+        }else {
+            console.log("vinay inside of other", eventName);
+        }
         onCancelAlert();
     }
     return(
