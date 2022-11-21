@@ -3,6 +3,7 @@ import logoBlack from './../assets/img/logo-black.svg';
 import hand from './../assets/img/bell.jpg';
 import {Link} from 'react-router-dom';
 import AlertMsg from "./AlertMsg";
+import {Profile} from "../MockData";
 
 const HeaderAlert = ({headerAlert, setHeaderAlert, setConfirmAlert, setCancelAlert}) =>{
     const onReschedule = () =>{
@@ -101,7 +102,7 @@ const Header = ({active}) =>{
                                 <div className="header__nav__link__menu">
                                     <span className="icon-menu"></span>
                                     <div className="header__nav__link__user">
-                                        <div className="header__nav__link__user--init">S</div>
+                                        <div className="header__nav__link__user--init">{Profile[0].Customer_Name.charAt(0)}</div>
                                     </div>
                                 </div>
                             </Link>
