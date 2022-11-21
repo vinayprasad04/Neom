@@ -2,7 +2,6 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 const ThanksAlert = ({onCancel, alert}) =>{
-    console.log("alert",alert);
     return(
         <div className="AlertWrapper"  style={{display:!alert ? "none":"flex"}}>
             <div className="alertInner">

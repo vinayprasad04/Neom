@@ -88,10 +88,8 @@ const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAl
   const Sucmsg = () =>{
     setAlert(true);
   }*/
-  const container = document.getElementById("root");
   return(
       <div className="eventReserve__form" >
-            {ReactDOM.createPortal(<ThanksAlert alert={alert} onCancel={onCancelAlert}/>, container)}
         <form>
           <div className="eventReserve__form--title">
           {/*  AED 1800 <span>per person</span>*/}10:30AM - 7:30PM
@@ -206,6 +204,7 @@ const EventDetail = (props) => {
 
   return (
     <div>
+      <ThanksAlert alert={alert} onCancel={onCancelAlert}/>
       <Header />
       <main className="content event" id={"eventDetail"}>
         {eventAddReviewPanel && <div className="eventAddReview">
