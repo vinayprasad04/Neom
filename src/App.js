@@ -13,12 +13,12 @@ import Layout from './component/Layout';
 function App() {
   const [api, setApi] = useState(false);
   const [cancelled, setCancelled] = useState(false);
-  const [rCancelAlert, setRCancelAlert] = useState(false);
+  const [rCancelAlert, setRCancelAlert] = useState({crAlert:false, srAlert:false});
   return (
       <BrowserRouter>
         <Routes>
           <Route element={<Layout api={api} setApi={setApi} />}>
-            <Route path="/" element={<Dashboard api={api} cancelled={cancelled} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
+            <Route path="/" element={<Dashboard api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
             <Route path="/home" element={<HomePage rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
             <Route path="/dashboard" element={<Dashboard api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
             <Route path="/edit-profile" element={<EditProfile api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />

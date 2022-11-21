@@ -11,7 +11,7 @@ const AlertMsg = ({setConfirmAlert, heading, dec, setCancelAlert, setRCancelAler
     }
     const onCancelAlertEvent = ()=>{
         setCancelAlert(false);
-        setRCancelAlert(true);
+        setRCancelAlert({crAlert:true, srAlert:false});
     }
     return(
         <div className={"AlertWrapper"}>

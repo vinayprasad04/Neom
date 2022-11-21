@@ -22,7 +22,7 @@ import {HomePage} from "./index";
 const dashboardPage = getJson();
 
 const Dashboard = (props) => {
-  const { api,cancelled } = props;
+  const { api } = props;
   const [data, setData] = useState(EventDetail);
   const [dataYourchoice, setDataYourchoice] = useState([...dashboardPage.YourChoice.SliderCard]);
   const [dataRecList, setdataRecList] = useState([...dashboardPage.RecommendationsCard.Treading]);
@@ -105,7 +105,7 @@ const Dashboard = (props) => {
     <div>
       <Header active={"dashboard"} {...props}/>
       <main className="content">
-        <SliderCard EventDetail={data.slice(0, 2)} cancelled={cancelled} />
+        <SliderCard EventDetail={data.slice(0, 2)} />
 
         <div className="recSlider recSlider--cardView recSlider--cardView-fullWidth">
               <SectionHeader heading={"Charlie, hope we understand you better"} />

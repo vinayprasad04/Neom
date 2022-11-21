@@ -61,12 +61,8 @@ const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""}
         setCancelled(true);
     }
 },[])
-    useEffect(()=>{
-        setTimeout(()=>{
-            console.log("vinay recomomndation page", rCancelAlert);
-        },500)
-    })
-const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert) ? RecommendationBannerData.slice(1,3):RecommendationBannerData;
+
+const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAlert) ? RecommendationBannerData.slice(1,3):RecommendationBannerData;
     return(
         <>
             {alertBooked &&
