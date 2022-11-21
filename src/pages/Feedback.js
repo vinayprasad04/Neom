@@ -123,7 +123,7 @@ const Feedback = () =>{
                                                         <p>{item.Event.Event_End_Date}</p>
                                                         <div className="card--review">
                                                             <p>{item.Event.Total_reviews} reviews</p>
-                                                            <div className="icon"><span className="icon-star"></span>{item.Event.Overall_Event_Rating}</div>
+                                                            <div className="icon"><span className="icon-star"></span>{item.Event.Overall_Event_Rating.toFixed(1)}</div>
                                                         </div>
                                                     </div>
                                                 </div>

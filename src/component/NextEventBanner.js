@@ -24,7 +24,7 @@ const NextEventsData = [
         "Event_Capacity": 300,
         "Overall_Event_Rating": 4.6,
         "Operator_Rating": 5,
-        "vibes_text":"Overwhelmed vibes",
+        "vibes_text":"Active & Energizing",
         "imgurl":[
             {"img": "surfing.jpg"},
             {"img": "surfing.jpg"},
@@ -51,6 +51,7 @@ const NextEventsData = [
         "Event_Capacity": 250,
         "Overall_Event_Rating": 4.6,
         "Operator_Rating": 4,
+        "vibes_text":"Invigorating & Uplifting",
         "imgurl":[
             {"img": "golf.jpg"},
             {"img": "golf.jpg"},
@@ -77,7 +78,7 @@ const NextEventsData = [
         "Event_Capacity": 300,
         "Overall_Event_Rating": 4.6,
         "Operator_Rating": 5,
-        "vibes_text":"Overwhelmed vibes",
+        "vibes_text":"Vibrant & Social",
         "imgurl":[
             {"img": "yacht.jpg"},
             {"img": "yacht.jpg"},
@@ -104,7 +105,7 @@ const NextEventsData = [
         "Event_Capacity": 300,
         "Overall_Event_Rating": 4.6,
         "Operator_Rating": 5,
-        "vibes_text":"Overwhelmed vibes",
+        "vibes_text":"Glamorous & Grand",
         "imgurl":[
             {"img": "dive.jpg"},
             {"img": "dive.jpg"},
@@ -163,7 +164,7 @@ const NextEventBanner = ({showHeartIcon})=>{
                                                         <div className="vibes">
                                                             <img src={overwhelmed} alt="Overwhelmed"
                                                                  className="vibes__icon"/>
-                                                            <span className="vibes__text">Overwhelmed</span>
+                                                            <span className="vibes__text">{item.vibes_text}</span>
                                                         </div>
                                                     </div>
 

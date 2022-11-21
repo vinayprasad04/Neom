@@ -25,13 +25,9 @@ const SliderCard = ({EventDetail,cancelled}) => {
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
-          slidesPerView={2.4}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          slidesPerView={2}
           navigation
-          autoplay={{
-            delay: 112500,
-          }}
+          autoplay={false}
           breakpoints={{
               1024: {
                   slidesPerView: 2.4,
@@ -75,7 +71,7 @@ const SliderCard = ({EventDetail,cancelled}) => {
                       <h3 className="recSlider__info__title">{item.Event_Name}</h3>
                       <div className="recSlider__info__rating">
                           <RatingValue fillColor={"#FF385C"} readOnly={true} initialValue={item.Overall_Event_Rating}/>
-                              <div className="review">{item.Overall_Event_Rating}</div>
+                              <div className="review">{item.Overall_Event_Rating.toFixed(1)}</div>
                           </div>
                       <div className="recSlider__info__row">
                         <div className="recSlider__info__items recSlider__info__description">

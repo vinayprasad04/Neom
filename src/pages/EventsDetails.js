@@ -225,8 +225,8 @@ const EventDetail = (props) => {
           <div className="container">
               <h2 className="eventDetails__title">{eventData.Event_Name}</h2>
               <div className="eventDetails__review">
-                <RatingValue readOnly={true} fillColor={"#FF385C"} initialValue={eventData.Overall_Event_Rating}/>
-                <div className="review">{eventData.Overall_Event_Rating}<span>23 reviews</span></div>
+                <RatingValue readOnly={true} fillColor={"#FF385C"} initialValue={eventData.Overall_Event_Rating.toFixed(1)}/>
+                <div className="review">{eventData.Overall_Event_Rating.toFixed(1)}<span>23 reviews</span></div>
                 <div className="location">{eventData.Event_Location}</div>
               </div>
 
@@ -304,8 +304,8 @@ const EventDetail = (props) => {
                 <div className="event__review">
                   <h4 className="event__reserve--title">Operator River Stone {eventData.Operator_Name}</h4>
                   <div className="event__review--row">
-                    <div className="rating"><RatingValue fillColor={"#FF385C"} readOnly={true} initialValue={eventData.Operator_Rating}/></div>
-                    <div className="review">{eventData.Operator_Rating}</div>
+                    <div className="rating"><RatingValue fillColor={"#FF385C"} readOnly={true} initialValue={eventData.Operator_Rating.toFixed(1)}/></div>
+                    <div className="review">{eventData.Operator_Rating.toFixed(1)}</div>
                   </div>
                   <div className="event__description--content">
                     <p>

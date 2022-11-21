@@ -104,7 +104,7 @@ const Dashboard = (props) => {
     <div>
       <Header active={"dashboard"} />
       <main className="content">
-        <SliderCard EventDetail={data.slice(0, 4)} cancelled={cancelled} />
+        <SliderCard EventDetail={data.slice(0, 2)} cancelled={cancelled} />
 
         <div className="recSlider recSlider--cardView recSlider--cardView-fullWidth">
               <SectionHeader heading={"Charlie, hope we understand you better"} />

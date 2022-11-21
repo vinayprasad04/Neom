@@ -53,9 +53,9 @@ const RatingSliderCard = (props) => {
                 <div className="recSlider__info__row">
                   <div className="recSlider__info__rating">
                     <div className="rating">
-                      <RatingValue fillColor={"#FF385C"} readOnly={true} initialValue={5}/>
+                      <RatingValue fillColor={"#FF385C"} readOnly={true} initialValue={item.rating}/>
                     </div>
-                    <div className="review">{item.rating}</div></div>
+                    <div className="review">{item.rating.toFixed(1)}</div></div>
                 </div>
               </div>
               <button className="recSlider__button">Read more</button>

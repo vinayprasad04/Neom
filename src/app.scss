@@ -196,6 +196,37 @@
   }
 }
 
+.recSlider--cardView {
+  .swiper-wrapper {
+    .swiper-slide {
+      .recSlider__info {
+        .recSlider__info__items{
+          &.recSlider__info__description{
+            min-height: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+.home {
+  .banner__info__link button{
+    background-color: #fff;
+    color: #222;
+    font-weight: 400;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 2rem;
+    transition: color 500ms ease, background-color 500ms ease;
+    border: none;
+    cursor: pointer;
+    &:hover{
+      background-color: #FF385C;
+      color: #fff;
+    }
+  }
+}
 
 
 
