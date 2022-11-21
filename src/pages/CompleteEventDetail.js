@@ -44,7 +44,7 @@ const CompleteEventDetail = (props) => {
    }
   return (
     <div>
-      <Header />
+      <Header {...props}/>
       <main className="content event">
       <div className="eventAddReview">
             <div className="container">

@@ -15,7 +15,9 @@ import AlertMsg from "../component/AlertMsg";
 import CircleTimer from "./../component/CircleTimer";
 
 
-const Recommendation = ({setCancelled}) =>{
+const Recommendation = (props) =>{
+    const {setCancelled, rCancelAlert, setRCancelAlert} = props;
+
     let location = useLocation().hash;
     const recommendationsPage = getJson();
     const cards = recommendationsPage.RecommendationData.Recommendation;
@@ -59,7 +61,12 @@ const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""}
         setCancelled(true);
     }
 },[])
-
+    useEffect(()=>{
+        setTimeout(()=>{
+            console.log("vinay recomomndation page", rCancelAlert);
+        },500)
+    })
+const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert) ? RecommendationBannerData.slice(1,3):RecommendationBannerData;
     return(
         <>
             {alertBooked &&
@@ -67,7 +74,7 @@ const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""}
                 heading={"Hi, Charlie"}
                 dec={`You have chosen a new ${alertBookedData.name} event on ${alertBookedData.date} at ${alertBookedData.time}. Have a great day ahead and enjoy your new ${alertBookedData.name}!`}/>
             }
-        <Header/>
+        <Header {...props}/>
             <main className="content home recommendation--page">
 
                 <div className="eventAddReview" style={{padding:"0"}}>
@@ -108,7 +115,7 @@ const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""}
                             <div className="swiper-wrapper">
                                 <Swiper modules={[Navigation, Autoplay]} spaceBetween={50} slidesPerView={1} navigation autoplay={false}>
                                     {
-                                        RecommendationBannerData.map(( item, index)=>{
+                                        cancelEventBannerData.map(( item, index)=>{
                                             return(
                                                 <SwiperSlide key={index}>
                                                     <img src={process.env.PUBLIC_URL + "./img/"+item.url} alt="event title"/>
@@ -121,7 +128,7 @@ const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""}
                                                             {/*<div className="counter" id={"counterNew"} data-date={item.Event_Start_Date}></div>*/}
                                                         </div>
                                                         <div className="banner__info__link">
-                                                            <Link onClick={(e)=>onAlertOpen(e, item.Event_Name, item.Event_Start_Date, item.Event_Start_Time)}>Yes, I am in</Link>
+                                                            <button onClick={(e)=>onAlertOpen(e, item.Event_Name, item.Event_Start_Date, item.Event_Start_Time)}>Yes, I am in</button>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>

@@ -13,24 +13,25 @@ import Layout from './component/Layout';
 function App() {
   const [api, setApi] = useState(false);
   const [cancelled, setCancelled] = useState(false);
+  const [rCancelAlert, setRCancelAlert] = useState(false);
   return (
       <BrowserRouter>
         <Routes>
           <Route element={<Layout api={api} setApi={setApi} />}>
-            <Route path="/" element={<Dashboard api={api} cancelled={cancelled}/>} />
-            <Route path="/home" element={<HomePage/>} />
-            <Route path="/dashboard" element={<Dashboard api={api}/>} />
-            <Route path="/edit-profile" element={<EditProfile api={api}/>} />
+            <Route path="/" element={<Dashboard api={api} cancelled={cancelled} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
+            <Route path="/home" element={<HomePage rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
+            <Route path="/dashboard" element={<Dashboard api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
+            <Route path="/edit-profile" element={<EditProfile api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
               {/*<Route path="/profiles/:id" element={<EditProfile/>} />*/}
-            <Route path="/feedback" element={<Feedback api={api}/>} />
-            <Route path="/settings" element={<Settings api={api}/>} />
-            <Route path="/notifications" element={<Notifications api={api}/>} />
-            <Route path="/recommendation" element={<Recommendation api={api} setCancelled={setCancelled}/>} />
-            <Route path="/eventdetails" element={<EventDetail api={api}/>} />
-            <Route path="/eventdetails/:id" element={<EventDetail api={api}/>} />
-            <Route path="/eventdetailcomplete" element={<CompleteEventDetail api={api}/>} />
-            <Route path="/myfavorites" element={<Myfavorites api={api}/>} />
-            <Route path="/upcomingevent" element={<UpcomingEvent api={api}/>} />
+            <Route path="/feedback" element={<Feedback api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
+            <Route path="/settings" element={<Settings api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
+            <Route path="/notifications" element={<Notifications api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
+            <Route path="/recommendation" element={<Recommendation api={api} setCancelled={setCancelled} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
+            <Route path="/eventdetails" element={<EventDetail api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert} />} />
+            <Route path="/eventdetails/:id" element={<EventDetail api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
+            <Route path="/eventdetailcomplete" element={<CompleteEventDetail api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
+            <Route path="/myfavorites" element={<Myfavorites api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
+            <Route path="/upcomingevent" element={<UpcomingEvent api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
           </Route>
         </Routes>
       </BrowserRouter>

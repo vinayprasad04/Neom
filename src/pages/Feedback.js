@@ -35,7 +35,7 @@ let ratingNew = Number(rating).toFixed(0);
     )
 }
 
-const Feedback = () =>{
+const Feedback = (props) =>{
     const [vivoMeaterModal, setVivoMeaterModal] = useState(false);
     function openModal() {
         let el = document.getElementById('modal')
@@ -52,7 +52,7 @@ const Feedback = () =>{
             <div>
                 <AddAReview closeModal={closeModal} vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>
                 {vivoMeaterModal && <AddVivoMeaterReview vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>}
-                <Header/>
+                <Header {...props}/>
                 <main className="content feedback">
                     <div className="feedback__banner">
                         <div className="container--fluid">

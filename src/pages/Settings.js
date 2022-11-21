@@ -4,13 +4,13 @@ import {
     Footer,
 } from "../component/index.js";
 import {Profile} from "../MockData";
-const Settings = () =>{
+const Settings = (props) =>{
     useEffect(()=>{
         window.scrollTo(0, 0);
     },[])
     return(
         <>
-            <Header/>
+            <Header {...props}/>
             <main className="content">
                 <div className="settings">
                     <div className="container">

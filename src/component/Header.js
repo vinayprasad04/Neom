@@ -47,7 +47,8 @@ const HeaderAlert = ({headerAlert, setHeaderAlert, setConfirmAlert, setCancelAle
         </div>
     )
 }
-const Header = ({active}) =>{
+const Header = (props) =>{
+    const {active, setRCancelAlert} = props;
     const [headerAlert, setHeaderAlert] = useState(false);
     const [confirmAlert, setConfirmAlert] = useState(false);
     const [cancelAlert, setCancelAlert] = useState(false);
@@ -158,7 +159,7 @@ const Header = ({active}) =>{
         </div>
     </header>
             {confirmAlert && <AlertMsg setConfirmAlert={setConfirmAlert} heading={"Hi, Charlie"} dec={"Are you sure, you want to reschedule this event?"}/>}
-            {cancelAlert && <AlertMsg setCancelAlert={setCancelAlert} heading={"Hi, Charlie"} dec={"Are you sure, you want to cancel this event?"}/>}
+            {cancelAlert && <AlertMsg setRCancelAlert={setRCancelAlert} setCancelAlert={setCancelAlert} heading={"Hi, Charlie"} dec={"Are you sure, you want to cancel this event?"}/>}
         </>
     )
 }

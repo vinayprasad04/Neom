@@ -14,10 +14,10 @@ import 'swiper/css/pagination';
 import getJson from "../utils/homepageData";
 const homePage = getJson();
 
-const Home = ()=>{
+const Home = (props)=>{
     return(
         <div>
-            <Header/>
+            <Header {...props}/>
             <main className="content home">
                 <Banner/>
                 <NextEventBanner/>

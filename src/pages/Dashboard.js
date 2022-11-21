@@ -17,6 +17,7 @@ import getJson from "../utils/dashboardData";
 import { EventDetail, Profile } from "./../MockData";
 import { getEventList, getYourChoiceList, getRecommendationsList, getAttendedEvent } from "../utils/Api";
 import {SectionHeader} from "../component/index";
+import {HomePage} from "./index";
 
 const dashboardPage = getJson();
 
@@ -102,7 +103,7 @@ const Dashboard = (props) => {
   }, []);
   return (
     <div>
-      <Header active={"dashboard"} />
+      <Header active={"dashboard"} {...props}/>
       <main className="content">
         <SliderCard EventDetail={data.slice(0, 2)} cancelled={cancelled} />
 

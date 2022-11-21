@@ -58,7 +58,7 @@ const Myfavorites = (props) => {
     },[])
     return (
         <div>
-            <Header active={"myfavorites"} />
+            <Header active={"myfavorites"} {...props}/>
             <main className="content favorites">
                 <Recommendations{...myFavorites.FavoritesData} showCancelFavorite={true}/>
                 <NextEventBanner showHeartIcon={true}/>

@@ -37,7 +37,7 @@ const activitylist = [
     {name:"Water Sports", img:watersports,  select:false,},
 ]
 
-const EditProfile = () =>{
+const EditProfile = (props) =>{
     const {id} = useParams();
     const profile = Profile.find((profile) => profile.Customer_ID === '001');
     const {Customer_Name,Contact_Email,Contact_Number, Customer_Image, Gender, dop, Likes} = profile;
@@ -122,7 +122,7 @@ const EditProfile = () =>{
     return(
         <>
             {alert && <ThanksAlert alert={alert} onCancel={onCancelAlert}/>}
-            <Header/>
+            <Header {...props}/>
                 <main className="content">
                 <div className="profile">
                     <div className="container">

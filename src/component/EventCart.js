@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 const EventCart = ({ item, setEventData, onRemoveItem }) => {
-    console.log("item",item);
   const { img, rank, rating, date, title, desc, vibeicon, vibetext, heartIcon, showCancelFavorite,favorites_Id,Event_ID=10005} = item;
   const [heartAdd, setHeartAdd] = useState(false);
   const onHeartClick = ()=>{

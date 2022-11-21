@@ -241,7 +241,7 @@ const NotificationData = [
 
 
 
-const Notifications = () =>{
+const Notifications = (props) =>{
     const itemPerRow = 4,
         Next = 4;
     const [rowData, setRowData] = useState(NotificationData);
@@ -279,7 +279,7 @@ const Notifications = () =>{
         <>
             <AddAReview closeModal={closeModal} vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>
             {vivoMeaterModal && <AddVivoMeaterReview vivoMeaterModal={vivoMeaterModal} setVivoMeaterModal={setVivoMeaterModal}/>}
-            <Header/>
+            <Header {...props}/>
             <main className="content">
                 <div className="notification">
                     <div className="container">

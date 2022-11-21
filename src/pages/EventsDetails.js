@@ -205,7 +205,7 @@ const EventDetail = (props) => {
   return (
     <div>
       <ThanksAlert alert={alert} onCancel={onCancelAlert}/>
-      <Header />
+      <Header {...props}/>
       <main className="content event" id={"eventDetail"}>
         {eventAddReviewPanel && <div className="eventAddReview">
           <div className="container">

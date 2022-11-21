@@ -75,7 +75,7 @@ const selectedFilter = (filter) =>{
   },[])
   return (
     <div>
-      <Header active={"upcomingevent"}/>
+      <Header active={"upcomingevent"} {...props}/>
       <main className="content event">
         <div className="recommendations">
           <div className="container">

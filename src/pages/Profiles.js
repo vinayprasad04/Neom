@@ -5,7 +5,7 @@ import Header from "../component/Header";
 import {Link} from 'react-router-dom';
 
 
-const Profiles = () =>{
+const Profiles = (props) =>{
         const [selectUser, setUserSelect] = useState({});
         const onHandleProfileClick = (e, id, item)=>{
             setUserSelect({[id]: id});
@@ -18,7 +18,7 @@ const Profiles = () =>{
         },[])
     return(
         <>
-        <Header/>
+        <Header {...props}/>
         <main className="content">
         <div className="profile">
             <div className="container">
