@@ -108,8 +108,8 @@ const selectedFilter = (filter) =>{
                         <select value={location} onChange={handleChnage} style={{width:'265px', height:'50px', border:'0', backgroundColor:'transparent', fontSize:'16px'}}>
                         <option value="">Select Location</option>
                         <option value="Location One">Location One</option>
-                        <option calue="Location Two">Location Two</option>
-                        <option Location One="Location Three">Location Three</option>
+                        <option value="Location Two">Location Two</option>
+                        <option value="Location Three">Location Three</option>
                         </select>
                       </div>
                     </div>

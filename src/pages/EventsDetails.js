@@ -75,8 +75,8 @@ const EmotionList = ({rating}) =>{
   )
 }
 
-const Cart = ({eventData}) =>{
-  const [seatValue, setSeatValue] = useState(1);
+const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAlert, Sucmsg}) =>{
+/*  const [seatValue, setSeatValue] = useState(1);
   const [alert, setAlert] = useState(false);
 
   const onSelectSeat = (e) =>{
@@ -87,7 +87,7 @@ const Cart = ({eventData}) =>{
   }
   const Sucmsg = () =>{
     setAlert(true);
-  }
+  }*/
   const container = document.getElementById("root");
   return(
       <div className="eventReserve__form" >
@@ -190,6 +190,19 @@ const EventDetail = (props) => {
     window.scrollTo(0, 0);
     setRecSlider();
   },[])
+
+  const [seatValue, setSeatValue] = useState(1);
+  const [alert, setAlert] = useState(false);
+
+  const onSelectSeat = (e) =>{
+    setSeatValue(e.target.value);
+  }
+  const onCancelAlert = ()=>{
+    setAlert(false);
+  }
+  const Sucmsg = () =>{
+    setAlert(true);
+  }
 
   return (
     <div>
@@ -309,7 +322,7 @@ const EventDetail = (props) => {
                 </div>
               </div>
               <div className="eventReserve__grid--col flex__order--1">
-                <Cart eventData={eventData}/>
+                <Cart eventData={eventData} Sucmsg={Sucmsg} onCancelAlert={onCancelAlert} onSelectSeat={onSelectSeat} alert={alert} setAlert={setAlert} setSeatValue={setSeatValue}/>
               </div>
             </div>
           </div>
