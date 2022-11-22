@@ -54,12 +54,17 @@ const Header = (props) =>{
     const [cancelAlert, setCancelAlert] = useState(false);
 
     useEffect(()=>{
+        window.onunload = function () {
+            localStorage.removeItem('bellAlert');
+        }
         setTimeout(()=>{
-            setHeaderAlert(true);
+            if(!window.localStorage.getItem("bellAlert")){
+                setHeaderAlert(true);
+            }
         },5000)
         if(!headerAlert){
             setInterval(()=>{
-                setHeaderAlert(true);
+                //setHeaderAlert(true);
             },12000000)
         }
     },[])
