@@ -6,7 +6,7 @@ import {Link, useParams} from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-import user from './../assets/img/user.svg';
+import user from './../assets/img/Charlie.png';
 import golf from './../assets/img/golf.jpg';
 import music from './../assets/img/music.png';
 import exploring from './../assets/img/exploring2.png';
@@ -25,15 +25,15 @@ import ThanksAlert from "../component/ThanksAlert";
 
 const activitylist = [
     {name:"Golf", img:golf, select:true,},
-    {name:"Music", img:music, select:false,},
-    {name:"Rooms", img:rooms, select:true,},
+    {name:"Music", img:music, select:true,},
+   /* {name:"Rooms", img:rooms, select:true,},*/
     {name:"Exploring", img:exploring, select:false,},
     {name:"Socializing", img:socializing,  select:false,},
-    {name:"Cooking & dining", img:cookingdinner,  select:false,},
+    {name:"Cooking & dining", img:cookingdinner,  select:true,},
     {name:"Plays", img:plays,  select:false,},
     {name:"Chinese Food", img:chinesefood,  select:false,},
     {name:"Screaming Child", img:screamingchild,  select:false,},
-    {name:"Walking for long", img:walkingforlong,  select:false,},
+   /* {name:"Walking for long", img:walkingforlong,  select:false,},*/
     {name:"Water Sports", img:watersports,  select:false,},
 ]
 
@@ -111,7 +111,7 @@ const EditProfile = (props) =>{
         setActivityList(newArray);*/
     }
 
-    const [photo, setPhoto] = useState(music);
+    const [photo, setPhoto] = useState(user);
     const [startDate, setStartDate] = useState(new Date(profileValue.dop));
     const onChangePhoto = (e) =>{
         setPhoto(URL.createObjectURL(e.target.files[0]));

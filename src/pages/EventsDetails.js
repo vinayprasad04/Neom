@@ -249,10 +249,9 @@ const EventDetail = (props) => {
                     <li className="event__description--list-item">
                       <div className="icon icon-category"></div>
                       <div className="description-details">
-                        <h5>Golf</h5>
+                        <h5>{eventData.Event_Category}</h5>
                         <p>
-                          This is one of the many events comes under the Golf
-                          category.
+                          This is one of the many events comes under the {eventData.Event_Category} category.
                         </p>
                       </div>
                     </li>

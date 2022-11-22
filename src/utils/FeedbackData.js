@@ -10,7 +10,7 @@ const FeedData = [
             "Event_Name": "Round of Golf",
             "Event_Start_Date": "Nov 10-29, 2022",
             "Event_End_Date": "Nov 10-29, 2022",
-            "Event_Location": "Sindalah City",
+            "Event_Location": "Sindalah Island",
             "Overall_Event_Rating": 5.0,
             "Total_reviews":"123"
         },
@@ -32,7 +32,7 @@ const FeedData = [
             "Event_Name": "Dive into Exciting",
             "Event_Start_Date": "Nov 10-29, 2022",
             "Event_End_Date": "Nov 10-29, 2022",
-            "Event_Location": "Sindalah City",
+            "Event_Location": "Sindalah Island",
             "Overall_Event_Rating": 5.0,
             "Total_reviews":"123"
         },
@@ -54,7 +54,7 @@ const FeedData = [
             "Event_Name": "Surfing at leisure",
             "Event_Start_Date": "Nov 10-29, 2022",
             "Event_End_Date": "Nov 10-29, 2022",
-            "Event_Location": "Sindalah City",
+            "Event_Location": "Sindalah Island",
             "Overall_Event_Rating": 4.9,
             "Total_reviews":"123"
         },
@@ -76,7 +76,7 @@ const FeedData = [
             "Event_Name": "Round of Golf",
             "Event_Start_Date": "Nov 10-29, 2022",
             "Event_End_Date": "Nov 10-29, 2022",
-            "Event_Location": "Sindalah City",
+            "Event_Location": "Sindalah Island",
             "Overall_Event_Rating": 5.0,
             "Total_reviews":"123"
         },

@@ -3,11 +3,11 @@ const data = () => {
     SliderCardData:{
       heading: "Good morningCharlie",
       SliderCard: [
-        {Event_ID:10001,img:"spa_0.png", rank:"one.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-        {Event_ID:10002,img:"recommend2.jpg", rank:"two.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-        {Event_ID:10003,img:"trending2.jpg", rank:"three.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-        {Event_ID:10004,img:"trending1.jpg", rank:"four.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Hi Charlie, we came to from our chef John that you didn't enjoyed the Epicurean cuisines yesterday. As a compensation we would like to offer you a free Italian cuisines as agoodwill gesture. Would you like to accept our request?"},
-        {Event_ID:10005, img:"recommend2.jpg", rank:"five.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod dolore magna aliquyam erat…"},
+        {Event_ID:10001,img:"spa_0.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+        {Event_ID:10002,img:"recommend2.jpg", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+        {Event_ID:10003,img:"trending2.jpg", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+        {Event_ID:10004,img:"trending1.jpg", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Hi Charlie, we came to from our chef John that you didn't enjoyed the Epicurean cuisines yesterday. As a compensation we would like to offer you a free Italian cuisines as agoodwill gesture. Would you like to accept our request?"},
+        {Event_ID:10005, img:"recommend2.jpg", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod dolore magna aliquyam erat…"},
         /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
     ]
     },
@@ -37,7 +37,7 @@ const data = () => {
       Treading : [
         {img:"golf.jpg", Event_ID: 10010, rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Round of Golf", desc:"AED 1800 per person"},
         {img:"surfing.jpg", Event_ID: 10011, rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Surfing", desc:"AED 1800 per person"},
-        {img:"yacht.jpg",Event_ID: 10012,  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Jazz Misuc", desc:"AED 1800 per person"},
+        {img:"yacht.jpg",Event_ID: 10012,  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Jazz Music", desc:"AED 1800 per person"},
         {img:"dive.jpg", Event_ID: 10013,  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Sweet Wonderland", desc:"AED 1800 per person"},
         {img:"beach.jpg",Event_ID: 10014, rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Kite Surfing", desc:"AED 1800 per person"},
       ]
