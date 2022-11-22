@@ -160,6 +160,21 @@
       min-width: 150px;
       font-size: 18px;
     }
+    .form{
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      .form__group{
+        .form__label{
+          margin-bottom: 5px;
+          margin-top: 10px;
+        }
+        width: 50%;
+        select{
+          width: 90%;
+        }
+      }
+    }
     .btnGroup{
       display: flex;
       align-items: center;
@@ -228,7 +243,11 @@
   }
 }
 
-
+.rescheduleBannerNotification{
+  .swiper-button-lock{
+    display: none !important;
+  }
+}
 
 @media(max-width: 767px){
   .lightBoxOverlay{

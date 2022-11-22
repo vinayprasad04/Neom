@@ -12,7 +12,7 @@ import Layout from './component/Layout';
 
 function App() {
   const [api, setApi] = useState(false);
-  const [rCancelAlert, setRCancelAlert] = useState({crAlert:false, srAlert:false, crBookedAlert:false, srBookedAlert:false});
+  const [rCancelAlert, setRCancelAlert] = useState({crAlert:false, srAlert:false, crBookedAlert:false, srBookedAlert:false, srBookedAlertData:{}});
   return (
       <BrowserRouter>
         <Routes>

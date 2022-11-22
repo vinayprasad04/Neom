@@ -56,18 +56,17 @@ const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""}
     window.scrollTo(0, 0);
 },[])
 const bookedMsgFlash = rCancelAlert.crBookedAlert ? "As you have scheduled new \"Jazz Music\" event":"As you have just rescheduled your \"Round of Golf\" event.";  //crAlert:false, srAlert:false, crBookedAlert:false, srBookedAlert:false
-const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAlert) ? RecommendationBannerData.slice(1,3):RecommendationBannerData;
+const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAlert) ? RecommendationBannerData.slice(1,3):RecommendationBannerData.slice(0,1);
     return(
         <>
             {alertBooked &&
             <AlertBooked onCancelAlert={onCancelAlert} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}
-                heading={"Hi, Charlie"}
-                         eventName={alertBookedData.name}
-                dec={`You have chosen a new ${alertBookedData.name} event on ${alertBookedData.date} at ${alertBookedData.time}. Have a great day ahead and enjoy your new ${alertBookedData.name}!`}/>
+                heading={"Hi, Charlie"} eventName={alertBookedData.name}
+                dec={`You have chosen a new event. Have a great day ahead and enjoy!`}/>
             }
+            {/*dec={`You have chosen a new ${alertBookedData.name} event on ${alertBookedData.date} at ${alertBookedData.time}. Have a great day ahead and enjoy your new ${alertBookedData.name}!`}*/}
         <Header {...props}/>
             <main className="content home recommendation--page">
-
                 <div className="eventAddReview" style={{padding:"0"}}>
                     <div className="container">
                         <div className="eventAddReview__card">
@@ -90,24 +89,13 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                         </div>
                     </div>
                 </div>
-
-{/*                <div className="recommendations">
-                    <div className="container">
-                        <h2 className="recommendations__title">Hey {Profile[0].Customer_Name},</h2>
-                        <div className="recommendations__subtitle">
-                            <h3>Due to some bad weather your "Golf Tournament" event has been cancelled.</h3>
-                            <h3> We have a similar event for you, starting just in an hour and 5 minutes drive
-                                away.</h3>
-                        </div>
-                    </div>
-                </div>*/}
                 <div className="banner">
                     <div className="container">
                         <div className="swiper mainbanner">
-                            <div className="swiper-wrapper">
+                            <div className={`swiper-wrapper ${(location === "#confirmAlert")? "rescheduleBannerNotification":""}`}>
                                 <Swiper modules={[Navigation, Autoplay]} spaceBetween={50} slidesPerView={1} navigation autoplay={false}>
-                                    {
-                                        cancelEventBannerData.map(( item, index)=>{
+                                    { (location !== "#confirmAlert" && rCancelAlert.crAlert) ?
+                                        RecommendationBannerData.slice(1,3).map(( item, index)=>{
                                             return(
                                                 <SwiperSlide key={index}>
                                                     <img src={process.env.PUBLIC_URL + "./img/"+item.url} alt="event title"/>
@@ -121,6 +109,25 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                                                         </div>
                                                         <div className="banner__info__link">
                                                             <button onClick={(e)=>onAlertOpen(e, item.Event_Name, item.Event_Start_Date, item.Event_Start_Time)}>Yes, I am in</button>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
+                                            )
+                                        })
+                                        :
+                                        RecommendationBannerData.slice(0,1).map(( item, index)=>{
+                                            return(
+                                                <SwiperSlide key={index}>
+                                                    <img src={process.env.PUBLIC_URL + "./img/"+item.url} alt="event title"/>
+                                                    <div className="banner__info">
+                                                        <div className="banner__info__title">{item.Event_Name}</div>
+                                                        <div className="banner__info__location">{item.Event_Location}</div>
+                                                        {/*<div className="banner__info__date">{item.Event_Start_Date} at {item.Event_Start_Time}</div>*/}
+                                                       {/* <div className="banner__info__countdown">
+                                                            <CircleTimer itemTime={item.Event_Start_Date}/>
+                                                        </div>*/}
+                                                        <div className="banner__info__link" style={{marginTop:"20px"}}>
+                                                            <button onClick={(e)=>onAlertOpen(e, item.Event_Name, item.Event_Start_Date, item.Event_Start_Time)}>Reschedule</button>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
