@@ -41,21 +41,21 @@ const RatingSliderCard = (props) => {
                 <SwiperSlide key ={index}>
                   <a href="#" className="recSlider__link">
                   <div className="recSlider__profile">
-                  <img src={process.env.PUBLIC_URL + "./../img/" + item.img} alt="event title"/>
+                  <img src={process.env.PUBLIC_URL + "./../img/" + item.Event_Img} alt="event title"/>
                 <div className="recSlider__profile--info">
-                    <h4>{item.title}</h4>
-                    <span>{item.date}</span>
+                    <h4>{item.Event_Name}</h4>
+                    <span>{item.Event_Start_Date}</span>
                 </div>
               </div>
 
                     <div className="recSlider__info">
-                    <div className="recSlider__info__description">{item.desc}</div>
+                    <div className="recSlider__info__description">{item.Event_Description}</div>
                 <div className="recSlider__info__row">
                   <div className="recSlider__info__rating">
                     <div className="rating">
-                      <RatingValue fillColor={"#FF385C"} readOnly={true} initialValue={item.rating}/>
+                      <RatingValue fillColor={"#FF385C"} readOnly={true} initialValue={item.Overall_Event_Rating}/>
                     </div>
-                    <div className="review">{item.rating.toFixed(1)}</div></div>
+                    <div className="review">{item.Overall_Event_Rating.toFixed(1)}</div></div>
                 </div>
               </div>
               <button className="recSlider__button">Read more</button>

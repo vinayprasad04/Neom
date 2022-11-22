@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 const EventCart = ({ item, setEventData, onRemoveItem }) => {
-  const { img, rank, rating, date, title, desc, vibeicon, vibetext, heartIcon, showCancelFavorite,favorites_Id,Event_ID=10005} = item;
+  const { Event_Img, Event_Rank, Overall_Event_Rating, Event_Start_Date, Event_Name, Event_Description, Event_Vibe_Icon, Event_Vibe, heartIcon, showCancelFavorite,favorites_Id,Event_ID=10005} = item;
   const [heartAdd, setHeartAdd] = useState(false);
   const onHeartClick = ()=>{
       setHeartAdd(!heartAdd);
@@ -13,13 +13,13 @@ const EventCart = ({ item, setEventData, onRemoveItem }) => {
           {showCancelFavorite && <button className="card__remove" onClick={(e)=>onRemoveItem(e, favorites_Id)}>Remove</button>}
           <Link className={"card__link"} to={`/eventdetails/${Event_ID}`} >
               <img
-                  src={process.env.PUBLIC_URL + "./../img/" + img}
+                  src={process.env.PUBLIC_URL + "./../img/" + Event_Img}
                   alt="event name"
                   className="card__img"
               />
-              {rank && (
+              {Event_Rank && (
                   <span className="card__count">
-                    <img src={process.env.PUBLIC_URL + "./../img/" + rank} alt="Top ranking 1"/>
+                    <img src={process.env.PUBLIC_URL + "./../img/" + Event_Rank} alt="Top ranking 1"/>
                   </span>
               )}
           </Link>
@@ -27,23 +27,23 @@ const EventCart = ({ item, setEventData, onRemoveItem }) => {
         <div className="card__info">
           <div className="card__row">
             <div className="vibes">
-              {vibetext && (
+              {Event_Vibe_Icon && (
                   <img
-                      src={process.env.PUBLIC_URL + "./../img/" + vibeicon}
+                      src={process.env.PUBLIC_URL + "./../img/" + Event_Vibe_Icon}
                       alt="Overwhelmed"
                       className="vibes__icon"
                   />
               )}
-              {vibetext &&
-              (<span className="vibes__text">{vibetext}</span>
+              {Event_Vibe &&
+              (<span className="vibes__text">{Event_Vibe}</span>
               )}
-              {rating && (
-                  <div className="card__rating"><span className="icon-star"></span>{rating}</div>
+              {Overall_Event_Rating && (
+                  <div className="card__rating"><span className="icon-star"></span>{Overall_Event_Rating}</div>
               )}
             </div>
-            <div className="card__date">{date}</div>
+            <div className="card__date">{Event_Start_Date}</div>
           </div>
-          <div className="card__title">{title}</div>
+          <div className="card__title">{Event_Name}</div>
           <div className="card__price">{/*{desc}*/}10:30AM - 7:30PM</div>
         </div>
 

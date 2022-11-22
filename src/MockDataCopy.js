@@ -1,44 +1,44 @@
 const RecommendationData = [
-    {Event_Img:"trending1.jpg",  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
-    {Event_Img:"recommend2.jpg", Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
-    {Event_Img:"trending2.jpg",  Overall_Event_Rating:4.9, Event_Review:"(123 review)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
-    {Event_Img:"trending1.jpg",  Overall_Event_Rating:4.9, Event_Revie:"(123 reviws)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
-    {Event_Img:"recommend2.jpg", Overall_Event_Rating:4.9, Event_Reviw:"(123 reiews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
+    {img:"trending1.jpg",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+    {img:"recommend2.jpg", rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+    {img:"trending2.jpg",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+    {img:"trending1.jpg",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+    {img:"recommend2.jpg", rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
 
-    {Event_Img:"trending1.jpg",  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
-    {Event_Img:"recommend2.jpg",  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
-    {Event_Img:"trending2.jpg",  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
-    {Event_Img:"trending1.jpg",  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
-    {Event_Img:"recommend2.jpg",  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
+    {img:"trending1.jpg",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+    {img:"recommend2.jpg",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+    {img:"trending2.jpg",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+    {img:"trending1.jpg",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+    {img:"recommend2.jpg",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
 ]
 const eventDetailImage = [
-    {Event_Img:"Image120.jpg"},
-    {Event_Img:"Image118.jpg"},
-    {Event_Img:"Image122.jpg"},
-    {Event_Img:"Image121.jpg"},
-    /*{Event_Img:"", Event_Rank:"", Overall_Event_Rating:"", Event_Start_Date:"", Event_Name:"", Event_Description:""},*/
+    {img:"Image120.jpg"},
+    {img:"Image118.jpg"},
+    {img:"Image122.jpg"},
+    {img:"Image121.jpg"},
+    /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
 ]
 const Treading = [
-    {Event_Img:"trending1.jpg", Event_Rank:"one.svg", Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
-    {Event_Img:"recommend2.jpg", Event_Rank:"two.svg", Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
-    {Event_Img:"trending2.jpg", Event_Rank:"three.svg", Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
-    {Event_Img:"trending1.jpg", Event_Rank:"four.svg", Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
-    {Event_Img:"recommend2.jpg", Event_Rank:"five.svg", Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"AED 1800 per person"},
-    /*{Event_Img:"", Event_Rank:"", Overall_Event_Rating:"", Event_Start_Date:"", Event_Name:"", Event_Description:""},*/
+    {img:"trending1.jpg", rank:"one.svg", rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+    {img:"recommend2.jpg", rank:"two.svg", rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+    {img:"trending2.jpg", rank:"three.svg", rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+    {img:"trending1.jpg", rank:"four.svg", rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+    {img:"recommend2.jpg", rank:"five.svg", rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"AED 1800 per person"},
+    /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
 ]
 const SliderCardData = [
-    {Event_Img:"trending1.jpg", Event_Rank:"one.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-    {Event_Img:"recommend2.jpg", Event_Rank:"two.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:4.9,Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-    {Event_Img:"trending2.jpg", Event_Rank:"three.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:4.9,Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-    {Event_Img:"trending1.jpg", Event_Rank:"four.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)",Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod et dolore magna aliquyam erat…"},
-    {Event_Img:"recommend2.jpg", Event_Rank:"five.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:4.9,Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod dolore magna aliquyam erat…"},
-    /*{Event_Img:"", Event_Rank:"", Overall_Event_Rating:"", Event_Start_Date:"", Event_Name:"", Event_Description:""},*/
+    {img:"trending1.jpg", rank:"one.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+    {img:"recommend2.jpg", rank:"two.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+    {img:"trending2.jpg", rank:"three.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+    {img:"trending1.jpg", rank:"four.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod et dolore magna aliquyam erat…"},
+    {img:"recommend2.jpg", rank:"five.svg", city:"Sindalah City", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod dolore magna aliquyam erat…"},
+    /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
 ]
 const RecommendationBannerData =[
     {
         "Event_ID": 10005,
         "Operator_ID": 20002,
-        "Event_Img":'golf.jpg',
+        "url":'golf.jpg',
         "Operator_Name": "Dark Roast",
         "Event_Category": "Golf",
         "Event_Name": "Round of Golf",
@@ -53,9 +53,9 @@ const RecommendationBannerData =[
         "Event_Capacity": 200,
         "Overall_Event_Rating": 5.0,
         "Operator_Rating": 4.9,
-        "Event_Vibe":"Overwhelmed vibes",
+        "vibes_text":"Overwhelmed vibes",
         "removedWhenCancel":true,
-        "Event_Images":[
+        "imgurl":[
             {"img": "golf.jpg"},
             {"img": "golf.jpg"},
             {"img": "golf.jpg"},
@@ -66,7 +66,7 @@ const RecommendationBannerData =[
     {
         "Event_ID": 10012,
         "Operator_ID": 20005,
-        "Event_Img":'yacht.jpg',
+        "url":'yacht.jpg',
         "Operator_Name": "Basket of gold",
         "Event_Category": "Jazz Music",
         "Event_Name": "Jazz Music",
@@ -82,8 +82,8 @@ const RecommendationBannerData =[
         "Overall_Event_Rating": 4.6,
         "Operator_Rating": 5,
         "Client_Booked": true,
-        "Event_Vibe":"Overwhelmed vibes",
-        "Event_Images":[
+        "vibes_text":"Overwhelmed vibes",
+        "imgurl":[
             {"img": "Jazz1.jpg"},
             {"img": "Jazz2.jpg"},
             {"img": "Jazz3.jpg"},
@@ -94,7 +94,7 @@ const RecommendationBannerData =[
     {
         "Event_ID": 10003,
         "Operator_ID": 20003,
-        "Event_Img":'dive.jpg',
+        "url":'dive.jpg',
         "Operator_Name": "Basket of gold",
         "Event_Category": "Water Activity",
         "Event_Name": "Dive into Exciting",
@@ -110,8 +110,8 @@ const RecommendationBannerData =[
         "Overall_Event_Rating": 4.6,
         "Operator_Rating": 3,
         "Client_Booked": true,
-        "Event_Vibe":"Joyed vibes",
-        "Event_Images":[
+        "vibes_text":"Joyed vibes",
+        "imgurl":[
             {"img": "surfing.jpg"},
             {"img": "surfing.jpg"},
             {"img": "surfing.jpg"},
@@ -126,7 +126,7 @@ const EventDetail =
             "Event_ID": 10101,
             "itinerary":true,
             "Operator_ID": 20005,
-            "Event_Img":'yacht.jpg',
+            "url":'yacht.jpg',
             "Operator_Name": "Basket of gold",
             "Event_Category": "Jazz Music",
             "Event_Name": "Jazz Music",
@@ -141,8 +141,8 @@ const EventDetail =
             "Event_Capacity": 300,
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
-            "Event_Vibe":"Overwhelmed vibes",
-            "Event_Images":[
+            "vibes_text":"Overwhelmed vibes",
+            "imgurl":[
                 {"img": "Jazz1.jpg"},
                 {"img": "Jazz2.jpg"},
                 {"img": "Jazz3.jpg"},
@@ -154,7 +154,7 @@ const EventDetail =
         "Event_ID": 10102,
             "itinerary":true,
         "Operator_ID": 20002,
-        "Event_Img":'golf.jpg',
+        "url":'golf.jpg',
         "Operator_Name": "Dark Roast",
         "Event_Category": "Golf",
         "Event_Name": "Round of Golf",
@@ -169,10 +169,10 @@ const EventDetail =
         "Event_Capacity": 200,
         "Overall_Event_Rating": 4.0,
         "Operator_Rating": 3,
-          "Event_Vibe":"InvigoEvent_Rating & Uplifting",
+          "vibes_text":"Invigorating & Uplifting",
            "isCancelledPossible":true,
          // "Client_Booked": true,
-          "Event_Images":[
+          "imgurl":[
             {"img": "Golf11.png"},
             {"img": "Golf12.png"},
             {"img": "Golf13.png"},
@@ -185,7 +185,7 @@ const EventDetail =
             "Event_ID": 10103,
             "itinerary":true,
             "Operator_ID": 20002,
-            "Event_Img":'Dining.jpg',
+            "url":'Dining.jpg',
             "Operator_Name": "Dark Roast",
             "Event_Category": "Dining",
             "Event_Name": "Epicurean Cuisine",
@@ -200,8 +200,8 @@ const EventDetail =
             "Event_Capacity": 200,
             "Overall_Event_Rating": 3.0,
             "Operator_Rating": 3,
-            "Event_Vibe":"Vibrant & Social",
-            "Event_Images":[
+            "vibes_text":"Vibrant & Social",
+            "imgurl":[
                 {"img": "Dinning-1.jpg"},
                 {"img": "Dinning-2.jpg"},
                 {"img": "Dinning-3.jpg"},
@@ -215,7 +215,7 @@ const EventDetail =
             "Event_ID": 10104,
             "itinerary":true,
             "Operator_ID": 20002,
-            "Event_Img":'golf.jpg',
+            "url":'golf.jpg',
             "Operator_Name": "Dark Roast",
             "Event_Category": "Golf",
             "Event_Name": "Round of Golf",
@@ -230,10 +230,10 @@ const EventDetail =
             "Event_Capacity": 200,
             "Overall_Event_Rating": 4.1,
             "Operator_Rating": 3,
-            "Event_Vibe":"InvigoEvent_Rating & Uplifting",
+            "vibes_text":"Invigorating & Uplifting",
             "isCancelledPossible":true,
             // "Client_Booked": true,
-            "Event_Images":[
+            "imgurl":[
                 {"img": "Golf11.png"},
                 {"img": "Golf12.png"},
                 {"img": "Golf13.png"},
@@ -246,7 +246,7 @@ const EventDetail =
             "Event_ID": 10105,
             "itinerary":true,
             "Operator_ID": 20002,
-            "Event_Img":'Dining.jpg',
+            "url":'Dining.jpg',
             "Operator_Name": "Dark Roast",
             "Event_Category": "Dining",
             "Event_Name": "Epicurean Cuisine",
@@ -261,8 +261,8 @@ const EventDetail =
             "Event_Capacity": 200,
             "Overall_Event_Rating": 3.0,
             "Operator_Rating": 3,
-            "Event_Vibe":"Vibrant & Social",
-            "Event_Images":[
+            "vibes_text":"Vibrant & Social",
+            "imgurl":[
                 {"img": "Dinning-1.jpg"},
                 {"img": "Dinning-2.jpg"},
                 {"img": "Dinning-3.jpg"},
@@ -277,7 +277,7 @@ const EventDetail =
             "Event_ID": 10106,
             "itinerary":true,
             "Operator_ID": 20002,
-            "Event_Img":'golf.jpg',
+            "url":'golf.jpg',
             "Operator_Name": "Dark Roast",
             "Event_Category": "Golf",
             "Event_Name": "Round of Golf",
@@ -292,10 +292,10 @@ const EventDetail =
             "Event_Capacity": 200,
             "Overall_Event_Rating": 4.0,
             "Operator_Rating": 3,
-            "Event_Vibe":"InvigoEvent_Rating & Uplifting",
+            "vibes_text":"Invigorating & Uplifting",
             "isCancelledPossible":true,
             // "Client_Booked": true,
-            "Event_Images":[
+            "imgurl":[
                 {"img": "Golf11.png"},
                 {"img": "Golf12.png"},
                 {"img": "Golf13.png"},
@@ -308,7 +308,7 @@ const EventDetail =
             "Event_ID": 10107,
             "itinerary":true,
             "Operator_ID": 20002,
-            "Event_Img":'Dining.jpg',
+            "url":'Dining.jpg',
             "Operator_Name": "Dark Roast",
             "Event_Category": "Dining",
             "Event_Name": "Epicurean Cuisine",
@@ -323,8 +323,8 @@ const EventDetail =
             "Event_Capacity": 200,
             "Overall_Event_Rating": 3.0,
             "Operator_Rating": 3,
-            "Event_Vibe":"Vibrant & Social",
-            "Event_Images":[
+            "vibes_text":"Vibrant & Social",
+            "imgurl":[
                 {"img": "Dinning-1.jpg"},
                 {"img": "Dinning-2.jpg"},
                 {"img": "Dinning-3.jpg"},
@@ -339,7 +339,7 @@ const EventDetail =
         {
           "Event_ID": 10005,
           "Operator_ID": 20004,
-          "Event_Img":'golf.jpg',
+          "url":'golf.jpg',
           "Operator_Name": "Northern lights",
           "Event_Category": "Golf",
           "Event_Name": "Golf tournament",
@@ -354,7 +354,7 @@ const EventDetail =
           "Event_Capacity": 250,
           "Overall_Event_Rating": 4.6,
           "Operator_Rating": 4,
-          "Event_Images":[
+          "imgurl":[
               {"img": "Golf11.png"},
               {"img": "Golf12.png"},
               {"img": "Golf13.png"},
@@ -366,7 +366,7 @@ const EventDetail =
         {
           "Event_ID": 10006,
           "Operator_ID": 20005,
-            "Event_Img":'surfing.jpg',
+            "url":'surfing.jpg',
             "Operator_Name": "Basket of gold",
             "Event_Category": "Surfing",
             "Event_Name": "Surfing at leisure",
@@ -381,8 +381,8 @@ const EventDetail =
             "Event_Capacity": 300,
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
-            "Event_Vibe":"Overwhelmed vibes",
-            "Event_Images":[
+            "vibes_text":"Overwhelmed vibes",
+            "imgurl":[
                 {"img": "surfing.jpg"},
                 {"img": "surfing.jpg"},
                 {"img": "surfing.jpg"},
@@ -393,7 +393,7 @@ const EventDetail =
         {
           "Event_ID": 10007,
           "Operator_ID": 20005,
-            "Event_Img":'yacht.jpg',
+            "url":'yacht.jpg',
             "Operator_Name": "Basket of gold",
             "Event_Category": "Jazz Music",
             "Event_Name": "Jazz Music",
@@ -408,8 +408,8 @@ const EventDetail =
             "Event_Capacity": 300,
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
-            "Event_Vibe":"Overwhelmed vibes",
-            "Event_Images":[
+            "vibes_text":"Overwhelmed vibes",
+            "imgurl":[
                 {"img": "Jazz1.jpg"},
                 {"img": "Jazz2.jpg"},
                 {"img": "Jazz3.jpg"},
@@ -420,7 +420,7 @@ const EventDetail =
         {
           "Event_ID": 10008,
           "Operator_ID": 20006,
-            "Event_Img":'dive.jpg',
+            "url":'dive.jpg',
             "Operator_Name": "Basket of gold",
             "Event_Category": "Sweet Wonderland",
             "Event_Name": "Sweet Wonderland",
@@ -435,8 +435,8 @@ const EventDetail =
             "Event_Capacity": 300,
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
-            "Event_Vibe":"Overwhelmed vibes",
-            "Event_Images":[
+            "vibes_text":"Overwhelmed vibes",
+            "imgurl":[
                 {"img": "dive.jpg"},
                 {"img": "dive.jpg"},
                 {"img": "dive.jpg"},
@@ -447,7 +447,7 @@ const EventDetail =
         {
           "Event_ID": 10009,
           "Operator_ID": 20007,
-            "Event_Img":'beach.jpg',
+            "url":'beach.jpg',
             "Operator_Name": "Basket of gold",
             "Event_Category": "Surfing",
             "Event_Name": "Kite Surfing",
@@ -462,8 +462,8 @@ const EventDetail =
             "Event_Capacity": 300,
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
-            "Event_Vibe":"Overwhelmed vibes",
-            "Event_Images":[
+            "vibes_text":"Overwhelmed vibes",
+            "imgurl":[
                 {"img": "beach.jpg"},
                 {"img": "beach.jpg"},
                 {"img": "beach.jpg"},
@@ -476,7 +476,7 @@ const EventDetail =
             "Event_ID": 10010,
             "itinerary":true,
             "Operator_ID": 20004,
-            "Event_Img":'golf.jpg',
+            "url":'golf.jpg',
             "Operator_Name": "Northern lights",
             "Event_Category": "Golf",
             "Event_Name": "Golf tournament",
@@ -492,7 +492,7 @@ const EventDetail =
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 4,
             "Client_Booked": true,
-            "Event_Images":[
+            "imgurl":[
                 {"img": "Golf11.png"},
                 {"img": "Golf12.png"},
                 {"img": "Golf13.png"},
@@ -505,7 +505,7 @@ const EventDetail =
             "Event_ID": 10011,
             "itinerary":true,
             "Operator_ID": 20005,
-            "Event_Img":'surfing.jpg',
+            "url":'surfing.jpg',
             "Operator_Name": "Basket of gold",
             "Event_Category": "Surfing",
             "Event_Name": "Surfing at leisure",
@@ -521,8 +521,8 @@ const EventDetail =
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
             "Client_Booked": true,
-            "Event_Vibe":"Overwhelmed vibes",
-            "Event_Images":[
+            "vibes_text":"Overwhelmed vibes",
+            "imgurl":[
                 {"img": "surfing.jpg"},
                 {"img": "surfing.jpg"},
                 {"img": "surfing.jpg"},
@@ -534,7 +534,7 @@ const EventDetail =
             "Event_ID": 10012,
             "itinerary":true,
             "Operator_ID": 20005,
-            "Event_Img":'yacht.jpg',
+            "url":'yacht.jpg',
             "Operator_Name": "Basket of gold",
             "Event_Category": "Jazz Music",
             "Event_Name": "Jazz Music",
@@ -550,8 +550,8 @@ const EventDetail =
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
             "Client_Booked": true,
-            "Event_Vibe":"Overwhelmed vibes",
-            "Event_Images":[
+            "vibes_text":"Overwhelmed vibes",
+            "imgurl":[
                 {"img": "Jazz1.jpg"},
                 {"img": "Jazz2.jpg"},
                 {"img": "Jazz3.jpg"},
@@ -563,7 +563,7 @@ const EventDetail =
             "Event_ID": 10013,
             "itinerary":true,
             "Operator_ID": 20006,
-            "Event_Img":'dive.jpg',
+            "url":'dive.jpg',
             "Operator_Name": "Basket of gold",
             "Event_Category": "Sweet Wonderland",
             "Event_Name": "Sweet Wonderland",
@@ -579,8 +579,8 @@ const EventDetail =
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
             "Client_Booked": true,
-            "Event_Vibe":"Overwhelmed vibes",
-            "Event_Images":[
+            "vibes_text":"Overwhelmed vibes",
+            "imgurl":[
                 {"img": "dive.jpg"},
                 {"img": "dive.jpg"},
                 {"img": "dive.jpg"},
@@ -592,7 +592,7 @@ const EventDetail =
             "Event_ID": 10014,
             "itinerary":true,
             "Operator_ID": 20007,
-            "Event_Img":'beach.jpg',
+            "url":'beach.jpg',
             "Operator_Name": "Basket of gold",
             "Event_Category": "Surfing",
             "Event_Name": "Kite Surfing",
@@ -608,8 +608,8 @@ const EventDetail =
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
             "Client_Booked": true,
-            "Event_Vibe":"Overwhelmed vibes",
-            "Event_Images":[
+            "vibes_text":"Overwhelmed vibes",
+            "imgurl":[
                 {"img": "beach.jpg"},
                 {"img": "beach.jpg"},
                 {"img": "beach.jpg"},
@@ -723,9 +723,9 @@ const Profile = [
         "Age":48,
         "dop":'08/01/1979',
         "Gender":"Male",
-        "Arrival_Event_Date":"11/25/2022",
+        "Arrival_Date":"11/25/2022",
         "Arrival_Time":"12:06 PM",
-        "Departure_Event_Date":"11/28/2022",
+        "Departure_Date":"11/28/2022",
         "Departure_Time":"1:06 PM",
         "Likes":"Golf, Rooms",
         "Dislikes":"Walking for Long",
@@ -744,9 +744,9 @@ const Profile = [
         "Master_Journey":"Guests",
         "Age":50,
         "Gender":"male",
-        "Arrival_Event_Date":"11/25/2022",
+        "Arrival_Date":"11/25/2022",
         "Arrival_Time":"12:06 PM",
-        "Departure_Event_Date":"11/28/2022",
+        "Departure_Date":"11/28/2022",
         "Departure_Time":"1:06 PM",
         "Likes":"Music, Exploring",
         "Dislikes":"Walking for Long",
@@ -766,9 +766,9 @@ const Profile = [
         "Master_Journey":"Guests",
         "Age":48,
         "Gender":"female",
-        "Arrival_Event_Date":"11/25/2022",
+        "Arrival_Date":"11/25/2022",
         "Arrival_Time":"12:06 PM",
-        "Departure_Event_Date":"11/28/2022",
+        "Departure_Date":"11/28/2022",
         "Departure_Time":"1:06 PM",
         "Likes":"Cooking",
         "Dislikes":"Chinese food",
@@ -785,9 +785,9 @@ const Profile = [
         "Master_Journey":"Guests",
         "Age":13,
         "Gender":"Male",
-        "Arrival_Event_Date":"11/19/2022",
+        "Arrival_Date":"11/19/2022",
         "Arrival_Time":"11:41  PM",
-        "Departure_Event_Date":"11/23/2022",
+        "Departure_Date":"11/23/2022",
         "Departure_Time":"8:21 AM",
         "Likes":"Comedy Show,Cooking",
         "Dislikes":"Screaming Children",
@@ -795,240 +795,6 @@ const Profile = [
     }
 
 ]
-const NotificationData = [
-    {
-        Note:"We have added a new activity for you.",
-        Notification_Type:"event",
-        Notification_Date:"Nov 5",
-        Event_ID:"10004",
-        Event_Name:"Surfing at leisure",
-        Event_Time:"10:30AM - 7:30PM",
-        Event_Start_Date:"Nov 10-29",
-        Event_Description:"",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"",
-        Notification_Type:"review",
-        Notification_Date:"Nov 4",
-        Event_ID:"10003",
-        Event_Name:"Congratulations Charlie!",
-        Event_Time:"",
-        Event_Start_Date:"",
-        Event_Description:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"We have added a new activity for you.",
-        Notification_Type:"dashboard",
-        Notification_Date:"Nov 4",
-        Event_ID:"",
-        Event_Name:"Surfing at leisure",
-        Event_Time:"10:30AM - 7:30PM",
-        Event_Start_Date:"Nov 10-29",
-        Event_Description:"",
-        Event_Img:""
-    },
-    {
-        Note:"",
-        Notification_Type:"review",
-        Notification_Date:"Nov 3",
-        Event_ID:"10003",
-        Event_Name:"Congratulations Charlie!",
-        Event_Time:"",
-        Event_Start_Date:"",
-        Event_Description:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"We have added a new activity for you.",
-        Notification_Type:"event",
-        Notification_Date:"Nov 3",
-        Event_ID:"10004",
-        Event_Name:"Surfing at leisure",
-        Event_Time:"10:30AM - 7:30PM",
-        Event_Start_Date:"Nov 10-29",
-        Event_Description:"",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"",
-        Notification_Type:"review",
-        Notification_Date:"Nov 3",
-        Event_ID:"10003",
-        Event_Name:"Congratulations Charlie!",
-        Event_Time:"",
-        Event_Start_Date:"",
-        Event_Description:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"We have added a new activity for you.",
-        Notification_Type:"dashboard",
-        Notification_Date:"Nov 3",
-        Event_ID:"",
-        Event_Name:"Surfing at leisure",
-        Event_Time:"10:30AM - 7:30PM",
-        Event_Start_Date:"Nov 10-29",
-        Event_Description:"",
-        Event_Img:""
-    },
-    {
-        Note:"",
-        Notification_Type:"review",
-        Notification_Date:"Nov 2",
-        Event_ID:"10003",
-        Event_Name:"Congratulations Charlie!",
-        Event_Time:"",
-        Event_Start_Date:"",
-        Event_Description:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"We have added a new activity for you.",
-        Notification_Type:"event",
-        Notification_Date:"Nov 2",
-        Event_ID:"10004",
-        Event_Name:"Surfing at leisure",
-        Event_Time:"10:30AM - 7:30PM",
-        Event_Start_Date:"Nov 10-29",
-        Event_Description:"",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"",
-        Notification_Type:"review",
-        Notification_Date:"Nov 2",
-        Event_ID:"10003",
-        Event_Name:"Congratulations Charlie!",
-        Event_Time:"",
-        Event_Start_Date:"",
-        Event_Description:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"We have added a new activity for you.",
-        Notification_Type:"dashboard",
-        Notification_Date:"Nov 2",
-        Event_ID:"",
-        Event_Name:"Surfing at leisure",
-        Event_Time:"10:30AM - 7:30PM",
-        Event_Start_Date:"Nov 10-29",
-        Event_Description:"",
-        Event_Img:""
-    },
-    {
-        Note:"",
-        Notification_Type:"review",
-        Notification_Date:"Nov 2",
-        Event_ID:"10003",
-        Event_Name:"Congratulations Charlie!",
-        Event_Time:"",
-        Event_Start_Date:"",
-        Event_Description:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"We have added a new activity for you.",
-        Notification_Type:"event",
-        Notification_Date:"Nov 2",
-        Event_ID:"10004",
-        Event_Name:"Surfing at leisure",
-        Event_Time:"10:30AM - 7:30PM",
-        Event_Start_Date:"Nov 10-29",
-        Event_Description:"",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"",
-        Notification_Type:"review",
-        Notification_Date:"Nov 2",
-        Event_ID:"10003",
-        Event_Name:"Congratulations Charlie!",
-        Event_Time:"",
-        Event_Start_Date:"",
-        Event_Description:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"We have added a new activity for you.",
-        Notification_Type:"dashboard",
-        Notification_Date:"Nov 1",
-        Event_ID:"",
-        Event_Name:"Surfing at leisure",
-        Event_Time:"10:30AM - 7:30PM",
-        Event_Start_Date:"Nov 10-29",
-        Event_Description:"",
-        Event_Img:""
-    },
-    {
-        Note:"",
-        Notification_Type:"review",
-        Notification_Date:"Nov 1",
-        Event_ID:"10003",
-        Event_Name:"Congratulations Charlie!",
-        Event_Time:"",
-        Event_Start_Date:"",
-        Event_Description:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"We have added a new activity for you.",
-        Notification_Type:"event",
-        Notification_Date:"Nov 1",
-        Event_ID:"10004",
-        Event_Name:"Surfing at leisure",
-        Event_Time:"10:30AM - 7:30PM",
-        Event_Start_Date:"Nov 10-29",
-        Event_Description:"",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"",
-        Notification_Type:"review",
-        Notification_Date:"Nov 1",
-        Event_ID:"10003",
-        Event_Name:"Congratulations Charlie!",
-        Event_Time:"",
-        Event_Start_Date:"",
-        Event_Description:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"We have added a new activity for you.",
-        Notification_Type:"dashboard",
-        Notification_Date:"Nov 1",
-        Event_ID:"",
-        Event_Name:"Surfing at leisure",
-        Event_Time:"10:30AM - 7:30PM",
-        Event_Start_Date:"Nov 10-29",
-        Event_Description:"",
-        Event_Img:""
-    },
-    {
-        Note:"",
-        Notification_Type:"review",
-        Notification_Date:"Nov 1",
-        Event_ID:"10003",
-        Event_Name:"Congratulations Charlie!",
-        Event_Time:"",
-        Event_Start_Date:"",
-        Event_Description:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        Event_Img:"Product1.png"
-    },
-    {
-        Note:"",
-        Notification_Type:"review",
-        Notification_Date:"Nov 1",
-        Event_ID:"10003",
-        Event_Name:"Congratulations Charlie!",
-        Event_Time:"",
-        Event_Start_Date:"",
-        Event_Description:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        Event_Img:"Product1.png"
-    },
-]
 
 
-
-export {RecommendationData, Treading, Profile, eventDetailImage, EventDetail, RecommendationBannerData, NotificationData};
+export {RecommendationData, Treading, Profile, eventDetailImage, EventDetail, RecommendationBannerData};

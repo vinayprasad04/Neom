@@ -35,7 +35,7 @@ const Profiles = (props) =>{
                                         Profile.map((item,index)=>{
                                                 return(
                                                     <li key={index}
-                                                        className={`profile__list--item ${selectUser[item.Customer_ID] == item.Customer_ID && 'active'}`}>
+                                                        className={`profile__list--item ${selectUser[item.Customer_ID] === item.Customer_ID && 'active'}`}>
                                                             <div className="profile__info">
                                                                     <div className="profile__image"
                                                                          onClick={(e)=>onHandleProfileClick(e, item.Customer_ID, item)}>

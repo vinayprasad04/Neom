@@ -47,11 +47,11 @@ const SliderCard = ({EventDetail}) => {
           <div className="swiper-wrapper">
             {EventDetail.map((item, index) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={index} >
                     <Link className={"recSlider__link"} to={`/eventdetails/${item.Event_ID}`} >
                         <div className="slider__image--wrapper">
                             <img
-                                src={process.env.PUBLIC_URL + "./../img/" + item?.url}
+                                src={process.env.PUBLIC_URL + "./../img/" + item?.Event_Img}
                                 alt="event title"
                             />
                             <div className="weather">
@@ -100,9 +100,9 @@ const SliderCard = ({EventDetail}) => {
                         <div className="recSlider__footer__item">
                             <div className="vibes">
                                 <img src={overwhelmed} alt="Overwhelmed" className="vibes__icon"/>
-                                    <span className="vibes__text">{item.vibes_text} </span>
+                                    <span className="vibes__text">{item.Event_Vibe} </span>
                             </div>
-                            <span className={`status ${(item.Event_Status == "Over" || item.Event_Status == "Completed") ? "completed" : (item.Event_Status == "Cancelled") ? "cancelled" : "scheduled"}`}>{item.Event_Status}</span>
+                            <span className={`status ${(item.Event_Status === "Over" || item.Event_Status === "Completed") ? "completed" : (item.Event_Status === "Cancelled") ? "cancelled" : "scheduled"}`}>{item.Event_Status}</span>
                         </div>
                       </div>
                     </div>

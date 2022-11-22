@@ -1,244 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {Header, Footer,} from "../component/index.js";
+import {Header,} from "../component/index.js";
 import {Profile} from "../MockData";
 import {Link} from "react-router-dom";
 import AddAReview from "../component/AddAReview";
 import AddVivoMeaterReview from "../component/AddVivoMeaterReview";
-
-const NotificationData = [
-    {
-        note:"We have added a new activity for you.",
-        notification_type:"event",
-        notification_date:"Nov 5",
-        event_id:"10004",
-        title:"Surfing at leisure",
-        time:"10:30AM - 7:30PM",
-        event_date:"Nov 10-29",
-        desc:"",
-        img:"Product1.png"
-    },
-    {
-        note:"",
-        notification_type:"review",
-        notification_date:"Nov 4",
-        event_id:"10003",
-        title:"Congratulations Charlie!",
-        time:"",
-        event_date:"",
-        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        img:"Product1.png"
-    },
-    {
-        note:"We have added a new activity for you.",
-        notification_type:"dashboard",
-        notification_date:"Nov 4",
-        event_id:"",
-        title:"Surfing at leisure",
-        time:"10:30AM - 7:30PM",
-        event_date:"Nov 10-29",
-        desc:"",
-        img:""
-    },
-    {
-        note:"",
-        notification_type:"review",
-        notification_date:"Nov 3",
-        event_id:"10003",
-        title:"Congratulations Charlie!",
-        time:"",
-        event_date:"",
-        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        img:"Product1.png"
-    },
-    {
-        note:"We have added a new activity for you.",
-        notification_type:"event",
-        notification_date:"Nov 3",
-        event_id:"10004",
-        title:"Surfing at leisure",
-        time:"10:30AM - 7:30PM",
-        event_date:"Nov 10-29",
-        desc:"",
-        img:"Product1.png"
-    },
-    {
-        note:"",
-        notification_type:"review",
-        notification_date:"Nov 3",
-        event_id:"10003",
-        title:"Congratulations Charlie!",
-        time:"",
-        event_date:"",
-        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        img:"Product1.png"
-    },
-    {
-        note:"We have added a new activity for you.",
-        notification_type:"dashboard",
-        notification_date:"Nov 3",
-        event_id:"",
-        title:"Surfing at leisure",
-        time:"10:30AM - 7:30PM",
-        event_date:"Nov 10-29",
-        desc:"",
-        img:""
-    },
-    {
-        note:"",
-        notification_type:"review",
-        notification_date:"Nov 2",
-        event_id:"10003",
-        title:"Congratulations Charlie!",
-        time:"",
-        event_date:"",
-        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        img:"Product1.png"
-    },
-    {
-        note:"We have added a new activity for you.",
-        notification_type:"event",
-        notification_date:"Nov 2",
-        event_id:"10004",
-        title:"Surfing at leisure",
-        time:"10:30AM - 7:30PM",
-        event_date:"Nov 10-29",
-        desc:"",
-        img:"Product1.png"
-    },
-    {
-        note:"",
-        notification_type:"review",
-        notification_date:"Nov 2",
-        event_id:"10003",
-        title:"Congratulations Charlie!",
-        time:"",
-        event_date:"",
-        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        img:"Product1.png"
-    },
-    {
-        note:"We have added a new activity for you.",
-        notification_type:"dashboard",
-        notification_date:"Nov 2",
-        event_id:"",
-        title:"Surfing at leisure",
-        time:"10:30AM - 7:30PM",
-        event_date:"Nov 10-29",
-        desc:"",
-        img:""
-    },
-    {
-        note:"",
-        notification_type:"review",
-        notification_date:"Nov 2",
-        event_id:"10003",
-        title:"Congratulations Charlie!",
-        time:"",
-        event_date:"",
-        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        img:"Product1.png"
-    },
-    {
-        note:"We have added a new activity for you.",
-        notification_type:"event",
-        notification_date:"Nov 2",
-        event_id:"10004",
-        title:"Surfing at leisure",
-        time:"10:30AM - 7:30PM",
-        event_date:"Nov 10-29",
-        desc:"",
-        img:"Product1.png"
-    },
-    {
-        note:"",
-        notification_type:"review",
-        notification_date:"Nov 2",
-        event_id:"10003",
-        title:"Congratulations Charlie!",
-        time:"",
-        event_date:"",
-        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        img:"Product1.png"
-    },
-    {
-        note:"We have added a new activity for you.",
-        notification_type:"dashboard",
-        notification_date:"Nov 1",
-        event_id:"",
-        title:"Surfing at leisure",
-        time:"10:30AM - 7:30PM",
-        event_date:"Nov 10-29",
-        desc:"",
-        img:""
-    },
-    {
-        note:"",
-        notification_type:"review",
-        notification_date:"Nov 1",
-        event_id:"10003",
-        title:"Congratulations Charlie!",
-        time:"",
-        event_date:"",
-        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        img:"Product1.png"
-    },
-    {
-        note:"We have added a new activity for you.",
-        notification_type:"event",
-        notification_date:"Nov 1",
-        event_id:"10004",
-        title:"Surfing at leisure",
-        time:"10:30AM - 7:30PM",
-        event_date:"Nov 10-29",
-        desc:"",
-        img:"Product1.png"
-    },
-    {
-        note:"",
-        notification_type:"review",
-        notification_date:"Nov 1",
-        event_id:"10003",
-        title:"Congratulations Charlie!",
-        time:"",
-        event_date:"",
-        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        img:"Product1.png"
-    },
-    {
-        note:"We have added a new activity for you.",
-        notification_type:"dashboard",
-        notification_date:"Nov 1",
-        event_id:"",
-        title:"Surfing at leisure",
-        time:"10:30AM - 7:30PM",
-        event_date:"Nov 10-29",
-        desc:"",
-        img:""
-    },
-    {
-        note:"",
-        notification_type:"review",
-        notification_date:"Nov 1",
-        event_id:"10003",
-        title:"Congratulations Charlie!",
-        time:"",
-        event_date:"",
-        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        img:"Product1.png"
-    },
-    {
-        note:"",
-        notification_type:"review",
-        notification_date:"Nov 1",
-        event_id:"10003",
-        title:"Congratulations Charlie!",
-        time:"",
-        event_date:"",
-        desc:"You have completed event \"Surfing at leisure\". Hope you have enjoyed the activity. Please do share your valuable feedback with us to improve and serve you the best.",
-        img:"Product1.png"
-    },
-]
-
+import {NotificationData} from '../MockData.js'
 
 
 const Notifications = (props) =>{
@@ -294,7 +60,7 @@ const Notifications = (props) =>{
                                         {rowData.slice(0, limitData).map((item, index)=>{
                                             return(
                                                     <li className="date__list--item"  key={index+"11"}>
-                                                        <div className="date">{item.notification_date}</div>
+                                                        <div className="date">{item.Notification_Date}</div>
                                                         <span className="circle-mark"></span>
                                                     </li>
                                             )
@@ -312,23 +78,23 @@ const Notifications = (props) =>{
                                                     <li key={index} className="notification__list--item">
                                                         <div className="notification__info">
                                                             <div className="image--wrapper">
-                                                                {item.img ?
-                                                                    <img src={process.env.PUBLIC_URL + './img/' + item.img}
+                                                                {item.Event_Img ?
+                                                                    <img src={process.env.PUBLIC_URL + './img/' + item.Event_Img}
                                                                       alt="" width="100px" height="100px"/>
                                                                       :<span>UG</span>
                                                                 }
                                                             </div>
                                                             <div className="content--wrapper">
-                                                                {item.note && <div className="title">{item.note}</div>}
-                                                                {item.title && <div className="subtitle">{item.title}</div>}
-                                                                {item.time && <div className="details">{item.time}</div>}
-                                                                {item.event_date && <div className="details">{item.event_date}</div>}
-                                                                {item.desc && <div className="details">{item.desc}</div>}
+                                                                {item.Note && <div className="title">{item.Note}</div>}
+                                                                {item.Event_Name && <div className="subtitle">{item.Event_Name}</div>}
+                                                                {item.Event_Time && <div className="details">{item.Event_Time}</div>}
+                                                                {item.Event_Start_Date && <div className="details">{item.Event_Start_Date}</div>}
+                                                                {item.Event_Description && <div className="details">{item.Event_Description}</div>}
                                                             </div>
                                                         </div>
-                                                        {item.notification_type ==="event" && <Link to={`/eventdetails/10005`} className="btn__transparent">View event</Link>}
-                                                        {item.notification_type ==="review" && <button className="btn__transparent" onClick={openModal}>Add a review</button>}
-                                                        {item.notification_type ==="dashboard" && <Link to={`/`} className="btn__transparent">Go to Dashboard</Link>}
+                                                        {item.Notification_Type ==="event" && <Link to={`/eventdetails/10005`} className="btn__transparent">View event</Link>}
+                                                        {item.Notification_Type ==="review" && <button className="btn__transparent" onClick={openModal}>Add a review</button>}
+                                                        {item.Notification_Type ==="dashboard" && <Link to={`/`} className="btn__transparent">Go to Dashboard</Link>}
 
 
                                                     </li>

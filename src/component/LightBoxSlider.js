@@ -31,7 +31,7 @@ const LightBoxSlider = ({imagesGallery}) =>{
                             delay: 112500,
                         }}
                     >
-                        {imagesGallery.imgurl.map((item, index)=>{
+                        {imagesGallery.Event_Images.map((item, index)=>{
                             return(
                                 <SwiperSlide key={index}><img src={process.env.PUBLIC_URL + "./../img/" + item?.img} alt="event title"/></SwiperSlide>
                             )

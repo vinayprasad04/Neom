@@ -35,23 +35,23 @@ const YourChoice = (props) => {
           <div className="swiper-wrapper">
             {SliderCard.map((item, index) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide  key={index} >
                   <a href="#" className="recSlider__link">
                   <div className="slider__image--wrapper">
                               <img
-                      src={process.env.PUBLIC_URL + "./img/" + item.img}
+                      src={process.env.PUBLIC_URL + "./img/" + item.Event_Img}
                       alt="event title"
                     />
                             </div>
 
                     <div className="recSlider__info" key={index}>
-                    <h3 className="recSlider__info__title">{item.title}</h3>
+                    <h3 className="recSlider__info__title">{item.Event_Name}</h3>
                                 <div className="recSlider__info__row">
-                                    <div className="recSlider__info__items">{item.date}</div>
+                                    <div className="recSlider__info__items">{item.Event_Start_Date}</div>
                                 </div>
                       <div className="recSlider__info__row">
                         <div className="recSlider__info__items recSlider__info__description">
-                          {item.desc}
+                          {item.Event_Description}
                         </div>
                       </div>
                       <div className="recSlider__info__row">

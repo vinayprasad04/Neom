@@ -33,20 +33,20 @@ const EventSlider = (props) => {
             {Treading.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div className={"card__grid card__grid--dashboard"}>
+                  <div className={"card__grid card__grid--dashboard"} >
                     <div className="card__item">
                       <Link className={"card__link"}  to={`/eventdetails/${item.Event_ID || 10005}`} >
                         <div className="card__thumb">
                           <img
-                              src={process.env.PUBLIC_URL + "./img/" + item.img}
+                              src={process.env.PUBLIC_URL + "./img/" + item.Event_Img}
                               alt="event name"
                               className="card__img"
                           />
-                          {item.rank && (
+                          {item.Event_Rank && (
                               <span className="card__count">
                             <img
                                 src={
-                                  process.env.PUBLIC_URL + "./img/" + item.rank
+                                  process.env.PUBLIC_URL + "./img/" + item.Event_Rank
                                 }
                                 alt="Top ranking 1"
                             />
@@ -55,9 +55,9 @@ const EventSlider = (props) => {
                         </div>
 
                         <div className="card__info">
-                          <h3 className="card__title">{item.title}</h3>
+                          <h3 className="card__title">{item.Event_Name}</h3>
                           <div className="card__price">{/*{item.desc}*/}10:30AM - 7:30PM</div>
-                          <div className="card__date">on {item.date}</div>
+                          <div className="card__date">on {item.Event_Start_Date}</div>
                           <div className="card__row">
                             <div className="card__rating">
                             <span className="card__rating__txt">

@@ -17,7 +17,6 @@ import getJson from "../utils/dashboardData";
 import { EventDetail, Profile } from "./../MockData";
 import { getEventList, getYourChoiceList, getRecommendationsList, getAttendedEvent } from "../utils/Api";
 import {SectionHeader} from "../component/index";
-import {HomePage} from "./index";
 
 const dashboardPage = getJson();
 
