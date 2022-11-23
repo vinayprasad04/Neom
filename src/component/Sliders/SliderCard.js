@@ -56,10 +56,10 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                             <img src={process.env.PUBLIC_URL + "./../img/" + item?.url} alt="event title"/>
                             <div className="weather"><div className="weather__icon"><img src={abstract} alt="Weather" /></div>
                             <div className="weather__text">
-                                <h2>18&#176;<sup>C</sup></h2>
+                                <h2>30&#176;<sup>C</sup></h2>
                                 <div className="weather__text--wrap">
-                                    <span>29&#176;</span>
-                                    <span>16&#176;</span>
+                                    <span>33&#176;</span>
+                                    <span>22&#176;</span>
                                 </div>
                             </div>
                             </div>

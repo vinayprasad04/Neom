@@ -55,14 +55,14 @@ const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""}
   useEffect(()=>{
     window.scrollTo(0, 0);
 },[])
-const bookedMsgFlash = rCancelAlert.crBookedAlert ? "As you have scheduled new \"Jazz Music\" event":"As you have just rescheduled your \"Round of Golf\" event.";  //crAlert:false, srAlert:false, crBookedAlert:false, srBookedAlert:false
+const bookedMsgFlash = rCancelAlert.crBookedAlert ? "Congratulations! Your Jazz  Event has been booked.":"As you have just rescheduled your \"Round of Golf\", we have found alternate events for you and one of them is just an hour and 5 minutes drive away.";  //crAlert:false, srAlert:false, crBookedAlert:false, srBookedAlert:false
 const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAlert) ? RecommendationBannerData.slice(1,3):RecommendationBannerData.slice(0,1);
     return(
         <>
             {alertBooked &&
             <AlertBooked onCancelAlert={onCancelAlert} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}
                 heading={"Hi, Charlie"} eventName={alertBookedData.name}
-                dec={`You have chosen a new event. Have a great day ahead and enjoy!`}/>
+                dec={`Please reserve your event. Have a great day ahead and enjoy!`}/>
             }
             {/*dec={`You have chosen a new ${alertBookedData.name} event on ${alertBookedData.date} at ${alertBookedData.time}. Have a great day ahead and enjoy your new ${alertBookedData.name}!`}*/}
         <Header {...props}/>
@@ -73,8 +73,7 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                             <div>
                                 <h2 className="eventAddReview__card--title">Hey {Profile[0].Customer_Name},</h2>
                                 {location === "#confirmAlert" && <p className="eventAddReview__card--subtitle">
-                                    We have a few similar event for you against your today's rescheduled event of "Round of Golf".
-                                    And one of them is just starting in an hour and 5 minutes drive away.
+                                    As you plan to reschedule your Round Of Golf, here are some options.
                                 </p>}
                                 {location === "#cancelAlert" && <p className="eventAddReview__card--subtitle">
                                     You have just cancelled your "Round of Golf" event. We have found a few similar event for you against your today's cancelled event.
@@ -127,7 +126,7 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                                                             <CircleTimer itemTime={item.Event_Start_Date}/>
                                                         </div>*/}
                                                         <div className="banner__info__link" style={{marginTop:"20px"}}>
-                                                            <button onClick={(e)=>onAlertOpen(e, item.Event_Name, item.Event_Start_Date, item.Event_Start_Time)}>Reschedule</button>
+                                                            <button onClick={(e)=>onAlertOpen(e, item.Event_Name, item.Event_Start_Date, item.Event_Start_Time)} style={{fontSize:"21px"}}>Reschedule</button>
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
