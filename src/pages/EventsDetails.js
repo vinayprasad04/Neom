@@ -75,7 +75,7 @@ const EmotionList = ({rating}) =>{
   )
 }
 
-const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAlert, Sucmsg}) =>{
+const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAlert, Sucmsg, rCancelAlert}) =>{
 /*  const [seatValue, setSeatValue] = useState(1);
   const [alert, setAlert] = useState(false);
 
@@ -87,24 +87,47 @@ const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAl
   }
   const Sucmsg = () =>{
     setAlert(true);
-  }*/
+  } */
+
+  console.log("rCancelAlert",rCancelAlert.srBookedAlertData);
   return(
       <div className="eventReserve__form" >
         <form>
-          <div className="eventReserve__form--title">
-          {/*  AED 1800 <span>per person</span>*/}10:30AM - 7:30PM
-          </div>
+          {/*  AED 1800 <span>per person</span>*/}
+          {
+            !rCancelAlert.srBookedAlertData.selectedTime ?
+                <div className="eventReserve__form--title">{eventData.Event_Start_Time} - {eventData.Event_End_Time}</div>:
+                <div className="eventReserve__form--title">{rCancelAlert.srBookedAlertData.selectedTime}</div>
+          }
+
           <div className="eventReserve__form--date"></div>
+          { rCancelAlert.srBookedAlertData.selectedDate ?
+              <div className="form__flex--row">
+                <div className="s-form-floating">
+                  <input type="text" className="s-form-control" id="floatingFromInput" value={rCancelAlert.srBookedAlertData.selectedDate}
+                         readOnly/>
+                  <label htmlFor="floatingFromInput">From</label>
+                </div>
+                <div className="s-form-floating">
+                  <input type="text" className="s-form-control" id="floatingToInput" value={rCancelAlert.srBookedAlertData.selectedDate}
+                         readOnly/>
+                  <label htmlFor="floatingToInput">To</label>
+                </div>
+              </div>
+              :
           <div className="form__flex--row">
             <div className="s-form-floating">
-              <input type="text" className="s-form-control" id="floatingFromInput" value={eventData.Event_Start_Date} readOnly/>
+              <input type="text" className="s-form-control" id="floatingFromInput" value={eventData.Event_Start_Date}
+                     readOnly/>
               <label htmlFor="floatingFromInput">From</label>
             </div>
             <div className="s-form-floating">
-              <input type="text" className="s-form-control" id="floatingToInput" value={eventData.Event_End_Date} readOnly/>
+              <input type="text" className="s-form-control" id="floatingToInput" value={eventData.Event_End_Date}
+                     readOnly/>
               <label htmlFor="floatingToInput">To</label>
             </div>
           </div>
+          }
           <div className="s-form-floating">
             <select className="s-form-select" id="floatingSelectGrid" aria-label="Floating label select example" onChange={onSelectSeat}>
               <option value="1">1 adult</option>
@@ -142,6 +165,7 @@ const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAl
 }
 
 const EventDetail = (props) => {
+  const {rCancelAlert} = props;
   const {id} = useParams();
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [vivoMeaterModal, setVivoMeaterModal] = useState(false);
@@ -320,7 +344,7 @@ const EventDetail = (props) => {
                 </div>
               </div>
               <div className="eventReserve__grid--col flex__order--1">
-                <Cart eventData={eventData} Sucmsg={Sucmsg} onCancelAlert={onCancelAlert} onSelectSeat={onSelectSeat} alert={alert} setAlert={setAlert} setSeatValue={setSeatValue}/>
+                <Cart rCancelAlert={rCancelAlert} eventData={eventData} Sucmsg={Sucmsg} onCancelAlert={onCancelAlert} onSelectSeat={onSelectSeat} alert={alert} setAlert={setAlert} setSeatValue={setSeatValue}/>
               </div>
             </div>
           </div>

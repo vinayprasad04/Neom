@@ -167,8 +167,7 @@ const EditProfile = (props) =>{
                                     </div>
                                     <div className="form__group">
                                         <label className="form__label">What's your email address?</label>
-                                        <input type="email" className="form__input" placeholder=""
-                                               value={Contact_Email} disabled/>
+                                        <input type="email" className="form__input" placeholder="" value={Contact_Email} disabled/>
                                     </div>
                                     <div className="form__group">
                                         <label className="form__label">On which number can we contact you?</label>
@@ -411,7 +410,7 @@ const EditProfile = (props) =>{
                                         <label className="form__label">Please let us know if you have some
                                             interests</label>
                                         <input type="text" className="form__input" value={inputLike} onChange={onChangeLikesInput}
-                                               placeholder="Add multiple interests comma ( , ) separated"/>
+                                               placeholder="Add multiple interests comma ( , ) separated" disabled/>
                                     </div>
                                     <div className="btn--wrap">
                                         <button className="btn btn__red" onClick={onSubmitHandler}>Save</button>

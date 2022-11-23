@@ -95,7 +95,7 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                             <div className={`swiper-wrapper ${(location === "#confirmAlert")? "rescheduleBannerNotification":""}`}>
                                 <Swiper modules={[Navigation, Autoplay]} spaceBetween={50} slidesPerView={1} navigation autoplay={false}>
                                     { (location !== "#confirmAlert" && rCancelAlert.crAlert) ?
-                                        RecommendationBannerData.slice(1,3).map(( item, index)=>{
+                                        RecommendationBannerData.slice(1,2).map(( item, index)=>{
                                             return(
                                                 <SwiperSlide key={index}>
                                                     <img src={process.env.PUBLIC_URL + "./img/"+item.url} alt="event title"/>
