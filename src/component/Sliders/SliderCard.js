@@ -104,23 +104,80 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                       </div>
                     </div>
                     </Link>
-
                 </SwiperSlide>
               );
             }):
                 EventDetail.slice(4,5).map((item, index) => {
                     return (
                         <>
+                            {rCancelAlert.ReseduleWithJazzOut && <SwiperSlide>
+                                <Link className={"recSlider__link"} to={`/eventdetails/10101`}>
+                                    <div className="slider__image--wrapper">
+                                        <img src={process.env.PUBLIC_URL + "./../img/yacht.jpg"} alt="event title"/>
+                                        <div className="weather">
+                                            <div className="weather__icon"><img src={abstract} alt="Weather"/></div>
+                                            <div className="weather__text">
+                                                <h2>30&#176;<sup>C</sup></h2>
+                                                <div className="weather__text--wrap">
+                                                    <span>33&#176;</span>
+                                                    <span>22&#176;</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="recSlider__info" key={index}>
+                                        <h3 className="recSlider__info__title">Jazz Music</h3>
+                                        <div className="recSlider__info__rating">
+                                            <RatingValue fillColor={"#FF385C"} readOnly={true} initialValue={4.1}/>
+                                            <div className="review">4.1</div>
+                                        </div>
+                                        <div className="recSlider__info__row">
+                                            <div className="recSlider__info__items recSlider__info__description">
+                                                Most awaited concert featuring a spectacular line-up of Grammy-nominated
+                                                musicians from across the world coming together to create some fine
+                                                jazz... <span className="read--more">read more</span>
+                                            </div>
+                                        </div>
+                                        <div className="recSlider__info__row">
+                                            <div className="recSlider__info__items">
+                                                <span className="icon icon-calendar"></span>
+                                                12/11/2022, 8:00 PM - 12/11/2022, 11:59 PM
+                                            </div>
+                                        </div>
+                                        <div className="recSlider__info__row">
+                                            <div className="recSlider__info__items">
+                                                <span className="icon icon-location"></span>
+                                                Sindalah Island
+                                            </div>
+                                        </div>
+                                        <div className="recSlider__info__row">
+                                            <div className="recSlider__info__items">
+                                                <span className="icon icon-category"></span>
+                                                Jazz Music
+                                            </div>
+                                        </div>
+                                        <div className="recSlider__info__row recSlider__footer">
+                                            <div className="recSlider__footer__item">
+                                                <div className="vibes">
+                                                    <img src={overwhelmed} alt="Overwhelmed" className="vibes__icon"/>
+                                                    <span className="vibes__text">Overwhelmed vibes </span>
+                                                </div>
+                                                <span className={`status scheduled`}>Scheduled</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </SwiperSlide>}
                             <SwiperSlide>
                                     <Link className={"recSlider__link"} to={`/eventdetails/10104`} >
                                         <div className="slider__image--wrapper">
                                             <img src={process.env.PUBLIC_URL + "./../img/golf.jpg" } alt="event title"/>
                                             <div className="weather"><div className="weather__icon"><img src={abstract} alt="Weather" /></div>
                                                 <div className="weather__text">
-                                                    <h2>18&#176;<sup>C</sup></h2>
+                                                    <h2>30&#176;<sup>C</sup></h2>
                                                     <div className="weather__text--wrap">
-                                                        <span>29&#176;</span>
-                                                        <span>16&#176;</span>
+                                                        <span>33&#176;</span>
+                                                        <span>22&#176;</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -165,7 +222,6 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                             </div>
                                         </div>
                                     </Link>
-
                                 </SwiperSlide>
                             <SwiperSlide>
                                 <Link className={"recSlider__link"} to={`/eventdetails/${item.Event_ID}`} >
@@ -173,10 +229,10 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                         <img src={process.env.PUBLIC_URL + "./../img/" + item?.url} alt="event title"/>
                                         <div className="weather"><div className="weather__icon"><img src={abstract} alt="Weather" /></div>
                                             <div className="weather__text">
-                                                <h2>18&#176;<sup>C</sup></h2>
+                                                <h2>30&#176;<sup>C</sup></h2>
                                                 <div className="weather__text--wrap">
-                                                    <span>29&#176;</span>
-                                                    <span>16&#176;</span>
+                                                    <span>33&#176;</span>
+                                                    <span>22&#176;</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -221,7 +277,6 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                         </div>
                                     </div>
                                 </Link>
-
                             </SwiperSlide>
                         </>
                     );
