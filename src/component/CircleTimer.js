@@ -31,7 +31,7 @@ export default function CircleTimer({itemTime}) {
 /*    console.log(" timeValue", timeValue);*/
 
     const stratTime = Date.now() / 1000; // use UNIX timestamp in seconds
-    const endTime = stratTime + 36000; // use UNIX timestamp in seconds
+    const endTime = stratTime + 20000; // use UNIX timestamp in seconds
 /*    console.log(" stratTime", stratTime);
     console.log(" endTime", endTime);*/
     //1344537000
