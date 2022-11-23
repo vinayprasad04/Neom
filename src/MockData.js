@@ -142,6 +142,17 @@ const EventDetail =
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
             "vibes_text":"Overwhelmed vibes",
+            "Event_Detail_Title":"Sunday Night All That Jazz Concert",
+            "Event_Detail_Des1":"Every last Sunday of the month, prepare to dive into the fascinating world of jazz, in a journey led by Ed Jackson that will allow you to experience the pleasant sensations of life which is hosted by Jackson Room in Sindalah Island.  An intimate ambience in a beautiful venue where music, dance and song combine to make you feel the emotions of Jazz in its purest form.",
+            "Event_Detail_Des2":"Ed Jackson is an accomplished saxophonist & active jazz player on the NY & International scene. Ed Jackson’s dynamic sound encompasses both the tradition and future of jazz. His versatility enables him to move within the various styles of jazz while at the same time maintaining a unique sound and direction.",
+            "Event_Detail_Des3":"Jazz music in general hits every chord in our lives, and Ed Jackson knows how to play it. So why not join us and allow your mind to wander, relax, and unwind. Whether you’re looking for a beautifully unique classical music performance or a romantic candlelit experience, this performance is for you. Simply sit back and savour the stunning atmosphere and pieces you’ll hear.",
+            "Operator_Title": "Marriot Vacation Club",
+            "Operator_Des": "Discover Your World with Marriot's collection of amazing experiences. Whether you are looking for sumo wrestling classes in Tokyo, skip-the-line tickets at the Eiffel Tower, or a custom wine tour in Cape Town, we have options for every traveler.",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"First time in Jazz Alley, the place was filled with various groups of people eating, drinking, and chatting. Our table was in good position, plus I was able to see the stage very well. We ordered some cocktails and everyone looked relaxed and enjoying their evening"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"The “All that Jazz” concert at the Sindalah Island was an enjoyable evening. It was full of good music that stimulated my intellectual and musical experience."},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
             "imgurl":[
                 {"img": "Jazz1.jpg"},
                 {"img": "Jazz2.jpg"},
@@ -171,8 +182,22 @@ const EventDetail =
         "Operator_Rating": 3,
           "vibes_text":"Invigorating & Uplifting",
            "isCancelledPossible":true,
-         // "Client_Booked": true,
-          "imgurl":[
+
+            "Event_Detail_Title":"Tee Off at Sindalah's green master course",
+            "Event_Detail_Des1":"The 1st hole at the Sindalah Golf Course  is a straightforward 128 yards opening hole giving ample opportunity to start the round with a birdie. Depending on the placement of the tee markers and the pin location, this hole can play as a short 110 yarder making it an aggressive starter too. Only place to miss this green is short of it, as bunkers line the left side and thick bushes and trees flank the right, with little room for error.",
+            "Event_Detail_Des2":"The 2nd, an Iconic 269 yard dog-leg left par 4, is the most challenging hole on the Sindalah Golf Course. Making a par is a bonus on this hole for the average golfer. The safest way to play is to the right of the fairway bunker at 128 yards leaving a 107 yard approach over an imposing date tree nearly 80 feet high. Alternately the trees on the left of an intimidating narrow fairway can be hit over to cut the dogleg to the green 230 yards away, but with dire consequences in case of an errant or especially a pulled shot. Either way a hugely daunting par 4 that allows no room for error. Placement of the tee shot is critical. Expect a bogey or worse if one is even marginally wayward on this hole",
+            "Event_Detail_Des3":"",
+            "Operator_Title": "IMG Golf Course",
+            "Operator_Des": "IMG is a global leader in the design, development, marketing and management of world class golf courses. For more than 30 years, the company has set the standard for excellence in golf course design and golf club management, and consistently delivered exceptional results for our clients and partners.",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
+            "imgurl":[
             {"img": "Golf11.png"},
             {"img": "Golf12.png"},
             {"img": "Golf13.png"},
@@ -201,6 +226,14 @@ const EventDetail =
             "Overall_Event_Rating": 3.0,
             "Operator_Rating": 3,
             "vibes_text":"Vibrant & Social",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
             "imgurl":[
                 {"img": "Dinning-1.jpg"},
                 {"img": "Dinning-2.jpg"},
@@ -233,6 +266,20 @@ const EventDetail =
             "vibes_text":"Invigorating & Uplifting",
             "isCancelledPossible":true,
             // "Client_Booked": true,
+            "Event_Detail_Title":"Tee Off at Sindalah's green master course",
+            "Event_Detail_Des1":"The 1st hole at the Sindalah Golf Course  is a straightforward 128 yards opening hole giving ample opportunity to start the round with a birdie. Depending on the placement of the tee markers and the pin location, this hole can play as a short 110 yarder making it an aggressive starter too. Only place to miss this green is short of it, as bunkers line the left side and thick bushes and trees flank the right, with little room for error.",
+            "Event_Detail_Des2":"The 2nd, an Iconic 269 yard dog-leg left par 4, is the most challenging hole on the Sindalah Golf Course. Making a par is a bonus on this hole for the average golfer. The safest way to play is to the right of the fairway bunker at 128 yards leaving a 107 yard approach over an imposing date tree nearly 80 feet high. Alternately the trees on the left of an intimidating narrow fairway can be hit over to cut the dogleg to the green 230 yards away, but with dire consequences in case of an errant or especially a pulled shot. Either way a hugely daunting par 4 that allows no room for error. Placement of the tee shot is critical. Expect a bogey or worse if one is even marginally wayward on this hole",
+            "Event_Detail_Des3":"",
+            "Operator_Title": "IMG Golf Course",
+            "Operator_Des": "IMG is a global leader in the design, development, marketing and management of world class golf courses. For more than 30 years, the company has set the standard for excellence in golf course design and golf club management, and consistently delivered exceptional results for our clients and partners.",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
             "imgurl":[
                 {"img": "Golf11.png"},
                 {"img": "Golf12.png"},
@@ -262,6 +309,14 @@ const EventDetail =
             "Overall_Event_Rating": 3.0,
             "Operator_Rating": 3,
             "vibes_text":"Vibrant & Social",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
             "imgurl":[
                 {"img": "Dinning-1.jpg"},
                 {"img": "Dinning-2.jpg"},
@@ -295,6 +350,20 @@ const EventDetail =
             "vibes_text":"Invigorating & Uplifting",
             "isCancelledPossible":true,
             // "Client_Booked": true,
+            "Event_Detail_Title":"Tee Off at Sindalah's green master course",
+            "Event_Detail_Des1":"The 1st hole at the Sindalah Golf Course  is a straightforward 128 yards opening hole giving ample opportunity to start the round with a birdie. Depending on the placement of the tee markers and the pin location, this hole can play as a short 110 yarder making it an aggressive starter too. Only place to miss this green is short of it, as bunkers line the left side and thick bushes and trees flank the right, with little room for error.",
+            "Event_Detail_Des2":"The 2nd, an Iconic 269 yard dog-leg left par 4, is the most challenging hole on the Sindalah Golf Course. Making a par is a bonus on this hole for the average golfer. The safest way to play is to the right of the fairway bunker at 128 yards leaving a 107 yard approach over an imposing date tree nearly 80 feet high. Alternately the trees on the left of an intimidating narrow fairway can be hit over to cut the dogleg to the green 230 yards away, but with dire consequences in case of an errant or especially a pulled shot. Either way a hugely daunting par 4 that allows no room for error. Placement of the tee shot is critical. Expect a bogey or worse if one is even marginally wayward on this hole",
+            "Event_Detail_Des3":"",
+            "Operator_Title": "IMG Golf Course",
+            "Operator_Des": "IMG is a global leader in the design, development, marketing and management of world class golf courses. For more than 30 years, the company has set the standard for excellence in golf course design and golf club management, and consistently delivered exceptional results for our clients and partners.",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
             "imgurl":[
                 {"img": "Golf11.png"},
                 {"img": "Golf12.png"},
@@ -324,6 +393,14 @@ const EventDetail =
             "Overall_Event_Rating": 3.0,
             "Operator_Rating": 3,
             "vibes_text":"Vibrant & Social",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
             "imgurl":[
                 {"img": "Dinning-1.jpg"},
                 {"img": "Dinning-2.jpg"},
@@ -354,7 +431,21 @@ const EventDetail =
           "Event_Capacity": 250,
           "Overall_Event_Rating": 4.6,
           "Operator_Rating": 4,
-          "imgurl":[
+            "Event_Detail_Title":"Tee Off at Sindalah's green master course",
+            "Event_Detail_Des1":"The 1st hole at the Sindalah Golf Course  is a straightforward 128 yards opening hole giving ample opportunity to start the round with a birdie. Depending on the placement of the tee markers and the pin location, this hole can play as a short 110 yarder making it an aggressive starter too. Only place to miss this green is short of it, as bunkers line the left side and thick bushes and trees flank the right, with little room for error.",
+            "Event_Detail_Des2":"The 2nd, an Iconic 269 yard dog-leg left par 4, is the most challenging hole on the Sindalah Golf Course. Making a par is a bonus on this hole for the average golfer. The safest way to play is to the right of the fairway bunker at 128 yards leaving a 107 yard approach over an imposing date tree nearly 80 feet high. Alternately the trees on the left of an intimidating narrow fairway can be hit over to cut the dogleg to the green 230 yards away, but with dire consequences in case of an errant or especially a pulled shot. Either way a hugely daunting par 4 that allows no room for error. Placement of the tee shot is critical. Expect a bogey or worse if one is even marginally wayward on this hole",
+            "Event_Detail_Des3":"",
+            "Operator_Title": "IMG Golf Course",
+            "Operator_Des": "IMG is a global leader in the design, development, marketing and management of world class golf courses. For more than 30 years, the company has set the standard for excellence in golf course design and golf club management, and consistently delivered exceptional results for our clients and partners.",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
+            "imgurl":[
               {"img": "Golf11.png"},
               {"img": "Golf12.png"},
               {"img": "Golf13.png"},
@@ -382,6 +473,20 @@ const EventDetail =
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
             "vibes_text":"Overwhelmed vibes",
+            "Event_Detail_Title":"Riding the Waves",
+            "Event_Detail_Des1":"The Riding The Waves surfing experience is all about freedom in the waves, good vibes, not taking things too seriously and learning to just go with the flow. Enjoy world-class waves and dive into the Sindalah surf experience with us. We will guide you to the best surf spots around Sindalah. No one knows the Sindalah waves and spots better than our local Surf Instructors. Whether this is your first surf holiday or you’re an advanced surfer,  we respond to you individually and teach you to surf in a fun and efficient way. Professional and experienced surf teachers coach you using unique techniques acquired through years of experience. They speak a number of languages so communication is easy, guaranteeing a successful surf holiday.",
+            "Event_Detail_Des2":"",
+            "Event_Detail_Des3":"",
+            "Operator_Title": "Dive Butler",
+            "Operator_Des": "Dive Butler are pioneers in the field of true luxury diving, providing private, personal scuba diving guides and instructors to super yachts, charter companies, luxury 5 Star resorts and individuals across the world. Our global services include, but are not limited to, one-to-one diving instructors, private diving guides, yacht itinerary planning, PADI course certifications and on board dive consultation services.",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
             "imgurl":[
                 {"img": "surfing.jpg"},
                 {"img": "surfing.jpg"},
@@ -409,6 +514,16 @@ const EventDetail =
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
             "vibes_text":"Overwhelmed vibes",
+            "Event_Detail_Title":"Sunday Night All That Jazz Concert",
+            "Event_Detail_Des1":"Every last Sunday of the month, prepare to dive into the fascinating world of jazz, in a journey led by Ed Jackson that will allow you to experience the pleasant sensations of life which is hosted by Jackson Room in Sindalah Island.  An intimate ambience in a beautiful venue where music, dance and song combine to make you feel the emotions of Jazz in its purest form.",
+            "Event_Detail_Des2":"Ed Jackson is an accomplished saxophonist & active jazz player on the NY & International scene. Ed Jackson’s dynamic sound encompasses both the tradition and future of jazz. His versatility enables him to move within the various styles of jazz while at the same time maintaining a unique sound and direction.",
+            "Event_Detail_Des3":"Jazz music in general hits every chord in our lives, and Ed Jackson knows how to play it. So why not join us and allow your mind to wander, relax, and unwind. Whether you’re looking for a beautifully unique classical music performance or a romantic candlelit experience, this performance is for you. Simply sit back and savour the stunning atmosphere and pieces you’ll hear.",
+            "Operator_Title": "Marriot Vacation Club",
+            "Operator_Des": "Discover Your World with Marriot's collection of amazing experiences. Whether you are looking for sumo wrestling classes in Tokyo, skip-the-line tickets at the Eiffel Tower, or a custom wine tour in Cape Town, we have options for every traveler.",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"First time in Jazz Alley, the place was filled with various groups of people eating, drinking, and chatting. Our table was in good position, plus I was able to see the stage very well. We ordered some cocktails and everyone looked relaxed and enjoying their evening"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"The “All that Jazz” concert at the Sindalah Island was an enjoyable evening. It was full of good music that stimulated my intellectual and musical experience."},
+            ],
             "imgurl":[
                 {"img": "Jazz1.jpg"},
                 {"img": "Jazz2.jpg"},
@@ -436,6 +551,21 @@ const EventDetail =
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
             "vibes_text":"Overwhelmed vibes",
+
+            "Event_Detail_Title":"The Wonder Carnival",
+            "Event_Detail_Des1":"Strap yourselves in as The Wonder Carnival - a full-fledged fun fiesta here with unlimited merrymaking and revelry, taking place at Sindalah Island. Carnival celebrations are a spectacle, filled with cuisine, entertainment, live music, and colorful, over-the-top costumes. From shimmering feathery headpieces to wooden shoes, it's an event you won't want to miss. For many, it’s a time to let loose and indulge one last time before the start of Lent. For others, it's a way to reflect and celebrate the joy of life. ",
+            "Event_Detail_Des2":"You can dance on the streets with the crowd for free and wear whatever you want, but locals tend to wear t-shirts and shorts. If you prefer to watch from the sidelines, you can do so from a camarote (cabin) located along the parade avenues.",
+            "Event_Detail_Des3":"Dress code: If you are planning to visit  for Carnival, you should dress up in costume to be a part of the fun. The best part? There are no rules, so you can dress up as anything, like you would for Halloween.",
+            "Operator_Title": "Four Seasons",
+            "Operator_Des": "Four Seasons Hotels and Resorts is an international luxury hotel and resort company headquartered in Toronto, Ontario, Canada. Four Seasons currently operates more than 100 hotels and resorts worldwide. ",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
             "imgurl":[
                 {"img": "dive.jpg"},
                 {"img": "dive.jpg"},
@@ -463,6 +593,14 @@ const EventDetail =
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 5,
             "vibes_text":"Overwhelmed vibes",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
             "imgurl":[
                 {"img": "beach.jpg"},
                 {"img": "beach.jpg"},
@@ -492,6 +630,20 @@ const EventDetail =
             "Overall_Event_Rating": 4.6,
             "Operator_Rating": 4,
             "Client_Booked": true,
+            "Event_Detail_Title":"Tee Off at Sindalah's green master course",
+            "Event_Detail_Des1":"The 1st hole at the Sindalah Golf Course  is a straightforward 128 yards opening hole giving ample opportunity to start the round with a birdie. Depending on the placement of the tee markers and the pin location, this hole can play as a short 110 yarder making it an aggressive starter too. Only place to miss this green is short of it, as bunkers line the left side and thick bushes and trees flank the right, with little room for error.",
+            "Event_Detail_Des2":"The 2nd, an Iconic 269 yard dog-leg left par 4, is the most challenging hole on the Sindalah Golf Course. Making a par is a bonus on this hole for the average golfer. The safest way to play is to the right of the fairway bunker at 128 yards leaving a 107 yard approach over an imposing date tree nearly 80 feet high. Alternately the trees on the left of an intimidating narrow fairway can be hit over to cut the dogleg to the green 230 yards away, but with dire consequences in case of an errant or especially a pulled shot. Either way a hugely daunting par 4 that allows no room for error. Placement of the tee shot is critical. Expect a bogey or worse if one is even marginally wayward on this hole",
+            "Event_Detail_Des3":"",
+            "Operator_Title": "IMG Golf Course",
+            "Operator_Des": "IMG is a global leader in the design, development, marketing and management of world class golf courses. For more than 30 years, the company has set the standard for excellence in golf course design and golf club management, and consistently delivered exceptional results for our clients and partners.",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
             "imgurl":[
                 {"img": "Golf11.png"},
                 {"img": "Golf12.png"},
@@ -522,6 +674,21 @@ const EventDetail =
             "Operator_Rating": 5,
             "Client_Booked": true,
             "vibes_text":"Overwhelmed vibes",
+
+            "Event_Detail_Title":"Riding the Waves",
+            "Event_Detail_Des1":"The Riding The Waves surfing experience is all about freedom in the waves, good vibes, not taking things too seriously and learning to just go with the flow. Enjoy world-class waves and dive into the Sindalah surf experience with us. We will guide you to the best surf spots around Sindalah. No one knows the Sindalah waves and spots better than our local Surf Instructors. Whether this is your first surf holiday or you’re an advanced surfer,  we respond to you individually and teach you to surf in a fun and efficient way. Professional and experienced surf teachers coach you using unique techniques acquired through years of experience. They speak a number of languages so communication is easy, guaranteeing a successful surf holiday.",
+            "Event_Detail_Des2":"",
+            "Event_Detail_Des3":"",
+            "Operator_Title": "Dive Butler",
+            "Operator_Des": "Dive Butler are pioneers in the field of true luxury diving, providing private, personal scuba diving guides and instructors to super yachts, charter companies, luxury 5 Star resorts and individuals across the world. Our global services include, but are not limited to, one-to-one diving instructors, private diving guides, yacht itinerary planning, PADI course certifications and on board dive consultation services.",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
             "imgurl":[
                 {"img": "surfing.jpg"},
                 {"img": "surfing.jpg"},
@@ -551,6 +718,16 @@ const EventDetail =
             "Operator_Rating": 5,
             "Client_Booked": true,
             "vibes_text":"Overwhelmed vibes",
+            "Event_Detail_Title":"Sunday Night All That Jazz Concert",
+            "Event_Detail_Des1":"Every last Sunday of the month, prepare to dive into the fascinating world of jazz, in a journey led by Ed Jackson that will allow you to experience the pleasant sensations of life which is hosted by Jackson Room in Sindalah Island.  An intimate ambience in a beautiful venue where music, dance and song combine to make you feel the emotions of Jazz in its purest form.",
+            "Event_Detail_Des2":"Ed Jackson is an accomplished saxophonist & active jazz player on the NY & International scene. Ed Jackson’s dynamic sound encompasses both the tradition and future of jazz. His versatility enables him to move within the various styles of jazz while at the same time maintaining a unique sound and direction.",
+            "Event_Detail_Des3":"Jazz music in general hits every chord in our lives, and Ed Jackson knows how to play it. So why not join us and allow your mind to wander, relax, and unwind. Whether you’re looking for a beautifully unique classical music performance or a romantic candlelit experience, this performance is for you. Simply sit back and savour the stunning atmosphere and pieces you’ll hear.",
+            "Operator_Title": "Marriot Vacation Club",
+            "Operator_Des": "Discover Your World with Marriot's collection of amazing experiences. Whether you are looking for sumo wrestling classes in Tokyo, skip-the-line tickets at the Eiffel Tower, or a custom wine tour in Cape Town, we have options for every traveler.",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"First time in Jazz Alley, the place was filled with various groups of people eating, drinking, and chatting. Our table was in good position, plus I was able to see the stage very well. We ordered some cocktails and everyone looked relaxed and enjoying their evening"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"The “All that Jazz” concert at the Sindalah Island was an enjoyable evening. It was full of good music that stimulated my intellectual and musical experience."},
+            ],
             "imgurl":[
                 {"img": "Jazz1.jpg"},
                 {"img": "Jazz2.jpg"},
@@ -580,6 +757,20 @@ const EventDetail =
             "Operator_Rating": 5,
             "Client_Booked": true,
             "vibes_text":"Overwhelmed vibes",
+            "Event_Detail_Title":"The Wonder Carnival",
+            "Event_Detail_Des1":"Strap yourselves in as The Wonder Carnival - a full-fledged fun fiesta here with unlimited merrymaking and revelry, taking place at Sindalah Island. Carnival celebrations are a spectacle, filled with cuisine, entertainment, live music, and colorful, over-the-top costumes. From shimmering feathery headpieces to wooden shoes, it's an event you won't want to miss. For many, it’s a time to let loose and indulge one last time before the start of Lent. For others, it's a way to reflect and celebrate the joy of life. ",
+            "Event_Detail_Des2":"You can dance on the streets with the crowd for free and wear whatever you want, but locals tend to wear t-shirts and shorts. If you prefer to watch from the sidelines, you can do so from a camarote (cabin) located along the parade avenues.",
+            "Event_Detail_Des3":"Dress code: If you are planning to visit  for Carnival, you should dress up in costume to be a part of the fun. The best part? There are no rules, so you can dress up as anything, like you would for Halloween.",
+            "Operator_Title": "Four Seasons",
+            "Operator_Des": "Four Seasons Hotels and Resorts is an international luxury hotel and resort company headquartered in Toronto, Ontario, Canada. Four Seasons currently operates more than 100 hotels and resorts worldwide. ",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
             "imgurl":[
                 {"img": "dive.jpg"},
                 {"img": "dive.jpg"},
@@ -609,6 +800,14 @@ const EventDetail =
             "Operator_Rating": 5,
             "Client_Booked": true,
             "vibes_text":"Overwhelmed vibes",
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
             "imgurl":[
                 {"img": "beach.jpg"},
                 {"img": "beach.jpg"},
@@ -634,7 +833,15 @@ const EventDetail =
           "Event_Status": "Not Sarted",
           "Event_Capacity": 200,
           "Overall_Event_Rating": 4.6,
-          "Operator_Rating": 3
+          "Operator_Rating": 3,
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
         },
         {
           "Event_ID": 100016,
@@ -652,7 +859,15 @@ const EventDetail =
           "Event_Status": "Not Sarted",
           "Event_Capacity": 100,
           "Overall_Event_Rating": 4.6,
-          "Operator_Rating": 3
+          "Operator_Rating": 3,
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
         },
         {
           "Event_ID": 100017,
@@ -670,7 +885,15 @@ const EventDetail =
           "Event_Status": "Not Sarted",
           "Event_Capacity": 50,
           "Overall_Event_Rating": 4.6,
-          "Operator_Rating": 3
+          "Operator_Rating": 3,
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
         },
         {
           "Event_ID": 100018,
@@ -688,7 +911,15 @@ const EventDetail =
           "Event_Status": "Not Sarted",
           "Event_Capacity": 20,
           "Overall_Event_Rating": 4.6,
-          "Operator_Rating": 3
+          "Operator_Rating": 3,
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
         },
         {
           "Event_ID": 100019,
@@ -706,7 +937,15 @@ const EventDetail =
           "Event_Status": "Not Sarted",
           "Event_Capacity": 20,
           "Overall_Event_Rating": 4.6,
-          "Operator_Rating": 3
+          "Operator_Rating": 3,
+            "RatingSliderCard": [
+                {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+                /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
+            ],
         }
       ]
 

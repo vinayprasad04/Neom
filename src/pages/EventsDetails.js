@@ -304,23 +304,28 @@ const EventDetail = (props) => {
                     </li>
                   </ul>
                   <div className="event__description--content">
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    <p>{eventData.Event_Detail_Des1 ? eventData.Event_Detail_Des1:
+                      `Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                       sed diam nonumy eirmod tempor invidunt ut labore et dolore
                       magna aliquyam erat, sed diam voluptua. At vero eos et
                       accusam et justo duo dolores et ea rebum. Stet clita kasd
                       gubergren, no sea takimata sanctus est Lorem ipsum dolor
                       sit amet. Lorem ipsum dolor sit amet, consetetur
-                      sadipscing elit.
+                      sadipscing elit.`
+                    }
                     </p>
                     <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                      {eventData.Event_Detail_Des2 ? eventData.Event_Detail_Des2:
+                     ` Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                       sed diam nonumy eirmod tempor invidunt ut labore et dolore
                       magna aliquyam erat, sed diam voluptua. At vero eos et
                       accusam et justo duo dolores et ea rebum. Stet clita kasd
                       gubergren, no sea takimata sanctus est Lorem ipsum dolor
                       sit amet. Lorem ipsum dolor sit amet, consetetur
-                      sadipscing elit.
+                      sadipscing elit.`}
+                    </p>
+                    <p>
+                      {eventData.Event_Detail_Des3 && eventData.Event_Detail_Des3}
                     </p>
                   </div>
                 </div>
@@ -331,14 +336,15 @@ const EventDetail = (props) => {
                     <div className="review">{eventData.Operator_Rating.toFixed(1)}</div>
                   </div>
                   <div className="event__description--content">
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    <p>{eventData.Operator_Des ? eventData.Operator_Des:
+                     ` Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                       sed diam nonumy eirmod tempor invidunt ut labore et dolore
                       magna aliquyam erat, sed diam voluptua. At vero eos et
                       accusam et justo duo dolores et ea rebum. Stet clita kasd
                       gubergren, no sea takimata sanctus est Lorem ipsum dolor
                       sit amet. Lorem ipsum dolor sit amet, consetetur
-                      sadipscing elit.
+                      sadipscing elit.`
+                    }
                     </p>
                   </div>
                 </div>
@@ -349,7 +355,7 @@ const EventDetail = (props) => {
             </div>
           </div>
         </div>
-        <RatingSlider {...eventDetailPage.RatingSliderCardData} />
+        <RatingSlider RatingSliderCard={eventData.RatingSliderCard} />
         <div className="recommendations event--recommendations">
           <div className="container">
             <h2 className="recommendations__title">Some more recommendations for you, Charlie!</h2>
