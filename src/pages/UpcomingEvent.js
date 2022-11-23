@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 
 import {
   Header,
+  Footer,
 } from "../component/index.js";
 
 import "photoswipe/dist/photoswipe.css";
@@ -9,14 +10,17 @@ import "photoswipe/dist/photoswipe.css";
 
 import getJson from "../utils/eventDetailData";
 import EventCart from "../component/EventCart";
+import { filter, height } from "dom7";
 const eventDetailPage = getJson();
 const itemPerRow = 15;
+let totalFilters = []
 const UpcomingEvent = (props) => {
   const [next, setNext] = useState(itemPerRow);
   const [filterItem, setItemFilter ] = useState()
   const [drive, setDrive] = useState()
   const [distance, setDistance] = useState()
   const [location, setLocation] = useState()
+  const [date, setDate] = useState()
   const cards = eventDetailPage.RecommendationData.Recommendation
 const [filterCards, setFilterCards] = useState(eventDetailPage.RecommendationData.Recommendation.slice(0, next));
 
@@ -24,12 +28,12 @@ const selectedFilter = (filter) =>{
     // totalFilters.push(filter)
     setDrive(null)
     setItemFilter(filter)
-    let cardsFilterd = cards.filter((item)=>item.category === filter)
+    let cardsFilterd = cards.filter((item)=>item.category == filter)
     setFilterCards(cardsFilterd)
     setNext(100)
   }
   const slectedDrive = (driveFilter) =>{
-    let cardsFilterd = cards.filter((item)=>item.drive === driveFilter)
+    let cardsFilterd = cards.filter((item)=>item.drive == driveFilter)
     setFilterCards(cardsFilterd)
     setNext(100)
     setItemFilter(null)
@@ -37,7 +41,7 @@ const selectedFilter = (filter) =>{
     setDistance(null)
   }
   const slectedWalkingDistance = (distanceFilter) =>{
-    let cardsFilterd = cards.filter((item)=>item.drive === distanceFilter)
+    let cardsFilterd = cards.filter((item)=>item.drive == distanceFilter)
     setFilterCards(cardsFilterd)
     setDistance(distanceFilter)
     setNext(100)
@@ -48,7 +52,7 @@ const selectedFilter = (filter) =>{
   const handleChnage = (newValue) =>{
     const nValue = newValue.target.value
     setLocation(nValue)
-    let cardsFilterd = cards.filter((item)=>item.location === location)
+    let cardsFilterd = cards.filter((item)=>item.location == location)
     setFilterCards(cardsFilterd)
     setDistance(null)
     setNext(100)
@@ -59,7 +63,7 @@ const selectedFilter = (filter) =>{
     setNext(next + itemPerRow);
   };
   const noLimit = () =>{
-    let cardsFilterd = cards.filter((item)=>item.location === location)
+    let cardsFilterd = cards.filter((item)=>item.location == location)
     setFilterCards(cardsFilterd)
     setDistance(null)
     setNext(100)
@@ -118,7 +122,7 @@ const selectedFilter = (filter) =>{
                       <ul className="time__list">
                         {eventDetailPage.FilterList.DistanceFilter.map((item, index) => {
                           return(
-                            <li key={index} className={`time__list--item ${distance === item.Event_Name && 'active'}`} onClick={(()=> slectedWalkingDistance(item.Event_Name))}>{item.Event_Name}</li>
+                            <li className={`time__list--item ${distance == item.title && 'active'}`} onClick={(()=> slectedWalkingDistance(item.title))}>{item.title}</li>
                           )
                         })}
                       </ul>
@@ -126,7 +130,7 @@ const selectedFilter = (filter) =>{
                       <ul className="time__list">
                         {eventDetailPage.FilterList.DriveFilter.map((item, index) => {
                           return(
-                            <li key={index} className={`time__list--item ${drive === item.Event_Name && 'active'}`} onClick={(()=> slectedDrive(item.Event_Name))}>{item.Event_Name}</li>
+                            <li className={`time__list--item ${drive == item.title && 'active'}`} onClick={(()=> slectedDrive(item.title))}>{item.title}</li>
                           )
                         })}
                       </ul>
@@ -143,7 +147,7 @@ const selectedFilter = (filter) =>{
                   <ul className="category__list">
                     {eventDetailPage.FilterList.Filter.map((item, index) => {
                       return(
-                   <li key={index} className={`category__list--item  ${filterItem === item.Event_Name  && 'active'}`} onClick={(()=> selectedFilter(item.Event_Name))}>{item.Event_Name}</li>
+                   <li key={index} className={`category__list--item  ${filterItem == item.title  && 'active'}`} onClick={(()=> selectedFilter(item.title))}>{item.title}</li>
                     )})}
                   </ul>
                 </div>
@@ -164,9 +168,9 @@ const selectedFilter = (filter) =>{
                 filterCards.map((item, index)=>{
                    return totalFilters.length ? totalFilters.map((filter, index)=>{
                   return(
-                      (filter === item.category) ? <EventCart key={index} item={item}/> :  null
+                      (filter == item.category) ? <EventCart key={index} item={item}/> :  null
                   )
-                }) : (drive === item.drive ) ? <EventCart key={index} item={item}/> : null
+                }) : (drive == item.drive ) ? <EventCart key={index} item={item}/> : null
                 })
               } */}
             </div>

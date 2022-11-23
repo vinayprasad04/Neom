@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {
     Header,
+    Footer,
 } from "../component/index.js";
 import {Profile} from "../MockData";
 const Settings = (props) =>{

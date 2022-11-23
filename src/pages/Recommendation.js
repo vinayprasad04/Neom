@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import {
     Header
 } from "../component/index.js";
@@ -26,14 +26,14 @@ const [alertBooked, setAlterBooked] = useState(false);
 const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""});
 
   const slectedDrive = (driveFilter) =>{
-    let cardsFilterd = cards.filter((item)=>item.drive = driveFilter)
+    let cardsFilterd = cards.filter((item)=>item.drive === driveFilter)
     setFilterCards(cardsFilterd)
     setDrive(driveFilter)
     setDistance(null)
       setNoLimit(false);
   }
   const slectedWalkingDistance = (distanceFilter) =>{
-    let cardsFilterd = cards.filter((item)=>item.drive = distanceFilter)
+    let cardsFilterd = cards.filter((item)=>item.drive === distanceFilter)
     setFilterCards(cardsFilterd)
     setDistance(distanceFilter)
     setDrive(null);
@@ -97,7 +97,7 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                                         RecommendationBannerData.slice(1,2).map(( item, index)=>{
                                             return(
                                                 <SwiperSlide key={index}>
-                                                    <img src={process.env.PUBLIC_URL + "./img/"+item.Event_Img} alt="event title"/>
+                                                    <img src={process.env.PUBLIC_URL + "./img/"+item.url} alt="event title"/>
                                                     <div className="banner__info">
                                                         <div className="banner__info__title">{item.Event_Name}</div>
                                                         <div className="banner__info__location">{item.Event_Location}</div>

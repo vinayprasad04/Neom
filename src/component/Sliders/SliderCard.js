@@ -50,7 +50,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
             { !rCancelAlert.srBookedAlert?
                 itneryData.map((item, index) => {
               return (
-                <SwiperSlide key={index} >
+                <SwiperSlide>
                     <Link className={"recSlider__link"} to={`/eventdetails/${item.Event_ID}`} >
                         <div className="slider__image--wrapper">
                             <img src={process.env.PUBLIC_URL + "./../img/" + item?.url} alt="event title"/>
@@ -97,9 +97,9 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                         <div className="recSlider__footer__item">
                             <div className="vibes">
                                 <img src={overwhelmed} alt="Overwhelmed" className="vibes__icon"/>
-                                    <span className="vibes__text">{item.Event_Vibe} </span>
+                                    <span className="vibes__text">{item.vibes_text} </span>
                             </div>
-                            <span className={`status ${(item.Event_Status === "Over" || item.Event_Status === "Completed") ? "completed" : (item.Event_Status === "Cancelled") ? "cancelled" : "scheduled"}`}>{item.Event_Status}</span>
+                            <span className={`status ${(item.Event_Status == "Over" || item.Event_Status == "Completed") ? "completed" : (item.Event_Status == "Cancelled") ? "cancelled" : "scheduled"}`}>{item.Event_Status}</span>
                         </div>
                       </div>
                     </div>

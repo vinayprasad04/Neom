@@ -2,6 +2,10 @@ import React from "react";
 
 import {
   Header,
+  Footer,
+  Trending,
+  SliderCard,
+  EventSlider,
   useOpenWeather,
   RatingSlider,
   GallaryItems
@@ -10,6 +14,8 @@ import {
 import Recommendations from "../component/Recommendations";
 
 import "photoswipe/dist/photoswipe.css";
+import { Gallery, Item } from "react-photoswipe-gallery";
+import { eventDetailImage } from "../MockData.js";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -20,6 +26,14 @@ const eventDetailPage = getJson();
 
 const CompleteEventDetail = (props) => {
     const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  const { data, isLoading, errorMessage } = useOpenWeather({
+    key: "edb174adcaf962338a5b74bbb3498eb1",
+    lat: "48.137154",
+    lon: "11.576124",
+    lang: "en",
+    unit: "metric",
+  });
   function openModal() {
    let el = document.getElementById('modal')
     el.style = 'display:block'

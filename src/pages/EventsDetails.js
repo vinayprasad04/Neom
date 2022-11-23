@@ -1,20 +1,32 @@
 import React, {useEffect, useState} from "react";
+import ReactDOM from 'react-dom';
 
 import {
   Header,
+  Footer,
+  Trending,
+  SliderCard,
+  EventSlider,
   useOpenWeather,
   RatingSlider,
   GallaryItems,
   // SimpleMap
 } from "../component/index.js";
+import Recommendations from "../component/Recommendations";
 
 import "photoswipe/dist/photoswipe.css";
+import { Gallery, Item } from "react-photoswipe-gallery";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import getJson from "../utils/eventDetailData";
 import {useParams, Link} from "react-router-dom";
 import {EventDetail as detail} from "../MockData";
+
+import Image120 from './../assets/img/Image120.jpg';
+import Image118 from './../assets/img/Image118.jpg';
+import Image122 from './../assets/img/Image122.jpg';
+import Image121 from './../assets/img/Image121.jpg';
 
 import overwhelmed from './../assets/img/overwhelmed.svg';
 import joy from './../assets/img/joy.svg';
@@ -28,6 +40,7 @@ import AddAReview from "../component/AddAReview";
 import AddVivoMeaterReview from "../component/AddVivoMeaterReview";
 import ThanksAlert from "../component/ThanksAlert";
 
+const imagesGallery = [Image120,Image118,Image122,Image121];
 const eventDetailPage = getJson();
 
 

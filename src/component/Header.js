@@ -80,17 +80,17 @@ const Header = (props) =>{
                 </div>
                 <nav className="header__menu">
                     <ul className="header__nav">
-                        <li className={`header__nav__item header__nav__item--mobile ${ (active ==="dashboard") && "header__nav__item-active" }`}>
+                        <li className={`header__nav__item header__nav__item--mobile ${ (active =="dashboard") && "header__nav__item-active" }`}>
                             <Link to={'/dashboard'} className={"header__nav__link header__nav__link--underline"}>
                                 Dashboard
                             </Link>
                         </li>
-                        <li className={`header__nav__item header__nav__item--mobile ${ (active ==="myfavorites") && "header__nav__item-active" }`}>
+                        <li className={`header__nav__item header__nav__item--mobile ${ (active =="myfavorites") && "header__nav__item-active" }`}>
                             <Link to={'/myfavorites'} className={"header__nav__link header__nav__link--underline"}>
                                 My favorites
                             </Link>
                         </li>
-                        <li className={`header__nav__item header__nav__item--mobile ${ (active ==="upcomingevent") && "header__nav__item-active" }`}>
+                        <li className={`header__nav__item header__nav__item--mobile ${ (active =="upcomingevent") && "header__nav__item-active" }`}>
                             <Link to={'/upcomingevent'} className={"header__nav__link header__nav__link--underline"}>
                                 Upcoming events
                             </Link>

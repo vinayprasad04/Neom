@@ -5,17 +5,17 @@ const data = () => {
         desc:"You have short listed 8 events to join later.",
 
         Recommendation : [
-          {favorites_Id:1, Event_Img:"surfing.jpg", showCancelFavorite:true,  Event_Vibe:'Invigorating & Uplifting', Event_Vibe_Icon:'overwhelmed.svg', Event_Start_Time:"Nov 10-29", Event_Name:"Round of Golf", Event_Description:"AED 1800 per person"},
-          {favorites_Id:2,Event_Img:"golf.jpg", showCancelFavorite:true, Event_Vibe:'Active & Energizing', Event_Vibe_Icon:'overwhelmed.svg', Event_Start_Time:"Nov 10-29", Event_Name:"Kite Surfing", Event_Description:"AED 1800 per person"},
-          {favorites_Id:3,Event_Img:"yacht.jpg", showCancelFavorite:true, Event_Vibe:'Vibrant & Social', Event_Vibe_Icon:'overwhelmed.svg', Event_Start_Time:"Nov 10-29", Event_Name:"Jazz Misuc", Event_Description:"AED 1800 per person"},
-          {favorites_Id:4,Event_Img:"beach.jpg", showCancelFavorite:true, Event_Vibe:'Glamorous & Grand', Event_Vibe_Icon:'overwhelmed.svg', Event_Start_Time:"Nov 10-29", Event_Name:"Sweet Wonderland", Event_Description:"AED 1800 per person"},
-          {favorites_Id:5,Event_Img:"dive.jpg", showCancelFavorite:true, Event_Vibe:'Active & Energizing', Event_Vibe_Icon:'overwhelmed.svg', Event_Start_Time:"Nov 10-29", Event_Name:"Swimming game for below 18 year...", Event_Description:"AED 1800 per person"},
+          {favorites_Id:1, img:"surfing.jpg", showCancelFavorite:true,  vibetext:'Invigorating & Uplifting', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Round of Golf", desc:"AED 1800 per person"},
+          {favorites_Id:2,img:"golf.jpg", showCancelFavorite:true, vibetext:'Active & Energizing', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Kite Surfing", desc:"AED 1800 per person"},
+          {favorites_Id:3,img:"yacht.jpg", showCancelFavorite:true, vibetext:'Vibrant & Social', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Jazz Misuc", desc:"AED 1800 per person"},
+          {favorites_Id:4,img:"beach.jpg", showCancelFavorite:true, vibetext:'Glamorous & Grand', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Sweet Wonderland", desc:"AED 1800 per person"},
+          {favorites_Id:5,img:"dive.jpg", showCancelFavorite:true, vibetext:'Active & Energizing', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Swimming game for below 18 year...", desc:"AED 1800 per person"},
 
-          {favorites_Id:6,Event_Img:"surfing.jpg", showCancelFavorite:true, Event_Vibe:'Invigorating & Uplifting', Event_Vibe_Icon:'overwhelmed.svg', Event_Start_Time:"Nov 10-29", Event_Name:"Round of Golf", Event_Description:"AED 1800 per person"},
-          {favorites_Id:7,Event_Img:"golf.jpg", showCancelFavorite:true, Event_Vibe:'Active & Energizing', Event_Vibe_Icon:'overwhelmed.svg', Event_Start_Time:"Nov 10-29", Event_Name:"Kite Surfing", Event_Description:"AED 1800 per person"},
-          {favorites_Id:8,Event_Img:"yacht.jpg", showCancelFavorite:true, Event_Vibe:'Vibrant & Social', Event_Vibe_Icon:'overwhelmed.svg', Event_Start_Time:"Nov 10-29", Event_Name:"Jazz Misuc", Event_Description:"AED 1800 per person"},
-          {favorites_Id:9,Event_Img:"beach.jpg", showCancelFavorite:true, Event_Vibe:'Glamorous & Grand', Event_Vibe_Icon:'overwhelmed.svg', Event_Start_Time:"Nov 10-29", Event_Name:"Sweet Wonderland", Event_Description:"AED 1800 per person"},
-          {favorites_Id:10,Event_Img:"dive.jpg", showCancelFavorite:true, Event_Vibe:'Active & Energizing', Event_Vibe_Icon:'overwhelmed.svg', Event_Start_Time:"Nov 10-29", Event_Name:"Swimming game for below 18 year...", Event_Description:"AED 1800 per person"},
+          {favorites_Id:6,img:"surfing.jpg", showCancelFavorite:true, vibetext:'Invigorating & Uplifting', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Round of Golf", desc:"AED 1800 per person"},
+          {favorites_Id:7,img:"golf.jpg", showCancelFavorite:true, vibetext:'Active & Energizing', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Kite Surfing", desc:"AED 1800 per person"},
+          {favorites_Id:8,img:"yacht.jpg", showCancelFavorite:true, vibetext:'Vibrant & Social', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Jazz Misuc", desc:"AED 1800 per person"},
+          {favorites_Id:9,img:"beach.jpg", showCancelFavorite:true, vibetext:'Glamorous & Grand', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Sweet Wonderland", desc:"AED 1800 per person"},
+          {favorites_Id:10,img:"dive.jpg", showCancelFavorite:true, vibetext:'Active & Energizing', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Swimming game for below 18 year...", desc:"AED 1800 per person"},
       ],
       },
     }

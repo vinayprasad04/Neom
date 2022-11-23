@@ -1,31 +1,34 @@
 import React, {useEffect, useState} from 'react';
 import {
     Header,
+    Footer,
 } from "../component/index.js";
 import {FeedData} from './../utils/FeedbackData';
 import {Profile} from "../MockData";
+import ChartSmile from "../component/Chart";
 import AddAReview from "../component/AddAReview";
 import AddVivoMeaterReview from "../component/AddVivoMeaterReview";
+import GaugeChart from 'react-gauge-chart';
 const EmotionList = ({rating}) =>{
 let ratingNew = Number(rating).toFixed(0);
     return(
         <ul className="emotion__list">
-            <li className={`emotion__list--item  ${(ratingNew===5) && 'active'}`}>
+            <li className={`emotion__list--item  ${(ratingNew==5) && 'active'}`}>
                 <img src={process.env.PUBLIC_URL + "./img/overwhelmed.svg"} alt=""/>
             </li>
-            <li className={`emotion__list--item  ${ratingNew===4 && 'active'}`}>
+            <li className={`emotion__list--item  ${ratingNew==4 && 'active'}`}>
                 <img src={process.env.PUBLIC_URL + "./img/joy.svg"} alt=""/>
             </li>
-            <li className={`emotion__list--item  ${ratingNew===3 && 'active'}`}>
+            <li className={`emotion__list--item  ${ratingNew==3 && 'active'}`}>
                 <img src={process.env.PUBLIC_URL + "./img/appreciation.svg"} alt=""/>
             </li>
-            <li className={`emotion__list--item  ${ratingNew===2 && 'active'}`}>
+            <li className={`emotion__list--item  ${ratingNew==2 && 'active'}`}>
                 <img src={process.env.PUBLIC_URL + "./img/boredom.svg"} alt=""/>
             </li>
-            <li className={`emotion__list--item  ${ratingNew===1 && 'active'}`}>
+            <li className={`emotion__list--item  ${ratingNew==1 && 'active'}`}>
                 <img src={process.env.PUBLIC_URL + "./img/disappointed.svg"} alt=""/>
             </li>
-            <li className={`emotion__list--item  ${ratingNew===0 && 'active'}`}>
+            <li className={`emotion__list--item  ${ratingNew==0 && 'active'}`}>
                 <img src={process.env.PUBLIC_URL + "./img/anger.svg"} alt=""/>
             </li>
         </ul>
