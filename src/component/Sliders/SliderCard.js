@@ -15,7 +15,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
     const userName = Profile[0].Customer_Name;
   return (
     <div className="recSlider recSlider--cardView" id={"newId"}>
-      <h2 className="recSlider__title">Good morning {userName}!</h2>
+      <h2 className="recSlider__title"> Hey {userName}!</h2>
       <div className="recSlider__subtitle">
         <p>
           Below listed are your itineraries, have a look to the timings and the
@@ -76,7 +76,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                         </div>
                       </div>
                       <div className="recSlider__info__row">
-                        <div className="recSlider__info__items">
+                        <div className="recSlider__info__items calenderField">
                           <span className="icon icon-calendar"></span>
                           {item.Event_Start_Date}, {item.Event_Start_Time} -  {item.Event_End_Date}, {item.Event_End_Time}
                         </div>
@@ -139,9 +139,9 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                             </div>
                                         </div>
                                         <div className="recSlider__info__row">
-                                            <div className="recSlider__info__items">
+                                            <div className="recSlider__info__items calenderField">
                                                 <span className="icon icon-calendar"></span>
-                                                12/11/2022, 8:00 PM - 12/11/2022, 11:59 PM
+                                                Dec 11, 2022, 8:00 PM - Dec 11, 2022, 11:59 PM
                                             </div>
                                         </div>
                                         <div className="recSlider__info__row">
@@ -194,7 +194,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                                 </div>
                                             </div>
                                             <div className="recSlider__info__row">
-                                                <div className="recSlider__info__items">
+                                                <div className="recSlider__info__items calenderField">
                                                     <span className="icon icon-calendar"></span>
                                                     {rCancelAlert.srBookedAlertData.selectedDate} &nbsp;  {rCancelAlert.srBookedAlertData.selectedTime}
                                                 </div>
@@ -222,7 +222,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                             </div>
                                         </div>
                                     </Link>
-                                </SwiperSlide>
+                            </SwiperSlide>
                             <SwiperSlide>
                                 <Link className={"recSlider__link"} to={`/eventdetails/${item.Event_ID}`} >
                                     <div className="slider__image--wrapper">
@@ -249,7 +249,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                             </div>
                                         </div>
                                         <div className="recSlider__info__row">
-                                            <div className="recSlider__info__items">
+                                            <div className="recSlider__info__items calenderField">
                                                 <span className="icon icon-calendar"></span>
                                                 {item.Event_Start_Date}, {item.Event_Start_Time} -  {item.Event_End_Date}, {item.Event_End_Time}
                                             </div>

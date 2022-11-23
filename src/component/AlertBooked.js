@@ -7,7 +7,7 @@ const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setR
     const onChangeResedule = (e, item) =>{
         setReSedule({...reSedule, [item]:e.target.value});
     }
-
+    console.log("reseduleWithJazz",reseduleWithJazz);
     const onSubmit =() =>{
         if(eventName ==="Round of Golf"){
             setRCancelAlert({...rCancelAlert, crBookedAlert:false, srBookedAlert:true, srBookedAlertData:reSedule})
@@ -28,7 +28,7 @@ const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setR
                 <h1>{heading}</h1>
                 <p>{dec}</p>
                 {
-                    (eventName ==="Round of Golf") ?
+                     (eventName ==="Round of Golf") && !reseduleWithJazz ?
                         <div className="form">
                             <div className="form__group">
                                 <label className="form__label">Select a day</label>
@@ -63,19 +63,12 @@ const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setR
                             <option value="1">4 Seat</option>
                         </select>
                 }
-
-              {/*  <select>
-                    <option value="1">1 Seat</option>
-                    <option value="1">2 Seat</option>
-                    <option value="1">3 Seat</option>
-                    <option value="1">4 Seat</option>
-                </select>*/}
                 <div className="btnGroup">
                     {
                         reseduleWithJazz ?
-                            <Link to={{pathname: "/recommendation", hash: "bookedSeat"}} onClick={onSubmitReseduleWithJazz} className={"btn"} style={{width:"188px"}}>Reserved My Seat</Link>
+                            <Link to={{pathname: "/recommendation", hash: "bookedSeat"}} onClick={onSubmitReseduleWithJazz} className={"btn"} style={{width:"188px"}}>Reserve My Seat</Link>
                             :
-                            <Link to={{pathname: "/recommendation", hash: "bookedSeat"}} onClick={onSubmit} className={"btn"} style={{width:"188px"}}>Reserved My Seat</Link>
+                            <Link to={{pathname: "/recommendation", hash: "bookedSeat"}} onClick={onSubmit} className={"btn"} style={{width:"188px"}}>Reserve My Seat</Link>
                     }
 
                    {/* <button className="btn">Yes, I'm sure</button>*/}
