@@ -89,27 +89,27 @@ const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAl
     setAlert(true);
   } */
 
-  console.log("rCancelAlert",rCancelAlert.srBookedAlertData);
+
   return(
       <div className="eventReserve__form" >
         <form>
           {/*  AED 1800 <span>per person</span>*/}
           {
-            !rCancelAlert.srBookedAlertData.selectedTime ?
+            !rCancelAlert?.srBookedAlertData?.selectedTime ?
                 <div className="eventReserve__form--title">{eventData.Event_Start_Time} - {eventData.Event_End_Time}</div>:
-                <div className="eventReserve__form--title">{rCancelAlert.srBookedAlertData.selectedTime}</div>
+                <div className="eventReserve__form--title">{rCancelAlert?.srBookedAlertData?.selectedTime}</div>
           }
 
           <div className="eventReserve__form--date"></div>
-          { rCancelAlert.srBookedAlertData.selectedDate ?
+          { rCancelAlert?.srBookedAlertData?.selectedDate ?
               <div className="form__flex--row">
                 <div className="s-form-floating">
-                  <input type="text" className="s-form-control" id="floatingFromInput" value={rCancelAlert.srBookedAlertData.selectedDate}
+                  <input type="text" className="s-form-control" id="floatingFromInput" value={rCancelAlert?.srBookedAlertData?.selectedDate}
                          readOnly/>
                   <label htmlFor="floatingFromInput">From</label>
                 </div>
                 <div className="s-form-floating">
-                  <input type="text" className="s-form-control" id="floatingToInput" value={rCancelAlert.srBookedAlertData.selectedDate}
+                  <input type="text" className="s-form-control" id="floatingToInput" value={rCancelAlert?.srBookedAlertData?.selectedDate}
                          readOnly/>
                   <label htmlFor="floatingToInput">To</label>
                 </div>

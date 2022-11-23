@@ -10,7 +10,7 @@ import RatingValue from "../Rating";
 import {Profile} from './../../MockData';
 
 const SliderCard = ({EventDetail, rCancelAlert}) => {
-    const itneryData = rCancelAlert.srBookedAlert ? EventDetail.slice(3,5): rCancelAlert.crBookedAlert ? EventDetail.slice(0,3): rCancelAlert.crAlert? EventDetail.slice(1,3):EventDetail.slice(5, 7);
+    const itneryData = rCancelAlert.crBookedAlert ? EventDetail.slice(0,3): rCancelAlert.crAlert? EventDetail.slice(1,3):EventDetail.slice(5, 7);
 
     const userName = Profile[0].Customer_Name;
   return (
