@@ -113,7 +113,27 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                                                 </SwiperSlide>
                                             )
                                         })
-                                        :
+                                        : location === "#bookedSeat" && !rCancelAlert.crBookedAlert ?
+                                            RecommendationBannerData.slice(1,2).map(( item, index)=>{
+                                                return(
+                                                    <SwiperSlide key={index}>
+                                                        <img src={process.env.PUBLIC_URL + "./img/"+item.url} alt="event title"/>
+                                                        <div className="banner__info">
+                                                            <div className="banner__info__title">{item.Event_Name}</div>
+                                                            <div className="banner__info__location">{item.Event_Location}</div>
+                                                            <div className="banner__info__date">{item.Event_Start_Date} at {item.Event_Start_Time}</div>
+                                                            <div className="banner__info__countdown">
+                                                                <CircleTimer itemTime={item.Event_Start_Date}/>
+                                                                {/*<div className="counter" id={"counterNew"} data-date={item.Event_Start_Date}></div>*/}
+                                                            </div>
+                                                            <div className="banner__info__link">
+                                                                <button onClick={(e)=>onAlertOpen(e, item.Event_Name, item.Event_Start_Date, item.Event_Start_Time)}>Yes, I am in</button>
+                                                            </div>
+                                                        </div>
+                                                    </SwiperSlide>
+                                                )
+                                            })
+                                            :
                                         RecommendationBannerData.slice(0,1).map(( item, index)=>{
                                             return(
                                                 <SwiperSlide key={index}>
