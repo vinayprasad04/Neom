@@ -3,12 +3,12 @@ const data = () => {
     SliderCardData:{
       heading: "Good morningCharlie",
       SliderCard: [
-        {Event_ID:10001,Event_Img:"spa_0.png", Event_Rank:"one.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-        {Event_ID:10002,Event_Img:"recommend2.jpg", Event_Rank:"two.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-        {Event_ID:10003,Event_Img:"trending2.jpg", Event_Rank:"three.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-        {Event_ID:10004,Event_Img:"trending1.jpg", Event_Rank:"four.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"Hi Charlie, we came to from our chef John that you didn't enjoyed the Epicurean cuisines yesterday. As a compensation we would like to offer you a free Italian cuisines as agoodwill gesture. Would you like to accept our request?"},
-        {Event_ID:10005, Event_Img:"recommend2.jpg", Event_Rank:"five.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Men's Golf League", Event_Description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod dolore magna aliquyam erat…"},
-        /*{Event_Img:"", Event_Rank:"", Overall_Event_Rating:"", Event_Start_Date:"", Event_Name:"", Event_Description:""},*/
+        {Event_ID:10001,img:"spa_0.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+        {Event_ID:10002,img:"recommend2.jpg", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+        {Event_ID:10003,img:"trending2.jpg", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+        {Event_ID:10004,img:"trending1.jpg", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Hi Charlie, we came to from our chef John that you didn't enjoyed the Epicurean cuisines yesterday. As a compensation we would like to offer you a free Italian cuisines as agoodwill gesture. Would you like to accept our request?"},
+        {Event_ID:10005, img:"recommend2.jpg", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Men's Golf League", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod dolore magna aliquyam erat…"},
+        /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
     ]
     },
     YourChoice:{
@@ -35,11 +35,11 @@ const data = () => {
     AttendEventCard:{
       heading: "Charlie, here is your master journey with us so far",
       Treading : [
-        {Event_Img:"golf.jpg", Event_ID: 10010, Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Round of Golf", Event_Description:"AED 1800 per person"},
-        {Event_Img:"surfing.jpg", Event_ID: 10011, Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Surfing", Event_Description:"AED 1800 per person"},
-        {Event_Img:"yacht.jpg",Event_ID: 10012,  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Jazz Misuc", Event_Description:"AED 1800 per person"},
-        {Event_Img:"dive.jpg", Event_ID: 10013,  Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Sweet Wonderland", Event_Description:"AED 1800 per person"},
-        {Event_Img:"beach.jpg",Event_ID: 10014, Overall_Event_Rating:4.9, Event_Review:"(123 reviews)", Event_Start_Date:"Nov 10-29", Event_Name:"Kite Surfing", Event_Description:"AED 1800 per person"},
+        {img:"golf.jpg", Event_ID: 10010, rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Round of Golf", desc:"AED 1800 per person"},
+        {img:"surfing.jpg", Event_ID: 10011, rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Surfing", desc:"AED 1800 per person"},
+        {img:"yacht.jpg",Event_ID: 10012,  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Jazz Music", desc:"AED 1800 per person"},
+        {img:"dive.jpg", Event_ID: 10013,  rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Sweet Wonderland", desc:"AED 1800 per person"},
+        {img:"beach.jpg",Event_ID: 10014, rating:" 4.9 (123 reviews)", date:"Nov 10-29", title:"Kite Surfing", desc:"AED 1800 per person"},
       ]
     },
     CartInfoSlider: {

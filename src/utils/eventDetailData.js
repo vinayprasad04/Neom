@@ -15,12 +15,12 @@ const data = () => {
       RatingSliderCardData:{
         heading: "Good morning Charlie!",
         SliderCard: [
-          {Event_ID:10001,Event_Img:"user1.png", Event_Rank:"one.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:4.0, Event_Start_Date:"Nov 2022", Event_Name:"Anastasia", Event_Description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-          {Event_ID:10002,Event_Img:"user2.png", Event_Rank:"two.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:4.9, Event_Start_Date:"Oct 2022", Event_Name:"Warren", Event_Description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-          {Event_ID:10003,Event_Img:"user3.png", Event_Rank:"three.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:3.0, Event_Start_Date:"Oct 2022", Event_Name:"Martin", Event_Description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-          {Event_ID:10004,Event_Img:"user4.png", Event_Rank:"four.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:3.0, Event_Start_Date:"Sep 2022", Event_Name:"Martin", Event_Description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-          {Event_ID:10005,Event_Img:"user5.png", Event_Rank:"five.svg", Event_Location:"Sindalah City", Event_Category:"Golf",  Overall_Event_Rating:3.0, Event_Start_Date:"Aug 2022", Event_Name:"Anastasia", Event_Description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
-          /*{Event_Img:"", Event_Rank:"", Overall_Event_Rating:"", Event_Start_Date:"", Event_Name:"", Event_Description:""},*/
+          {Event_ID:10001,img:"user1.png", rank:"one.svg", city:"Sindalah Island", game:"Golf",  rating:4.0, date:"Nov 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+          {Event_ID:10002,img:"user2.png", rank:"two.svg", city:"Sindalah Island", game:"Golf",  rating:4.9, date:"Oct 2022", title:"Warren", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+          {Event_ID:10003,img:"user3.png", rank:"three.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Oct 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+          {Event_ID:10004,img:"user4.png", rank:"four.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Sep 2022", title:"Martin", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+          {Event_ID:10005,img:"user5.png", rank:"five.svg", city:"Sindalah Island", game:"Golf",  rating:3.0, date:"Aug 2022", title:"Anastasia", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
+          /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
       ]
       },
       RecommendationData:{

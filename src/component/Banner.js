@@ -32,7 +32,7 @@ const Banner = () => {
                     Jazz Concert
                   </div>
                   <div className="banner__info__location">
-                    Sindalah City, Dubai
+                    Sindalah Island
                   </div>
                   <div className="banner__info__date">
                     Jan 01, 2023 at 00:00

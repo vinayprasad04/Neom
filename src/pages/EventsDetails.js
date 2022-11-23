@@ -62,7 +62,7 @@ const EmotionList = ({rating}) =>{
   )
 }
 
-const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAlert, Sucmsg}) =>{
+const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAlert, Sucmsg, rCancelAlert}) =>{
 /*  const [seatValue, setSeatValue] = useState(1);
   const [alert, setAlert] = useState(false);
 
@@ -74,24 +74,47 @@ const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAl
   }
   const Sucmsg = () =>{
     setAlert(true);
-  }*/
+  } */
+
+
   return(
       <div className="eventReserve__form" >
         <form>
-          <div className="eventReserve__form--title">
-          {/*  AED 1800 <span>per person</span>*/}10:30AM - 7:30PM
-          </div>
+          {/*  AED 1800 <span>per person</span>*/}
+          {
+            !rCancelAlert?.srBookedAlertData?.selectedTime ?
+                <div className="eventReserve__form--title">{eventData.Event_Start_Time} - {eventData.Event_End_Time}</div>:
+                <div className="eventReserve__form--title">{rCancelAlert?.srBookedAlertData?.selectedTime}</div>
+          }
+
           <div className="eventReserve__form--date"></div>
+          { rCancelAlert?.srBookedAlertData?.selectedDate ?
+              <div className="form__flex--row">
+                <div className="s-form-floating">
+                  <input type="text" className="s-form-control" id="floatingFromInput" value={rCancelAlert?.srBookedAlertData?.selectedDate}
+                         readOnly/>
+                  <label htmlFor="floatingFromInput">From</label>
+                </div>
+                <div className="s-form-floating">
+                  <input type="text" className="s-form-control" id="floatingToInput" value={rCancelAlert?.srBookedAlertData?.selectedDate}
+                         readOnly/>
+                  <label htmlFor="floatingToInput">To</label>
+                </div>
+              </div>
+              :
           <div className="form__flex--row">
             <div className="s-form-floating">
-              <input type="text" className="s-form-control" id="floatingFromInput" value={eventData.Event_Start_Date} readOnly/>
+              <input type="text" className="s-form-control" id="floatingFromInput" value={eventData.Event_Start_Date}
+                     readOnly/>
               <label htmlFor="floatingFromInput">From</label>
             </div>
             <div className="s-form-floating">
-              <input type="text" className="s-form-control" id="floatingToInput" value={eventData.Event_End_Date} readOnly/>
+              <input type="text" className="s-form-control" id="floatingToInput" value={eventData.Event_End_Date}
+                     readOnly/>
               <label htmlFor="floatingToInput">To</label>
             </div>
           </div>
+          }
           <div className="s-form-floating">
             <select className="s-form-select" id="floatingSelectGrid" aria-label="Floating label select example" onChange={onSelectSeat}>
               <option value="1">1 adult</option>
@@ -129,6 +152,7 @@ const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAl
 }
 
 const EventDetail = (props) => {
+  const {rCancelAlert} = props;
   const {id} = useParams();
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [vivoMeaterModal, setVivoMeaterModal] = useState(false);
@@ -236,10 +260,9 @@ const EventDetail = (props) => {
                     <li className="event__description--list-item">
                       <div className="icon icon-category"></div>
                       <div className="description-details">
-                        <h5>Golf</h5>
+                        <h5>{eventData.Event_Category}</h5>
                         <p>
-                          This is one of the many events comes under the Golf
-                          category.
+                          This is one of the many events comes under the {eventData.Event_Category} category.
                         </p>
                       </div>
                     </li>
@@ -268,23 +291,22 @@ const EventDetail = (props) => {
                     </li>
                   </ul>
                   <div className="event__description--content">
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    <p>{eventData.Event_Detail_Des1 ? eventData.Event_Detail_Des1:
+                      `Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                       sed diam nonumy eirmod tempor invidunt ut labore et dolore
                       magna aliquyam erat, sed diam voluptua. At vero eos et
                       accusam et justo duo dolores et ea rebum. Stet clita kasd
                       gubergren, no sea takimata sanctus est Lorem ipsum dolor
                       sit amet. Lorem ipsum dolor sit amet, consetetur
-                      sadipscing elit.
+                      sadipscing elit.`
+                    }
                     </p>
                     <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                      magna aliquyam erat, sed diam voluptua. At vero eos et
-                      accusam et justo duo dolores et ea rebum. Stet clita kasd
-                      gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                      sit amet. Lorem ipsum dolor sit amet, consetetur
-                      sadipscing elit.
+                      {eventData?.Event_Detail_Des2 && eventData.Event_Detail_Des2}
+
+                    </p>
+                    <p>
+                      {eventData.Event_Detail_Des3 && eventData.Event_Detail_Des3}
                     </p>
                   </div>
                 </div>
@@ -295,25 +317,26 @@ const EventDetail = (props) => {
                     <div className="review">{eventData.Operator_Rating.toFixed(1)}</div>
                   </div>
                   <div className="event__description--content">
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    <p>{eventData.Operator_Des ? eventData.Operator_Des:
+                     ` Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                       sed diam nonumy eirmod tempor invidunt ut labore et dolore
                       magna aliquyam erat, sed diam voluptua. At vero eos et
                       accusam et justo duo dolores et ea rebum. Stet clita kasd
                       gubergren, no sea takimata sanctus est Lorem ipsum dolor
                       sit amet. Lorem ipsum dolor sit amet, consetetur
-                      sadipscing elit.
+                      sadipscing elit.`
+                    }
                     </p>
                   </div>
                 </div>
               </div>
               <div className="eventReserve__grid--col flex__order--1">
-                <Cart eventData={eventData} Sucmsg={Sucmsg} onCancelAlert={onCancelAlert} onSelectSeat={onSelectSeat} alert={alert} setAlert={setAlert} setSeatValue={setSeatValue}/>
+                <Cart rCancelAlert={rCancelAlert} eventData={eventData} Sucmsg={Sucmsg} onCancelAlert={onCancelAlert} onSelectSeat={onSelectSeat} alert={alert} setAlert={setAlert} setSeatValue={setSeatValue}/>
               </div>
             </div>
           </div>
         </div>
-        <RatingSlider {...eventDetailPage.RatingSliderCardData} />
+        <RatingSlider RatingSliderCard={eventData.RatingSliderCard} />
         <div className="recommendations event--recommendations">
           <div className="container">
             <h2 className="recommendations__title">Some more recommendations for you, Charlie!</h2>

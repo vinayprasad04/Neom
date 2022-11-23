@@ -3,12 +3,13 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper";
 import trending1 from './../../assets/img/trending1.jpg';
+import {Link} from 'react-router-dom';
 import RatingValue from './../Rating';
 
 import "./Slider.scss";
 
-const RatingSliderCard = (props) => {
-  const {heading, SliderCard} = props;
+const RatingSliderCard = ({RatingSliderCard}) => {
+  console.log("RatingSliderCard",RatingSliderCard);
   return (
     <div className="recSlider recSlider--ratingCards" style={{margin:"0px 0px 0px 84px"}}>
       <div className="swiper tailored arrow_pos">
@@ -36,10 +37,10 @@ const RatingSliderCard = (props) => {
           }}
         >
           <div className="swiper-wrapper">
-            {SliderCard.map((item, index) => {
+            {RatingSliderCard.map((item, index) => {
               return (
                 <SwiperSlide key ={index}>
-                  <a href="#" className="recSlider__link">
+                  <Link className="recSlider__link">
                   <div className="recSlider__profile">
                   <img src={process.env.PUBLIC_URL + "./../img/" + item.Event_Img} alt="event title"/>
                 <div className="recSlider__profile--info">
@@ -59,7 +60,7 @@ const RatingSliderCard = (props) => {
                 </div>
               </div>
               <button className="recSlider__button">Read more</button>
-                  </a>
+                  </Link>
                 </SwiperSlide>
               );
             })}

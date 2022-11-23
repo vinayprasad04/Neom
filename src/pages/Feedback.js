@@ -64,7 +64,7 @@ const Feedback = (props) =>{
                                             <h3 className="feedback__banner--subtitle">Your Vibe-O-Meter reading exits us too
                                             </h3>
                                             <div className="feedback__banner--description">We are happy too because we
-                                                successfully keep you happy during this visit to Sindalah City.
+                                                successfully keep you happy during this visit to Sindalah Island.
                                             </div>
                                         </div>
                                     </div>

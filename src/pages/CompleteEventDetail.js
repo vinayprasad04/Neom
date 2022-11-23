@@ -131,7 +131,7 @@ const CompleteEventDetail = (props) => {
               <div className="review">
                 5.0 <span>23 reviews</span>
               </div>
-              <div className="location">Sindalah City, Dubai</div>
+              <div className="location">Sindalah Island</div>
             </div>
             <GallaryItems {...eventDetailPage.PhotoGallaryData} />
           </div>
