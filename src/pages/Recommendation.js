@@ -44,6 +44,7 @@ const [reseduleWithJazz, setReseduleWithJazz] = useState(false);
   const onAlertOpen = (e, name, date, time) =>{
       setAlterBookedData({name: name, date: date, time: time})
       setAlterBooked(true);
+      window.scrollTo(0, 0);
   }
   const onCancelAlert = () =>{
       setAlterBooked(false);
@@ -57,6 +58,7 @@ const [reseduleWithJazz, setReseduleWithJazz] = useState(false);
   const onReseduleWithJazz = () =>{
       setAlterBooked(true);
       setReseduleWithJazz(true);
+      window.scrollTo(0, 0);
   }
   useEffect(()=>{
     window.scrollTo(0, 0);
