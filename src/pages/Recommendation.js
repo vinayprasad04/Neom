@@ -63,7 +63,7 @@ const [reseduleWithJazz, setReseduleWithJazz] = useState(false);
   useEffect(()=>{
     window.scrollTo(0, 0);
 },[])
-const bookedMsgFlash = rCancelAlert.crBookedAlert ||rCancelAlert.ReseduleWithJazzOut ? "Congratulations! Your Jazz  Event has been booked.":"As you have just rescheduled your \"Round of Golf\", we have found alternate events for you and one of them is just an hour and 5 minutes drive away.";
+const bookedMsgFlash = rCancelAlert.crBookedAlert ||rCancelAlert.ReseduleWithJazzOut ? "Thank you for showing your interest in Jazz music event. We have received your reservation request. Please refer your itinerary for Jazz reservation details. Enjoy the evening!":"Thank you for rescheduling We are pleased to inform you that we have found alternate events for you and one of them is Jazz musical event which starts tonight at 8 PM.";
 const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAlert) ? RecommendationBannerData.slice(1,3):RecommendationBannerData.slice(0,1);
     return(
         <>
@@ -81,7 +81,7 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                             <div>
                                 <h2 className="eventAddReview__card--title">Hey {Profile[0].Customer_Name},</h2>
                                 {location === "#confirmAlert" && <p className="eventAddReview__card--subtitle">
-                                    As you plan to reschedule your Round Of Golf, here are some options.
+                                As you have shown interest to reschedule Round Of Golf, we would like to recommend you choose from available date and time slots as per your choice.
                                 </p>}
                                 {location === "#cancelAlert" && <p className="eventAddReview__card--subtitle">
                                     You have just cancelled your "Round of Golf" event. We have found a few similar event for you against your today's cancelled event.

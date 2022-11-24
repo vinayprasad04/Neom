@@ -66,9 +66,9 @@ const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setR
                 <div className="btnGroup">
                     {
                         reseduleWithJazz ?
-                            <Link to={{pathname: "/recommendation", hash: "bookedSeat"}} onClick={onSubmitReseduleWithJazz} className={"btn"} style={{width:"188px"}}>Reserve My Seat</Link>
+                            <Link to={{pathname: "/recommendation", hash: "bookedSeat"}} onClick={onSubmitReseduleWithJazz} className={"btn"} style={{width:"188px"}}>Reserve</Link>
                             :
-                            <Link to={{pathname: "/recommendation", hash: "bookedSeat"}} onClick={onSubmit} className={"btn"} style={{width:"188px"}}>Reserve My Seat</Link>
+                            <Link to={{pathname: "/recommendation", hash: "bookedSeat"}} onClick={onSubmit} className={"btn"} style={{width:"188px"}}>Reserve</Link>
                     }
 
                    {/* <button className="btn">Yes, I'm sure</button>*/}

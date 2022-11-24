@@ -27,8 +27,8 @@ const data = () => {
         heading: "Good morning Charlie!",
         desc:"You have short listed 8 events to join later.",
         Recommendation : [
-          {img:"surfing.jpg", drive:'30 mins drive', category:'Golf Tournament', heartIcon:true, vibetext:'Invigorating & Uplifting', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Round of Golf", desc:"AED 1800 per person", location:'Location One'},
-          {img:"golf.jpg",  drive:'30 mins drive', category:'Kite Surfing', heartIcon:true, vibetext:'Active & Energizing', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Kite Surfing", desc:"AED 1800 per person" , location:'Location One'},
+          {img:"golf.jpg", drive:'30 mins drive', category:'Golf Tournament', heartIcon:true, vibetext:'Invigorating & Uplifting', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Round of Golf", desc:"AED 1800 per person", location:'Location One'},
+          {img:"kite_surfing.png",  drive:'30 mins drive', category:'Kite Surfing', heartIcon:true, vibetext:'Active & Energizing', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Kite Surfing", desc:"AED 1800 per person" , location:'Location One'},
           {img:"yacht.jpg", drive:'30 mins walking', category:'Singing', heartIcon:true, vibetext:'Vibrant & Social', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Jazz Misuc", desc:"AED 1800 per person" , location:'Location One'},
           {img:"dive.jpg",  drive:'30 mins drive', category:'Book Exhibitions', heartIcon:true, vibetext:'Glamorous & Grand', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Sweet Wonderland", desc:"AED 1800 per person", location:'Location One'},
           {img:"beach.jpg", drive:'10 mins walking', category:'Kite Surfing', heartIcon:true, vibetext:'Active & Energizing', vibeicon:'overwhelmed.svg', date:"Nov 10-29", title:"Swimming game for below 18 year...", desc:"AED 1800 per person", location:'Location One'},
