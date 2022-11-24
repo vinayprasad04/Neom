@@ -272,3 +272,17 @@
     }
   }
 }
+
+.banner__info__location{
+  margin-bottom: 1.5rem;
+}
+.banner__info__time, .banner__info__date, .banner__info__location{
+  font-family: "Brown";
+  color: #FFF;
+  font-size: 1.2rem !important;
+  font-weight: 400;
+
+  @media (min-width: 576px) {
+    font-size: 1.4rem !important;
+  }
+}
