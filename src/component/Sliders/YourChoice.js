@@ -59,9 +59,9 @@ const YourChoice = (props) => {
                                     <button className="btn btn__link">No, thanks</button>
                                 </div>
                     </div>
-                    <div className="recSlider__emotion">
-                                <img src={process.env.PUBLIC_URL + "./img/disappointed.svg" } alt="" />
-                            </div>
+                    {/* {item.disappointed && <div className="recSlider__emotion">
+                                <img src={process.env.PUBLIC_URL + "./img/" + item.disappointed } alt="" />
+                            </div>} */}
                   </a>
                 </SwiperSlide>
               );
