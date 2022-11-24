@@ -488,11 +488,11 @@ const EventDetail =
                 /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
             ],
             "imgurl":[
-                {"img": "surfing.jpg"},
-                {"img": "surfing.jpg"},
-                {"img": "surfing.jpg"},
-                {"img": "surfing.jpg"},
-                {"img": "surfing.jpg"},
+                {"img": "surfing_image.png"},
+                {"img": "surfing_image.png"},
+                {"img": "surfing_image.png"},
+                {"img": "surfing_image.png"},
+                {"img": "surfing_image.png"},
             ]
         },
         {
@@ -602,11 +602,11 @@ const EventDetail =
                 /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
             ],
             "imgurl":[
-                {"img": "beach.jpg"},
-                {"img": "beach.jpg"},
-                {"img": "beach.jpg"},
-                {"img": "beach.jpg"},
-                {"img": "beach.jpg"},
+                {"img": "kite_surfing.png"},
+                {"img": "kite_surfing.png"},
+                {"img": "kite_surfing.png"},
+                {"img": "kite_surfing.png"},
+                {"img": "kite_surfing.png"},
             ]
         },
 
@@ -690,11 +690,11 @@ const EventDetail =
                 /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
             ],
             "imgurl":[
-                {"img": "surfing.jpg"},
-                {"img": "surfing.jpg"},
-                {"img": "surfing.jpg"},
-                {"img": "surfing.jpg"},
-                {"img": "surfing.jpg"},
+                {"img": "surfing_image.png"},
+                {"img": "surfing_image.png"},
+                {"img": "surfing_image.png"},
+                {"img": "surfing_image.png"},
+                {"img": "surfing_image.png"},
             ]
         },
         {
@@ -809,11 +809,11 @@ const EventDetail =
                 /*{img:"", rank:"", rating:"", date:"", title:"", desc:""},*/
             ],
             "imgurl":[
-                {"img": "beach.jpg"},
-                {"img": "beach.jpg"},
-                {"img": "beach.jpg"},
-                {"img": "beach.jpg"},
-                {"img": "beach.jpg"},
+                {"img": "kite_surfing.png"},
+                {"img": "kite_surfing.png"},
+                {"img": "kite_surfing.png"},
+                {"img": "kite_surfing.png"},
+                {"img": "kite_surfing.png"},
             ]
         },
 
