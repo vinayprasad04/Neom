@@ -133,7 +133,7 @@
   .alertInner{
     width: 600px;
     border-radius: 12px;
-    background: #fff;
+    background: #F9F7F2;
     padding: 30px;
     max-width: 90%;
     height: auto;
@@ -252,6 +252,10 @@
 .recSlider--ratingCards .swiper .swiper-wrapper .swiper-slide .recSlider__link .recSlider__info .recSlider__info__description{
   min-height: 140px;
 }
+.calenderField{
+  min-height: 42px;
+}
+
 
 @media(max-width: 767px){
   .lightBoxOverlay{

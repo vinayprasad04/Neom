@@ -23,7 +23,9 @@ const [distance, setDistance] = useState()
 const [filterCards, setFilterCards] = useState(cards);
 const [noLimit, setNoLimit] = useState(false);
 const [alertBooked, setAlterBooked] = useState(false);
+
 const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""});
+const [reseduleWithJazz, setReseduleWithJazz] = useState(false);
 
   const slectedDrive = (driveFilter) =>{
     let cardsFilterd = cards.filter((item)=>item.drive === driveFilter)
@@ -52,15 +54,19 @@ const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""}
       setDrive(null);
       setDistance(null)
   }
+  const onReseduleWithJazz = () =>{
+      setAlterBooked(true);
+      setReseduleWithJazz(true);
+  }
   useEffect(()=>{
     window.scrollTo(0, 0);
 },[])
-const bookedMsgFlash = rCancelAlert.crBookedAlert ? "Congratulations! Your Jazz  Event has been booked.":"As you have just rescheduled your \"Round of Golf\", we have found alternate events for you and one of them is just an hour and 5 minutes drive away.";  //crAlert:false, srAlert:false, crBookedAlert:false, srBookedAlert:false
+const bookedMsgFlash = rCancelAlert.crBookedAlert ||rCancelAlert.ReseduleWithJazzOut ? "Congratulations! Your Jazz  Event has been booked.":"As you have just rescheduled your \"Round of Golf\", we have found alternate events for you and one of them is just an hour and 5 minutes drive away.";
 const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAlert) ? RecommendationBannerData.slice(1,3):RecommendationBannerData.slice(0,1);
     return(
         <>
             {alertBooked &&
-            <AlertBooked onCancelAlert={onCancelAlert} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}
+            <AlertBooked reseduleWithJazz={reseduleWithJazz} onCancelAlert={onCancelAlert} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}
                 heading={"Hi, Charlie"} eventName={alertBookedData.name}
                 dec={`Please reserve your event. Have a great day ahead and enjoy!`}/>
             }
@@ -127,7 +133,7 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                                                                 {/*<div className="counter" id={"counterNew"} data-date={item.Event_Start_Date}></div>*/}
                                                             </div>
                                                             <div className="banner__info__link">
-                                                                <button onClick={(e)=>onAlertOpen(e, item.Event_Name, item.Event_Start_Date, item.Event_Start_Time)}>Yes, I am in</button>
+                                                                <button onClick={onReseduleWithJazz}>Yes, I am in</button>
                                                             </div>
                                                         </div>
                                                     </SwiperSlide>

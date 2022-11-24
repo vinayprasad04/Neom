@@ -89,7 +89,7 @@ const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAl
     setAlert(true);
   } */
 
-
+  console.log("rCancelAlert?.ReseduleWithJazzOut",rCancelAlert?.ReseduleWithJazzOut);
   return(
       <div className="eventReserve__form" >
         <form>
@@ -97,20 +97,33 @@ const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAl
           {
             !rCancelAlert?.srBookedAlertData?.selectedTime ?
                 <div className="eventReserve__form--title">{eventData.Event_Start_Time} - {eventData.Event_End_Time}</div>:
-                <div className="eventReserve__form--title">{rCancelAlert?.srBookedAlertData?.selectedTime}</div>
+                <div className="eventReserve__form--title">
+                  {eventData.Event_Category === "Golf" ?
+                      rCancelAlert?.srBookedAlertData?.selectedTime:
+                      <strong>{eventData.Event_Start_Time} - {eventData.Event_End_Time}</strong>
+                  }
+                </div>
           }
 
           <div className="eventReserve__form--date"></div>
           { rCancelAlert?.srBookedAlertData?.selectedDate ?
               <div className="form__flex--row">
                 <div className="s-form-floating">
-                  <input type="text" className="s-form-control" id="floatingFromInput" value={rCancelAlert?.srBookedAlertData?.selectedDate}
-                         readOnly/>
+                  { eventData.Event_Category ==="Golf" ?
+                      <input type="text" className="s-form-control" id="floatingFromInput" value={rCancelAlert?.srBookedAlertData?.selectedDate}
+                             readOnly/>:
+                      <input type="text" className="s-form-control" id="floatingFromInput" value={eventData.Event_Start_Date}
+                             readOnly/>
+                  }
                   <label htmlFor="floatingFromInput">From</label>
                 </div>
                 <div className="s-form-floating">
-                  <input type="text" className="s-form-control" id="floatingToInput" value={rCancelAlert?.srBookedAlertData?.selectedDate}
-                         readOnly/>
+                  { eventData.Event_Category === "Golf"?
+                      <input type="text" className="s-form-control" id="floatingToInput" value={rCancelAlert?.srBookedAlertData?.selectedDate}
+                             readOnly/>:
+                      <input type="text" className="s-form-control" id="floatingToInput" value={eventData.Event_End_Date}
+                             readOnly/>
+                  }
                   <label htmlFor="floatingToInput">To</label>
                 </div>
               </div>

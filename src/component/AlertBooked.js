@@ -2,22 +2,24 @@ import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import walkingforlong from "../assets/img/walking-for-long.png";
 
-const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setRCancelAlert}) =>{
+const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setRCancelAlert, reseduleWithJazz}) =>{
     const [reSedule, setReSedule] = useState({selectedDate: 'Dec 12, 2022', selectedTime: '7:00 AM - 9:00 AM', selectedSeat: '1'});
     const onChangeResedule = (e, item) =>{
         setReSedule({...reSedule, [item]:e.target.value});
     }
-
+    console.log("reseduleWithJazz",reseduleWithJazz);
     const onSubmit =() =>{
         if(eventName ==="Round of Golf"){
-            console.log("vinay inside of golf", eventName);
             setRCancelAlert({...rCancelAlert, crBookedAlert:false, srBookedAlert:true, srBookedAlertData:reSedule})
         }else if(eventName ==="Jazz Music"){
-            console.log("vinay inside of Jazz", eventName);
             setRCancelAlert({...rCancelAlert, crBookedAlert:true, srBookedAlert:false})
         }else {
             console.log("inside of other", eventName);
         }
+        onCancelAlert();
+    }
+    const onSubmitReseduleWithJazz = () =>{
+        setRCancelAlert({...rCancelAlert, ReseduleWithJazzOut: true})
         onCancelAlert();
     }
     return(
@@ -26,7 +28,7 @@ const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setR
                 <h1>{heading}</h1>
                 <p>{dec}</p>
                 {
-                    (eventName ==="Round of Golf") ?
+                     (eventName ==="Round of Golf") && !reseduleWithJazz ?
                         <div className="form">
                             <div className="form__group">
                                 <label className="form__label">Select a day</label>
@@ -61,15 +63,14 @@ const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setR
                             <option value="1">4 Seat</option>
                         </select>
                 }
-
-              {/*  <select>
-                    <option value="1">1 Seat</option>
-                    <option value="1">2 Seat</option>
-                    <option value="1">3 Seat</option>
-                    <option value="1">4 Seat</option>
-                </select>*/}
                 <div className="btnGroup">
-                 <Link to={{pathname: "/recommendation", hash: "bookedSeat"}} onClick={onSubmit} className={"btn"} style={{width:"188px"}}>Reserved My Seat</Link>
+                    {
+                        reseduleWithJazz ?
+                            <Link to={{pathname: "/recommendation", hash: "bookedSeat"}} onClick={onSubmitReseduleWithJazz} className={"btn"} style={{width:"188px"}}>Reserve My Seat</Link>
+                            :
+                            <Link to={{pathname: "/recommendation", hash: "bookedSeat"}} onClick={onSubmit} className={"btn"} style={{width:"188px"}}>Reserve My Seat</Link>
+                    }
+
                    {/* <button className="btn">Yes, I'm sure</button>*/}
                     <button className="btn default" onClick={onCancelAlert}>Cancel</button>
                 </div>
