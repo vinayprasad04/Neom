@@ -105,7 +105,7 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                                                 <SwiperSlide key={index}>
                                                     <img src={process.env.PUBLIC_URL + "./img/"+item.url} alt="event title"/>
                                                     <div className="banner__info">
-                                                        <div className="banner__info__title">{item.Event_Name}</div>
+                                                        <h2 className="banner__info__title">{item.Event_Name}</h2>
                                                         <div className="banner__info__location">{item.Event_Location}</div>
                                                         <div className="banner__info__date">{item.Event_Start_Date} at {item.Event_Start_Time}</div>
                                                         <div className="banner__info__countdown">
@@ -125,7 +125,7 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                                                     <SwiperSlide key={index}>
                                                         <img src={process.env.PUBLIC_URL + "./img/"+item.url} alt="event title"/>
                                                         <div className="banner__info">
-                                                            <div className="banner__info__title">{item.Event_Name}</div>
+                                                            <h2 className="banner__info__title">{item.Event_Name}</h2>
                                                             <div className="banner__info__location">{item.Event_Location}</div>
                                                             <div className="banner__info__date">{item.Event_Start_Date} at {item.Event_Start_Time}</div>
                                                             <div className="banner__info__countdown">
@@ -145,7 +145,7 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                                                 <SwiperSlide key={index}>
                                                     <img src={process.env.PUBLIC_URL + "./img/"+item.url} alt="event title"/>
                                                     <div className="banner__info">
-                                                        <div className="banner__info__title">{item.Event_Name}</div>
+                                                        <h2 className="banner__info__title">{item.Event_Name}</h2>
                                                         <div className="banner__info__location">{item.Event_Location}</div>
                                                         {/*<div className="banner__info__date">{item.Event_Start_Date} at {item.Event_Start_Time}</div>*/}
                                                        {/* <div className="banner__info__countdown">
