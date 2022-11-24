@@ -1,3 +1,5 @@
+// @use '../src/assets/scss/_variables' as *;
+
 .alert{
   background: #ddffdd;
   color: #000;
@@ -228,6 +230,8 @@
   .banner__info__link button{
     background-color: #fff;
     color: #222;
+    font-family: 'Brown';
+    font-size: 1.125rem !important;
     font-weight: 400;
     border-radius: 0.25rem;
     text-decoration: none;
@@ -252,9 +256,6 @@
 .recSlider--ratingCards .swiper .swiper-wrapper .swiper-slide .recSlider__link .recSlider__info .recSlider__info__description{
   min-height: 140px;
 }
-.calenderField{
-  min-height: 42px;
-}
 
 
 @media(max-width: 767px){
@@ -269,5 +270,19 @@
     .lightBoxInner{
       padding: 10px;
     }
+  }
+}
+
+.banner__info__location{
+  margin-bottom: 1.5rem;
+}
+.banner__info__time, .banner__info__date, .banner__info__location{
+  font-family: "Brown";
+  color: #FFF;
+  font-size: 1.2rem !important;
+  font-weight: 400;
+
+  @media (min-width: 576px) {
+    font-size: 1.4rem !important;
   }
 }
