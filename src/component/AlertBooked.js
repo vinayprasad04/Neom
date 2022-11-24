@@ -30,21 +30,21 @@ const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setR
                 {
                      (eventName ==="Round of Golf") && !reseduleWithJazz ?
                         <div className="form">
-                            <div className="form__group">
+                            {/* <div className="form__group">
                                 <label className="form__label">Select a day</label>
                                 <select value={reSedule.selectedDate} onChange={(e)=>{onChangeResedule(e, "selectedDate")}}>
                                     <option value="Dec 12, 2022">Dec 12, 2022</option>
                                     <option value="Dec 13, 2022">Dec 13, 2022</option>
                                 </select>
-                            </div>
-                            <div className="form__group">
+                            </div> */}
+                            {/* <div className="form__group">
                                 <label className="form__label">Select a time slot</label>
                                 <select value={reSedule.selectedTime} onChange={(e)=>{onChangeResedule(e, "selectedTime")}}>
                                     <option value="7:00 AM - 9:00 AM">7:00 AM - 9:00 AM</option>
                                     <option value="9:00 AM - 12:00 PM">9:00 AM - 12:00 PM</option>
                                     <option value="12:00 PM - 4:00 PM">12:00 PM - 4:00 PM</option>
                                 </select>
-                            </div>
+                            </div> */}
                             <div className="form__group">
                                 <label className="form__label">Select your seats</label>
                                 <select value={reSedule.selectedSeat} onChange={(e)=>{onChangeResedule(e, "selectedSeat")}}>

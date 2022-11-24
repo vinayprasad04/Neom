@@ -109,8 +109,14 @@ const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAl
           { rCancelAlert?.srBookedAlertData?.selectedDate ?
               <div className="form__flex--row">
                 <div className="s-form-floating">
-                  { eventData.Event_Category ==="Golf" ?
+                  {/* { eventData.Event_Category ==="Golf" ?
                       <input type="text" className="s-form-control" id="floatingFromInput" value={rCancelAlert?.srBookedAlertData?.selectedDate}
+                             readOnly/>:
+                      <input type="text" className="s-form-control" id="floatingFromInput" value={eventData.Event_Start_Date}
+                             readOnly/>
+                  } */}
+                  { eventData.Event_Category ==="Golf" ?
+                      <input type="text" className="s-form-control" id="floatingFromInput" value="Jan 01, 2023"
                              readOnly/>:
                       <input type="text" className="s-form-control" id="floatingFromInput" value={eventData.Event_Start_Date}
                              readOnly/>
@@ -119,7 +125,7 @@ const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAl
                 </div>
                 <div className="s-form-floating">
                   { eventData.Event_Category === "Golf"?
-                      <input type="text" className="s-form-control" id="floatingToInput" value={rCancelAlert?.srBookedAlertData?.selectedDate}
+                      <input type="text" className="s-form-control" id="floatingToInput" value="Jan 01, 2023"
                              readOnly/>:
                       <input type="text" className="s-form-control" id="floatingToInput" value={eventData.Event_End_Date}
                              readOnly/>
@@ -143,10 +149,10 @@ const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAl
           }
           <div className="s-form-floating">
             <select className="s-form-select" id="floatingSelectGrid" aria-label="Floating label select example" onChange={onSelectSeat}>
-              <option value="1">1 adult</option>
-              <option value="2">2 adult</option>
-              <option value="3">3 adult</option>
-              <option value="4">4 adult</option>
+              <option value="1">1 Seat</option>
+              <option value="2">2 Seat</option>
+              <option value="3">3 Seat</option>
+              <option value="4">4 Seat</option>
             </select>
             <label htmlFor="floatingSelectGrid">Guests</label>
           </div>
