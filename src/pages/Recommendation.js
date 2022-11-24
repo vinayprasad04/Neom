@@ -149,8 +149,8 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                                                     <div className="banner__info">
                                                         <h2 className="banner__info__title">{item.Event_Name}</h2>
                                                         <div className="banner__info__location">{item.Event_Location}</div>
-                                                        <div className="banner__info__date">{item.Event_Start_Date}</div>
-                                                        <div className="banner__info__time">{item.Event_Start_Time}</div>
+                                                        {/* <div className="banner__info__date">{item.Event_Start_Date}</div>
+                                                        <div className="banner__info__time">{item.Event_Start_Time}</div> */}
                                                        {/* <div className="banner__info__countdown">
                                                             <CircleTimer itemTime={item.Event_Start_Date}/>
                                                         </div>*/}

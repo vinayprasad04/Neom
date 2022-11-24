@@ -196,8 +196,8 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                             <div className="recSlider__info__row">
                                                 <div className="recSlider__info__items calenderField">
                                                     <span className="icon icon-calendar"></span>
-                                                    {/* {rCancelAlert.srBookedAlertData.selectedDate} &nbsp;  {rCancelAlert.srBookedAlertData.selectedTime} */}
-                                                    Jan 01, 2023 10:30 AM | 3:00 PM | 5:30 PM
+                                                    {rCancelAlert.srBookedAlertData.selectedDate} &nbsp;  {rCancelAlert.srBookedAlertData.selectedTime}
+                                                    {/* Jan 01, 2023 10:30 AM | 3:00 PM | 5:30 PM */}
                                                 </div>
                                             </div>
                                             <div className="recSlider__info__row">

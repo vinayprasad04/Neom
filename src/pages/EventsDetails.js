@@ -109,23 +109,23 @@ const Cart = ({eventData,setSeatValue, alert, setAlert, onSelectSeat, onCancelAl
           { rCancelAlert?.srBookedAlertData?.selectedDate ?
               <div className="form__flex--row">
                 <div className="s-form-floating">
-                  {/* { eventData.Event_Category ==="Golf" ?
+                  { eventData.Event_Category ==="Golf" ?
                       <input type="text" className="s-form-control" id="floatingFromInput" value={rCancelAlert?.srBookedAlertData?.selectedDate}
                              readOnly/>:
                       <input type="text" className="s-form-control" id="floatingFromInput" value={eventData.Event_Start_Date}
                              readOnly/>
-                  } */}
-                  { eventData.Event_Category ==="Golf" ?
+                  }
+                  {/* { eventData.Event_Category ==="Golf" ?
                       <input type="text" className="s-form-control" id="floatingFromInput" value="Jan 01, 2023"
                              readOnly/>:
                       <input type="text" className="s-form-control" id="floatingFromInput" value={eventData.Event_Start_Date}
                              readOnly/>
-                  }
+                  } */}
                   <label htmlFor="floatingFromInput">From</label>
                 </div>
                 <div className="s-form-floating">
                   { eventData.Event_Category === "Golf"?
-                      <input type="text" className="s-form-control" id="floatingToInput" value="Jan 01, 2023"
+                      <input type="text" className="s-form-control" id="floatingToInput" value={rCancelAlert?.srBookedAlertData?.selectedDate}
                              readOnly/>:
                       <input type="text" className="s-form-control" id="floatingToInput" value={eventData.Event_End_Date}
                              readOnly/>
