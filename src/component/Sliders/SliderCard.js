@@ -51,7 +51,8 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                 itneryData.map((item, index) => {
               return (
                 <SwiperSlide>
-                    <Link className={"recSlider__link"} to={`/eventdetails/${item.Event_ID}`} >
+                    {/* <Link className={"recSlider__link"} to={`/eventdetails/${item.Event_ID}`} > */}
+                    <Link className={"recSlider__link"} >
                         <div className="slider__image--wrapper">
                             <img src={process.env.PUBLIC_URL + "./../img/" + item?.url} alt="event title"/>
                             <div className="weather"><div className="weather__icon"><img src={abstract} alt="Weather" /></div>
@@ -112,9 +113,10 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                     return (
                         <>
                             {rCancelAlert.ReseduleWithJazzOut && <SwiperSlide>
-                                <Link className={"recSlider__link"} to={`/eventdetails/10101`}>
+                                {/* <Link className={"recSlider__link"} to={`/eventdetails/10101`}> */}
+                                <Link className={"recSlider__link"}>
                                     <div className="slider__image--wrapper">
-                                        <img src={process.env.PUBLIC_URL + "./../img/yacht.jpg"} alt="event title"/>
+                                        <img src={process.env.PUBLIC_URL + "./../img/tech_expo1.jpg"} alt="event title"/>
                                         <div className="weather">
                                             <div className="weather__icon"><img src={abstract} alt="Weather"/></div>
                                             <div className="weather__text">
@@ -127,7 +129,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                         </div>
                                     </div>
                                     <div className="recSlider__info" key={index}>
-                                        <h3 className="recSlider__info__title">Jazz Music</h3>
+                                        <h3 className="recSlider__info__title">Tech Expo</h3>
                                         <div className="recSlider__info__rating">
                                             <RatingValue fillColor={"#FF385C"} readOnly={true} initialValue={4.1}/>
                                             <div className="review">4.1</div>
@@ -142,7 +144,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                         <div className="recSlider__info__row">
                                             <div className="recSlider__info__items calenderField">
                                                 <span className="icon icon-calendar"></span>
-                                                Dec 11, 2022, 8:00 PM - 11:59 PM
+                                                Dec 11, 2022, 3:00 PM
                                             </div>
                                         </div>
                                         <div className="recSlider__info__row">
@@ -154,7 +156,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                         <div className="recSlider__info__row">
                                             <div className="recSlider__info__items">
                                                 <span className="icon icon-category"></span>
-                                                Jazz Music
+                                                Tech Expo
                                             </div>
                                         </div>
                                         <div className="recSlider__info__row recSlider__footer">
@@ -170,7 +172,8 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                 </Link>
                             </SwiperSlide>}
                             <SwiperSlide>
-                                    <Link className={"recSlider__link"} to={`/eventdetails/10104`} >
+                                    {/* <Link className={"recSlider__link"} to={`/eventdetails/10104`} > */}
+                                    <Link className={"recSlider__link"}>
                                         <div className="slider__image--wrapper">
                                             <img src={process.env.PUBLIC_URL + "./../img/golf.jpg" } alt="event title"/>
                                             <div className="weather"><div className="weather__icon"><img src={abstract} alt="Weather" /></div>
@@ -226,7 +229,8 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                     </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Link className={"recSlider__link"} to={`/eventdetails/${item.Event_ID}`} >
+                                {/* <Link className={"recSlider__link"} to={`/eventdetails/${item.Event_ID}`} > */}
+                                <Link className={"recSlider__link"}>
                                     <div className="slider__image--wrapper">
                                         <img src={process.env.PUBLIC_URL + "./../img/" + item?.url} alt="event title"/>
                                         <div className="weather"><div className="weather__icon"><img src={abstract} alt="Weather" /></div>

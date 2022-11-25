@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import {
     Header
 } from "../component/index.js";
@@ -26,7 +26,8 @@ const [alertBooked, setAlterBooked] = useState(false);
 
 const [alertBookedData, setAlterBookedData] = useState({name:"",date:"",time:""});
 const [reseduleWithJazz, setReseduleWithJazz] = useState(false);
-
+const { data } = useParams();
+console.log(data, "call dattatat")
   const slectedDrive = (driveFilter) =>{
     let cardsFilterd = cards.filter((item)=>item.drive === driveFilter)
     setFilterCards(cardsFilterd)
@@ -60,11 +61,19 @@ const [reseduleWithJazz, setReseduleWithJazz] = useState(false);
       setReseduleWithJazz(true);
       window.scrollTo(0, 0);
   }
+  const reschdule = (e) => {
+    const item = RecommendationBannerData[0]
+    onAlertOpen(e, item.Event_Name, item.Event_Start_Date, item.Event_Start_Time)
+}
   useEffect(()=>{
     window.scrollTo(0, 0);
+    if(location === "#confirmAlert"){
+    reschdule()
+    }
 },[])
-const bookedMsgheading = rCancelAlert.crBookedAlert ||rCancelAlert.ReseduleWithJazzOut ? `Hey Charlie,` : `Reschedule Confirmed,`
-const bookedMsgFlash = rCancelAlert.crBookedAlert ||rCancelAlert.ReseduleWithJazzOut ? "Thank you for showing your interest in Jazz music event. We have received your reservation request. Please refer your itinerary for Jazz reservation details. Enjoy the evening!": "Now that you are not playing golf, Why dont you explore one of other events happening around here";
+
+const bookedMsgheading = rCancelAlert.crBookedAlert || rCancelAlert.ReseduleWithJazzOut ? `Hey Charlie,` : `Reschedule Confirmed,`
+const bookedMsgFlash = rCancelAlert.crBookedAlert ||rCancelAlert.ReseduleWithJazzOut ? "Thank you for showing your interest in Tech Expo event. We have received your reservation request. Please refer your itinerary for Tech Expo reservation details. Enjoy the evening!": "Now that you are not playing golf, Why dont you explore one of other events happening around here";
 const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAlert) ? RecommendationBannerData.slice(1,3):RecommendationBannerData.slice(0,1);
     return(
         <>
@@ -117,7 +126,7 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                     <div className="container">
                         <div className="swiper mainbanner">
                             <div className={`swiper-wrapper ${(location === "#confirmAlert")? "rescheduleBannerNotification":""}`}>
-                                <Swiper modules={[Navigation, Autoplay]} spaceBetween={50} slidesPerView={1} navigation autoplay={false}>
+                                <Swiper modules={[Navigation, Autoplay]} spaceBetween={50} slidesPerView={1}  autoplay={false}>
                                     { (location !== "#confirmAlert" && rCancelAlert.crAlert) ?
                                         RecommendationBannerData.slice(1,2).map(( item, index)=>{
                                             return(
@@ -184,6 +193,7 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
 
                                 </Swiper>
                             </div>
+                            
                         </div>
                     </div>
                 </div>

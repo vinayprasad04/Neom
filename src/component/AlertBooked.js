@@ -48,10 +48,10 @@ const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setR
                             <div className="form__group">
                                 <label className="form__label">Select Number of People</label>
                                 <select value={reSedule.selectedSeat} onChange={(e)=>{onChangeResedule(e, "selectedSeat")}}>
-                                    <option value="1">1 person</option>
-                                    <option value="2">2 person</option>
-                                    <option value="3">3 person</option>
-                                    <option value="4">4 person</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
                                 </select>
                             </div>
 

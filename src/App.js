@@ -25,7 +25,7 @@ function App() {
             <Route path="/feedback" element={<Feedback api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
             <Route path="/settings" element={<Settings api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
             <Route path="/notifications" element={<Notifications api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
-            <Route path="/recommendation" element={<Recommendation api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
+            <Route path="/recommendation/" element={<Recommendation api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
             <Route path="/eventdetails" element={<EventDetail api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert} />} />
             <Route path="/eventdetails/:id" element={<EventDetail api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
             <Route path="/eventdetailcomplete" element={<CompleteEventDetail api={api} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}/>} />
