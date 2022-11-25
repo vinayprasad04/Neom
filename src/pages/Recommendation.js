@@ -63,14 +63,17 @@ const [reseduleWithJazz, setReseduleWithJazz] = useState(false);
   useEffect(()=>{
     window.scrollTo(0, 0);
 },[])
-const bookedMsgFlash = rCancelAlert.crBookedAlert ||rCancelAlert.ReseduleWithJazzOut ? "Thank you for showing your interest in Jazz music event. We have received your reservation request. Please refer your itinerary for Jazz reservation details. Enjoy the evening!":"Thank you for rescheduling We are pleased to inform you that we have found alternate events for you and one of them is Jazz musical event which starts tonight at 8 PM.";
+const bookedMsgheading = rCancelAlert.crBookedAlert ||rCancelAlert.ReseduleWithJazzOut ? `Hey Charlie,` : `Reschedule Confirmed,`
+const bookedMsgFlash = rCancelAlert.crBookedAlert ||rCancelAlert.ReseduleWithJazzOut ? "Thank you for showing your interest in Jazz music event. We have received your reservation request. Please refer your itinerary for Jazz reservation details. Enjoy the evening!": "Now that you are not playing golf, Why dont you explore one of other events happening around here";
 const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAlert) ? RecommendationBannerData.slice(1,3):RecommendationBannerData.slice(0,1);
     return(
         <>
             {alertBooked &&
             <AlertBooked reseduleWithJazz={reseduleWithJazz} onCancelAlert={onCancelAlert} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}
-                heading={"Hi, Charlie"} eventName={alertBookedData.name}
-                dec={`Please reserve your event. Have a great day ahead and enjoy!`}/>
+                heading={reseduleWithJazz ? `Hi, Charlie` : 'Reserve Your Game'} eventName={alertBookedData.name}
+                dec={reseduleWithJazz ? `Please reserve your event. Have a great day ahead and enjoy!` : 'Please reserve your round of golf. Have a great day ahead and enjoy!'}
+                
+                />
             }
             {/*dec={`You have chosen a new ${alertBookedData.name} event on ${alertBookedData.date} at ${alertBookedData.time}. Have a great day ahead and enjoy your new ${alertBookedData.name}!`}*/}
         <Header {...props}/>
@@ -79,19 +82,33 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                     <div className="container">
                         <div className="eventAddReview__card">
                             <div>
-                                <h2 className="eventAddReview__card--title">Hey {Profile[0].Customer_Name},</h2>
-                                {location === "#confirmAlert" && <p className="eventAddReview__card--subtitle">
+                            {/* <h2 className="eventAddReview__card--title">Hey {Profile[0].Customer_Name},</h2> */}
+                                
+                                {location === "#confirmAlert" && 
+                                <>
+                                {/* <h2 className="eventAddReview__card--title">Hey Charlie</h2>  */}
+                                <p className="eventAddReview__card--subtitle">
                                 As you have shown interest to reschedule Round Of Golf, we would like to recommend you choose from available date and time slots as per your choice.
-                                </p>}
-                                {location === "#cancelAlert" && <p className="eventAddReview__card--subtitle">
+                                </p>
+                                </>
+                                }
+                                {location === "#cancelAlert" && 
+                                 <>
+                                 <h2 className="eventAddReview__card--title">Hey Charlie</h2> 
+                                <p className="eventAddReview__card--subtitle">
                                     You have just cancelled your "Round of Golf" event. We have found a few similar event for you against your today's cancelled event.
                                     And one of them is just starting in an hour and 5 minutes drive away.
-                                </p>}
-                                {location === "#bookedSeat" && <p className="eventAddReview__card--subtitle">
+                                </p>
+                                </>}
+                                {location === "#bookedSeat" && 
+                                <>
+                                <h2 className="eventAddReview__card--title">{bookedMsgheading}</h2> 
+                                <p className="eventAddReview__card--subtitle">
                                     {bookedMsgFlash}
                                    {/* and your slot is free, we have found alternate events for you.
                                     And one of them is just an hour and 5 minutes drive away.*/}
-                                </p>}
+                                </p>
+                                </>}
                             </div>
                         </div>
                     </div>
