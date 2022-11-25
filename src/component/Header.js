@@ -61,7 +61,7 @@ const Header = (props) =>{
         setTimeout(()=>{
             if(!window.localStorage.getItem("bellAlert")){
                 setHeaderAlert(true);
-            }
+            }else{setHeaderAlert(false);}
         },5000)
         if(!headerAlert){
             setInterval(()=>{

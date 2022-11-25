@@ -57,7 +57,7 @@ const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setR
 
                         </div>:
                         <select>
-                            <option value="1">1 people</option>
+                            <option value="1">1 Person</option>
                             <option value="1">2 people</option>
                             <option value="1">3 people</option>
                             <option value="1">4 people</option>

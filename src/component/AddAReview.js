@@ -49,7 +49,7 @@ const AddAReview = ({closeModal, vivoMeaterModal, setVivoMeaterModal}) => {
                     <h2>Add a review</h2>
                 </div>
                 <div className="modal-body">
-                    <p>Hi Charlie, If you're here on this page, we bet you enjoy this event fully. Would you
+                    <p>If you're here on this page, we bet you enjoy this event fully. Would you
                         mind to share your valuable feedback review with us?</p>
                     {/* <div class="modal-image">
                                 <img src="./assets/img/vibe-o-meter.svg" alt="">

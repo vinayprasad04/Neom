@@ -110,12 +110,12 @@ const Dashboard = (props) => {
         <SliderCard EventDetail={data}  rCancelAlert={rCancelAlert}/>
 
         <div className="recSlider recSlider--cardView recSlider--cardView-fullWidth">
-              <SectionHeader heading={"Charlie, hope we understand you better"} />
+              <SectionHeader heading={"Hope we understand you better"} />
           <YourChoice SliderCard={dataYourchoice} />
         </div>
         <div className="trending">
           <div className="container">
-            <h2 className="trending__title">Today's recommendations for you, Charlie!</h2>
+            <h2 className="trending__title">Today's recommendations for you</h2>
             <Trending Treading={dataRecList} showHeartIcon={true} />
           </div>
         </div>
@@ -123,7 +123,7 @@ const Dashboard = (props) => {
         <div className="trending">
           <div className="container">
             <div className="trending__title">
-                  <SectionHeader heading={"Charlie, here is your master journey with us so far"} />
+                  <SectionHeader heading={"Here is your master journey with us so far"} />
             </div>
             <EventSlider Treading={dataAttend} />
           </div>

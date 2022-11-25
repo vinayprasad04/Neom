@@ -118,6 +118,7 @@ const EditProfile = (props) =>{
     }
     useEffect(()=>{
         window.scrollTo(0, 0);
+        localStorage.setItem('bellAlert', 'alert');
     },[])
     return(
         <>

@@ -55,6 +55,7 @@ const Myfavorites = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0);
         setRecSlider()
+        localStorage.setItem('bellAlert', 'alert');
     },[])
     return (
         <div>
