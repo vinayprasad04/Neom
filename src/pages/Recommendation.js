@@ -188,7 +188,7 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
                     </div>
                 </div>
 
-                <div className="recommendations">
+                {/* <div className="recommendations">
                     <div className="container">
                         <h2 className="recommendations__title">Some similar recommendation for you, {Profile[0].Customer_Name}.</h2>
                         <div className="schedule">
@@ -226,7 +226,7 @@ const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAl
 
                         </div>
                     </div>
-                </div>
+                </div> */}
 
             </main>
         </>
