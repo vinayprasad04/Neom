@@ -11,7 +11,8 @@ const EventCart = ({ item, setEventData, onRemoveItem }) => {
         <div className="card__thumb">
           {heartIcon && (<button className="card__fav" onClick={onHeartClick}><span className="icon-heart" style={{color:heartAdd ?"red":""}}></span></button>)}
           {showCancelFavorite && <button className="card__remove" onClick={(e)=>onRemoveItem(e, favorites_Id)}>Remove</button>}
-          <Link className={"card__link"} to={`/eventdetails/${Event_ID}`} >
+          {/* <Link className={"card__link"} to={`/eventdetails/${Event_ID}`} > */}
+          <Link className={"card__link"}>
               <img
                   src={process.env.PUBLIC_URL + "./../img/" + img}
                   alt="event name"

@@ -116,7 +116,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                 {/* <Link className={"recSlider__link"} to={`/eventdetails/10101`}> */}
                                 <Link className={"recSlider__link"}>
                                     <div className="slider__image--wrapper">
-                                        <img src={process.env.PUBLIC_URL + "./../img/tech_expo1.jpg"} alt="event title"/>
+                                        <img src={process.env.PUBLIC_URL + "./../img/expo.png"} alt="event title"/>
                                         <div className="weather">
                                             <div className="weather__icon"><img src={abstract} alt="Weather"/></div>
                                             <div className="weather__text">

@@ -66,7 +66,7 @@ const RecommendationBannerData =[
     {
         "Event_ID": 10012,
         "Operator_ID": 20005,
-        "url":'tech_expo1.jpg',
+        "url":'expo.png',
         "Operator_Name": "Basket of gold",
         "Event_Category": "Tech Expo",
         "Event_Name": "Tech Expo",
@@ -117,7 +117,7 @@ const RecommendationBannerData =[
     {
         "Event_ID": 10013,
         "Operator_ID": 20003,
-        "url":'surfing_image.png',
+        "url":'carnival.png',
         "Operator_Name": "Basket of gold",
         "Event_Category": "Carnival",
         "Event_Name": "Carnival",
@@ -139,7 +139,7 @@ const RecommendationBannerData =[
     {
         "Event_ID": 10013,
         "Operator_ID": 20005,
-        "url":'yacht.jpg',
+        "url":'jazz.png',
         "Operator_Name": "Basket of gold",
         "Event_Category": "Jazz Concert",
         "Event_Name": "Jazz Concert",
@@ -168,7 +168,7 @@ const RecommendationBannerData =[
     {
         "Event_ID": 10003,
         "Operator_ID": 20003,
-        "url":'yacht.jpg',
+        "url":'yacht_party.png',
         "Operator_Name": "Basket of gold",
         "Event_Category": "Yacht Party",
         "Event_Name": "Yacht Party",
