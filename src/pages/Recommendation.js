@@ -88,7 +88,7 @@ const Recommendation = (props) => {
             {/*dec={`You have chosen a new ${alertBookedData.name} event on ${alertBookedData.date} at ${alertBookedData.time}. Have a great day ahead and enjoy your new ${alertBookedData.name}!`}*/}
             <Header {...props} />
             <main className="home recommendation--page">
-                <div className="eventAddReview" style={{ padding: "0" }}>
+                <div className={`eventAddReview ${(location === "#confirmAlert") ? "hide" : ""}`} style={{ padding: "0" }}>
                     <div className="container">
                         <div className="eventAddReview__card">
                             <div>

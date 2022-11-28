@@ -261,7 +261,9 @@
   transform: unset !important;
   opacity: 1 !important;
 }
-
+.hide{
+  display: none;
+}
 @media(max-width: 767px){
   .lightBoxOverlay{
     .cancelBox{
