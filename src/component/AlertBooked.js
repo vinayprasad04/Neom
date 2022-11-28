@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import walkingforlong from "../assets/img/walking-for-long.png";
 
 const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setRCancelAlert, reseduleWithJazz}) =>{
@@ -7,20 +7,31 @@ const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setR
     const onChangeResedule = (e, item) =>{
         setReSedule({...reSedule, [item]:e.target.value});
     }
+    let navigate = useNavigate();
+
+
     console.log("reseduleWithJazz",reseduleWithJazz);
-    const onSubmit =() =>{
+    const onSubmit =(e) =>{
+        console.log("eventName new",eventName);
         if(eventName ==="Round of Golf"){
             setRCancelAlert({...rCancelAlert, crBookedAlert:false, srBookedAlert:true, srBookedAlertData:reSedule})
-        }else if(eventName ==="Jazz Music"){
+        }else if(eventName ==="Tech Expo"){
             setRCancelAlert({...rCancelAlert, crBookedAlert:true, srBookedAlert:false})
+            e.preventDefault();
+            navigate("/");
         }else {
             console.log("inside of other", eventName);
         }
+        
         onCancelAlert();
     }
-    const onSubmitReseduleWithJazz = () =>{
+    const onSubmitReseduleWithJazz = (e) =>{
         setRCancelAlert({...rCancelAlert, ReseduleWithJazzOut: true})
         onCancelAlert();
+        e.preventDefault();
+        navigate("/");
+        console.log("eventName new asdasd",eventName);
+        
     }
     return(
         <div className={"AlertWrapper"}>

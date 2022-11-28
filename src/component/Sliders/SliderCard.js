@@ -80,7 +80,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                         <div className="recSlider__info__items calenderField">
                           <span className="icon icon-calendar"></span>
                           {/* {item.Event_Start_Date}, {item.Event_Start_Time} -  {item.Event_End_Date}, {item.Event_End_Time} */}
-                          {item.Event_Start_Date}, {item.Event_Start_Time} - {item.Event_End_Time}
+                          {item.Event_Start_Date}, {item.Event_Start_Time}
                         </div>
                       </div>
                       <div className="recSlider__info__row">
@@ -138,7 +138,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                             <div className="recSlider__info__items recSlider__info__description">
                                                 Most awaited concert featuring a spectacular line-up of Grammy-nominated
                                                 musicians from across the world coming together to create some fine
-                                                jazz... <span className="read--more">read more</span>
+                                                Tech Expo...
                                             </div>
                                         </div>
                                         <div className="recSlider__info__row">
@@ -257,7 +257,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
                                         <div className="recSlider__info__row">
                                             <div className="recSlider__info__items calenderField">
                                                 <span className="icon icon-calendar"></span>
-                                                {item.Event_Start_Date}, {item.Event_Start_Time} - {item.Event_End_Time}
+                                                {item.Event_Start_Date}, {item.Event_Start_Time}
                                             </div>
                                         </div>
                                         <div className="recSlider__info__row">
