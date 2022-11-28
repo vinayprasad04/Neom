@@ -1,0 +1,196 @@
+@use './_variables' as *;
+
+$gold: #E6DBBF;
+
+.newItinerary{
+  padding: 100px 0 5rem;
+  &__text {
+    font-size: 1.5rem;
+  }
+
+  &__title {
+    font-size: clamp(24px, 3vw, 35px);
+    margin: 2rem 0 0.5rem;
+    font-family: "Ivy Mode";
+    letter-spacing: 2px;
+  }
+}
+
+.itinerary{
+  padding: 2rem 0 0;
+  display: flex;
+  gap: 0 1rem;
+  margin-bottom: 2rem;
+
+  &__date {
+    min-width: 90px;
+    max-width: 90px;
+    display: none;
+    padding-bottom: 3rem;
+
+    &__inner{
+      line-height: 1.2;
+      background-color: $gold;
+      padding: 1.5rem;
+      flex-flow: column;
+      border-radius: 0.75rem;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+      font-family: "BrownMedium";
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: $md) {
+      display: flex;
+    }
+  }
+
+  .itinerarySlider{
+    padding-right: 20vw;
+    flex-grow: 1;
+
+    @media (min-width: $md) {
+      padding-right: 10vw;
+    }
+    @media (min-width: $xxl) {
+      padding-right: 0vw;
+    }
+
+    &__progress{
+      width: 99%;
+      border-bottom: 2px dashed $black;
+      bottom: 1rem;
+      left: 0;
+      position: absolute;
+      opacity: 0.2;
+
+      &:before{
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        border: 2px solid $black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-18px, -10px);
+        background-color: $bgDefault;
+      }
+    }
+
+    &__title{
+      color: $white;
+      font-size: 20px;
+      font-family: "BrownMedium";
+      line-height: 1.1;
+      margin-bottom: 0.35rem;
+    }
+    &__day {
+      color: $white;
+      font-size: 15px;
+      font-family: "BrownMedium";
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+      display: block;
+
+      @media (min-width: $md) {
+        display: none;
+      }
+    }
+    &__time {
+      color: $white;
+      font-size: 15px;
+      font-family: "BrownMedium";
+      line-height: 1.2;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+    &__rescheduled{
+      font-size: 12px;
+      font-family: "BrownMedium";
+    }
+
+    &__link {
+      width: 100%;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+
+    &__info {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      z-index: 2;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+      background: rgba($black, 50%);
+    }
+
+    &__image {
+      &--img {
+        aspect-ratio: 10/9 !important;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        min-height: 240px;
+      }
+    }
+
+    .swiper-wrapper{
+      margin-left: 0;
+      padding-bottom: 3rem;
+
+      .swiper-slide{
+        padding-right: 1rem;
+        position: relative;
+
+        &:last-of-type{
+          .itinerarySlider__progress{
+            width: calc(100% - 1rem);
+          }
+        }
+
+        &--done{
+          .itinerarySlider__progress{
+            border: 1px solid $green;
+            opacity: 1;
+            width: 100%;
+
+            &:before{
+              border: 1px solid $green;
+              background-color: $green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.banner__info__count{
+  position: absolute;
+  right:2rem;
+  bottom: 1.5rem;
+  z-index: 2;
+}
+
+.mainbanner{
+  + .mainbanner{
+    margin-top: 2rem;
+  }
+}

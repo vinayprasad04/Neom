@@ -87,7 +87,7 @@ const Recommendation = (props) => {
             }
             {/*dec={`You have chosen a new ${alertBookedData.name} event on ${alertBookedData.date} at ${alertBookedData.time}. Have a great day ahead and enjoy your new ${alertBookedData.name}!`}*/}
             <Header {...props} />
-            <main className="content home recommendation--page">
+            <main className="home recommendation--page">
                 <div className="eventAddReview" style={{ padding: "0" }}>
                     <div className="container">
                         <div className="eventAddReview__card">
@@ -127,11 +127,10 @@ const Recommendation = (props) => {
                     <div className="container">
                         <div className="swiper mainbanner">
                             <div className={`swiper-wrapper ${(location === "#confirmAlert") ? "rescheduleBannerNotification" : ""}`}>
-                                <Swiper modules={[Navigation, Autoplay]} spaceBetween={50} slidesPerView={1} autoplay={false}>
                                     {(location !== "#confirmAlert" && rCancelAlert.crAlert) ?
                                         RecommendationBannerData.slice(1, 2).map((item, index) => {
                                             return (
-                                                <SwiperSlide key={index}>
+                                                <div className='swiper-slide' key={index}>
                                                     <img src={process.env.PUBLIC_URL + "./img/" + item.url} alt="event title" />
                                                     <div className="banner__info">
                                                         <h2 className="banner__info__title">{item.Event_Name}</h2>
@@ -146,13 +145,13 @@ const Recommendation = (props) => {
                                                             <button onClick={(e) => onAlertOpen(e, item.Event_Name, item.Event_Start_Date, item.Event_Start_Time)}>Yes, I am in</button>
                                                         </div>
                                                     </div>
-                                                </SwiperSlide>
+                                                </div>
                                             )
                                         })
                                         : location === "#bookedSeat" && !rCancelAlert.crBookedAlert ?
                                             RecommendationBannerData.slice(1, 2).map((item, index) => {
                                                 return (
-                                                    <SwiperSlide key={index}>
+                                                    <div className='swiper-slide' key={index}>
                                                         <img src={process.env.PUBLIC_URL + "./img/" + item.url} alt="event title" />
                                                         <div className="banner__info">
                                                             <h2 className="banner__info__title">{item.Event_Name}</h2>
@@ -167,13 +166,18 @@ const Recommendation = (props) => {
                                                                 <button onClick={onReseduleWithJazz}>Yes, I am in</button>
                                                             </div>
                                                         </div>
-                                                    </SwiperSlide>
+                                                        {item.Event_Rank && (
+                  <div class="banner__info__count">
+                    <img className='img' src={process.env.PUBLIC_URL + "./../img/" + item.Event_Rank} alt="Top ranking 1"/>
+                  </div>
+              )}
+                                                    </div>
                                                 )
                                             })
                                             :
                                             RecommendationBannerData.slice(0, 1).map((item, index) => {
                                                 return (
-                                                    <SwiperSlide key={index}>
+                                                    <div className='swiper-slide' key={index}>
                                                         <img src={process.env.PUBLIC_URL + "./img/" + item.url} alt="event title" />
                                                         <div className="banner__info">
                                                             <h2 className="banner__info__title">{item.Event_Name}</h2>
@@ -187,19 +191,17 @@ const Recommendation = (props) => {
                                                                 <button onClick={(e) => onAlertOpen(e, item.Event_Name, item.Event_Start_Date, item.Event_Start_Time)} style={{ fontSize: "21px" }}>Reschedule</button>
                                                             </div>
                                                         </div>
-                                                    </SwiperSlide>
+                                                    </div>
                                                 )
                                             })
                                     }
 
-                                </Swiper>
                             </div>
                             {location === "#bookedSeat" &&
                                 RecommendationBannerData.slice(2,6).map((item, index) => {
                                     return (
                                         <div className={`swiper-wrapper ${(location === "#confirmAlert") ? "rescheduleBannerNotification" : ""}`} style={{paddingTop:'30px'}}>
-                                            <Swiper modules={[Navigation, Autoplay]} spaceBetween={50} slidesPerView={1} autoplay={false}>
-                                                <SwiperSlide key={index}>
+                                                <div className='swiper-slide' key={index}>
                                                     <img src={process.env.PUBLIC_URL + "./img/" + item.url} alt="event title" />
                                                     <div className="banner__info">
                                                         <h2 className="banner__info__title">{item.Event_Name}</h2>
@@ -214,15 +216,13 @@ const Recommendation = (props) => {
                                                             <button>Yes, I am in </button> 
                                                             
                                                         </div>
-                                                        {item.Event_Rank && (
-                  <span className="card__count">
-                    <img src={process.env.PUBLIC_URL + "./../img/" + item.Event_Rank} alt="Top ranking 1"/>
-                  </span>
-              )}
                                                     </div>
-                                                    
-                                                </SwiperSlide>
-                                            </Swiper>
+                                                    {item.Event_Rank && (
+                  <div class="banner__info__count">
+                    <img className='img' src={process.env.PUBLIC_URL + "./../img/" + item.Event_Rank} alt="Top ranking 1"/>
+                  </div>
+              )}
+                                                </div>
                                         </div>
                                     )
                                 })

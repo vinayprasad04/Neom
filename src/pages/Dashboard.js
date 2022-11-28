@@ -107,6 +107,7 @@ const Dashboard = (props) => {
     <div>
       <Header active={"dashboard"} {...props}/>
       <main className="content">
+        
         <SliderCard EventDetail={data}  rCancelAlert={rCancelAlert}/>
 
         <div className="recSlider recSlider--cardView recSlider--cardView-fullWidth">
