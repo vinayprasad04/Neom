@@ -202,7 +202,7 @@ const Recommendation = (props) => {
                                     return (
                                         <div className={`swiper-wrapper ${(location === "#confirmAlert") ? "rescheduleBannerNotification" : ""}`} style={{paddingTop:'30px'}}>
                                                 <div  className='swiper-slide' key={index}>
-                                                    <img className='img' src={process.env.PUBLIC_URL + "./img/" + item.url} alt="event title" />
+                                                    <img className='img' src={process.env.PUBLIC_URL + "./../img/" + item.url} alt="event title" />
                                                     <div className="banner__info">
                                                         <div className="banner__info__title">{item.Event_Name}</div>
                                                         {/* <div className="banner__info__location">{item.Event_Location}</div> */}

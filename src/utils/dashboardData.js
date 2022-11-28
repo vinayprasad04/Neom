@@ -14,7 +14,7 @@ const data = () => {
     YourChoice:{
       heading: "Charlie, hope we understand you better",
       SliderCard: [
-        {img:"yacht_party.png", disappointed:"disappointed.svg", title:'Fly Bridge Yacht', date:"Dec 11, 2022", desc:"Hi Charlie, we came to know that you enjoyed the surfing experience. We look forward to see you again."},
+        {img:"yacht_party.png", disappointed:"disappointed.svg", title:'Fly Bridge Yacht', date:"Dec 11, 2022", desc:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat…"},
         {img:"cusine_0.png", title:'Indulge in the Finest Epicurean Cuisines', date:"Dec 11, 2022", desc:"Hi Charlie, we came to from our chef John that you didn't enjoyed the Epicurean cuisines yesterday. As a compensation we would like to offer you a free Italian cuisines as agoodwill gesture. Would you like to accept our request?"},
         // {img:"surfing_image.png", disappointed:"disappointed.svg", title:'Surfing at leisure', date:"Dec 11, 2022", desc:"Hi Charlie, we came to know that you enjoyed the surfing experience. We look forward to see you again."},
         // {img:"Product1.png", disappointed:"disappointed.svg", title:'Dive into Exciting Island Experiences', date:"Dec 11, 2022", desc:"Hi Charlie, we came to from our chef John that you didn't enjoyed the Epicurean cuisines yesterday. As a compensation we would like to offer you a free Italian cuisines as agoodwill gesture. Would you like to accept our request?"},
