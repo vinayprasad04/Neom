@@ -138,7 +138,7 @@ const Recommendation = (props) => {
                                                         <div className="banner__info__date">{item.Event_Start_Date}, {item.Event_Start_Time}</div>
                                                         {/* <div className="banner__info__time">{item.Event_Start_Time}</div> */}
                                                         <div className="banner__info__countdown">
-                                                            <CircleTimer itemTime={item.Event_Start_Date} />
+                                                            <CircleTimer itemTime={item.Event_Counter_Time} />
                                                             {/*<div className="counter" id={"counterNew"} data-date={item.Event_Start_Date}></div>*/}
                                                         </div>
                                                         <div className="banner__info__link">
