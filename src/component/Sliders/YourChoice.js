@@ -10,7 +10,7 @@ const YourChoice = (props) => {
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={20}
-          slidesPerView={2.4}
+          slidesPerView={2.2}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           navigation
@@ -19,7 +19,7 @@ const YourChoice = (props) => {
           }}
           breakpoints={{
               1024: {
-                  slidesPerView: 2.4,
+                  slidesPerView: 2.2,
                   spaceBetween: 20,
               },
               768: {

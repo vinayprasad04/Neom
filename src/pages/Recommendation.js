@@ -73,14 +73,14 @@ const Recommendation = (props) => {
         localStorage.setItem('bellAlert', 'alert');
     }, [])
 
-    const bookedMsgheading = rCancelAlert.crBookedAlert || rCancelAlert.ReseduleWithJazzOut ? `Hey Charlie,` : `Reschedule Confirmed!`
+    const bookedMsgheading = rCancelAlert.crBookedAlert || rCancelAlert.ReseduleWithJazzOut ? `` : `Reschedule Confirmed!`
     const bookedMsgFlash = rCancelAlert.crBookedAlert || rCancelAlert.ReseduleWithJazzOut ? "Thank you for showing your interest in Tech Expo event. We have received your reservation request. Please refer your itinerary for Tech Expo reservation details. Enjoy the evening!" : "Now that you are not playing golf, Why dont you explore one of other events happening around here.";
     const cancelEventBannerData = (location !== "#confirmAlert" && rCancelAlert.crAlert) ? RecommendationBannerData.slice(1, 3) : RecommendationBannerData.slice(0, 1);
     return (
         <>
             {alertBooked &&
                 <AlertBooked reseduleWithJazz={reseduleWithJazz} onCancelAlert={onCancelAlert} rCancelAlert={rCancelAlert} setRCancelAlert={setRCancelAlert}
-                    heading={reseduleWithJazz ? `Hi Charlie,` : 'Reserve Your Game'} eventName={alertBookedData.name}
+                    heading={reseduleWithJazz ? `` : 'Reserve Your Game'} eventName={alertBookedData.name}
                     dec={reseduleWithJazz ? `Please reserve your event. Have a great day ahead and enjoy!` : 'Please reserve your round of golf. Have a great day ahead and enjoy!'}
 
                 />
@@ -104,7 +104,7 @@ const Recommendation = (props) => {
                                 }
                                 {location === "#cancelAlert" &&
                                     <>
-                                        <h2 className="eventAddReview__card--title">Hey Charlie</h2>
+                                        {/* <h2 className="eventAddReview__card--title">Hey Charlie</h2> */}
                                         <p className="eventAddReview__card--subtitle">
                                             You have just cancelled your "Round of Golf" event. We have found a few similar event for you against your today's cancelled event.
                                             And one of them is just starting in an hour and 5 minutes drive away.
@@ -131,7 +131,7 @@ const Recommendation = (props) => {
                                         RecommendationBannerData.slice(1, 2).map((item, index) => {
                                             return (
                                                 <div className='swiper-slide' key={index}>
-                                                    <img src={process.env.PUBLIC_URL + "./img/" + item.url} alt="event title" />
+                                                    <img className='img' src={process.env.PUBLIC_URL + "./img/" + item.url} alt="event title" />
                                                     <div className="banner__info">
                                                         <h2 className="banner__info__title">{item.Event_Name}</h2>
                                                         <div className="banner__info__location">{item.Event_Location}</div>
@@ -152,14 +152,14 @@ const Recommendation = (props) => {
                                             RecommendationBannerData.slice(1, 2).map((item, index) => {
                                                 return (
                                                     <div className='swiper-slide' key={index}>
-                                                        <img src={process.env.PUBLIC_URL + "./img/" + item.url} alt="event title" />
+                                                        <img className='img' src={process.env.PUBLIC_URL + "./img/" + item.url} alt="event title" />
                                                         <div className="banner__info">
                                                             <h2 className="banner__info__title">{item.Event_Name}</h2>
                                                             {/* <div className="banner__info__location">{item.Event_Location}</div> */}
                                                             <div className="banner__info__date">{item.Event_Start_Date}, {item.Event_Start_Time}</div>
                                                             {/* <div className="banner__info__time">{item.Event_Start_Time}</div> */}
                                                             <div className="banner__info__countdown">
-                                                                <CircleTimer itemTime={item.Event_Start_Date} />
+                                                                <CircleTimer itemTime={item.Event_Counter_Time} />
                                                                 {/*<div className="counter" id={"counterNew"} data-date={item.Event_Start_Date}></div>*/}
                                                             </div>
                                                             <div className="banner__info__link">
@@ -178,7 +178,7 @@ const Recommendation = (props) => {
                                             RecommendationBannerData.slice(0, 1).map((item, index) => {
                                                 return (
                                                     <div className='swiper-slide' key={index}>
-                                                        <img src={process.env.PUBLIC_URL + "./img/" + item.url} alt="event title" />
+                                                        <img className='img' src={process.env.PUBLIC_URL + "./img/" + item.url} alt="event title" />
                                                         <div className="banner__info">
                                                             <div className="banner__info__title">{item.Event_Name}</div>
                                                             {/* <div className="banner__info__location">{item.Event_Location}</div> */}
@@ -201,15 +201,15 @@ const Recommendation = (props) => {
                                 RecommendationBannerData.slice(2,6).map((item, index) => {
                                     return (
                                         <div className={`swiper-wrapper ${(location === "#confirmAlert") ? "rescheduleBannerNotification" : ""}`} style={{paddingTop:'30px'}}>
-                                                <div className='swiper-slide' key={index}>
-                                                    <img src={process.env.PUBLIC_URL + "./img/" + item.url} alt="event title" />
+                                                <div  className='swiper-slide' key={index}>
+                                                    <img className='img' src={process.env.PUBLIC_URL + "./img/" + item.url} alt="event title" />
                                                     <div className="banner__info">
                                                         <div className="banner__info__title">{item.Event_Name}</div>
                                                         {/* <div className="banner__info__location">{item.Event_Location}</div> */}
                                                         <div className="banner__info__date">{item.Event_Start_Date}, {item.Event_Start_Time}</div>
                                                         {/* <div className="banner__info__time">{item.Event_Start_Time}</div> */}
                                                         <div className="banner__info__countdown">
-                                                            <CircleTimer itemTime={item.Event_Start_Date} />
+                                                            <CircleTimer itemTime={item.Event_Counter_Time} />
                                                             {/*<div className="counter" id={"counterNew"} data-date={item.Event_Start_Date}></div>*/}
                                                         </div>
                                                         <div className="banner__info__link">

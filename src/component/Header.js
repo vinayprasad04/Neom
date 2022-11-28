@@ -23,7 +23,7 @@ const HeaderAlert = ({headerAlert, setHeaderAlert, setConfirmAlert, setCancelAle
                 <span className="popup__icon"><img src={hand} alt=""/></span>
             </h4>
             <p className="popup__content">
-            “The humidity at golf course is too high and may not be pleasent for you. 
+            “The humidity at golf course is too high and may not be pleasant for you. 
             Would you like to reschedule or Cancel your golf session today?”
 
             </p>

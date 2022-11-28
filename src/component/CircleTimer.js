@@ -27,11 +27,11 @@ const getTimeDays = (time) => (time / daySeconds) | 0;
 
 export default function CircleTimer({itemTime}) {
 
-    const timeValue = Math.floor(new Date('2022/11/20').getTime() / 1000); //yyyy:mm:dd
+    // const timeValue = Math.floor(new Date('2022/11/20').getTime() / 1000); //yyyy:mm:dd
 /*    console.log(" timeValue", timeValue);*/
 
     const stratTime = Date.now() / 1000; // use UNIX timestamp in seconds
-    const endTime = stratTime + 20000; // use UNIX timestamp in seconds
+    const endTime = stratTime + itemTime; // use UNIX timestamp in seconds
 /*    console.log(" stratTime", stratTime);
     console.log(" endTime", endTime);*/
     //1344537000

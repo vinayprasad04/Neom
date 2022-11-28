@@ -1813,6 +1813,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   left: 0;
   top: 0;
 }
+.home .banner .swiper-slide .img {
+  transform: none !important;
+}
 @media (max-width: 767px) {
   .home .banner .swiper-slide img {
     height: 100%;
