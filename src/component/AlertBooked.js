@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
-import walkingforlong from "../assets/img/walking-for-long.png";
 
 const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setRCancelAlert, reseduleWithJazz}) =>{
     const [reSedule, setReSedule] = useState({selectedDate: 'Dec 12, 2022', selectedTime: '7:00 AM - 9:00 AM', selectedSeat: '1'});
@@ -8,11 +7,7 @@ const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setR
         setReSedule({...reSedule, [item]:e.target.value});
     }
     let navigate = useNavigate();
-
-
-    console.log("reseduleWithJazz",reseduleWithJazz);
     const onSubmit =(e) =>{
-        console.log("eventName new",eventName);
         if(eventName ==="Round of Golf"){
             setRCancelAlert({...rCancelAlert, crBookedAlert:false, srBookedAlert:true, srBookedAlertData:reSedule})
         }else if(eventName ==="Tech Expo"){
@@ -22,16 +17,15 @@ const AlertBooked = ({onCancelAlert, heading, dec, eventName, rCancelAlert, setR
         }else {
             console.log("inside of other", eventName);
         }
-        
-        onCancelAlert();
+        setTimeout(()=>{
+            onCancelAlert();
+        },400)
     }
     const onSubmitReseduleWithJazz = (e) =>{
         setRCancelAlert({...rCancelAlert, ReseduleWithJazzOut: true})
         onCancelAlert();
         e.preventDefault();
         navigate("/");
-        console.log("eventName new asdasd",eventName);
-        
     }
     return(
         <div className={"AlertWrapper"}>
