@@ -52,7 +52,7 @@ const SliderCard = ({EventDetail, rCancelAlert}) => {
               return (
                 <SwiperSlide>
                     {/* <Link className={"recSlider__link"} to={`/eventdetails/${item.Event_ID}`} > */}
-                    <Link className={"recSlider__link"} >
+                    <Link className={"recSlider__link"}  to={`/eventdetails/${item.Event_ID}`}>
                         <div className="slider__image--wrapper">
                             <img src={process.env.PUBLIC_URL + "./../img/" + item?.url} alt="event title"/>
                             <div className="weather"><div className="weather__icon"><img src={abstract} alt="Weather" /></div>
